@@ -1,0 +1,140 @@
+{
+  "caseSeries": [
+    {
+      "id": "skx38",
+      "name": "SKX 3.8 Case",
+      "description": "38mm case, classic SKX profile",
+      "size": "38mm",
+      "lugWidth": "20mm",
+      "thickness": "12.5mm",
+      "lugToLug": "44mm",
+      "weight": "65g",
+      "material": "316L Stainless Steel",
+      "waterResistance": "200m",
+      "crystal": "Sapphire",
+      "images": {
+        "front": "placeholder",
+        "side": "placeholder",
+        "back": "placeholder"
+      },
+      "compatibleParts": {
+        "bezel": ["b-skx38-01", "b-skx38-02", "b-skx38-03", "b-skx38-04"],
+        "hands": ["h-skx-01", "h-skx-02", "h-skx-03", "h-skx-04", "h-skx-05"],
+        "dial": ["d-skx-01", "d-skx-02", "d-skx-03", "d-skx-04", "d-skx-05", "d-skx-06"],
+        "chapterRing": ["cr-skx-01", "cr-skx-02", "cr-skx-03"],
+        "crown": ["c-skx-01", "c-skx-02", "c-skx-03"],
+        "caseback": ["cb-skx-01", "cb-skx-02", "cb-skx-03"],
+        "strap": ["s-skx-01", "s-skx-02", "s-skx-03", "s-skx-04", "s-skx-05"]
+      }
+    },
+    {
+      "id": "skx30",
+      "name": "SKX 3.0 Case",
+      "description": "30mm slim case, vintage inspired",
+      "size": "30mm",
+      "lugWidth": "18mm",
+      "thickness": "11mm",
+      "lugToLug": "38mm",
+      "weight": "48g",
+      "material": "316L Stainless Steel",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "images": {
+        "front": "placeholder",
+        "side": "placeholder",
+        "back": "placeholder"
+      },
+      "compatibleParts": {
+        "bezel": ["b-skx30-01", "b-skx30-02", "b-skx30-03"],
+        "hands": ["h-skx-01", "h-skx-02", "h-skx-03"],
+        "dial": ["d-skx-01", "d-skx-02", "d-skx-03"],
+        "chapterRing": ["cr-skx-01", "cr-skx-02"],
+        "crown": ["c-skx-01", "c-skx-02"],
+        "caseback": ["cb-skx-01", "cb-skx-02"],
+        "strap": ["s-skx-01", "s-skx-02", "s-skx-03"]
+      }
+    },
+    {
+      "id": "skxsub",
+      "name": "SKX SUB Case",
+      "description": "40mm dive case, submariner style",
+      "size": "40mm",
+      "lugWidth": "20mm",
+      "thickness": "13mm",
+      "lugToLug": "47mm",
+      "weight": "72g",
+      "material": "316L Stainless Steel",
+      "waterResistance": "300m",
+      "crystal": "Sapphire",
+      "images": {
+        "front": "placeholder",
+        "side": "placeholder",
+        "back": "placeholder"
+      },
+      "compatibleParts": {
+        "bezel": ["b-skxsub-01", "b-skxsub-02", "b-skxsub-03", "b-skxsub-04", "b-skxsub-05"],
+        "hands": ["h-skx-01", "h-skx-02", "h-skx-03", "h-skx-04"],
+        "dial": ["d-skx-01", "d-skx-02", "d-skx-03", "d-skx-04"],
+        "chapterRing": ["cr-skx-01", "cr-skx-02", "cr-skx-03", "cr-skx-04"],
+        "crown": ["c-skx-01", "c-skx-02", "c-skx-03", "c-skx-04"],
+        "caseback": ["cb-skx-01", "cb-skx-02", "cb-skx-03"],
+        "strap": ["s-skx-01", "s-skx-02", "s-skx-03", "s-skx-04"]
+      }
+    }
+  ],
+  "parts": {
+    "bezel": [
+      {"id": "b-skx38-01", "name": "Fine Knurl Bezel", "nameZh": "小齿纹表圈", "description": "Fine coin-edge knurling, polished finish", "series": "skx38", "color": "Silver", "material": "Stainless Steel"},
+      {"id": "b-skx38-02", "name": "Coarse Knurl Bezel", "nameZh": "大齿纹表圈", "description": "Bold coin-edge knurling, brushed finish", "series": "skx38", "color": "Silver", "material": "Stainless Steel"},
+      {"id": "b-skx38-03", "name": "Ceramic Insert Bezel", "nameZh": "陶瓷圈", "description": "Ceramic insert with engraved numerals", "series": "skx38", "color": "Black", "material": "Ceramic"},
+      {"id": "b-skx38-04", "name": "PVD Black Bezel", "nameZh": "黑色PVD圈", "description": "PVD coated black bezel", "series": "skx38", "color": "Black", "material": "Stainless Steel PVD"},
+      {"id": "b-skx30-01", "name": "Slim Bezel", "nameZh": "薄表圈", "description": "Slim profile bezel", "series": "skx30", "color": "Silver", "material": "Stainless Steel"},
+      {"id": "b-skx30-02", "name": "Coin Edge Bezel", "nameZh": "硬币边圈", "description": "Classic coin edge", "series": "skx30", "color": "Silver", "material": "Stainless Steel"},
+      {"id": "b-skx30-03", "name": "Ceramic Slim Bezel", "nameZh": "陶瓷薄圈", "description": "Slim ceramic insert", "series": "skx30", "color": "Black", "material": "Ceramic"},
+      {"id": "b-skxsub-01", "name": "Dive Bezel", "nameZh": "潜水圈", "description": "Unidirectional dive bezel", "series": "skxsub", "color": "Black", "material": "Stainless Steel"},
+      {"id": "b-skxsub-02", "name": "Ceramic Dive Bezel", "nameZh": "陶瓷潜水圈", "description": "Ceramic dive insert", "series": "skxsub", "color": "Black", "material": "Ceramic"},
+      {"id": "b-skxsub-03", "name": "Pepsi Bezel", "nameZh": "百事圈", "description": "Blue-red two-tone bezel", "series": "skxsub", "color": "Blue/Red", "material": "Aluminum"},
+      {"id": "b-skxsub-04", "name": "Batman Bezel", "nameZh": "蝙蝠侠圈", "description": "Blue-black two-tone bezel", "series": "skxsub", "color": "Blue/Black", "material": "Ceramic"},
+      {"id": "b-skxsub-05", "name": "Root Beer Bezel", "nameZh": "根汁啤酒圈", "description": "Brown-gold two-tone bezel", "series": "skxsub", "color": "Brown/Gold", "material": "Aluminum"}
+    ],
+    "hands": [
+      {"id": "h-skx-01", "name": "Mercedes Hands", "nameZh": "奔驰针", "description": "Classic Mercedes-style hour hand", "series": "all", "color": "Silver"},
+      {"id": "h-skx-02", "name": "Sword Hands", "nameZh": "剑针", "description": "Sharp sword-style hands", "series": "all", "color": "Silver"},
+      {"id": "h-skx-03", "name": "Alpha Hands", "nameZh": "阿尔法针", "description": "Leaf-shaped alpha hands", "series": "all", "color": "Silver"},
+      {"id": "h-skx-04", "name": "Baton Hands", "nameZh": "棒形针", "description": "Slim baton hands", "series": "all", "color": "Silver"},
+      {"id": "h-skx-05", "name": "Snowflake Hands", "nameZh": "雪花针", "description": "Square-tipped snowflake hands", "series": "all", "color": "Silver"}
+    ],
+    "dial": [
+      {"id": "d-skx-01", "name": "Sunburst Blue Dial", "nameZh": "太阳纹蓝面", "description": "Deep blue sunburst finish", "series": "all", "color": "Blue"},
+      {"id": "d-skx-02", "name": "Sunburst Black Dial", "nameZh": "太阳纹黑面", "description": "Glossy black sunburst finish", "series": "all", "color": "Black"},
+      {"id": "d-skx-03", "name": "Matte White Dial", "nameZh": "磨砂白面", "description": "Clean matte white", "series": "all", "color": "White"},
+      {"id": "d-skx-04", "name": "Sunburst Green Dial", "nameZh": "太阳纹绿面", "description": "Deep green sunburst finish", "series": "all", "color": "Green"},
+      {"id": "d-skx-05", "name": "Matte Black Dial", "nameZh": "磨砂黑面", "description": "Stealthy matte black", "series": "all", "color": "Black"},
+      {"id": "d-skx-06", "name": "Sunburst Champagne Dial", "nameZh": "太阳纹香槟面", "description": "Warm champagne sunburst", "series": "all", "color": "Champagne"}
+    ],
+    "chapterRing": [
+      {"id": "cr-skx-01", "name": "Black Chapter Ring", "nameZh": "黑色内影圈", "description": "Black with white markers", "series": "all", "color": "Black"},
+      {"id": "cr-skx-02", "name": "White Chapter Ring", "nameZh": "白色内影圈", "description": "White with black markers", "series": "all", "color": "White"},
+      {"id": "cr-skx-03", "name": "Blue Chapter Ring", "nameZh": "蓝色内影圈", "description": "Blue with white markers", "series": "all", "color": "Blue"},
+      {"id": "cr-skx-04", "name": "Green Chapter Ring", "nameZh": "绿色内影圈", "description": "Green with white markers", "series": "all", "color": "Green"}
+    ],
+    "crown": [
+      {"id": "c-skx-01", "name": "Signed Crown", "nameZh": "签名表冠", "description": "Signed screw-down crown", "series": "all", "color": "Silver"},
+      {"id": "c-skx-02", "name": "Plain Crown", "nameZh": "光面表冠", "description": "Plain screw-down crown", "series": "all", "color": "Silver"},
+      {"id": "c-skx-03", "name": "Onion Crown", "nameZh": "洋葱头表冠", "description": "Oversized onion crown", "series": "all", "color": "Silver"},
+      {"id": "c-skx-04", "name": "PVD Black Crown", "nameZh": "黑色PVD表冠", "description": "PVD black crown", "series": "all", "color": "Black"}
+    ],
+    "caseback": [
+      {"id": "cb-skx-01", "name": "Exhibition Caseback", "nameZh": "透底后盖", "description": "Sapphire exhibition back", "series": "all", "color": "Silver"},
+      {"id": "cb-skx-02", "name": "Solid Caseback", "nameZh": "实底后盖", "description": "Solid stainless steel back", "series": "all", "color": "Silver"},
+      {"id": "cb-skx-03", "name": "Engraved Caseback", "nameZh": "雕刻后盖", "description": "Custom engraved back", "series": "all", "color": "Silver"}
+    ],
+    "strap": [
+      {"id": "s-skx-01", "name": "Stainless Steel Bracelet", "nameZh": "钢带", "description": "Solid link bracelet", "series": "all", "color": "Silver", "material": "Stainless Steel"},
+      {"id": "s-skx-02", "name": "Rubber Strap", "nameZh": "橡胶带", "description": "Dive rubber strap", "series": "all", "color": "Black", "material": "FKM Rubber"},
+      {"id": "s-skx-03", "name": "Leather Strap", "nameZh": "皮带", "description": "Genuine leather strap", "series": "all", "color": "Brown", "material": "Leather"},
+      {"id": "s-skx-04", "name": "NATO Strap", "nameZh": "尼龙带", "description": "Military NATO strap", "series": "all", "color": "Green", "material": "Nylon"},
+      {"id": "s-skx-05", "name": "Milanese Mesh", "nameZh": "米兰带", "description": "Fine mesh bracelet", "series": "all", "color": "Silver", "material": "Stainless Steel"}
+    ]
+  }
+}

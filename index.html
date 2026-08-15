@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mod Watch - Custom Watch Configurator</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .logo {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .header .nav { display: flex; gap: 24px; }
+  .header .nav a { color: #999; text-decoration: none; font-size: 14px; }
+  .header .nav a:hover { color: #fff; }
+
+  /* Main layout */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 64px);
+  }
+
+  /* Preview area - left side */
+  .preview {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    position: relative;
+  }
+  .preview .watch-container {
+    width: 400px;
+    height: 520px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview .watch-placeholder {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .preview .watch-face {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .preview .watch-hands {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview .watch-hands .hour-hand {
+    width: 4px;
+    height: 55px;
+    background: #333;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom center;
+    transform: rotate(60deg);
+  }
+  .preview .watch-hands .minute-hand {
+    width: 3px;
+    height: 75px;
+    background: #333;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+  }
+  .preview .watch-hands .second-hand {
+    width: 1.5px;
+    height: 85px;
+    background: #d4a017;
+    border-radius: 1px;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom center;
+    transform: rotate(270deg);
+  }
+  .preview .center-dot {
+    width: 8px;
+    height: 8px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+  }
+  .preview .bezel-ring {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 16px solid #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 1px #ccc;
+  }
+  .preview .case-label {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .preview .case-label .name {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .preview .case-label .size {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+  }
+  .preview .view-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .preview .view-tabs button {
+    padding: 6px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #666;
+    transition: all 0.2s;
+  }
+  .preview .view-tabs button.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+  }
+  .preview .view-tabs button:hover:not(.active) {
+    border-color: #999;
+  }
+  .preview .specs {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 400px;
+  }
+  .preview .specs .spec-item {
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .preview .specs .spec-item .label {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .preview .specs .spec-item .value {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  /* Options panel - right side */
+  .options {
+    background: #fff;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+  }
+  .options .section {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .options .section-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+  }
+  .options .section-header:hover { background: #fafafa; }
+  .options .section-header .title {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .options .section-header .title .step {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .options .section-header .arrow {
+    transition: transform 0.2s;
+    font-size: 12px;
+    color: #999;
+  }
+  .options .section.expanded .arrow { transform: rotate(180deg); }
+  .options .section-content {
+    display: none;
+    padding: 0 24px 20px;
+  }
+  .options .section.expanded .section-content { display: block; }
+  .options .part-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .options .part-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .options .part-item:hover { border-color: #999; background: #fafafa; }
+  .options .part-item.selected {
+    border-color: #1a1a1a;
+    background: #f5f5f5;
+    box-shadow: 0 0 0 1px #1a1a1a;
+  }
+  .options .part-item .thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #999;
+    flex-shrink: 0;
+  }
+  .options .part-item .info { flex: 1; }
+  .options .part-item .info .name {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .options .part-item .info .name-zh {
+    font-size: 12px;
+    color: #666;
+    margin-top: 1px;
+  }
+  .options .part-item .info .meta {
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+  }
+  .options .part-item .check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .options .part-item.selected .check {
+    border-color: #1a1a1a;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 10px;
+  }
+  .options .part-item.selected .check::after { content: "✓"; }
+  .options .part-description {
+    padding: 10px 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.5;
+    display: none;
+  }
+  .options .part-description.visible { display: block; }
+
+  /* Case series selector */
+  .options .case-series-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .options .case-series-item {
+    padding: 16px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .options .case-series-item:hover { border-color: #999; }
+  .options .case-series-item.selected {
+    border-color: #1a1a1a;
+    background: #f5f5f5;
+    box-shadow: 0 0 0 1px #1a1a1a;
+  }
+  .options .case-series-item .name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .options .case-series-item .size {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+  }
+  .options .case-series-item .desc {
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+
+  /* Summary bar */
+  .summary {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 400px;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  .summary .summary-text {
+    font-size: 14px;
+  }
+  .summary .summary-text span { color: #999; }
+  .summary .btn {
+    padding: 10px 24px;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* Scrollbar */
+  .options::-webkit-scrollbar { width: 4px; }
+  .options::-webkit-scrollbar-track { background: transparent; }
+  .options::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">MOD WATCH</div>
+  <div class="nav">
+    <a href="#">Configurator</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<div class="main">
+  <!-- Preview Area -->
+  <div class="preview">
+    <div class="watch-container" id="watchPreview">
+      <div class="bezel-ring" id="bezelPreview"></div>
+      <div class="watch-placeholder">
+        <div class="watch-face" id="dialPreview">
+          <div class="watch-hands" id="handsPreview">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+          </div>
+          <div class="center-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-label">
+      <div class="name" id="caseName">Select a Case</div>
+      <div class="size" id="caseSize">Choose a case series to begin</div>
+    </div>
+
+    <div class="view-tabs">
+      <button class="active" data-view="front">Front</button>
+      <button data-view="side">Side</button>
+      <button data-view="back">Back</button>
+    </div>
+
+    <div class="specs" id="specsGrid"></div>
+  </div>
+
+  <!-- Options Panel -->
+  <div class="options" id="optionsPanel"></div>
+</div>
+
+<!-- Summary Bar -->
+<div class="summary" id="summaryBar">
+  <div class="summary-text" id="summaryText">Select a case to begin building your watch</div>
+  <button class="btn" id="btnQuote">Get Quote</button>
+</div>
+
+<script>
+let DATA = null;
+let selectedCase = null;
+let selections = {};
+const PART_ORDER = ['case', 'bezel', 'hands', 'dial', 'chapterRing', 'crown', 'caseback', 'strap'];
+const PART_LABELS = {
+  case: 'Case',
+  bezel: 'Bezel',
+  hands: 'Hands',
+  dial: 'Dial',
+  chapterRing: 'Chapter Ring',
+  crown: 'Crown',
+  caseback: 'Caseback',
+  strap: 'Strap'
+};
+
+async function loadData() {
+  try {
+    const resp = await fetch('data.json');
+    DATA = await resp.json();
+  } catch(e) {
+    console.error('Failed to load data:', e);
+    DATA = { caseSeries: [], parts: {} };
+  }
+  renderOptions();
+}
+
+function renderOptions() {
+  const panel = document.getElementById('optionsPanel');
+  panel.innerHTML = '';
+
+  PART_ORDER.forEach((partType, index) => {
+    const section = document.createElement('div');
+    section.className = 'section' + (index === 0 ? ' expanded' : '');
+    section.dataset.part = partType;
+
+    const header = document.createElement('div');
+    header.className = 'section-header';
+    header.innerHTML = `
+      <div class="title"><span class="step">${index + 1}</span> ${PART_LABELS[partType]}</div>
+      <span class="arrow">▼</span>
+    `;
+    header.addEventListener('click', () => {
+      section.classList.toggle('expanded');
+    });
+    section.appendChild(header);
+
+    const content = document.createElement('div');
+    content.className = 'section-content';
+
+    if (partType === 'case') {
+      renderCaseSeries(content);
+    } else {
+      renderPartOptions(content, partType);
+    }
+
+    section.appendChild(content);
+    panel.appendChild(section);
+  });
+}
+
+function renderCaseSeries(container) {
+  const grid = document.createElement('div');
+  grid.className = 'case-series-grid';
+
+  DATA.caseSeries.forEach(cs => {
+    const item = document.createElement('div');
+    item.className = 'case-series-item' + (selectedCase && selectedCase.id === cs.id ? ' selected' : '');
+    item.innerHTML = `
+      <div class="name">${cs.name}</div>
+      <div class="size">${cs.size}</div>
+      <div class="desc">${cs.description}</div>
+    `;
+    item.addEventListener('click', () => selectCase(cs));
+    grid.appendChild(item);
+  });
+
+  container.appendChild(grid);
+}
+
+function renderPartOptions(container, partType) {
+  const list = document.createElement('div');
+  list.className = 'part-list';
+
+  let parts = DATA.parts[partType] || [];
+
+  if (selectedCase) {
+    const compatibleIds = selectedCase.compatibleParts[partType] || [];
+    parts = parts.filter(p => compatibleIds.includes(p.id));
+  }
+
+  if (parts.length === 0) {
+    list.innerHTML = `<div style="padding:12px;color:#999;font-size:13px;">Select a case first to see compatible options</div>`;
+  } else {
+    parts.forEach(part => {
+      const item = document.createElement('div');
+      const isSelected = selections[partType] && selections[partType].id === part.id;
+      item.className = 'part-item' + (isSelected ? ' selected' : '');
+      item.innerHTML = `
+        <div class="thumb">IMG</div>
+        <div class="info">
+          <div class="name">${part.name}</div>
+          <div class="name-zh">${part.nameZh || ''}</div>
+          <div class="meta">${part.color || ''}${part.material ? ' · ' + part.material : ''}</div>
+        </div>
+        <div class="check"></div>
+      `;
+      item.addEventListener('click', () => selectPart(partType, part));
+      list.appendChild(item);
+
+      if (isSelected) {
+        const desc = document.createElement('div');
+        desc.className = 'part-description visible';
+        desc.textContent = part.description;
+        list.appendChild(desc);
+      }
+    });
+  }
+
+  container.appendChild(list);
+}
+
+function selectCase(caseSeries) {
+  selectedCase = caseSeries;
+
+  // Clear incompatible selections
+  PART_ORDER.forEach(pt => {
+    if (pt === 'case') return;
+    const selected = selections[pt];
+    if (selected && !caseSeries.compatibleParts[pt].includes(selected.id)) {
+      delete selections[pt];
+    }
+  });
+
+  updatePreview();
+  renderOptions();
+  updateSummary();
+}
+
+function selectPart(partType, part) {
+  if (selections[partType] && selections[partType].id === part.id) {
+    delete selections[partType];
+  } else {
+    selections[partType] = part;
+  }
+  renderOptions();
+  updatePreview();
+  updateSummary();
+}
+
+function updatePreview() {
+  const nameEl = document.getElementById('caseName');
+  const sizeEl = document.getElementById('caseSize');
+  const specsGrid = document.getElementById('specsGrid');
+  const bezelEl = document.getElementById('bezelPreview');
+  const dialEl = document.getElementById('dialPreview');
+  const handsEl = document.getElementById('handsPreview');
+
+  if (selectedCase) {
+    nameEl.textContent = selectedCase.name;
+    sizeEl.textContent = selectedCase.size + ' · ' + selectedCase.material;
+
+    const specs = [
+      { label: 'Size', value: selectedCase.size },
+      { label: 'Thickness', value: selectedCase.thickness },
+      { label: 'Lug to Lug', value: selectedCase.lugToLug },
+      { label: 'Lug Width', value: selectedCase.lugWidth },
+      { label: 'Weight', value: selectedCase.weight },
+      { label: 'Water Res.', value: selectedCase.waterResistance }
+    ];
+    specsGrid.innerHTML = specs.map(s => `
+      <div class="spec-item">
+        <div class="label">${s.label}</div>
+        <div class="value">${s.value}</div>
+      </div>
+    `).join('');
+
+    // Update bezel color
+    const bezel = selections['bezel'];
+    if (bezel) {
+      const bezelColors = {
+        'Silver': '#c0c0c0', 'Black': '#333', 'Blue/Red': '#2a4a8a',
+        'Blue/Black': '#1a2a4a', 'Brown/Gold': '#8a6a3a'
+      };
+      bezelEl.style.borderColor = bezelColors[bezel.color] || '#e0e0e0';
+    } else {
+      bezelEl.style.borderColor = '#e0e0e0';
+    }
+
+    // Update dial color
+    const dial = selections['dial'];
+    if (dial) {
+      const dialColors = {
+        'Blue': '#1a3a6a', 'Black': '#1a1a1a', 'White': '#f5f5f5',
+        'Green': '#1a4a2a', 'Champagne': '#d4c59a'
+      };
+      dialEl.style.background = dialColors[dial.color] || '#f8f8f8';
+      dialEl.style.borderColor = dialColors[dial.color] ? 'transparent' : '#e0e0e0';
+    } else {
+      dialEl.style.background = '#f8f8f8';
+      dialEl.style.borderColor = '#e0e0e0';
+    }
+
+    // Update hands color
+    const hands = selections['hands'];
+    if (hands) {
+      const handColor = hands.color === 'Black' ? '#1a1a1a' : '#333';
+      handsEl.querySelector('.hour-hand').style.background = handColor;
+      handsEl.querySelector('.minute-hand').style.background = handColor;
+    }
+  } else {
+    nameEl.textContent = 'Select a Case';
+    sizeEl.textContent = 'Choose a case series to begin';
+    specsGrid.innerHTML = '';
+  }
+}
+
+function updateSummary() {
+  const el = document.getElementById('summaryText');
+  const parts = [];
+  if (selectedCase) parts.push(selectedCase.name);
+  PART_ORDER.forEach(pt => {
+    if (pt !== 'case' && selections[pt]) parts.push(selections[pt].name);
+  });
+
+  if (parts.length === 0) {
+    el.innerHTML = 'Select a case to begin building your watch';
+  } else {
+    el.innerHTML = 'Selected: <span>' + parts.join(' → ') + '</span>';
+  }
+}
+
+// View tabs
+document.querySelectorAll('.view-tabs button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.view-tabs button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // In a real implementation, this would switch the preview image
+  });
+});
+
+// Get Quote button
+document.getElementById('btnQuote').addEventListener('click', () => {
+  if (!selectedCase) {
+    alert('Please select a case first');
+    return;
+  }
+  const parts = ['Case: ' + selectedCase.name];
+  PART_ORDER.forEach(pt => {
+    if (pt !== 'case' && selections[pt]) parts.push(PART_LABELS[pt] + ': ' + selections[pt].name);
+  });
+  alert('Your Configuration:\n\n' + parts.join('\n'));
+});
+
+loadData();
+</script>
+
+</body>
+</html>
