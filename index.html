@@ -1,709 +1,1032 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mod Watch - Custom Watch Configurator</title>
+<title>MOD WATCH - Custom Watch Case Configurator</title>
 <style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface2: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #e8e8e8;
+    --text2: #999;
+    --accent: #d4a853;
+    --accent-dim: #a8842f;
+    --radius: 10px;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    background: #fafafa;
-    color: #1a1a1a;
+    font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: radial-gradient(1200px 800px at 75% -10%, #1c1710 0%, #0d0b08 45%, #080808 100%);
+    color: var(--text);
     min-height: 100vh;
   }
 
   /* Header */
   .header {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 16px 32px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--border);
   }
-  .header .logo {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--accent);
   }
-  .header .nav { display: flex; gap: 24px; }
-  .header .nav a { color: #999; text-decoration: none; font-size: 14px; }
-  .header .nav a:hover { color: #fff; }
+  .header-right {
+    font-size: 13px;
+    color: var(--text2);
+  }
 
-  /* Main layout */
+  /* Layout */
   .main {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 0;
+    display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: calc(100vh - 64px);
+    gap: 30px;
+    padding: 30px 40px;
   }
 
-  /* Preview area - left side */
-  .preview {
-    padding: 40px;
+  /* Left: Preview */
+  .preview-panel {
+    width: 480px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+  }
+  .preview-box {
+    background: linear-gradient(160deg, #1a1712 0%, #121212 60%, #0e0d0b 100%);
+    border: 1px solid #2e2820;
+    border-radius: var(--radius);
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #f0f0f0;
-    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(212,168,83,.08);
+    transition: box-shadow .8s ease;
   }
-  .preview .watch-container {
-    width: 400px;
-    height: 520px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .preview-box.celebrate {
+    animation: celebrate 1.6s ease;
   }
-  .preview .watch-placeholder {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  @keyframes celebrate {
+    0%   { box-shadow: 0 20px 60px rgba(0,0,0,.55); }
+    35%  { box-shadow: 0 0 80px rgba(212,168,83,.35), 0 20px 60px rgba(0,0,0,.55); }
+    100% { box-shadow: 0 20px 60px rgba(0,0,0,.55); }
   }
-  .preview .watch-face {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    background: #f8f8f8;
-    border: 1px solid #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .preview-canvas {
+    width: 380px;
+    height: 480px;
     position: relative;
+    margin-bottom: 16px;
   }
-  .preview .watch-hands {
-    position: absolute;
+  .preview-canvas svg {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .preview .watch-hands .hour-hand {
-    width: 4px;
-    height: 55px;
-    background: #333;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 50%;
-    transform-origin: bottom center;
-    transform: rotate(60deg);
-  }
-  .preview .watch-hands .minute-hand {
-    width: 3px;
-    height: 75px;
-    background: #333;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 50%;
-    transform-origin: bottom center;
-    transform: rotate(180deg);
-  }
-  .preview .watch-hands .second-hand {
-    width: 1.5px;
-    height: 85px;
-    background: #d4a017;
-    border-radius: 1px;
-    position: absolute;
-    bottom: 50%;
-    transform-origin: bottom center;
-    transform: rotate(270deg);
-  }
-  .preview .center-dot {
-    width: 8px;
-    height: 8px;
-    background: #333;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 10;
-  }
-  .preview .bezel-ring {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 16px solid #e0e0e0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: inset 0 0 0 1px #ccc;
-  }
-  .preview .case-label {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .preview .case-label .name {
-    font-size: 22px;
-    font-weight: 600;
-  }
-  .preview .case-label .size {
-    font-size: 14px;
-    color: #666;
-    margin-top: 4px;
-  }
-  .preview .view-tabs {
+
+  /* View toggle */
+  .view-toggle {
     display: flex;
     gap: 8px;
-    margin-top: 16px;
+    margin-bottom: 16px;
   }
-  .preview .view-tabs button {
+  .view-btn {
     padding: 6px 16px;
-    border: 1px solid #ddd;
-    background: #fff;
     border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text2);
+    font-size: 12px;
     cursor: pointer;
-    font-size: 13px;
-    color: #666;
-    transition: all 0.2s;
+    transition: all .2s;
   }
-  .preview .view-tabs button.active {
-    background: #1a1a1a;
-    color: #fff;
-    border-color: #1a1a1a;
+  .view-btn.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
   }
-  .preview .view-tabs button:hover:not(.active) {
-    border-color: #999;
+  .view-btn:hover:not(.active) {
+    border-color: var(--accent);
+    color: var(--text);
   }
-  .preview .specs {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    max-width: 400px;
-  }
-  .preview .specs .spec-item {
-    background: #fff;
-    padding: 12px;
-    border-radius: 8px;
+
+  .preview-info {
     text-align: center;
+    width: 100%;
   }
-  .preview .specs .spec-item .label {
-    font-size: 11px;
-    color: #999;
+  .preview-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .preview-info .specs {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  /* Right: Config */
+  .config-panel {
+    flex: 1;
+    min-width: 0;
+  }
+  .section-title {
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .preview .specs .spec-item .value {
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 4px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
   }
 
-  /* Options panel - right side */
-  .options {
-    background: #fff;
-    border-left: 1px solid #e0e0e0;
-    overflow-y: auto;
-    max-height: calc(100vh - 64px);
-  }
-  .options .section {
-    border-bottom: 1px solid #f0f0f0;
-  }
-  .options .section-header {
-    padding: 16px 24px;
+  /* Step-by-step wizard */
+  .progress-bar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .progress-dot {
+    flex: 1;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--border);
+    transition: background .2s;
+  }
+  .progress-dot.done {
+    background: var(--accent-dim);
     cursor: pointer;
-    user-select: none;
   }
-  .options .section-header:hover { background: #fafafa; }
-  .options .section-header .title {
-    font-size: 14px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .progress-dot.done:hover { background: var(--accent); }
+  .progress-dot.active { background: var(--accent); }
+  .step-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
   }
-  .options .section-header .title .step {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #1a1a1a;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .options .section-header .arrow {
-    transition: transform 0.2s;
-    font-size: 12px;
-    color: #999;
-  }
-  .options .section.expanded .arrow { transform: rotate(180deg); }
-  .options .section-content {
-    display: none;
-    padding: 0 24px 20px;
-  }
-  .options .section.expanded .section-content { display: block; }
-  .options .part-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .options .part-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .options .part-item:hover { border-color: #999; background: #fafafa; }
-  .options .part-item.selected {
-    border-color: #1a1a1a;
-    background: #f5f5f5;
-    box-shadow: 0 0 0 1px #1a1a1a;
-  }
-  .options .part-item .thumb {
-    width: 48px;
-    height: 48px;
+  .step-guide {
+    font-size: 13px;
+    color: var(--text2);
+    margin-bottom: 20px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
     border-radius: 6px;
-    background: #f0f0f0;
+    line-height: 1.5;
+  }
+  .step-guide.guide-ok {
+    border-left-color: #5dbb63;
+    color: #9fd8a3;
+  }
+  .finish-hero {
+    text-align: center;
+    padding: 28px 20px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(160deg, rgba(212,168,83,.10), rgba(212,168,83,.02));
+    border: 1px solid rgba(212,168,83,.25);
+    border-radius: var(--radius);
+  }
+  .finish-hero h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .finish-hero p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+  .config-code {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 18px;
+    border: 1px dashed rgba(212,168,83,.5);
+    border-radius: 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-family: 'SF Mono', Menlo, monospace;
+  }
+  .step-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  /* Case series grid */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .case-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    cursor: pointer;
+    transition: all .2s;
+    text-align: center;
+  }
+  .case-card:hover {
+    border-color: var(--accent-dim);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.4);
+  }
+  .case-card {
+    transition: all .25s ease;
+  }
+  .case-card.selected {
+    border-color: var(--accent);
+    background: rgba(212, 168, 83, 0.08);
+  }
+  .case-card .case-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    color: #999;
+  }
+  .case-card .case-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  .case-card h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .case-card .size {
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .case-card .desc {
+    font-size: 11px;
+    color: var(--text2);
+    line-height: 1.4;
+  }
+
+  /* Parts section */
+  .parts-section {
+    display: none;
+  }
+  .parts-section.visible {
+    display: block;
+  }
+
+  .part-group {
+    display: none;
+    margin-bottom: 28px;
+  }
+  .part-group.active {
+    display: block;
+    animation: fadeUp .4s ease;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .part-item {
+    transition: all .2s;
+  }
+  .part-item:hover {
+    transform: translateY(-2px);
+  }
+  .part-swatch {
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,.45), inset 0 2px 3px rgba(255,255,255,.18);
+  }
+  .part-group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .part-group-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .part-group-header .part-en {
+    font-size: 12px;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .part-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .part-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface2);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: all .2s;
+    min-width: 160px;
+  }
+  .part-item:hover {
+    border-color: var(--accent-dim);
+  }
+  .part-item.selected {
+    border-color: var(--accent);
+    background: rgba(212, 168, 83, 0.1);
+  }
+  .part-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
     flex-shrink: 0;
   }
-  .options .part-item .info { flex: 1; }
-  .options .part-item .info .name {
+  .part-info h5 {
     font-size: 13px;
     font-weight: 500;
+    margin-bottom: 2px;
   }
-  .options .part-item .info .name-zh {
-    font-size: 12px;
-    color: #666;
-    margin-top: 1px;
-  }
-  .options .part-item .info .meta {
+  .part-info .mat {
     font-size: 11px;
-    color: #999;
-    margin-top: 2px;
+    color: var(--text2);
   }
-  .options .part-item .check {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .options .part-item.selected .check {
-    border-color: #1a1a1a;
-    background: #1a1a1a;
-    color: #fff;
-    font-size: 10px;
-  }
-  .options .part-item.selected .check::after { content: "✓"; }
-  .options .part-description {
-    padding: 10px 12px;
-    background: #f9f9f9;
-    border-radius: 6px;
-    font-size: 12px;
-    color: #666;
-    margin-top: 8px;
-    line-height: 1.5;
-    display: none;
-  }
-  .options .part-description.visible { display: block; }
 
-  /* Case series selector */
-  .options .case-series-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-  .options .case-series-item {
-    padding: 16px 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s;
-  }
-  .options .case-series-item:hover { border-color: #999; }
-  .options .case-series-item.selected {
-    border-color: #1a1a1a;
-    background: #f5f5f5;
-    box-shadow: 0 0 0 1px #1a1a1a;
-  }
-  .options .case-series-item .name {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .options .case-series-item .size {
+  .part-desc {
     font-size: 12px;
-    color: #666;
-    margin-top: 4px;
-  }
-  .options .case-series-item .desc {
-    font-size: 11px;
-    color: #999;
-    margin-top: 4px;
+    color: var(--text2);
+    line-height: 1.5;
+    padding: 8px 12px;
+    background: var(--surface);
+    border-radius: 6px;
+    margin-top: 8px;
+    border-left: 3px solid var(--accent);
   }
 
   /* Summary bar */
-  .summary {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 400px;
-    background: #1a1a1a;
-    color: #fff;
-    padding: 16px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
+  .summary-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-top: 24px;
   }
-  .summary .summary-text {
+  .summary-bar h3 {
     font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-  .summary .summary-text span { color: #999; }
-  .summary .btn {
-    padding: 10px 24px;
-    background: #fff;
-    color: #1a1a1a;
-    border: none;
-    border-radius: 6px;
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+  }
+  .summary-item:last-child { border-bottom: none; }
+  .summary-item .label { color: var(--text2); }
+  .summary-item .value { color: var(--text); }
+
+  /* CTA */
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .btn {
+    padding: 12px 28px;
+    border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    border: none;
+    transition: all .2s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+  }
+  .btn-primary:hover { background: var(--accent-dim); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--accent); }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .main { flex-direction: column; padding: 20px; }
+    .preview-panel { width: 100%; position: static; }
+    .preview-canvas { width: 300px; height: 380px; }
+    .header { padding: 16px 20px; }
   }
 
-  /* Scrollbar */
-  .options::-webkit-scrollbar { width: 4px; }
-  .options::-webkit-scrollbar-track { background: transparent; }
-  .options::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+  /* Living hands: classic 10:08 pose + ticking seconds */
+  #hourHand, #minuteHand, #secondHand {
+    transform-origin: 190px 240px;
+  }
+  #secondHand {
+    transition: transform .18s cubic-bezier(.4, 2.08, .55, .44);
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
   <div class="logo">MOD WATCH</div>
-  <div class="nav">
-    <a href="#">Configurator</a>
-    <a href="#">Gallery</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
+  <div class="header-right">Craft Your Time — 慢慢来，打造只属于你的那一枚</div>
 </div>
 
 <div class="main">
-  <!-- Preview Area -->
-  <div class="preview">
-    <div class="watch-container" id="watchPreview">
-      <div class="bezel-ring" id="bezelPreview"></div>
-      <div class="watch-placeholder">
-        <div class="watch-face" id="dialPreview">
-          <div class="watch-hands" id="handsPreview">
-            <div class="hour-hand"></div>
-            <div class="minute-hand"></div>
-            <div class="second-hand"></div>
-          </div>
-          <div class="center-dot"></div>
+  <!-- Preview Panel -->
+  <div class="preview-panel">
+    <div class="preview-box">
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="front">正视图</button>
+        <button class="view-btn" data-view="side">侧视图</button>
+        <button class="view-btn" data-view="back">背视图</button>
+      </div>
+      <div class="preview-canvas" id="previewCanvas">
+        <svg viewBox="0 0 380 480" id="previewSvg">
+          <defs>
+            <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.14)"/>
+              <stop offset="45%" stop-color="rgba(255,255,255,0.04)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+          </defs>
+          <!-- Layer: Caseback (back view only, drawn as outline) -->
+          <g id="layerCaseback" style="display:none">
+            <rect x="80" y="40" width="220" height="400" rx="20" fill="none" stroke="#444" stroke-width="2"/>
+            <text x="190" y="240" text-anchor="middle" fill="#555" font-size="14">Caseback</text>
+          </g>
+          <!-- Layer: Case -->
+          <g id="layerCase">
+            <ellipse cx="190" cy="240" rx="95" ry="120" fill="#2a2a2a" stroke="#555" stroke-width="2"/>
+            <ellipse cx="190" cy="240" rx="82" ry="106" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+            <!-- Crown guard -->
+            <rect x="272" y="210" width="28" height="22" rx="4" fill="#2a2a2a" stroke="#555" stroke-width="1.5"/>
+          </g>
+          <!-- Layer: Chapter Ring -->
+          <g id="layerChapterRing">
+            <ellipse cx="190" cy="240" rx="78" ry="100" fill="none" stroke="#333" stroke-width="6"/>
+          </g>
+          <!-- Layer: Dial -->
+          <g id="layerDial">
+            <ellipse cx="190" cy="240" rx="72" ry="94" fill="#1a1a1a"/>
+            <!-- Hour markers -->
+            <g id="hourMarkers"></g>
+            <!-- Text -->
+            <text x="190" y="200" text-anchor="middle" fill="#888" font-size="10" font-family="Arial">MOD WATCH</text>
+            <text x="190" y="290" text-anchor="middle" fill="#666" font-size="8" font-family="Arial">AUTOMATIC 200m</text>
+          </g>
+          <!-- Layer: Hands (classic 10:08 pose, seconds ticking) -->
+          <g id="layerHands">
+            <line x1="190" y1="240" x2="190" y2="160" stroke="#ccc" stroke-width="4" stroke-linecap="round" id="hourHand"/>
+            <line x1="190" y1="240" x2="190" y2="140" stroke="#ccc" stroke-width="3" stroke-linecap="round" id="minuteHand"/>
+            <line x1="190" y1="252" x2="190" y2="150" stroke="#d4a853" stroke-width="1.5" id="secondHand"/>
+            <circle cx="190" cy="240" r="5" fill="#ccc"/>
+          </g>
+          <!-- Crystal glass reflection -->
+          <ellipse cx="160" cy="180" rx="55" ry="60" fill="url(#glassGrad)" style="pointer-events:none"/>
+          <!-- Layer: Bezel -->
+          <g id="layerBezel">
+            <ellipse cx="190" cy="240" rx="95" ry="120" fill="none" stroke="#444" stroke-width="8"/>
+          </g>
+          <!-- Layer: Insert (表圈内的插入片) -->
+          <g id="layerInsert">
+            <ellipse cx="190" cy="240" rx="88" ry="112" fill="none" stroke="#555" stroke-width="4"/>
+          </g>
+          <!-- Layer: Crown -->
+          <g id="layerCrown">
+            <rect x="272" y="210" width="28" height="22" rx="4" fill="#333" stroke="#666" stroke-width="1"/>
+            <rect x="272" y="210" width="8" height="22" rx="2" fill="#555"/>
+          </g>
+          <!-- Layer: Strap -->
+          <g id="layerStrap">
+            <rect x="140" y="0" width="100" height="60" rx="4" fill="#222" stroke="#444" stroke-width="1"/>
+            <rect x="140" y="420" width="100" height="60" rx="4" fill="#222" stroke="#444" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+      <div class="preview-info">
+        <h3 id="previewName">请选择表壳</h3>
+        <div class="specs" id="previewSpecs"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Config Panel -->
+  <div class="config-panel">
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="step-title" id="stepTitle">第 1 步 · 选择表壳系列</div>
+    <div class="step-guide" id="stepGuide">先选择一个表壳系列，后续所有配件会自动匹配兼容款式</div>
+
+    <div class="case-grid" id="caseGrid"></div>
+
+    <div id="partsSection" class="parts-section">
+
+      <div class="part-group" data-part="bezel">
+        <div class="part-group-header">
+          <h3>表圈</h3>
+          <span class="part-en">Bezel</span>
         </div>
+        <div class="part-list" id="list-bezel"></div>
+        <div class="part-desc" id="desc-bezel"></div>
+      </div>
+
+      <div class="part-group" data-part="chapterRing">
+        <div class="part-group-header">
+          <h3>内影圈</h3>
+          <span class="part-en">Chapter Ring</span>
+        </div>
+        <div class="part-list" id="list-chapterRing"></div>
+        <div class="part-desc" id="desc-chapterRing"></div>
+      </div>
+
+      <div class="part-group" data-part="insert">
+        <div class="part-group-header">
+          <h3>插入</h3>
+          <span class="part-en">Insert</span>
+        </div>
+        <div class="part-list" id="list-insert"></div>
+        <div class="part-desc" id="desc-insert"></div>
+      </div>
+
+      <div class="part-group" data-part="dial">
+        <div class="part-group-header">
+          <h3>字面</h3>
+          <span class="part-en">Dial</span>
+        </div>
+        <div class="part-list" id="list-dial"></div>
+        <div class="part-desc" id="desc-dial"></div>
+      </div>
+
+      <div class="part-group" data-part="hands">
+        <div class="part-group-header">
+          <h3>表针</h3>
+          <span class="part-en">Hands</span>
+        </div>
+        <div class="part-list" id="list-hands"></div>
+        <div class="part-desc" id="desc-hands"></div>
+      </div>
+
+      <div class="part-group" data-part="crown">
+        <div class="part-group-header">
+          <h3>表冠</h3>
+          <span class="part-en">Crown</span>
+        </div>
+        <div class="part-list" id="list-crown"></div>
+        <div class="part-desc" id="desc-crown"></div>
+      </div>
+
+      <div class="part-group" data-part="caseback">
+        <div class="part-group-header">
+          <h3>后盖</h3>
+          <span class="part-en">Caseback</span>
+        </div>
+        <div class="part-list" id="list-caseback"></div>
+        <div class="part-desc" id="desc-caseback"></div>
+      </div>
+
+      <div class="part-group" data-part="strap">
+        <div class="part-group-header">
+          <h3>表带</h3>
+          <span class="part-en">Strap</span>
+        </div>
+        <div class="part-list" id="list-strap"></div>
+        <div class="part-desc" id="desc-strap"></div>
       </div>
     </div>
 
-    <div class="case-label">
-      <div class="name" id="caseName">Select a Case</div>
-      <div class="size" id="caseSize">Choose a case series to begin</div>
+    <div class="step-nav">
+      <button class="btn btn-outline" id="btnPrev" onclick="prevStep()">← 上一步</button>
+      <button class="btn btn-primary" id="btnNext" onclick="nextStep()">下一步 →</button>
     </div>
 
-    <div class="view-tabs">
-      <button class="active" data-view="front">Front</button>
-      <button data-view="side">Side</button>
-      <button data-view="back">Back</button>
-    </div>
+    <div id="finalSection" class="parts-section">
+      <div class="finish-hero">
+        <h2>大功告成，这是您亲手打造的腕表</h2>
+        <p>从表壳到表带，每一处细节都出自您的选择。<br>世界上没有第二枚和它完全相同的 MOD WATCH。</p>
+        <div class="config-code" id="configCode">MW-000000</div>
+      </div>
+      <div class="summary-bar" id="summaryBar">
+        <h3>配置清单</h3>
+        <div id="summaryList"></div>
+      </div>
 
-    <div class="specs" id="specsGrid"></div>
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="alert('功能开发中：将跳转到询盘/下单页面')">获取报价</button>
+        <button class="btn btn-outline" onclick="resetAll()">重新配置</button>
+      </div>
+    </div>
   </div>
-
-  <!-- Options Panel -->
-  <div class="options" id="optionsPanel"></div>
-</div>
-
-<!-- Summary Bar -->
-<div class="summary" id="summaryBar">
-  <div class="summary-text" id="summaryText">Select a case to begin building your watch</div>
-  <button class="btn" id="btnQuote">Get Quote</button>
 </div>
 
 <script>
 let DATA = null;
 let selectedCase = null;
 let selections = {};
-const PART_ORDER = ['case', 'bezel', 'hands', 'dial', 'chapterRing', 'crown', 'caseback', 'strap'];
-const PART_LABELS = {
-  case: 'Case',
-  bezel: 'Bezel',
-  hands: 'Hands',
-  dial: 'Dial',
-  chapterRing: 'Chapter Ring',
-  crown: 'Crown',
-  caseback: 'Caseback',
-  strap: 'Strap'
-};
 
-async function loadData() {
-  try {
-    const resp = await fetch('data.json');
-    DATA = await resp.json();
-  } catch(e) {
-    console.error('Failed to load data:', e);
-    DATA = { caseSeries: [], parts: {} };
-  }
-  renderOptions();
-}
-
-function renderOptions() {
-  const panel = document.getElementById('optionsPanel');
-  panel.innerHTML = '';
-
-  PART_ORDER.forEach((partType, index) => {
-    const section = document.createElement('div');
-    section.className = 'section' + (index === 0 ? ' expanded' : '');
-    section.dataset.part = partType;
-
-    const header = document.createElement('div');
-    header.className = 'section-header';
-    header.innerHTML = `
-      <div class="title"><span class="step">${index + 1}</span> ${PART_LABELS[partType]}</div>
-      <span class="arrow">▼</span>
-    `;
-    header.addEventListener('click', () => {
-      section.classList.toggle('expanded');
-    });
-    section.appendChild(header);
-
-    const content = document.createElement('div');
-    content.className = 'section-content';
-
-    if (partType === 'case') {
-      renderCaseSeries(content);
-    } else {
-      renderPartOptions(content, partType);
-    }
-
-    section.appendChild(content);
-    panel.appendChild(section);
+// Load data
+fetch('data.json')
+  .then(r => r.json())
+  .then(d => { DATA = d; renderCaseGrid(); })
+  .catch(() => {
+    // Fallback inline data if fetch fails (e.g. file:// protocol)
+    DATA = getInlineData();
+    renderCaseGrid();
   });
+
+function getInlineData() {
+  return { caseSeries: [], parts: {} };
 }
 
-function renderCaseSeries(container) {
-  const grid = document.createElement('div');
-  grid.className = 'case-series-grid';
-
+// Render case series grid
+function renderCaseGrid() {
+  const grid = document.getElementById('caseGrid');
+  grid.innerHTML = '';
   DATA.caseSeries.forEach(cs => {
-    const item = document.createElement('div');
-    item.className = 'case-series-item' + (selectedCase && selectedCase.id === cs.id ? ' selected' : '');
-    item.innerHTML = `
-      <div class="name">${cs.name}</div>
-      <div class="size">${cs.size}</div>
-      <div class="desc">${cs.description}</div>
+    const card = document.createElement('div');
+    card.className = 'case-card';
+    card.dataset.id = cs.id;
+    card.innerHTML = `
+      <div class="case-icon">
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
+      </div>
+      <h4>${cs.name}</h4>
+      <div class="size">${cs.size} / ${cs.lugWidth}</div>
+      <div class="desc">${cs.description.substring(0, 40)}...</div>
     `;
-    item.addEventListener('click', () => selectCase(cs));
-    grid.appendChild(item);
+    card.addEventListener('click', () => selectCase(cs.id));
+    grid.appendChild(card);
   });
-
-  container.appendChild(grid);
 }
 
-function renderPartOptions(container, partType) {
-  const list = document.createElement('div');
-  list.className = 'part-list';
+// Select case series
+function selectCase(id) {
+  selectedCase = DATA.caseSeries.find(c => c.id === id);
+  selections = {};
 
-  let parts = DATA.parts[partType] || [];
+  // Update UI
+  document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
 
-  if (selectedCase) {
-    const compatibleIds = selectedCase.compatibleParts[partType] || [];
-    parts = parts.filter(p => compatibleIds.includes(p.id));
-  }
+  // Update preview info
+  document.getElementById('previewName').textContent = selectedCase.name;
+  document.getElementById('previewSpecs').innerHTML =
+    `${selectedCase.size} | 表耳 ${selectedCase.lugWidth} | 厚度 ${selectedCase.thickness}<br>` +
+    `防水 ${selectedCase.waterResistance} | 机芯 ${selectedCase.movement}<br>` +
+    `${selectedCase.description}`;
 
-  if (parts.length === 0) {
-    list.innerHTML = `<div style="padding:12px;color:#999;font-size:13px;">Select a case first to see compatible options</div>`;
-  } else {
+  // Render parts and go to step 2
+  renderParts();
+  updatePreview();
+  goToStep(1);
+}
+
+// Part type mapping
+const partTypes = ['bezel', 'chapterRing', 'insert', 'dial', 'hands', 'crown', 'caseback', 'strap'];
+const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+
+// Render compatible parts
+function renderParts() {
+  partTypes.forEach(type => {
+    const listEl = document.getElementById('list-' + type);
+    const descEl = document.getElementById('desc-' + type);
+    const compatible = selectedCase.compatibleParts[type] || [];
+    const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id));
+
+    listEl.innerHTML = '';
     parts.forEach(part => {
       const item = document.createElement('div');
-      const isSelected = selections[partType] && selections[partType].id === part.id;
-      item.className = 'part-item' + (isSelected ? ' selected' : '');
+      item.className = 'part-item';
+      item.dataset.id = part.id;
+      item.dataset.type = type;
       item.innerHTML = `
-        <div class="thumb">IMG</div>
-        <div class="info">
-          <div class="name">${part.name}</div>
-          <div class="name-zh">${part.nameZh || ''}</div>
-          <div class="meta">${part.color || ''}${part.material ? ' · ' + part.material : ''}</div>
+        <div class="part-swatch" style="background:${part.color}"></div>
+        <div class="part-info">
+          <h5>${part.nameZh || part.name}</h5>
+          <div class="mat">${part.material}</div>
         </div>
-        <div class="check"></div>
       `;
-      item.addEventListener('click', () => selectPart(partType, part));
-      list.appendChild(item);
-
-      if (isSelected) {
-        const desc = document.createElement('div');
-        desc.className = 'part-description visible';
-        desc.textContent = part.description;
-        list.appendChild(desc);
-      }
+      item.addEventListener('click', () => selectPart(type, part));
+      listEl.appendChild(item);
     });
-  }
 
-  container.appendChild(list);
+    descEl.textContent = '选择一个款式查看描述';
+  });
 }
 
-function selectCase(caseSeries) {
-  selectedCase = caseSeries;
+// Select a part
+function selectPart(type, part) {
+  selections[type] = part;
 
-  // Clear incompatible selections
-  PART_ORDER.forEach(pt => {
-    if (pt === 'case') return;
-    const selected = selections[pt];
-    if (selected && !caseSeries.compatibleParts[pt].includes(selected.id)) {
-      delete selections[pt];
-    }
+  // Update UI
+  document.querySelectorAll(`.part-item[data-type="${type}"]`).forEach(el => {
+    el.classList.toggle('selected', el.dataset.id === part.id);
   });
 
-  updatePreview();
-  renderOptions();
-  updateSummary();
-}
+  // Update description
+  document.getElementById('desc-' + type).textContent = part.description;
 
-function selectPart(partType, part) {
-  if (selections[partType] && selections[partType].id === part.id) {
-    delete selections[partType];
-  } else {
-    selections[partType] = part;
+  // Refresh wizard guide + next button for current step
+  const step = stepOrder[currentStep];
+  if (currentStep >= 1 && currentStep < stepOrder.length && step && step.type === type) {
+    const guideEl = document.getElementById('stepGuide');
+    guideEl.textContent = '已选：' + (part.nameZh || part.name) + '。确认无误请点「下一步」';
+    guideEl.classList.add('guide-ok');
+    const btnNext = document.getElementById('btnNext');
+    btnNext.disabled = false;
+    btnNext.style.opacity = '1';
+    btnNext.style.cursor = 'pointer';
   }
-  renderOptions();
+
+  // Update preview
   updatePreview();
   updateSummary();
 }
 
+// Update SVG preview
 function updatePreview() {
-  const nameEl = document.getElementById('caseName');
-  const sizeEl = document.getElementById('caseSize');
-  const specsGrid = document.getElementById('specsGrid');
-  const bezelEl = document.getElementById('bezelPreview');
-  const dialEl = document.getElementById('dialPreview');
-  const handsEl = document.getElementById('handsPreview');
+  if (!selectedCase) return;
 
-  if (selectedCase) {
-    nameEl.textContent = selectedCase.name;
-    sizeEl.textContent = selectedCase.size + ' · ' + selectedCase.material;
+  // Case color based on series
+  const caseEl = document.getElementById('layerCase');
+  const bezelEl = document.getElementById('layerBezel');
+  const insertEl = document.getElementById('layerInsert');
+  const crEl = document.getElementById('layerChapterRing');
+  const dialEl = document.getElementById('layerDial');
+  const handsEl = document.getElementById('layerHands');
+  const crownEl = document.getElementById('layerCrown');
+  const strapEl = document.getElementById('layerStrap');
+  const cbEl = document.getElementById('layerCaseback');
 
-    const specs = [
-      { label: 'Size', value: selectedCase.size },
-      { label: 'Thickness', value: selectedCase.thickness },
-      { label: 'Lug to Lug', value: selectedCase.lugToLug },
-      { label: 'Lug Width', value: selectedCase.lugWidth },
-      { label: 'Weight', value: selectedCase.weight },
-      { label: 'Water Res.', value: selectedCase.waterResistance }
-    ];
-    specsGrid.innerHTML = specs.map(s => `
-      <div class="spec-item">
-        <div class="label">${s.label}</div>
-        <div class="value">${s.value}</div>
-      </div>
-    `).join('');
+  // Case body color
+  const caseFill = selectedCase.id === 'skx30' ? '#333' : selectedCase.id === 'skxsub' ? '#2a2a2a' : '#2a2a2a';
+  caseEl.querySelector('ellipse').setAttribute('fill', caseFill);
 
-    // Update bezel color
-    const bezel = selections['bezel'];
-    if (bezel) {
-      const bezelColors = {
-        'Silver': '#c0c0c0', 'Black': '#333', 'Blue/Red': '#2a4a8a',
-        'Blue/Black': '#1a2a4a', 'Brown/Gold': '#8a6a3a'
-      };
-      bezelEl.style.borderColor = bezelColors[bezel.color] || '#e0e0e0';
-    } else {
-      bezelEl.style.borderColor = '#e0e0e0';
-    }
+  // Bezel
+  if (selections.bezel) {
+    bezelEl.querySelector('ellipse').setAttribute('stroke', selections.bezel.color);
+  }
+  // Insert
+  if (selections.insert) {
+    insertEl.querySelector('ellipse').setAttribute('stroke', selections.insert.color);
+  }
+  // Chapter ring
+  if (selections.chapterRing) {
+    crEl.querySelector('ellipse').setAttribute('stroke', selections.chapterRing.color);
+  }
+  // Dial
+  if (selections.dial) {
+    dialEl.querySelector('ellipse').setAttribute('fill', selections.dial.color);
+  }
+  // Hands
+  if (selections.hands) {
+    handsEl.querySelector('#hourHand').setAttribute('stroke', selections.hands.color);
+    handsEl.querySelector('#minuteHand').setAttribute('stroke', selections.hands.color);
+    handsEl.querySelector('circle').setAttribute('fill', selections.hands.color);
+  }
+  // Crown
+  if (selections.crown) {
+    crownEl.querySelector('rect').setAttribute('fill', selections.crown.color);
+  }
+  // Strap
+  if (selections.strap) {
+    strapEl.querySelectorAll('rect').forEach(r => r.setAttribute('fill', selections.strap.color));
+  }
 
-    // Update dial color
-    const dial = selections['dial'];
-    if (dial) {
-      const dialColors = {
-        'Blue': '#1a3a6a', 'Black': '#1a1a1a', 'White': '#f5f5f5',
-        'Green': '#1a4a2a', 'Champagne': '#d4c59a'
-      };
-      dialEl.style.background = dialColors[dial.color] || '#f8f8f8';
-      dialEl.style.borderColor = dialColors[dial.color] ? 'transparent' : '#e0e0e0';
-    } else {
-      dialEl.style.background = '#f8f8f8';
-      dialEl.style.borderColor = '#e0e0e0';
-    }
+  // Draw hour markers on dial
+  drawHourMarkers();
+}
 
-    // Update hands color
-    const hands = selections['hands'];
-    if (hands) {
-      const handColor = hands.color === 'Black' ? '#1a1a1a' : '#333';
-      handsEl.querySelector('.hour-hand').style.background = handColor;
-      handsEl.querySelector('.minute-hand').style.background = handColor;
-    }
-  } else {
-    nameEl.textContent = 'Select a Case';
-    sizeEl.textContent = 'Choose a case series to begin';
-    specsGrid.innerHTML = '';
+function drawHourMarkers() {
+  const g = document.getElementById('hourMarkers');
+  g.innerHTML = '';
+  const cx = 190, cy = 240, r1 = 58, r2 = 66;
+  for (let i = 0; i < 12; i++) {
+    const angle = (i * 30 - 90) * Math.PI / 180;
+    const x1 = cx + r1 * Math.cos(angle);
+    const y1 = cy + r1 * Math.sin(angle);
+    const x2 = cx + r2 * Math.cos(angle);
+    const y2 = cy + r2 * Math.sin(angle);
+    const isMain = i % 3 === 0;
+    g.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${isMain ? '#ccc' : '#555'}" stroke-width="${isMain ? 3 : 1.5}"/>`;
   }
 }
 
+// Update summary
 function updateSummary() {
-  const el = document.getElementById('summaryText');
-  const parts = [];
-  if (selectedCase) parts.push(selectedCase.name);
-  PART_ORDER.forEach(pt => {
-    if (pt !== 'case' && selections[pt]) parts.push(selections[pt].name);
-  });
-
-  if (parts.length === 0) {
-    el.innerHTML = 'Select a case to begin building your watch';
-  } else {
-    el.innerHTML = 'Selected: <span>' + parts.join(' → ') + '</span>';
+  const el = document.getElementById('summaryList');
+  el.innerHTML = '';
+  if (selectedCase) {
+    el.innerHTML += `<div class="summary-item"><span class="label">表壳</span><span class="value">${selectedCase.name}</span></div>`;
   }
+  partTypes.forEach(type => {
+    if (selections[type]) {
+      el.innerHTML += `<div class="summary-item"><span class="label">${partLabels[type]}</span><span class="value">${selections[type].nameZh || selections[type].name}</span></div>`;
+    }
+  });
 }
 
-// View tabs
-document.querySelectorAll('.view-tabs button').forEach(btn => {
+// View toggle
+document.querySelectorAll('.view-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.view-tabs button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    // In a real implementation, this would switch the preview image
+    const view = btn.dataset.view;
+    // For demo: front shows all, side shows case+crown, back shows caseback
+    document.getElementById('layerBezel').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerInsert').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerDial').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerHands').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerChapterRing').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerCaseback').style.display = view === 'back' ? '' : 'none';
   });
 });
 
-// Get Quote button
-document.getElementById('btnQuote').addEventListener('click', () => {
-  if (!selectedCase) {
-    alert('Please select a case first');
+// ===== Step-by-step wizard =====
+const stepOrder = [
+  { type: 'case',        label: '表壳' },
+  { type: 'bezel',       label: '表圈' },
+  { type: 'chapterRing', label: '内影圈' },
+  { type: 'insert',      label: '插入' },
+  { type: 'dial',        label: '字面' },
+  { type: 'hands',       label: '表针' },
+  { type: 'crown',       label: '表冠' },
+  { type: 'caseback',    label: '后盖' },
+  { type: 'strap',       label: '表带' }
+];
+let currentStep = 0;
+
+// Evocative guidance copy per step
+const stepGuides = {
+  case:        '每一枚好表，都从一枚好壳开始。选择您的表壳系列',
+  bezel:       '旋转的艺术 — 挑一枚与您气质呼应的表圈',
+  chapterRing: '懂表的人先看细节 — 选择内影圈',
+  insert:      '点睛之笔 — 选择插入',
+  dial:        '这是您腕表的性格 — 选择字面',
+  hands:       '让时间的走向由您决定 — 选择表针',
+  crown:       '掌控时间的把手 — 选择表冠',
+  caseback:    '翻过身来，里面也藏惊喜 — 选择后盖',
+  strap:       '最后一步，让它贴合您的手腕 — 选择表带'
+};
+
+function renderProgressBar() {
+  const bar = document.getElementById('progressBar');
+  bar.innerHTML = '';
+  stepOrder.forEach((s, idx) => {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot' + (idx < currentStep ? ' done' : idx === currentStep ? ' active' : '');
+    dot.title = '第' + (idx + 1) + '步：' + s.label;
+    if (idx < currentStep) dot.addEventListener('click', () => goToStep(idx));
+    bar.appendChild(dot);
+  });
+  const finDot = document.createElement('div');
+  finDot.className = 'progress-dot' + (currentStep === stepOrder.length ? ' active' : '');
+  finDot.title = '完成';
+  if (currentStep === stepOrder.length) finDot.classList.add('active');
+  else if (currentStep > 0) { finDot.classList.add('done'); finDot.addEventListener('click', () => goToStep(stepOrder.length)); }
+  bar.appendChild(finDot);
+}
+
+function goToStep(i) {
+  const isFinish = i === stepOrder.length;
+  const step = stepOrder[i];
+  currentStep = i;
+
+  renderProgressBar();
+
+  // Title & guide
+  const titleEl = document.getElementById('stepTitle');
+  const guideEl = document.getElementById('stepGuide');
+  if (i === 0) {
+    titleEl.textContent = '第 1 步 · 选择表壳系列';
+    guideEl.textContent = '先选择一个表壳系列，后续所有配件会自动匹配兼容款式';
+  } else if (isFinish) {
+    titleEl.style.display = 'none';
+    guideEl.style.display = 'none';
+  } else {
+    titleEl.style.display = '';
+    guideEl.style.display = '';
+    titleEl.textContent = '第 ' + (i + 1) + ' 步 · 选择' + step.label;
+    const picked = selections[step.type];
+    guideEl.textContent = picked
+      ? '已选「' + (picked.nameZh || picked.name) + '」— 好眼光。确认后继续下一步'
+      : stepGuides[step.type] + '（必选）';
+    guideEl.classList.toggle('guide-ok', !!picked);
+  }
+
+  // Visibility
+  document.getElementById('caseGrid').style.display = i === 0 ? '' : 'none';
+  document.getElementById('partsSection').classList.toggle('visible', i >= 1 && !isFinish);
+  document.querySelectorAll('.part-group').forEach(g => {
+    g.classList.toggle('active', !isFinish && step && g.dataset.part === step.type);
+  });
+  document.getElementById('finalSection').classList.toggle('visible', isFinish);
+
+  // Nav buttons
+  const btnPrev = document.getElementById('btnPrev');
+  const btnNext = document.getElementById('btnNext');
+  btnPrev.style.visibility = i === 0 ? 'hidden' : 'visible';
+  btnPrev.textContent = isFinish ? '← 上一步（表带）' : '← 上一步';
+  btnNext.style.display = isFinish ? 'none' : '';
+  btnNext.textContent = i === stepOrder.length - 1 ? '查看配置清单 →' : '下一步 →';
+  // Disable next until current step has a selection
+  const stepReady = i === 0 ? !!selectedCase : !!(step && selections[step.type]);
+  btnNext.disabled = !stepReady;
+  btnNext.style.opacity = stepReady ? '1' : '.45';
+  btnNext.style.cursor = stepReady ? 'pointer' : 'not-allowed';
+
+  if (isFinish) {
+    updateSummary();
+    generateConfigCode();
+    const box = document.querySelector('.preview-box');
+    box.classList.remove('celebrate');
+    void box.offsetWidth; // restart animation
+    box.classList.add('celebrate');
+  }
+  document.querySelector('.config-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Unique config code from selections, e.g. MW-8K2F4D
+function generateConfigCode() {
+  let seed = selectedCase ? selectedCase.id : '';
+  partTypes.forEach(t => { if (selections[t]) seed += selections[t].id; });
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  const chars = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  let code = 'MW-';
+  for (let i = 0; i < 6; i++) { code += chars[hash % chars.length]; hash = Math.floor(hash / chars.length) + i * 7; }
+  document.getElementById('configCode').textContent = code;
+}
+
+function nextStep() {
+  if (currentStep >= stepOrder.length) return;
+  const step = stepOrder[currentStep];
+  if (currentStep === 0 && !selectedCase) {
+    alert('请先选择一个表壳系列，再进入下一步');
     return;
   }
-  const parts = ['Case: ' + selectedCase.name];
-  PART_ORDER.forEach(pt => {
-    if (pt !== 'case' && selections[pt]) parts.push(PART_LABELS[pt] + ': ' + selections[pt].name);
-  });
-  alert('Your Configuration:\n\n' + parts.join('\n'));
-});
+  if (currentStep >= 1 && !selections[step.type]) {
+    alert('「' + step.label + '」为必选项，请先选择一个款式');
+    return;
+  }
+  goToStep(currentStep + 1);
+}
+function prevStep() {
+  if (currentStep > 0) goToStep(currentStep - 1);
+}
 
-loadData();
+// Reset
+function resetAll() {
+  selectedCase = null;
+  selections = {};
+  document.querySelectorAll('.case-card').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.part-item').forEach(el => el.classList.remove('selected'));
+  document.getElementById('previewName').textContent = '请选择表壳';
+  document.getElementById('previewSpecs').innerHTML = '';
+  goToStep(0);
+}
+
+// Init wizard
+goToStep(0);
+
+// ===== Living watch: classic 10:08 pose + ticking seconds =====
+(function initHands() {
+  const hour = document.getElementById('hourHand');
+  const minute = document.getElementById('minuteHand');
+  const second = document.getElementById('secondHand');
+  if (!hour || !minute || !second) return;
+  // Classic watch pose: 10:08
+  hour.style.transform = 'rotate(304deg)';
+  minute.style.transform = 'rotate(48deg)';
+  // Seconds tick live
+  function tick() {
+    const d = new Date();
+    const sec = d.getSeconds();
+    const ms = d.getMilliseconds();
+    const delay = Math.max(0, 1000 - ms);
+    second.style.transform = 'rotate(' + (sec * 6) + 'deg)';
+    setTimeout(tick, delay);
+  }
+  tick();
+})();
 </script>
 
 </body>
