@@ -3,138 +3,151 @@
     {
       "id": "skx38",
       "name": "SKX 3.8 Case",
-      "description": "38mm case, classic SKX profile",
-      "size": "38mm",
+      "nameZh": "SKX 3.8 表壳",
+      "size": "40.0mm",
       "lugWidth": "20mm",
-      "thickness": "12.5mm",
-      "lugToLug": "44mm",
-      "weight": "65g",
-      "material": "316L Stainless Steel",
+      "lugToLug": "46.0mm",
+      "thickness": "13.1mm",
       "waterResistance": "200m",
-      "crystal": "Sapphire",
-      "images": {
-        "front": "placeholder",
-        "side": "placeholder",
-        "back": "placeholder"
+      "crystal": "Sapphire / Hardlex",
+      "movement": "NH35 / NH36",
+      "description": "经典 SKX 风格潜水表壳，3.8 点钟位置表冠，适合日常佩戴。做工扎实，兼容 NH 系列机芯，是入门级改装的热门选择。",
+      "descriptionEn": "Classic SKX-style dive case with crown at 3:38, perfect for daily wear. Solid build, compatible with NH movements — a favorite for first-time modders.",
+      "views": {
+        "front": "img/skx38-front.png",
+        "side": "img/skx38-side.png",
+        "back": "img/skx38-back.png"
       },
       "compatibleParts": {
-        "bezel": ["b-skx38-01", "b-skx38-02", "b-skx38-03", "b-skx38-04"],
-        "hands": ["h-skx-01", "h-skx-02", "h-skx-03", "h-skx-04", "h-skx-05"],
-        "dial": ["d-skx-01", "d-skx-02", "d-skx-03", "d-skx-04", "d-skx-05", "d-skx-06"],
-        "chapterRing": ["cr-skx-01", "cr-skx-02", "cr-skx-03"],
-        "crown": ["c-skx-01", "c-skx-02", "c-skx-03"],
-        "caseback": ["cb-skx-01", "cb-skx-02", "cb-skx-03"],
-        "strap": ["s-skx-01", "s-skx-02", "s-skx-03", "s-skx-04", "s-skx-05"]
+        "bezel": ["bz-skx-smooth", "bz-skx-coin", "bz-skx-sub"],
+        "insert": ["in-skx-alu-black", "in-skx-ceramic-black", "in-skx-ceramic-blue"],
+        "hands": ["hd-mercedes", "hd-sword", "hd-plongeur"],
+        "dial": ["dl-skx-black", "dl-skx-blue", "dl-skx-pepsi"],
+        "chapterRing": ["cr-skx-black", "cr-skx-blue", "cr-skx-white"],
+        "crown": ["cw-skx-std", "cw-skx-signed"],
+        "caseback": ["cb-skx-plain", "cb-skx-exhibition"],
+        "strap": ["st-jubilee", "st-oyster", "st-rubber-black", "st-nato-olive"]
       }
     },
     {
       "id": "skx30",
       "name": "SKX 3.0 Case",
-      "description": "30mm slim case, vintage inspired",
-      "size": "30mm",
-      "lugWidth": "18mm",
-      "thickness": "11mm",
-      "lugToLug": "38mm",
-      "weight": "48g",
-      "material": "316L Stainless Steel",
-      "waterResistance": "100m",
+      "nameZh": "SKX 3.0 表壳",
+      "size": "42.0mm",
+      "lugWidth": "22mm",
+      "lugToLug": "48.5mm",
+      "thickness": "13.5mm",
+      "waterResistance": "200m",
       "crystal": "Sapphire",
-      "images": {
-        "front": "placeholder",
-        "side": "placeholder",
-        "back": "placeholder"
+      "movement": "NH35 / NH36",
+      "description": "大尺寸 SKX 风格表壳，3.0 点钟位置表冠，表径更大，适合手腕较粗的用户。整体气场更足，视觉存在感更强。",
+      "descriptionEn": "Larger SKX-style case with crown at 3:00. Bigger diameter suits larger wrists, with a stronger presence on the wrist.",
+      "views": {
+        "front": "img/skx30-front.png",
+        "side": "img/skx30-side.png",
+        "back": "img/skx30-back.png"
       },
       "compatibleParts": {
-        "bezel": ["b-skx30-01", "b-skx30-02", "b-skx30-03"],
-        "hands": ["h-skx-01", "h-skx-02", "h-skx-03"],
-        "dial": ["d-skx-01", "d-skx-02", "d-skx-03"],
-        "chapterRing": ["cr-skx-01", "cr-skx-02"],
-        "crown": ["c-skx-01", "c-skx-02"],
-        "caseback": ["cb-skx-01", "cb-skx-02"],
-        "strap": ["s-skx-01", "s-skx-02", "s-skx-03"]
+        "bezel": ["bz-skx-coin", "bz-skx-sub"],
+        "insert": ["in-skx-alu-black", "in-skx-ceramic-black", "in-skx-alu-pepsi"],
+        "hands": ["hd-mercedes", "hd-plongeur"],
+        "dial": ["dl-skx-black", "dl-skx-pepsi", "dl-skx-orange"],
+        "chapterRing": ["cr-skx-black", "cr-skx-white"],
+        "crown": ["cw-skx-std", "cw-skx-signed", "cw-skx-black"],
+        "caseback": ["cb-skx-plain", "cb-skx-exhibition"],
+        "strap": ["st-oyster", "st-rubber-black", "st-nato-black"]
       }
     },
     {
       "id": "skxsub",
       "name": "SKX SUB Case",
-      "description": "40mm dive case, submariner style",
-      "size": "40mm",
+      "nameZh": "SKX 潜航者表壳",
+      "size": "41.0mm",
       "lugWidth": "20mm",
-      "thickness": "13mm",
-      "lugToLug": "47mm",
-      "weight": "72g",
-      "material": "316L Stainless Steel",
+      "lugToLug": "47.0mm",
+      "thickness": "12.5mm",
       "waterResistance": "300m",
-      "crystal": "Sapphire",
-      "images": {
-        "front": "placeholder",
-        "side": "placeholder",
-        "back": "placeholder"
+      "crystal": "Sapphire (AR coated)",
+      "movement": "NH35 / NH36",
+      "description": "潜航者风格表壳，经典 SUB 造型，防水 300 米，表壳线条更加硬朗。适合追求经典潜水表风格的用户。",
+      "descriptionEn": "SUB-style case with classic lines and 300m water resistance. Sharper contours for those who love the classic dive watch look.",
+      "views": {
+        "front": "img/skxsub-front.png",
+        "side": "img/skxsub-side.png",
+        "back": "img/skxsub-back.png"
       },
       "compatibleParts": {
-        "bezel": ["b-skxsub-01", "b-skxsub-02", "b-skxsub-03", "b-skxsub-04", "b-skxsub-05"],
-        "hands": ["h-skx-01", "h-skx-02", "h-skx-03", "h-skx-04"],
-        "dial": ["d-skx-01", "d-skx-02", "d-skx-03", "d-skx-04"],
-        "chapterRing": ["cr-skx-01", "cr-skx-02", "cr-skx-03", "cr-skx-04"],
-        "crown": ["c-skx-01", "c-skx-02", "c-skx-03", "c-skx-04"],
-        "caseback": ["cb-skx-01", "cb-skx-02", "cb-skx-03"],
-        "strap": ["s-skx-01", "s-skx-02", "s-skx-03", "s-skx-04"]
+        "bezel": ["bz-sub-ceramic", "bz-sub-alu"],
+        "insert": ["in-sub-ceramic-black", "in-sub-ceramic-green", "in-sub-alu-red"],
+        "hands": ["hd-sub-mercedes", "hd-sub-sword"],
+        "dial": ["dl-sub-black", "dl-sub-green", "dl-sub-blue"],
+        "chapterRing": ["cr-sub-black", "cr-sub-white"],
+        "crown": ["cw-sub-std", "cw-sub-triplock"],
+        "caseback": ["cb-sub-plain", "cb-sub-exhibition"],
+        "strap": ["st-oyster", "st-jubilee", "st-rubber-black", "st-nato-green"]
       }
     }
   ],
   "parts": {
+    "insert": [
+      { "id": "in-skx-alu-black", "name": "Black Aluminum Insert", "nameZh": "黑色铝插入", "series": "skx38", "color": "#1a1a1a", "material": "Aluminum", "description": "阳极氧化铝插入，黑色经典配色，刻度清晰。", "descriptionEn": "Anodized aluminum insert in classic black with crisp markers.", "image": "img/in-skx-alu-black.png" },
+      { "id": "in-skx-ceramic-black", "name": "Black Ceramic Insert", "nameZh": "黑色陶瓷插入", "series": "skx38", "color": "#0a0a0a", "material": "Ceramic", "description": "黑色陶瓷插入，硬度高永不褪色，质感更好。", "descriptionEn": "Scratch-proof black ceramic insert that never fades. Premium feel.", "image": "img/in-skx-ceramic-black.png" },
+      { "id": "in-skx-ceramic-blue", "name": "Blue Ceramic Insert", "nameZh": "蓝色陶瓷插入", "series": "skx38", "color": "#1a3a6c", "material": "Ceramic", "description": "蓝色陶瓷插入，搭配蓝色字面效果出众。", "descriptionEn": "Blue ceramic insert — stunning when paired with a blue dial.", "image": "img/in-skx-ceramic-blue.png" },
+      { "id": "in-skx-alu-pepsi", "name": "Pepsi Aluminum Insert", "nameZh": "百事铝插入", "series": "skx30", "color": "#c0392b", "material": "Aluminum", "description": "经典百事红蓝配色铝插入，复古潜水表必备。", "descriptionEn": "Classic Pepsi red-blue insert, a retro diver must-have.", "image": "img/in-skx-alu-pepsi.png" },
+      { "id": "in-sub-ceramic-black", "name": "SUB Black Ceramic Insert", "nameZh": "SUB 黑色陶瓷插入", "series": "skxsub", "color": "#0a0a0a", "material": "Ceramic", "description": "SUB 风格黑色陶瓷插入，经典低调。", "descriptionEn": "SUB-style black ceramic insert. Classic and understated.", "image": "img/in-sub-ceramic-black.png" },
+      { "id": "in-sub-ceramic-green", "name": "SUB Green Ceramic Insert", "nameZh": "SUB 绿色陶瓷插入", "series": "skxsub", "color": "#1a4a2a", "material": "Ceramic", "description": "SUB 风格绿色陶瓷插入，搭配绿色字面绝配。", "descriptionEn": "SUB-style green ceramic insert, perfect with a green dial.", "image": "img/in-sub-ceramic-green.png" },
+      { "id": "in-sub-alu-red", "name": "SUB Red Aluminum Insert", "nameZh": "SUB 红色铝插入", "series": "skxsub", "color": "#c0392b", "material": "Aluminum", "description": "SUB 风格红色铝插入，醒目亮眼。", "descriptionEn": "SUB-style red aluminum insert, bold and eye-catching.", "image": "img/in-sub-alu-red.png" }
+    ],
     "bezel": [
-      {"id": "b-skx38-01", "name": "Fine Knurl Bezel", "nameZh": "小齿纹表圈", "description": "Fine coin-edge knurling, polished finish", "series": "skx38", "color": "Silver", "material": "Stainless Steel"},
-      {"id": "b-skx38-02", "name": "Coarse Knurl Bezel", "nameZh": "大齿纹表圈", "description": "Bold coin-edge knurling, brushed finish", "series": "skx38", "color": "Silver", "material": "Stainless Steel"},
-      {"id": "b-skx38-03", "name": "Ceramic Insert Bezel", "nameZh": "陶瓷圈", "description": "Ceramic insert with engraved numerals", "series": "skx38", "color": "Black", "material": "Ceramic"},
-      {"id": "b-skx38-04", "name": "PVD Black Bezel", "nameZh": "黑色PVD圈", "description": "PVD coated black bezel", "series": "skx38", "color": "Black", "material": "Stainless Steel PVD"},
-      {"id": "b-skx30-01", "name": "Slim Bezel", "nameZh": "薄表圈", "description": "Slim profile bezel", "series": "skx30", "color": "Silver", "material": "Stainless Steel"},
-      {"id": "b-skx30-02", "name": "Coin Edge Bezel", "nameZh": "硬币边圈", "description": "Classic coin edge", "series": "skx30", "color": "Silver", "material": "Stainless Steel"},
-      {"id": "b-skx30-03", "name": "Ceramic Slim Bezel", "nameZh": "陶瓷薄圈", "description": "Slim ceramic insert", "series": "skx30", "color": "Black", "material": "Ceramic"},
-      {"id": "b-skxsub-01", "name": "Dive Bezel", "nameZh": "潜水圈", "description": "Unidirectional dive bezel", "series": "skxsub", "color": "Black", "material": "Stainless Steel"},
-      {"id": "b-skxsub-02", "name": "Ceramic Dive Bezel", "nameZh": "陶瓷潜水圈", "description": "Ceramic dive insert", "series": "skxsub", "color": "Black", "material": "Ceramic"},
-      {"id": "b-skxsub-03", "name": "Pepsi Bezel", "nameZh": "百事圈", "description": "Blue-red two-tone bezel", "series": "skxsub", "color": "Blue/Red", "material": "Aluminum"},
-      {"id": "b-skxsub-04", "name": "Batman Bezel", "nameZh": "蝙蝠侠圈", "description": "Blue-black two-tone bezel", "series": "skxsub", "color": "Blue/Black", "material": "Ceramic"},
-      {"id": "b-skxsub-05", "name": "Root Beer Bezel", "nameZh": "根汁啤酒圈", "description": "Brown-gold two-tone bezel", "series": "skxsub", "color": "Brown/Gold", "material": "Aluminum"}
+      { "id": "bz-skx-smooth", "name": "Smooth Bezel", "nameZh": "光面表圈", "series": "skx38", "color": "#2a2a2a", "material": "Steel", "description": "光面不锈钢表圈，经典简约，耐磨耐腐蚀。", "descriptionEn": "Polished stainless bezel. Minimal, classic, corrosion-resistant.", "image": "img/bz-skx-smooth.png" },
+      { "id": "bz-skx-coin", "name": "Coin Edge Bezel", "nameZh": "齿纹表圈", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "经典齿纹设计，抓握感好，旋转手感清脆。", "descriptionEn": "Classic coin-edge grip with crisp ratcheting action.", "image": "img/bz-skx-coin.png" },
+      { "id": "bz-skx-sub", "name": "SUB Style Bezel", "nameZh": "潜航者表圈", "series": "skx38", "color": "#1a4a2a", "material": "Ceramic", "description": "陶瓷潜航者表圈，绿色陶瓷配色，耐磨不易刮花。", "descriptionEn": "Green ceramic SUB bezel, scratch resistant and fade-proof.", "image": "img/bz-skx-sub.png" },
+      { "id": "bz-sub-ceramic", "name": "Ceramic SUB Bezel", "nameZh": "陶瓷潜航圈", "series": "skxsub", "color": "#1a1a1a", "material": "Ceramic", "description": "黑色陶瓷表圈，刻度清晰，永不褪色。", "descriptionEn": "Black ceramic bezel with crisp markers, never fades.", "image": "img/bz-sub-ceramic.png" },
+      { "id": "bz-sub-alu", "name": "Aluminum SUB Bezel", "nameZh": "铝制潜航圈", "series": "skxsub", "color": "#c0392b", "material": "Aluminum", "description": "阳极氧化铝表圈，复古质感，色彩饱满。", "descriptionEn": "Anodized aluminum bezel with retro feel and rich color.", "image": "img/bz-sub-alu.png" }
     ],
     "hands": [
-      {"id": "h-skx-01", "name": "Mercedes Hands", "nameZh": "奔驰针", "description": "Classic Mercedes-style hour hand", "series": "all", "color": "Silver"},
-      {"id": "h-skx-02", "name": "Sword Hands", "nameZh": "剑针", "description": "Sharp sword-style hands", "series": "all", "color": "Silver"},
-      {"id": "h-skx-03", "name": "Alpha Hands", "nameZh": "阿尔法针", "description": "Leaf-shaped alpha hands", "series": "all", "color": "Silver"},
-      {"id": "h-skx-04", "name": "Baton Hands", "nameZh": "棒形针", "description": "Slim baton hands", "series": "all", "color": "Silver"},
-      {"id": "h-skx-05", "name": "Snowflake Hands", "nameZh": "雪花针", "description": "Square-tipped snowflake hands", "series": "all", "color": "Silver"}
+      { "id": "hd-mercedes", "name": "Mercedes Hands", "nameZh": "奔驰针", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "经典奔驰造型，夜光填充，辨识度高。", "descriptionEn": "Iconic Mercedes style with lume fill, instantly recognizable.", "image": "img/hd-mercedes.png" },
+      { "id": "hd-sword", "name": "Sword Hands", "nameZh": "剑形针", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "剑形指针，线条利落，风格硬朗。", "descriptionEn": "Sword hands with clean lines and a bold look.", "image": "img/hd-sword.png" },
+      { "id": "hd-plongeur", "name": "Plongeur Hands", "nameZh": "潜水针", "series": "skx38", "color": "#e67e22", "material": "Steel + Lume", "description": "橙色潜水风格，强夜光，水下可读性极佳。", "descriptionEn": "Orange plongeur style, strong lume, excellent underwater legibility.", "image": "img/hd-plongeur.png" },
+      { "id": "hd-sub-mercedes", "name": "SUB Mercedes Hands", "nameZh": "SUB 奔驰针", "series": "skxsub", "color": "#c0c0c0", "material": "Steel", "description": "潜航者风格奔驰针，经典不过时。", "descriptionEn": "SUB-style Mercedes hands, a timeless classic.", "image": "img/hd-sub-mercedes.png" },
+      { "id": "hd-sub-sword", "name": "SUB Sword Hands", "nameZh": "SUB 剑针", "series": "skxsub", "color": "#c0c0c0", "material": "Steel", "description": "潜航者剑形针，造型更加精致。", "descriptionEn": "SUB-style sword hands with refined shaping.", "image": "img/hd-sub-sword.png" }
     ],
     "dial": [
-      {"id": "d-skx-01", "name": "Sunburst Blue Dial", "nameZh": "太阳纹蓝面", "description": "Deep blue sunburst finish", "series": "all", "color": "Blue"},
-      {"id": "d-skx-02", "name": "Sunburst Black Dial", "nameZh": "太阳纹黑面", "description": "Glossy black sunburst finish", "series": "all", "color": "Black"},
-      {"id": "d-skx-03", "name": "Matte White Dial", "nameZh": "磨砂白面", "description": "Clean matte white", "series": "all", "color": "White"},
-      {"id": "d-skx-04", "name": "Sunburst Green Dial", "nameZh": "太阳纹绿面", "description": "Deep green sunburst finish", "series": "all", "color": "Green"},
-      {"id": "d-skx-05", "name": "Matte Black Dial", "nameZh": "磨砂黑面", "description": "Stealthy matte black", "series": "all", "color": "Black"},
-      {"id": "d-skx-06", "name": "Sunburst Champagne Dial", "nameZh": "太阳纹香槟面", "description": "Warm champagne sunburst", "series": "all", "color": "Champagne"}
+      { "id": "dl-skx-black", "name": "Black SKX Dial", "nameZh": "黑色 SKX 字面", "series": "skx38", "color": "#1a1a1a", "material": "Brass", "description": "经典黑色字面，百搭不出错。", "descriptionEn": "Classic black dial, goes with everything.", "image": "img/dl-skx-black.png" },
+      { "id": "dl-skx-blue", "name": "Blue SKX Dial", "nameZh": "蓝色 SKX 字面", "series": "skx38", "color": "#1a3a5c", "material": "Brass", "description": "深海蓝字面，阳光下呈现渐变效果。", "descriptionEn": "Deep sea blue with a sunburst gradient in sunlight.", "image": "img/dl-skx-blue.png" },
+      { "id": "dl-skx-pepsi", "name": "Pepsi SKX Dial", "nameZh": "百事 SKX 字面", "series": "skx38", "color": "#2c3e50", "material": "Brass", "description": "百事配色字面，经典红蓝圈搭配首选。", "descriptionEn": "Pepsi dial, the perfect match for a red-blue bezel.", "image": "img/dl-skx-pepsi.png" },
+      { "id": "dl-skx-orange", "name": "Orange SKX Dial", "nameZh": "橙色 SKX 字面", "series": "skx30", "color": "#d35400", "material": "Brass", "description": "亮橙字面，运动感十足，年轻活力。", "descriptionEn": "Vivid orange dial, sporty and full of energy.", "image": "img/dl-skx-orange.png" },
+      { "id": "dl-sub-black", "name": "SUB Black Dial", "nameZh": "SUB 黑色字面", "series": "skxsub", "color": "#1a1a1a", "material": "Brass", "description": "经典 SUB 黑面，致敬原版设计。", "descriptionEn": "Classic SUB black, true to the original.", "image": "img/dl-sub-black.png" },
+      { "id": "dl-sub-green", "name": "SUB Green Dial", "nameZh": "SUB 绿色字面", "series": "skxsub", "color": "#1a4a2a", "material": "Brass", "description": "墨绿 SUB 字面，低调有质感。", "descriptionEn": "Deep green SUB dial, understated character.", "image": "img/dl-sub-green.png" },
+      { "id": "dl-sub-blue", "name": "SUB Blue Dial", "nameZh": "SUB 蓝色字面", "series": "skxsub", "color": "#1a3a6c", "material": "Brass", "description": "深海蓝 SUB 字面，优雅大气。", "descriptionEn": "Deep sea blue SUB dial, elegant and refined.", "image": "img/dl-sub-blue.png" }
     ],
     "chapterRing": [
-      {"id": "cr-skx-01", "name": "Black Chapter Ring", "nameZh": "黑色内影圈", "description": "Black with white markers", "series": "all", "color": "Black"},
-      {"id": "cr-skx-02", "name": "White Chapter Ring", "nameZh": "白色内影圈", "description": "White with black markers", "series": "all", "color": "White"},
-      {"id": "cr-skx-03", "name": "Blue Chapter Ring", "nameZh": "蓝色内影圈", "description": "Blue with white markers", "series": "all", "color": "Blue"},
-      {"id": "cr-skx-04", "name": "Green Chapter Ring", "nameZh": "绿色内影圈", "description": "Green with white markers", "series": "all", "color": "Green"}
+      { "id": "cr-skx-black", "name": "Black Chapter Ring", "nameZh": "黑色内影圈", "series": "skx38", "color": "#1a1a1a", "material": "Steel", "description": "黑色内影圈，与黑色字面搭配协调。", "descriptionEn": "Black chapter ring, pairs seamlessly with a black dial.", "image": "img/cr-skx-black.png" },
+      { "id": "cr-skx-blue", "name": "Blue Chapter Ring", "nameZh": "蓝色内影圈", "series": "skx38", "color": "#1a3a5c", "material": "Steel", "description": "蓝色内影圈，搭配蓝色字面更出彩。", "descriptionEn": "Blue chapter ring, shines with a blue dial.", "image": "img/cr-skx-blue.png" },
+      { "id": "cr-skx-white", "name": "White Chapter Ring", "nameZh": "白色内影圈", "series": "skx38", "color": "#f0f0f0", "material": "Steel", "description": "白色内影圈，对比度高，读数清晰。", "descriptionEn": "White chapter ring, high contrast for easy reading.", "image": "img/cr-skx-white.png" },
+      { "id": "cr-sub-black", "name": "SUB Black Ring", "nameZh": "SUB 黑色内影圈", "series": "skxsub", "color": "#1a1a1a", "material": "Steel", "description": "SUB 风格黑色内影圈，刻度精致。", "descriptionEn": "SUB-style black chapter ring with fine markers.", "image": "img/cr-sub-black.png" },
+      { "id": "cr-sub-white", "name": "SUB White Ring", "nameZh": "SUB 白色内影圈", "series": "skxsub", "color": "#f0f0f0", "material": "Steel", "description": "SUB 风格白色内影圈，经典配色。", "descriptionEn": "SUB-style white chapter ring, classic pairing.", "image": "img/cr-sub-white.png" }
     ],
     "crown": [
-      {"id": "c-skx-01", "name": "Signed Crown", "nameZh": "签名表冠", "description": "Signed screw-down crown", "series": "all", "color": "Silver"},
-      {"id": "c-skx-02", "name": "Plain Crown", "nameZh": "光面表冠", "description": "Plain screw-down crown", "series": "all", "color": "Silver"},
-      {"id": "c-skx-03", "name": "Onion Crown", "nameZh": "洋葱头表冠", "description": "Oversized onion crown", "series": "all", "color": "Silver"},
-      {"id": "c-skx-04", "name": "PVD Black Crown", "nameZh": "黑色PVD表冠", "description": "PVD black crown", "series": "all", "color": "Black"}
+      { "id": "cw-skx-std", "name": "Standard Crown", "nameZh": "标准表冠", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "标准表冠，手感顺滑，密封性好。", "descriptionEn": "Standard crown, smooth action and reliable sealing.", "image": "img/cw-skx-std.png" },
+      { "id": "cw-skx-signed", "name": "Signed Crown", "nameZh": "带标表冠", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "带品牌标志表冠，细节更精致。", "descriptionEn": "Signed crown with brand logo, finer detail.", "image": "img/cw-skx-signed.png" },
+      { "id": "cw-skx-black", "name": "Black Crown", "nameZh": "黑色表冠", "series": "skx30", "color": "#1a1a1a", "material": "Steel + PVD", "description": "PVD 黑色表冠，与深色表壳搭配。", "descriptionEn": "PVD black crown for dark-toned builds.", "image": "img/cw-skx-black.png" },
+      { "id": "cw-sub-std", "name": "SUB Standard Crown", "nameZh": "SUB 标准表冠", "series": "skxsub", "color": "#c0c0c0", "material": "Steel", "description": "潜航者标准表冠，经典造型。", "descriptionEn": "SUB-style standard crown, classic shape.", "image": "img/cw-sub-std.png" },
+      { "id": "cw-sub-triplock", "name": "SUB Triplock Crown", "nameZh": "SUB 三扣锁表冠", "series": "skxsub", "color": "#c0c0c0", "material": "Steel", "description": "三扣锁防水表冠，防水性能更强。", "descriptionEn": "Triplock crown for enhanced water resistance.", "image": "img/cw-sub-triplock.png" }
     ],
     "caseback": [
-      {"id": "cb-skx-01", "name": "Exhibition Caseback", "nameZh": "透底后盖", "description": "Sapphire exhibition back", "series": "all", "color": "Silver"},
-      {"id": "cb-skx-02", "name": "Solid Caseback", "nameZh": "实底后盖", "description": "Solid stainless steel back", "series": "all", "color": "Silver"},
-      {"id": "cb-skx-03", "name": "Engraved Caseback", "nameZh": "雕刻后盖", "description": "Custom engraved back", "series": "all", "color": "Silver"}
+      { "id": "cb-skx-plain", "name": "Plain Caseback", "nameZh": "光面后盖", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "光面后盖，简约低调，可刻字。", "descriptionEn": "Plain caseback, minimal and engraveable.", "image": "img/cb-skx-plain.png" },
+      { "id": "cb-skx-exhibition", "name": "Exhibition Caseback", "nameZh": "透底后盖", "series": "skx38", "color": "#c0c0c0", "material": "Steel + Sapphire", "description": "蓝宝石透底，可以欣赏机芯运转。", "descriptionEn": "Sapphire exhibition back — watch the movement at work.", "image": "img/cb-skx-exhibition.png" },
+      { "id": "cb-sub-plain", "name": "SUB Plain Caseback", "nameZh": "SUB 光面后盖", "series": "skxsub", "color": "#c0c0c0", "material": "Steel", "description": "SUB 风格光面后盖，经典密封设计。", "descriptionEn": "SUB-style plain caseback, classic sealed design.", "image": "img/cb-sub-plain.png" },
+      { "id": "cb-sub-exhibition", "name": "SUB Exhibition Caseback", "nameZh": "SUB 透底后盖", "series": "skxsub", "color": "#c0c0c0", "material": "Steel + Sapphire", "description": "SUB 风格透底后盖，展示机芯之美。", "descriptionEn": "SUB-style exhibition back, show off the movement.", "image": "img/cb-sub-exhibition.png" }
     ],
     "strap": [
-      {"id": "s-skx-01", "name": "Stainless Steel Bracelet", "nameZh": "钢带", "description": "Solid link bracelet", "series": "all", "color": "Silver", "material": "Stainless Steel"},
-      {"id": "s-skx-02", "name": "Rubber Strap", "nameZh": "橡胶带", "description": "Dive rubber strap", "series": "all", "color": "Black", "material": "FKM Rubber"},
-      {"id": "s-skx-03", "name": "Leather Strap", "nameZh": "皮带", "description": "Genuine leather strap", "series": "all", "color": "Brown", "material": "Leather"},
-      {"id": "s-skx-04", "name": "NATO Strap", "nameZh": "尼龙带", "description": "Military NATO strap", "series": "all", "color": "Green", "material": "Nylon"},
-      {"id": "s-skx-05", "name": "Milanese Mesh", "nameZh": "米兰带", "description": "Fine mesh bracelet", "series": "all", "color": "Silver", "material": "Stainless Steel"}
+      { "id": "st-jubilee", "name": "Jubilee Bracelet", "nameZh": "纪念型表带", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "纪念型钢带，佩戴舒适，质感高级。", "descriptionEn": "Jubilee bracelet, comfortable with a premium feel.", "image": "img/st-jubilee.png" },
+      { "id": "st-oyster", "name": "Oyster Bracelet", "nameZh": "蚝式表带", "series": "skx38", "color": "#c0c0c0", "material": "Steel", "description": "蚝式钢带，三珠设计，经典百搭。", "descriptionEn": "Oyster bracelet, three-link classic that goes with anything.", "image": "img/st-oyster.png" },
+      { "id": "st-rubber-black", "name": "Black Rubber Strap", "nameZh": "黑色橡胶带", "series": "skx38", "color": "#1a1a1a", "material": "Rubber", "description": "黑色橡胶带，轻便防水，运动首选。", "descriptionEn": "Black rubber strap, lightweight and waterproof.", "image": "img/st-rubber-black.png" },
+      { "id": "st-nato-olive", "name": "Olive NATO Strap", "nameZh": "橄榄绿 NATO 带", "series": "skx38", "color": "#4a5a2a", "material": "Nylon", "description": "橄榄绿 NATO 带，军事风格，透气舒适。", "descriptionEn": "Olive NATO strap, military vibe, breathable comfort.", "image": "img/st-nato-olive.png" },
+      { "id": "st-nato-black", "name": "Black NATO Strap", "nameZh": "黑色 NATO 带", "series": "skx30", "color": "#1a1a1a", "material": "Nylon", "description": "黑色 NATO 带，百搭耐脏，风格硬朗。", "descriptionEn": "Black NATO strap, rugged and versatile.", "image": "img/st-nato-black.png" },
+      { "id": "st-nato-green", "name": "Green NATO Strap", "nameZh": "军绿 NATO 带", "series": "skxsub", "color": "#2a4a2a", "material": "Nylon", "description": "军绿 NATO 带，搭配潜水表绝配。", "descriptionEn": "Green NATO strap, a perfect dive-watch match.", "image": "img/st-nato-green.png" }
     ]
   }
 }

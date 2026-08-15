@@ -41,6 +41,25 @@
   .header-right {
     font-size: 13px;
     color: var(--text2);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .lang-btn {
+    padding: 5px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--accent-dim);
+    background: transparent;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .lang-btn:hover {
+    background: var(--accent);
+    color: #000;
   }
 
   /* Layout */
@@ -449,7 +468,10 @@
 
 <div class="header">
   <div class="logo">MOD WATCH</div>
-  <div class="header-right">Craft Your Time — 慢慢来，打造只属于你的那一枚</div>
+  <div class="header-right">
+    <span id="tagline">Craft Your Time — 慢慢来，打造只属于你的那一枚</span>
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+  </div>
 </div>
 
 <div class="main">
@@ -621,18 +643,18 @@
 
     <div id="finalSection" class="parts-section">
       <div class="finish-hero">
-        <h2>大功告成，这是您亲手打造的腕表</h2>
-        <p>从表壳到表带，每一处细节都出自您的选择。<br>世界上没有第二枚和它完全相同的 MOD WATCH。</p>
+        <h2 id="finishTitle">大功告成，这是您亲手打造的腕表</h2>
+        <p id="finishSub">从表壳到表带，每一处细节都出自您的选择。<br>世界上没有第二枚和它完全相同的 MOD WATCH。</p>
         <div class="config-code" id="configCode">MW-000000</div>
       </div>
       <div class="summary-bar" id="summaryBar">
-        <h3>配置清单</h3>
+        <h3 id="summaryTitle">配置清单</h3>
         <div id="summaryList"></div>
       </div>
 
       <div class="cta-row">
-        <button class="btn btn-primary" onclick="alert('功能开发中：将跳转到询盘/下单页面')">获取报价</button>
-        <button class="btn btn-outline" onclick="resetAll()">重新配置</button>
+        <button class="btn btn-primary" id="btnQuote" onclick="quoteAlert()">获取报价</button>
+        <button class="btn btn-outline" id="btnReset" onclick="resetAll()">重新配置</button>
       </div>
     </div>
   </div>
@@ -642,6 +664,62 @@
 let DATA = null;
 let selectedCase = null;
 let selections = {};
+
+// ===== i18n =====
+let LANG = 'zh';
+try { LANG = localStorage.getItem('mw-lang') || 'zh'; } catch (e) {}
+
+const I18N = {
+  tagline:      { zh: 'Craft Your Time — 慢慢来，打造只属于你的那一枚', en: 'Craft Your Time — take it slow, build the one that is truly yours' },
+  previewSelect:{ zh: '请选择表壳', en: 'Select a case' },
+  viewFront:    { zh: '正视图', en: 'Front' },
+  viewSide:     { zh: '侧视图', en: 'Side' },
+  viewBack:     { zh: '背视图', en: 'Back' },
+  stepCase:     { zh: '第 1 步 · 选择表壳系列', en: 'Step 1 · Choose Your Case' },
+  guideCase:    { zh: '每一枚好表，都从一枚好壳开始。选择您的表壳系列', en: 'Every great watch begins with a great case. Pick your case series' },
+  guides: {
+    case:        { zh: '每一枚好表，都从一枚好壳开始。选择您的表壳系列', en: 'Every great watch begins with a great case. Pick your case series' },
+    bezel:       { zh: '旋转的艺术 — 挑一枚与您气质呼应的表圈', en: 'The art of the turn — choose a bezel that matches your style' },
+    chapterRing: { zh: '懂表的人先看细节 — 选择内影圈', en: 'Connoisseurs look at details first — choose your chapter ring' },
+    insert:      { zh: '点睛之笔 — 选择插入', en: 'The finishing touch — choose your insert' },
+    dial:        { zh: '这是您腕表的性格 — 选择字面', en: 'This is your watch\u2019s personality — choose the dial' },
+    hands:       { zh: '让时间的走向由您决定 — 选择表针', en: 'Let time follow your lead — choose the hands' },
+    crown:       { zh: '掌控时间的把手 — 选择表冠', en: 'Take command of time — choose the crown' },
+    caseback:    { zh: '翻过身来，里面也藏惊喜 — 选择后盖', en: 'Flip it over — surprises hide within — choose the caseback' },
+    strap:       { zh: '最后一步，让它贴合您的手腕 — 选择表带', en: 'The final step — make it hug your wrist. Choose the strap' }
+  },
+  stepOf:       { zh: '第 ', en: 'Step ' },
+  stepPick:     { zh: ' 步 · 选择', en: ' · Choose ' },
+  required:     { zh: '（必选）', en: ' (required)' },
+  pickedPre:    { zh: '已选「', en: 'Selected \u201C' },
+  pickedPost:   { zh: '」— 好眼光。确认后继续下一步', en: '\u201D — great taste. Continue when ready' },
+  next:         { zh: '下一步 →', en: 'Next →' },
+  prev:         { zh: '← 上一步', en: '← Back' },
+  nextFinish:   { zh: '查看配置清单 →', en: 'Review Build →' },
+  prevFinish:   { zh: '← 上一步（表带）', en: '← Back (Strap)' },
+  alertCase:    { zh: '请先选择一个表壳系列，再进入下一步', en: 'Please choose a case series first' },
+  alertPartPre: { zh: '「', en: '\u201C' },
+  alertPartPost:{ zh: '」为必选项，请先选择一个款式', en: '\u201D is required — please pick an option' },
+  descPh:       { zh: '选择一个款式查看描述', en: 'Select an option to see its details' },
+  summaryTitle: { zh: '配置清单', en: 'Build Summary' },
+  finishTitle:  { zh: '大功告成，这是您亲手打造的腕表', en: 'It\u2019s done — this is the watch you built' },
+  finishSub:    { zh: '从表壳到表带，每一处细节都出自您的选择。<br>世界上没有第二枚和它完全相同的 MOD WATCH。', en: 'From case to strap, every detail was chosen by you.<br>There is no other MOD WATCH quite like yours.' },
+  getQuote:     { zh: '获取报价', en: 'Get a Quote' },
+  reset:        { zh: '重新配置', en: 'Start Over' },
+  caseLabel:    { zh: '表壳', en: 'Case' },
+  lug:          { zh: '表耳', en: 'Lug' },
+  thick:        { zh: '厚度', en: 'Thick' },
+  wr:           { zh: '防水', en: 'WR' },
+  move:         { zh: '机芯', en: 'Movement' }
+};
+function t(key) { return I18N[key][LANG]; }
+function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
+function partDesc(p) { return LANG === 'zh' ? p.description : (p.descriptionEn || p.description); }
+function typeLabel(type) {
+  const zh = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+  const en = { bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
+  return LANG === 'zh' ? zh[type] : en[type];
+}
 
 // Load data
 fetch('data.json')
@@ -669,9 +747,9 @@ function renderCaseGrid() {
       <div class="case-icon">
         <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
       </div>
-      <h4>${cs.name}</h4>
+      <h4>${partName(cs)}</h4>
       <div class="size">${cs.size} / ${cs.lugWidth}</div>
-      <div class="desc">${cs.description.substring(0, 40)}...</div>
+      <div class="desc">${partDesc(cs).substring(0, 40)}...</div>
     `;
     card.addEventListener('click', () => selectCase(cs.id));
     grid.appendChild(card);
@@ -687,11 +765,11 @@ function selectCase(id) {
   document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
 
   // Update preview info
-  document.getElementById('previewName').textContent = selectedCase.name;
+  document.getElementById('previewName').textContent = partName(selectedCase);
   document.getElementById('previewSpecs').innerHTML =
-    `${selectedCase.size} | 表耳 ${selectedCase.lugWidth} | 厚度 ${selectedCase.thickness}<br>` +
-    `防水 ${selectedCase.waterResistance} | 机芯 ${selectedCase.movement}<br>` +
-    `${selectedCase.description}`;
+    `${selectedCase.size} | ${t('lug')} ${selectedCase.lugWidth} | ${t('thick')} ${selectedCase.thickness}<br>` +
+    `${t('wr')} ${selectedCase.waterResistance} | ${t('move')} ${selectedCase.movement}<br>` +
+    `${partDesc(selectedCase)}`;
 
   // Render parts and go to step 2
   renderParts();
@@ -720,7 +798,7 @@ function renderParts() {
       item.innerHTML = `
         <div class="part-swatch" style="background:${part.color}"></div>
         <div class="part-info">
-          <h5>${part.nameZh || part.name}</h5>
+          <h5>${partName(part)}</h5>
           <div class="mat">${part.material}</div>
         </div>
       `;
@@ -728,7 +806,14 @@ function renderParts() {
       listEl.appendChild(item);
     });
 
-    descEl.textContent = '选择一个款式查看描述';
+    // Restore selected state after re-render
+    if (selections[type]) {
+      const sel = listEl.querySelector(`.part-item[data-id="${selections[type].id}"]`);
+      if (sel) sel.classList.add('selected');
+      descEl.textContent = partDesc(selections[type]);
+    } else {
+      descEl.textContent = t('descPh');
+    }
   });
 }
 
@@ -742,13 +827,13 @@ function selectPart(type, part) {
   });
 
   // Update description
-  document.getElementById('desc-' + type).textContent = part.description;
+  document.getElementById('desc-' + type).textContent = partDesc(part);
 
   // Refresh wizard guide + next button for current step
   const step = stepOrder[currentStep];
   if (currentStep >= 1 && currentStep < stepOrder.length && step && step.type === type) {
     const guideEl = document.getElementById('stepGuide');
-    guideEl.textContent = '已选：' + (part.nameZh || part.name) + '。确认无误请点「下一步」';
+    guideEl.textContent = t('pickedPre') + partName(part) + t('pickedPost');
     guideEl.classList.add('guide-ok');
     const btnNext = document.getElementById('btnNext');
     btnNext.disabled = false;
@@ -835,11 +920,11 @@ function updateSummary() {
   const el = document.getElementById('summaryList');
   el.innerHTML = '';
   if (selectedCase) {
-    el.innerHTML += `<div class="summary-item"><span class="label">表壳</span><span class="value">${selectedCase.name}</span></div>`;
+    el.innerHTML += `<div class="summary-item"><span class="label">${t('caseLabel')}</span><span class="value">${partName(selectedCase)}</span></div>`;
   }
   partTypes.forEach(type => {
     if (selections[type]) {
-      el.innerHTML += `<div class="summary-item"><span class="label">${partLabels[type]}</span><span class="value">${selections[type].nameZh || selections[type].name}</span></div>`;
+      el.innerHTML += `<div class="summary-item"><span class="label">${typeLabel(type)}</span><span class="value">${partName(selections[type])}</span></div>`;
     }
   });
 }
@@ -874,32 +959,19 @@ const stepOrder = [
 ];
 let currentStep = 0;
 
-// Evocative guidance copy per step
-const stepGuides = {
-  case:        '每一枚好表，都从一枚好壳开始。选择您的表壳系列',
-  bezel:       '旋转的艺术 — 挑一枚与您气质呼应的表圈',
-  chapterRing: '懂表的人先看细节 — 选择内影圈',
-  insert:      '点睛之笔 — 选择插入',
-  dial:        '这是您腕表的性格 — 选择字面',
-  hands:       '让时间的走向由您决定 — 选择表针',
-  crown:       '掌控时间的把手 — 选择表冠',
-  caseback:    '翻过身来，里面也藏惊喜 — 选择后盖',
-  strap:       '最后一步，让它贴合您的手腕 — 选择表带'
-};
-
 function renderProgressBar() {
   const bar = document.getElementById('progressBar');
   bar.innerHTML = '';
   stepOrder.forEach((s, idx) => {
     const dot = document.createElement('div');
     dot.className = 'progress-dot' + (idx < currentStep ? ' done' : idx === currentStep ? ' active' : '');
-    dot.title = '第' + (idx + 1) + '步：' + s.label;
+    dot.title = (LANG === 'zh' ? '第' + (idx + 1) + '步：' : 'Step ' + (idx + 1) + ': ') + typeLabel(s.type);
     if (idx < currentStep) dot.addEventListener('click', () => goToStep(idx));
     bar.appendChild(dot);
   });
   const finDot = document.createElement('div');
   finDot.className = 'progress-dot' + (currentStep === stepOrder.length ? ' active' : '');
-  finDot.title = '完成';
+  finDot.title = LANG === 'zh' ? '完成' : 'Done';
   if (currentStep === stepOrder.length) finDot.classList.add('active');
   else if (currentStep > 0) { finDot.classList.add('done'); finDot.addEventListener('click', () => goToStep(stepOrder.length)); }
   bar.appendChild(finDot);
@@ -916,19 +988,19 @@ function goToStep(i) {
   const titleEl = document.getElementById('stepTitle');
   const guideEl = document.getElementById('stepGuide');
   if (i === 0) {
-    titleEl.textContent = '第 1 步 · 选择表壳系列';
-    guideEl.textContent = '先选择一个表壳系列，后续所有配件会自动匹配兼容款式';
+    titleEl.textContent = t('stepCase');
+    guideEl.textContent = t('guideCase');
   } else if (isFinish) {
     titleEl.style.display = 'none';
     guideEl.style.display = 'none';
   } else {
     titleEl.style.display = '';
     guideEl.style.display = '';
-    titleEl.textContent = '第 ' + (i + 1) + ' 步 · 选择' + step.label;
+    titleEl.textContent = t('stepOf') + (i + 1) + t('stepPick') + typeLabel(step.type);
     const picked = selections[step.type];
     guideEl.textContent = picked
-      ? '已选「' + (picked.nameZh || picked.name) + '」— 好眼光。确认后继续下一步'
-      : stepGuides[step.type] + '（必选）';
+      ? t('pickedPre') + partName(picked) + t('pickedPost')
+      : I18N.guides[step.type][LANG] + t('required');
     guideEl.classList.toggle('guide-ok', !!picked);
   }
 
@@ -944,9 +1016,9 @@ function goToStep(i) {
   const btnPrev = document.getElementById('btnPrev');
   const btnNext = document.getElementById('btnNext');
   btnPrev.style.visibility = i === 0 ? 'hidden' : 'visible';
-  btnPrev.textContent = isFinish ? '← 上一步（表带）' : '← 上一步';
+  btnPrev.textContent = isFinish ? t('prevFinish') : t('prev');
   btnNext.style.display = isFinish ? 'none' : '';
-  btnNext.textContent = i === stepOrder.length - 1 ? '查看配置清单 →' : '下一步 →';
+  btnNext.textContent = i === stepOrder.length - 1 ? t('nextFinish') : t('next');
   // Disable next until current step has a selection
   const stepReady = i === 0 ? !!selectedCase : !!(step && selections[step.type]);
   btnNext.disabled = !stepReady;
@@ -980,11 +1052,11 @@ function nextStep() {
   if (currentStep >= stepOrder.length) return;
   const step = stepOrder[currentStep];
   if (currentStep === 0 && !selectedCase) {
-    alert('请先选择一个表壳系列，再进入下一步');
+    alert(t('alertCase'));
     return;
   }
   if (currentStep >= 1 && !selections[step.type]) {
-    alert('「' + step.label + '」为必选项，请先选择一个款式');
+    alert(t('alertPartPre') + typeLabel(step.type) + t('alertPartPost'));
     return;
   }
   goToStep(currentStep + 1);
@@ -999,13 +1071,52 @@ function resetAll() {
   selections = {};
   document.querySelectorAll('.case-card').forEach(c => c.classList.remove('selected'));
   document.querySelectorAll('.part-item').forEach(el => el.classList.remove('selected'));
-  document.getElementById('previewName').textContent = '请选择表壳';
+  document.getElementById('previewName').textContent = t('previewSelect');
   document.getElementById('previewSpecs').innerHTML = '';
   goToStep(0);
 }
 
+// ===== Language toggle =====
+function applyStaticTexts() {
+  document.getElementById('tagline').textContent = t('tagline');
+  document.getElementById('langBtn').textContent = LANG === 'zh' ? 'EN' : '中文';
+  document.querySelector('.view-btn[data-view="front"]').textContent = t('viewFront');
+  document.querySelector('.view-btn[data-view="side"]').textContent = t('viewSide');
+  document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
+  document.getElementById('finishTitle').textContent = t('finishTitle');
+  document.getElementById('finishSub').innerHTML = t('finishSub');
+  document.getElementById('summaryTitle').textContent = t('summaryTitle');
+  document.getElementById('btnQuote').textContent = t('getQuote');
+  document.getElementById('btnReset').textContent = t('reset');
+  if (!selectedCase) document.getElementById('previewName').textContent = t('previewSelect');
+}
+
+function setLang(l) {
+  LANG = l;
+  try { localStorage.setItem('mw-lang', l); } catch (e) {}
+  applyStaticTexts();
+  renderCaseGrid();
+  if (selectedCase) {
+    // restore selected case highlight
+    document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === selectedCase.id));
+    renderParts();
+    updatePreview();
+    updateSummary();
+  }
+  goToStep(currentStep);
+}
+
+function toggleLang() {
+  setLang(LANG === 'zh' ? 'en' : 'zh');
+}
+
+function quoteAlert() {
+  alert(LANG === 'zh' ? '功能开发中：将跳转到询盘/下单页面' : 'Coming soon — this will open the quote / order page');
+}
+
 // Init wizard
 goToStep(0);
+applyStaticTexts();
 
 // ===== Living watch: classic 10:08 pose + ticking seconds =====
 (function initHands() {
