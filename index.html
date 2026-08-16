@@ -6,20 +6,20 @@
 <title>MOD WATCH - Custom Watch Case Configurator</title>
 <style>
   :root {
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --surface2: #1e1e1e;
-    --border: #2a2a2a;
-    --text: #e8e8e8;
-    --text2: #999;
-    --accent: #d4a853;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface2: #ffffff;
+    --border: #e0e0e0;
+    --text: #1a1a1a;
+    --text2: #888888;
+    --accent: #b8923e;
     --accent-dim: #a8842f;
     --radius: 10px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    background: radial-gradient(1200px 800px at 75% -10%, #1c1710 0%, #0d0b08 45%, #080808 100%);
+    background: #ffffff;
     color: var(--text);
     min-height: 100vh;
   }
@@ -59,7 +59,7 @@
   }
   .lang-btn:hover {
     background: var(--accent);
-    color: #000;
+    color: #fff;
   }
 
   /* Layout */
@@ -80,23 +80,23 @@
     align-self: flex-start;
   }
   .preview-box {
-    background: linear-gradient(160deg, #1a1712 0%, #121212 60%, #0e0d0b 100%);
-    border: 1px solid #2e2820;
+    background: #ffffff;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(212,168,83,.08);
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
     transition: box-shadow .8s ease;
   }
   .preview-box.celebrate {
     animation: celebrate 1.6s ease;
   }
   @keyframes celebrate {
-    0%   { box-shadow: 0 20px 60px rgba(0,0,0,.55); }
-    35%  { box-shadow: 0 0 80px rgba(212,168,83,.35), 0 20px 60px rgba(0,0,0,.55); }
-    100% { box-shadow: 0 20px 60px rgba(0,0,0,.55); }
+    0%   { box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    35%  { box-shadow: 0 0 60px rgba(184,146,62,.3), 0 2px 12px rgba(0,0,0,.06); }
+    100% { box-shadow: 0 2px 12px rgba(0,0,0,.06); }
   }
   .preview-canvas {
     width: 380px;
@@ -107,6 +107,20 @@
   .preview-canvas svg {
     width: 100%;
     height: 100%;
+  }
+  /* Real image layer stack (used when part images exist) */
+  #imgStack {
+    position: absolute;
+    inset: 0;
+    display: none;
+  }
+  #imgStack img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
   }
 
   /* View toggle */
@@ -200,15 +214,15 @@
     line-height: 1.5;
   }
   .step-guide.guide-ok {
-    border-left-color: #5dbb63;
-    color: #9fd8a3;
+    border-left-color: #4c9e52;
+    color: #3a7d40;
   }
   .finish-hero {
     text-align: center;
     padding: 28px 20px 20px;
     margin-bottom: 20px;
-    background: linear-gradient(160deg, rgba(212,168,83,.10), rgba(212,168,83,.02));
-    border: 1px solid rgba(212,168,83,.25);
+    background: #ffffff;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
   }
   .finish-hero h2 {
@@ -260,14 +274,14 @@
   .case-card:hover {
     border-color: var(--accent-dim);
     transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(0,0,0,.4);
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
   }
   .case-card {
     transition: all .25s ease;
   }
   .case-card.selected {
     border-color: var(--accent);
-    background: rgba(212, 168, 83, 0.08);
+    background: #ffffff;
   }
   .case-card .case-icon {
     width: 60px;
@@ -276,10 +290,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   .case-card .case-icon svg {
     width: 100%;
     height: 100%;
+  }
+  .case-card .case-icon img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .case-card h4 {
     font-size: 14px;
@@ -323,7 +345,7 @@
     transform: translateY(-2px);
   }
   .part-swatch {
-    box-shadow: inset 0 -3px 6px rgba(0,0,0,.45), inset 0 2px 3px rgba(255,255,255,.18);
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,.15);
   }
   .part-group-header {
     display: flex;
@@ -364,7 +386,7 @@
   }
   .part-item.selected {
     border-color: var(--accent);
-    background: rgba(212, 168, 83, 0.1);
+    background: #ffffff;
   }
   .part-swatch {
     width: 32px;
@@ -372,6 +394,15 @@
     border-radius: 50%;
     border: 2px solid var(--border);
     flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .part-swatch img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .part-info h5 {
     font-size: 13px;
@@ -484,6 +515,7 @@
         <button class="view-btn" data-view="back">背视图</button>
       </div>
       <div class="preview-canvas" id="previewCanvas">
+        <div id="imgStack"></div>
         <svg viewBox="0 0 380 480" id="previewSvg">
           <defs>
             <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
@@ -533,6 +565,10 @@
           <!-- Layer: Insert (表圈内的插入片) -->
           <g id="layerInsert">
             <ellipse cx="190" cy="240" rx="88" ry="112" fill="none" stroke="#555" stroke-width="4"/>
+          </g>
+          <!-- Layer: Crystal (表镜) -->
+          <g id="layerCrystal">
+            <ellipse cx="190" cy="240" rx="82" ry="106" fill="rgba(230,240,248,0.12)" stroke="rgba(200,220,235,0.3)" stroke-width="1"/>
           </g>
           <!-- Layer: Crown -->
           <g id="layerCrown">
@@ -588,6 +624,15 @@
         </div>
         <div class="part-list" id="list-insert"></div>
         <div class="part-desc" id="desc-insert"></div>
+      </div>
+
+      <div class="part-group" data-part="crystal">
+        <div class="part-group-header">
+          <h3>表镜</h3>
+          <span class="part-en">Crystal</span>
+        </div>
+        <div class="part-list" id="list-crystal"></div>
+        <div class="part-desc" id="desc-crystal"></div>
       </div>
 
       <div class="part-group" data-part="dial">
@@ -682,6 +727,7 @@ const I18N = {
     bezel:       { zh: '旋转的艺术 — 挑一枚与您气质呼应的表圈', en: 'The art of the turn — choose a bezel that matches your style' },
     chapterRing: { zh: '懂表的人先看细节 — 选择内影圈', en: 'Connoisseurs look at details first — choose your chapter ring' },
     insert:      { zh: '点睛之笔 — 选择插入', en: 'The finishing touch — choose your insert' },
+    crystal:     { zh: '透过这层光看见时间 — 选择表镜', en: 'See time through this layer of light — choose your crystal' },
     dial:        { zh: '这是您腕表的性格 — 选择字面', en: 'This is your watch\u2019s personality — choose the dial' },
     hands:       { zh: '让时间的走向由您决定 — 选择表针', en: 'Let time follow your lead — choose the hands' },
     crown:       { zh: '掌控时间的把手 — 选择表冠', en: 'Take command of time — choose the crown' },
@@ -716,8 +762,8 @@ function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
 function partDesc(p) { return LANG === 'zh' ? p.description : (p.descriptionEn || p.description); }
 function typeLabel(type) {
-  const zh = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
-  const en = { bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
+  const zh = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+  const en = { bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', crystal: 'Crystal', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
   return LANG === 'zh' ? zh[type] : en[type];
 }
 
@@ -743,8 +789,12 @@ function renderCaseGrid() {
     const card = document.createElement('div');
     card.className = 'case-card';
     card.dataset.id = cs.id;
+    const caseImg = (cs.views && cs.views.front)
+      ? `<img src="${cs.views.front}" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">`
+      : '';
     card.innerHTML = `
       <div class="case-icon">
+        ${caseImg}
         <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
       </div>
       <h4>${partName(cs)}</h4>
@@ -778,8 +828,8 @@ function selectCase(id) {
 }
 
 // Part type mapping
-const partTypes = ['bezel', 'chapterRing', 'insert', 'dial', 'hands', 'crown', 'caseback', 'strap'];
-const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+const partTypes = ['bezel', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'crown', 'caseback', 'strap'];
+const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
 
 // Render compatible parts
 function renderParts() {
@@ -796,7 +846,7 @@ function renderParts() {
       item.dataset.id = part.id;
       item.dataset.type = type;
       item.innerHTML = `
-        <div class="part-swatch" style="background:${part.color}"></div>
+        <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.image}" alt="" onerror="this.remove()">` : ''}</div>
         <div class="part-info">
           <h5>${partName(part)}</h5>
           <div class="mat">${part.material}</div>
@@ -873,6 +923,10 @@ function updatePreview() {
   if (selections.insert) {
     insertEl.querySelector('ellipse').setAttribute('stroke', selections.insert.color);
   }
+  // Crystal
+  if (selections.crystal) {
+    document.getElementById('layerCrystal').style.opacity = '1';
+  }
   // Chapter ring
   if (selections.chapterRing) {
     crEl.querySelector('ellipse').setAttribute('stroke', selections.chapterRing.color);
@@ -898,6 +952,57 @@ function updatePreview() {
 
   // Draw hour markers on dial
   drawHourMarkers();
+
+  // Real-image layered preview (falls back to SVG when images missing)
+  renderImgStack();
+}
+
+// ===== Real image layered preview =====
+let currentView = 'front';
+const frontLayerOrder = ['strap', 'case', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'bezel', 'crown'];
+
+function renderImgStack() {
+  const stack = document.getElementById('imgStack');
+  const svg = document.getElementById('previewSvg');
+  stack.innerHTML = '';
+  svg.style.display = '';
+  stack.style.display = 'none';
+  if (!selectedCase) return;
+
+  let urls = [];
+  if (currentView === 'front') {
+    frontLayerOrder.forEach(k => {
+      if (k === 'case') {
+        if (selectedCase.views && selectedCase.views.front) urls.push(selectedCase.views.front);
+      } else if (selections[k] && selections[k].image) {
+        urls.push(selections[k].image);
+      }
+    });
+  } else if (currentView === 'side') {
+    if (selectedCase.views && selectedCase.views.side) urls.push(selectedCase.views.side);
+  } else {
+    const cb = selections.caseback;
+    if (cb && cb.image) urls.push(cb.image);
+    else if (selectedCase.views && selectedCase.views.back) urls.push(selectedCase.views.back);
+  }
+  if (!urls.length) return;
+
+  let failed = 0;
+  urls.forEach(u => {
+    const probe = new Image();
+    probe.onload = () => {
+      const el = document.createElement('img');
+      el.src = u;
+      stack.appendChild(el);
+      stack.style.display = 'block';
+      svg.style.display = 'none';
+    };
+    probe.onerror = () => {
+      failed++;
+      if (failed === urls.length) { stack.style.display = 'none'; svg.style.display = ''; }
+    };
+    probe.src = u;
+  });
 }
 
 function drawHourMarkers() {
@@ -932,16 +1037,20 @@ function updateSummary() {
 // View toggle
 document.querySelectorAll('.view-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.view-btn.active').classList.remove('active');
     btn.classList.add('active');
     const view = btn.dataset.view;
-    // For demo: front shows all, side shows case+crown, back shows caseback
+    currentView = view;
+    // SVG fallback visibility (used when no real images)
     document.getElementById('layerBezel').style.display = view === 'back' ? 'none' : '';
     document.getElementById('layerInsert').style.display = view === 'back' ? 'none' : '';
+    document.getElementById('layerCrystal').style.display = view === 'back' ? 'none' : '';
     document.getElementById('layerDial').style.display = view === 'back' ? 'none' : '';
     document.getElementById('layerHands').style.display = view === 'back' ? 'none' : '';
     document.getElementById('layerChapterRing').style.display = view === 'back' ? 'none' : '';
     document.getElementById('layerCaseback').style.display = view === 'back' ? '' : 'none';
+    // Re-render real image stack for this view
+    renderImgStack();
   });
 });
 
@@ -951,6 +1060,7 @@ const stepOrder = [
   { type: 'bezel',       label: '表圈' },
   { type: 'chapterRing', label: '内影圈' },
   { type: 'insert',      label: '插入' },
+  { type: 'crystal',     label: '表镜' },
   { type: 'dial',        label: '字面' },
   { type: 'hands',       label: '表针' },
   { type: 'crown',       label: '表冠' },
