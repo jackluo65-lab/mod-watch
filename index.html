@@ -182,22 +182,78 @@
   /* Step-by-step wizard */
   .progress-bar {
     display: flex;
-    gap: 6px;
-    margin-bottom: 16px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    padding-top: 4px;
   }
-  .progress-dot {
+  .progress-step {
     flex: 1;
-    height: 5px;
-    border-radius: 3px;
-    background: var(--border);
-    transition: background .2s;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
-  .progress-dot.done {
-    background: var(--accent-dim);
+  /* connector line between steps */
+  .progress-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .progress-step.done:not(:last-child)::after { background: var(--accent-dim); }
+  .progress-step .step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--border);
+    z-index: 1;
+    transition: all .2s;
+  }
+  .progress-step .step-label {
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text2);
+    white-space: nowrap;
+    transition: color .2s;
+  }
+  /* Completed steps — clickable, obvious affordance */
+  .progress-step.done .step-dot {
+    background: var(--accent);
+    border-color: var(--accent);
     cursor: pointer;
   }
-  .progress-dot.done:hover { background: var(--accent); }
-  .progress-dot.active { background: var(--accent); }
+  .progress-step.done .step-label {
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .progress-step.done:hover .step-dot {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 3px rgba(0,0,0,.06);
+  }
+  .progress-step.done:hover .step-label {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  /* Current step */
+  .progress-step.active .step-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.35);
+    box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+  }
+  .progress-step.active .step-label {
+    color: var(--text);
+    font-weight: 700;
+  }
   .step-title {
     font-size: 18px;
     font-weight: 700;
@@ -496,6 +552,8 @@
     .preview-panel { width: 100%; position: static; }
     .preview-canvas { width: 300px; height: 380px; }
     .header { padding: 16px 20px; }
+    .progress-step .step-label { display: none; }
+    .progress-step { padding-top: 2px; }
   }
 
   /* Living hands: classic 10:08 pose + ticking seconds */
@@ -774,8 +832,8 @@ function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
 function partDesc(p) { return LANG === 'zh' ? p.description : (p.descriptionEn || p.description); }
 function typeLabel(type) {
-  const zh = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
-  const en = { bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', crystal: 'Crystal', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
+  const zh = { case: '表壳', bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+  const en = { case: 'Case', bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', crystal: 'Crystal', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
   return LANG === 'zh' ? zh[type] : en[type];
 }
 
@@ -839,7 +897,15 @@ function renderCaseGrid() {
 // Select case series
 function selectCase(id) {
   selectedCase = DATA.caseSeries.find(c => c.id === id);
-  selections = {};
+
+  // Keep selections that are still compatible with the new case,
+  // so customers can go back to fix the case without re-picking everything.
+  const keep = {};
+  partTypes.forEach(type => {
+    const sel = selections[type];
+    if (sel && (selectedCase.compatibleParts[type] || []).includes(sel.id)) keep[type] = sel;
+  });
+  selections = keep;
 
   // Update UI
   document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
@@ -1088,35 +1154,40 @@ document.querySelectorAll('.view-btn').forEach(btn => {
 
 // ===== Step-by-step wizard =====
 const stepOrder = [
-  { type: 'case',        label: '表壳' },
-  { type: 'bezel',       label: '表圈' },
-  { type: 'chapterRing', label: '内影圈' },
-  { type: 'insert',      label: '插入' },
-  { type: 'crystal',     label: '表镜' },
-  { type: 'dial',        label: '字面' },
-  { type: 'hands',       label: '表针' },
-  { type: 'crown',       label: '表冠' },
-  { type: 'caseback',    label: '后盖' },
-  { type: 'strap',       label: '表带' }
+  { type: 'case',        label: '表壳', labelEn: 'Case' },
+  { type: 'bezel',       label: '表圈', labelEn: 'Bezel' },
+  { type: 'chapterRing', label: '内影圈', labelEn: 'Ring' },
+  { type: 'insert',      label: '插入', labelEn: 'Insert' },
+  { type: 'crystal',     label: '表镜', labelEn: 'Crystal' },
+  { type: 'dial',        label: '字面', labelEn: 'Dial' },
+  { type: 'hands',       label: '表针', labelEn: 'Hands' },
+  { type: 'crown',       label: '表冠', labelEn: 'Crown' },
+  { type: 'caseback',    label: '后盖', labelEn: 'Back' },
+  { type: 'strap',       label: '表带', labelEn: 'Strap' }
 ];
 let currentStep = 0;
 
 function renderProgressBar() {
   const bar = document.getElementById('progressBar');
   bar.innerHTML = '';
-  stepOrder.forEach((s, idx) => {
-    const dot = document.createElement('div');
-    dot.className = 'progress-dot' + (idx < currentStep ? ' done' : idx === currentStep ? ' active' : '');
-    dot.title = (LANG === 'zh' ? '第' + (idx + 1) + '步：' : 'Step ' + (idx + 1) + ': ') + typeLabel(s.type);
-    if (idx < currentStep) dot.addEventListener('click', () => goToStep(idx));
-    bar.appendChild(dot);
+  const allSteps = stepOrder.concat([{ type: 'finish', label: LANG === 'zh' ? '完成' : 'Done' }]);
+  allSteps.forEach((s, idx) => {
+    const isFinish = idx === stepOrder.length;
+    const isActive = isFinish ? currentStep === stepOrder.length : idx === currentStep;
+    const isDone = isFinish ? (!isActive && currentStep > 0) : idx < currentStep;
+    const stepEl = document.createElement('div');
+    stepEl.className = 'progress-step' + (isDone ? ' done' : '') + (isActive ? ' active' : '');
+    const label = isFinish
+      ? (LANG === 'zh' ? '完成' : 'Done')
+      : (LANG === 'zh' ? s.label : (s.labelEn || s.label));
+    stepEl.innerHTML = `<div class="step-dot"></div><div class="step-label">${label}</div>`;
+    // Completed steps can be clicked to jump back — customers can fix any earlier choice
+    if (isDone) {
+      stepEl.title = (LANG === 'zh' ? '点击返回：' : 'Back to: ') + label;
+      stepEl.addEventListener('click', () => goToStep(isFinish ? stepOrder.length : idx));
+    }
+    bar.appendChild(stepEl);
   });
-  const finDot = document.createElement('div');
-  finDot.className = 'progress-dot' + (currentStep === stepOrder.length ? ' active' : '');
-  finDot.title = LANG === 'zh' ? '完成' : 'Done';
-  if (currentStep === stepOrder.length) finDot.classList.add('active');
-  else if (currentStep > 0) { finDot.classList.add('done'); finDot.addEventListener('click', () => goToStep(stepOrder.length)); }
-  bar.appendChild(finDot);
 }
 
 function goToStep(i) {
@@ -1201,7 +1272,11 @@ function nextStep() {
     alert(t('alertPartPre') + typeLabel(step.type) + t('alertPartPost'));
     return;
   }
-  goToStep(currentStep + 1);
+  // Jump to the next step that still needs a choice,
+  // so returning to fix an earlier step doesn't mean re-walking everything.
+  let i = currentStep + 1;
+  while (i < stepOrder.length && i >= 1 && selections[stepOrder[i].type]) i++;
+  goToStep(i);
 }
 function prevStep() {
   if (currentStep > 0) goToStep(currentStep - 1);
