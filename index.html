@@ -317,6 +317,18 @@
     color: var(--text2);
     line-height: 1.4;
   }
+  .case-category {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
 
   /* Parts section */
   .parts-section {
@@ -781,28 +793,46 @@ function getInlineData() {
   return { caseSeries: [], parts: {} };
 }
 
-// Render case series grid
+// Render case series grid (grouped by category)
 function renderCaseGrid() {
   const grid = document.getElementById('caseGrid');
   grid.innerHTML = '';
+
+  // Group cases by category
+  const groups = {};
   DATA.caseSeries.forEach(cs => {
-    const card = document.createElement('div');
-    card.className = 'case-card';
-    card.dataset.id = cs.id;
-    const caseImg = (cs.views && cs.views.front)
-      ? `<img src="${cs.views.front}" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">`
-      : '';
-    card.innerHTML = `
-      <div class="case-icon">
-        ${caseImg}
-        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
-      </div>
-      <h4>${partName(cs)}</h4>
-      <div class="size">${cs.size} / ${cs.lugWidth}</div>
-      <div class="desc">${partDesc(cs).substring(0, 40)}...</div>
-    `;
-    card.addEventListener('click', () => selectCase(cs.id));
-    grid.appendChild(card);
+    const cat = cs.category || (LANG === 'zh' ? '表壳' : 'Cases');
+    if (!groups[cat]) groups[cat] = [];
+    groups[cat].push(cs);
+  });
+
+  Object.keys(groups).forEach(category => {
+    // Category header
+    const header = document.createElement('div');
+    header.className = 'case-category';
+    header.textContent = category;
+    grid.appendChild(header);
+
+    // Case cards in this category
+    groups[category].forEach(cs => {
+      const card = document.createElement('div');
+      card.className = 'case-card';
+      card.dataset.id = cs.id;
+      const caseImg = (cs.views && cs.views.front)
+        ? `<img src="${cs.views.front}" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">`
+        : '';
+      card.innerHTML = `
+        <div class="case-icon">
+          ${caseImg}
+          <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
+        </div>
+        <h4>${partName(cs)}</h4>
+        <div class="size">${cs.size} / ${cs.lugWidth}</div>
+        <div class="desc">${partDesc(cs).substring(0, 40)}...</div>
+      `;
+      card.addEventListener('click', () => selectCase(cs.id));
+      grid.appendChild(card);
+    });
   });
 }
 
@@ -911,8 +941,10 @@ function updatePreview() {
   const strapEl = document.getElementById('layerStrap');
   const cbEl = document.getElementById('layerCaseback');
 
-  // Case body color
-  const caseFill = selectedCase.id === 'skx30' ? '#333' : selectedCase.id === 'skxsub' ? '#2a2a2a' : '#2a2a2a';
+  // Case body color (SVG fallback)
+  let caseFill = '#2a2a2a';
+  if (selectedCase.id === 'skx30') caseFill = '#333';
+  else if (selectedCase.id.startsWith('classic-')) caseFill = '#d4d4d4';
   caseEl.querySelector('ellipse').setAttribute('fill', caseFill);
 
   // Bezel
