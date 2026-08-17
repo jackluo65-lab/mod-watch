@@ -211,8 +211,11 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin"
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -270,8 +273,11 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin"
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -329,8 +335,11 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin"
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -388,8 +397,11 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin"
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -447,8 +459,11 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin"
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -702,6 +717,61 @@
         "description": "阳极氧化铝表圈，复古质感，色彩饱满。",
         "descriptionEn": "Anodized aluminum bezel with retro feel and rich color.",
         "image": "img/bezel/bz-sub-alu.png"
+      },
+      {
+        "id": "bz-jd-1",
+        "name": "Bezel B-JD-1",
+        "nameZh": "表圈 B-JD-1",
+        "series": "classic",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "经典系列表圈 B-JD-1，银色齿纹设计，与经典表壳完美搭配。",
+        "descriptionEn": "Classic series bezel B-JD-1, silver coin-edge design, perfect match for Classic Case.",
+        "image": "img/bezel/B-JD-1.png"
+      },
+      {
+        "id": "bz-jd-3",
+        "name": "Bezel B-JD-3",
+        "nameZh": "表圈 B-JD-3",
+        "series": "classic",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "经典系列表圈 B-JD-3，专为经典表壳设计。",
+        "descriptionEn": "Classic series bezel B-JD-3, designed for Classic Case.",
+        "image": "img/bezel/B-JD-3.png"
+      },
+      {
+        "id": "bz-jd-4",
+        "name": "Bezel B-JD-4",
+        "nameZh": "表圈 B-JD-4",
+        "series": "classic",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "经典系列表圈 B-JD-4，专为经典表壳设计。",
+        "descriptionEn": "Classic series bezel B-JD-4, designed for Classic Case.",
+        "image": "img/bezel/B-JD-4.png"
+      },
+      {
+        "id": "bz-jd-6",
+        "name": "Bezel B-JD-6",
+        "nameZh": "表圈 B-JD-6",
+        "series": "classic",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "经典系列表圈 B-JD-6，专为经典表壳设计。",
+        "descriptionEn": "Classic series bezel B-JD-6, designed for Classic Case.",
+        "image": "img/bezel/B-JD-6.png"
+      },
+      {
+        "id": "bz-jd-7",
+        "name": "Bezel B-JD-7",
+        "nameZh": "表圈 B-JD-7",
+        "series": "classic",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "经典系列表圈 B-JD-7，专为经典表壳设计。",
+        "descriptionEn": "Classic series bezel B-JD-7, designed for Classic Case.",
+        "image": "img/bezel/B-JD-7.png"
       }
     ],
     "hands": [
