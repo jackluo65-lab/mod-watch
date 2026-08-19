@@ -581,7 +581,12 @@
           "bz-jd-3",
           "bz-jd-4",
           "bz-jd-6",
-          "bz-jd-7"
+          "bz-jd-7",
+          "bz-tx-1",
+          "bz-tx-3",
+          "bz-tx-4",
+          "bz-tx-6",
+          "bz-tx-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -650,7 +655,12 @@
           "bz-jd-3",
           "bz-jd-4",
           "bz-jd-6",
-          "bz-jd-7"
+          "bz-jd-7",
+          "bz-tx-1",
+          "bz-tx-3",
+          "bz-tx-4",
+          "bz-tx-6",
+          "bz-tx-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -719,7 +729,12 @@
           "bz-jd-3",
           "bz-jd-4",
           "bz-jd-6",
-          "bz-jd-7"
+          "bz-jd-7",
+          "bz-tx-1",
+          "bz-tx-3",
+          "bz-tx-4",
+          "bz-tx-6",
+          "bz-tx-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -788,7 +803,12 @@
           "bz-jd-3",
           "bz-jd-4",
           "bz-jd-6",
-          "bz-jd-7"
+          "bz-jd-7",
+          "bz-tx-1",
+          "bz-tx-3",
+          "bz-tx-4",
+          "bz-tx-6",
+          "bz-tx-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -857,7 +877,12 @@
           "bz-jd-3",
           "bz-jd-4",
           "bz-jd-6",
-          "bz-jd-7"
+          "bz-jd-7",
+          "bz-tx-1",
+          "bz-tx-3",
+          "bz-tx-4",
+          "bz-tx-6",
+          "bz-tx-7"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -1173,6 +1198,61 @@
         "description": "经典系列表圈 B-JD-7，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-7, designed for Classic Case.",
         "image": "img/bezel/B-JD-7.png"
+      },
+      {
+        "id": "bz-tx-1",
+        "name": "Bezel B-TX-1",
+        "nameZh": "表圈 B-TX-1",
+        "series": "explorer",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "探险家系列表圈 B-TX-1，专为 Explorer 表壳设计。",
+        "descriptionEn": "Explorer series bezel B-TX-1, designed exclusively for Explorer Case.",
+        "image": "img/bezel/B-TX-1.png"
+      },
+      {
+        "id": "bz-tx-3",
+        "name": "Bezel B-TX-3",
+        "nameZh": "表圈 B-TX-3",
+        "series": "explorer",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "探险家系列表圈 B-TX-3，专为 Explorer 表壳设计。",
+        "descriptionEn": "Explorer series bezel B-TX-3, designed exclusively for Explorer Case.",
+        "image": "img/bezel/B-TX-3.png"
+      },
+      {
+        "id": "bz-tx-4",
+        "name": "Bezel B-TX-4",
+        "nameZh": "表圈 B-TX-4",
+        "series": "explorer",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "探险家系列表圈 B-TX-4，专为 Explorer 表壳设计。",
+        "descriptionEn": "Explorer series bezel B-TX-4, designed exclusively for Explorer Case.",
+        "image": "img/bezel/B-TX-4.png"
+      },
+      {
+        "id": "bz-tx-6",
+        "name": "Bezel B-TX-6",
+        "nameZh": "表圈 B-TX-6",
+        "series": "explorer",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "探险家系列表圈 B-TX-6，专为 Explorer 表壳设计。",
+        "descriptionEn": "Explorer series bezel B-TX-6, designed exclusively for Explorer Case.",
+        "image": "img/bezel/B-TX-6.png"
+      },
+      {
+        "id": "bz-tx-7",
+        "name": "Bezel B-TX-7",
+        "nameZh": "表圈 B-TX-7",
+        "series": "explorer",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "探险家系列表圈 B-TX-7，专为 Explorer 表壳设计。",
+        "descriptionEn": "Explorer series bezel B-TX-7, designed exclusively for Explorer Case.",
+        "image": "img/bezel/B-TX-7.png"
       }
     ],
     "hands": [
