@@ -55,7 +55,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -119,7 +126,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-oyster",
@@ -181,7 +195,14 @@
         ],
         "caseback": [
           "cb-sub-plain",
-          "cb-sub-exhibition"
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-oyster",
@@ -244,7 +265,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -306,7 +334,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -368,7 +403,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -430,7 +472,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -492,7 +541,14 @@
         ],
         "caseback": [
           "cb-skx-plain",
-          "cb-skx-exhibition"
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
         ],
         "strap": [
           "st-jubilee",
@@ -1068,6 +1124,83 @@
         "description": "SUB 风格透底后盖，展示机芯之美。",
         "descriptionEn": "SUB-style exhibition back, show off the movement.",
         "image": "img/caseback/cb-sub-exhibition.png"
+      },
+      {
+        "id": "cb-b-1",
+        "name": "CB-B-1 Brushed Silver Caseback",
+        "nameZh": "CB-B-1 银拉丝后盖",
+        "series": "universal",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "通用后盖，银色拉丝工艺，适配全部表壳系列。",
+        "descriptionEn": "Universal brushed silver caseback, fits all case series.",
+        "image": "img/caseback/CB-B-1.png"
+      },
+      {
+        "id": "cb-c-2",
+        "name": "CB-C-2 Black Caseback",
+        "nameZh": "CB-C-2 黑色后盖",
+        "series": "universal",
+        "color": "#1a1a1a",
+        "material": "Steel",
+        "description": "通用后盖，黑色表面，适配全部表壳系列。",
+        "descriptionEn": "Universal black caseback, fits all case series.",
+        "image": "img/caseback/CB-C-2.png"
+      },
+      {
+        "id": "cb-d-1",
+        "name": "CB-D-1 Silver Caseback",
+        "nameZh": "CB-D-1 银色后盖",
+        "series": "universal",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "通用后盖，银色表面，适配全部表壳系列。",
+        "descriptionEn": "Universal silver caseback, fits all case series.",
+        "image": "img/caseback/CB-D-1.png"
+      },
+      {
+        "id": "cb-d-3",
+        "name": "CB-D-3 Gold Caseback",
+        "nameZh": "CB-D-3 金色后盖",
+        "series": "universal",
+        "color": "#d4af37",
+        "material": "Steel",
+        "description": "通用后盖，金色表面，适配全部表壳系列。",
+        "descriptionEn": "Universal gold caseback, fits all case series.",
+        "image": "img/caseback/CB-D-3.png"
+      },
+      {
+        "id": "cb-d-4",
+        "name": "CB-D-4 Rose Gold Caseback",
+        "nameZh": "CB-D-4 玫瑰金后盖",
+        "series": "universal",
+        "color": "#b76e79",
+        "material": "Steel",
+        "description": "通用后盖，玫瑰金表面，适配全部表壳系列。",
+        "descriptionEn": "Universal rose gold caseback, fits all case series.",
+        "image": "img/caseback/CB-D-4.png"
+      },
+      {
+        "id": "cb-g-1",
+        "name": "CB-G-1 Sand Silver Caseback",
+        "nameZh": "CB-G-1 砂银后盖",
+        "series": "universal",
+        "color": "#b8b8b8",
+        "material": "Steel",
+        "description": "通用后盖，砂银（喷砂）工艺，适配全部表壳系列。",
+        "descriptionEn": "Universal sandblasted silver caseback, fits all case series.",
+        "image": "img/caseback/CB-G-1.png"
+      },
+      {
+        "id": "cb-g-2",
+        "name": "CB-G-2 Matte Black Caseback",
+        "nameZh": "CB-G-2 黑磨砂后盖",
+        "series": "universal",
+        "color": "#2a2a2a",
+        "material": "Steel",
+        "description": "通用后盖，黑色磨砂工艺，适配全部表壳系列。",
+        "descriptionEn": "Universal matte black caseback, fits all case series.",
+        "image": "img/caseback/CB-G-2.png"
       }
     ],
     "strap": [
