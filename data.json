@@ -557,6 +557,351 @@
           "st-nato-olive"
         ]
       }
+    },
+    {
+      "id": "explorer-jtf1",
+      "name": "Explorer Case EXPLORER-C-JTF-1",
+      "nameZh": "探险家表壳 EXPLORER-C-JTF-1",
+      "category": "Explorer",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "探险家表壳系列 EXPLORER-C-JTF-1，经典探险风格，适合日常与户外佩戴。",
+      "descriptionEn": "Explorer Case series EXPLORER-C-JTF-1, classic explorer style for daily and outdoor wear.",
+      "views": {
+        "front": "img/cases/explorer/EXPLORER-C-JTF-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "explorer-jtf3",
+      "name": "Explorer Case EXPLORER-C-JTF-3",
+      "nameZh": "探险家表壳 EXPLORER-C-JTF-3",
+      "category": "Explorer",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "探险家表壳系列 EXPLORER-C-JTF-3，经典探险风格，适合日常与户外佩戴。",
+      "descriptionEn": "Explorer Case series EXPLORER-C-JTF-3, classic explorer style for daily and outdoor wear.",
+      "views": {
+        "front": "img/cases/explorer/EXPLORER-C-JTF-3.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "explorer-jtf4",
+      "name": "Explorer Case EXPLORER-C-JTF-4",
+      "nameZh": "探险家表壳 EXPLORER-C-JTF-4",
+      "category": "Explorer",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "探险家表壳系列 EXPLORER-C-JTF-4，经典探险风格，适合日常与户外佩戴。",
+      "descriptionEn": "Explorer Case series EXPLORER-C-JTF-4, classic explorer style for daily and outdoor wear.",
+      "views": {
+        "front": "img/cases/explorer/EXPLORER-C-JTF-4.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "explorer-jtf5",
+      "name": "Explorer Case EXPLORER-C-JTF-5",
+      "nameZh": "探险家表壳 EXPLORER-C-JTF-5",
+      "category": "Explorer",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "探险家表壳系列 EXPLORER-C-JTF-5，经典探险风格，适合日常与户外佩戴。",
+      "descriptionEn": "Explorer Case series EXPLORER-C-JTF-5, classic explorer style for daily and outdoor wear.",
+      "views": {
+        "front": "img/cases/explorer/EXPLORER-C-JTF-5.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "explorer-jtf6",
+      "name": "Explorer Case EXPLORER-C-JTF-6",
+      "nameZh": "探险家表壳 EXPLORER-C-JTF-6",
+      "category": "Explorer",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "探险家表壳系列 EXPLORER-C-JTF-6，经典探险风格，适合日常与户外佩戴。",
+      "descriptionEn": "Explorer Case series EXPLORER-C-JTF-6, classic explorer style for daily and outdoor wear.",
+      "views": {
+        "front": "img/cases/explorer/EXPLORER-C-JTF-6.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-jd-1",
+          "bz-jd-3",
+          "bz-jd-4",
+          "bz-jd-6",
+          "bz-jd-7"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
     }
   ],
   "parts": {
