@@ -917,6 +917,7 @@ const I18N = {
   alertPartPre: { zh: '「', en: '\u201C' },
   alertPartPost:{ zh: '」为必选项，请先选择一个款式', en: '\u201D is required — please pick an option' },
   descPh:       { zh: '选择一个款式查看描述', en: 'Select an option to see its details' },
+  noOptions:    { zh: '该分类下暂无可用选项，已自动跳过', en: 'No options available for this case — skipped automatically' },
   summaryTitle: { zh: '配置清单', en: 'Build Summary' },
   finishTitle:  { zh: '大功告成，这是您亲手打造的腕表', en: 'It\u2019s done — this is the watch you built' },
   finishSub:    { zh: '从表壳到表带，每一处细节都出自您的选择。<br>世界上没有第二枚和它完全相同的 MOD WATCH。', en: 'From case to strap, every detail was chosen by you.<br>There is no other MOD WATCH quite like yours.' },
@@ -1113,6 +1114,7 @@ function selectCase(id) {
 // Part type mapping
 const partTypes = ['bezel', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'crown', 'caseback', 'strap'];
 const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
+const availablePartsCount = {};
 
 // 零件分类匹配：universal/无分类零件不受限，其余必须与当前表壳同分类
 function categoryMatches(part, caseObj) {
@@ -1128,6 +1130,7 @@ function renderParts() {
     const descEl = document.getElementById('desc-' + type);
     const compatible = selectedCase.compatibleParts[type] || [];
     const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id) && categoryMatches(p, selectedCase));
+    availablePartsCount[type] = parts.length;
 
     listEl.innerHTML = '';
     parts.forEach(part => {
@@ -1407,9 +1410,13 @@ function goToStep(i) {
     guideEl.style.display = '';
     titleEl.textContent = t('stepOf') + (i + 1) + t('stepPick') + typeLabel(step.type);
     const picked = selections[step.type];
-    guideEl.textContent = picked
-      ? t('pickedPre') + partName(picked) + t('pickedPost')
-      : I18N.guides[step.type][LANG] + t('required');
+    if (picked) {
+      guideEl.textContent = t('pickedPre') + partName(picked) + t('pickedPost');
+    } else if (availablePartsCount[step.type] === 0) {
+      guideEl.textContent = t('noOptions');
+    } else {
+      guideEl.textContent = I18N.guides[step.type][LANG] + t('required');
+    }
     guideEl.classList.toggle('guide-ok', !!picked);
   }
 
@@ -1428,8 +1435,10 @@ function goToStep(i) {
   btnPrev.textContent = isFinish ? t('prevFinish') : t('prev');
   btnNext.style.display = isFinish ? 'none' : '';
   btnNext.textContent = i === stepOrder.length - 1 ? t('nextFinish') : t('next');
-  // Disable next until current step has a selection
-  const stepReady = i === 0 ? !!selectedCase : !!(step && selections[step.type]);
+  // Disable next until current step has a selection (or no options are available)
+  const stepReady = i === 0
+    ? !!selectedCase
+    : !!(step && (selections[step.type] || availablePartsCount[step.type] === 0));
   btnNext.disabled = !stepReady;
   btnNext.style.opacity = stepReady ? '1' : '.45';
   btnNext.style.cursor = stepReady ? 'pointer' : 'not-allowed';
@@ -1464,14 +1473,15 @@ function nextStep() {
     alert(t('alertCase'));
     return;
   }
-  if (currentStep >= 1 && !selections[step.type]) {
+  if (currentStep >= 1 && !selections[step.type] && availablePartsCount[step.type] > 0) {
     alert(t('alertPartPre') + typeLabel(step.type) + t('alertPartPost'));
     return;
   }
-  // Jump to the next step that still needs a choice,
+  // Jump to the next step that still needs a choice (or has no options),
   // so returning to fix an earlier step doesn't mean re-walking everything.
   let i = currentStep + 1;
-  while (i < stepOrder.length && i >= 1 && selections[stepOrder[i].type]) i++;
+  while (i < stepOrder.length && i >= 1 &&
+         (selections[stepOrder[i].type] || availablePartsCount[stepOrder[i].type] === 0)) i++;
   goToStep(i);
 }
 function prevStep() {

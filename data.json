@@ -902,6 +902,182 @@
           "st-nato-olive"
         ]
       }
+    },
+    {
+      "id": "pilot-jtf1",
+      "name": "Pilot Case P-JTF-1",
+      "nameZh": "飞行员表壳 P-JTF-1",
+      "category": "Pilot Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Pilot Case 系列占位型号，图片与详细参数待补充。",
+      "descriptionEn": "Pilot Case series placeholder. Images and specs coming soon.",
+      "views": {},
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf1",
+      "name": "Vintage Case V-JTF-1",
+      "nameZh": "复古表壳 V-JTF-1",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列占位型号，图片与详细参数待补充。",
+      "descriptionEn": "Vintage Case series placeholder. Images and specs coming soon.",
+      "views": {},
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
     }
   ],
   "parts": {
