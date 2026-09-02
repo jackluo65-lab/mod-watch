@@ -851,6 +851,12 @@ function getInlineData() {
   return { caseSeries: [], parts: {} };
 }
 
+// Display label for case category (e.g. "Explorer" -> "Explorer Case")
+function caseCategoryLabel(cat) {
+  if (cat === 'Explorer') return 'Explorer Case';
+  return cat;
+}
+
 // Render case series grid (grouped by category)
 function renderCaseGrid() {
   const grid = document.getElementById('caseGrid');
@@ -868,7 +874,7 @@ function renderCaseGrid() {
     // Category header
     const header = document.createElement('div');
     header.className = 'case-category';
-    header.textContent = category;
+    header.textContent = caseCategoryLabel(category);
     grid.appendChild(header);
 
     // Case cards in this category
