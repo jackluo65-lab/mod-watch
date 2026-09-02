@@ -1395,9 +1395,467 @@
       "waterResistance": "100m",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "Vintage Case 系列占位型号，图片与详细参数待补充。",
-      "descriptionEn": "Vintage Case series placeholder. Images and specs coming soon.",
-      "views": {},
+      "description": "Vintage Case 系列 V-JTF-1，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-1, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-1.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-1_1.png"
+      },
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf2",
+      "name": "Vintage Case V-JTF-2",
+      "nameZh": "复古表壳 V-JTF-2",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列 V-JTF-2，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-2, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-2.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-2_1.png"
+      },
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf3",
+      "name": "Vintage Case V-JTF-3",
+      "nameZh": "复古表壳 V-JTF-3",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列 V-JTF-3，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-3, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-3.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-3_1.png"
+      },
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf4",
+      "name": "Vintage Case V-JTF-4",
+      "nameZh": "复古表壳 V-JTF-4",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列 V-JTF-4，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-4, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-4.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-4_1.png"
+      },
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf6",
+      "name": "Vintage Case V-JTF-6",
+      "nameZh": "复古表壳 V-JTF-6",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列 V-JTF-6，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-6, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-6.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-6_1.png"
+      },
+      "compatibleParts": {
+        "bezel": [],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue",
+          "in-skx-alu-pepsi",
+          "in-sub-ceramic-black",
+          "in-sub-ceramic-green",
+          "in-sub-alu-red"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed",
+          "cr-skx-sapphire-ar",
+          "cr-sub-sapphire-ar",
+          "cr-sub-domed",
+          "cr-sub-flat"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white",
+          "cr-sub-black",
+          "cr-sub-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed",
+          "cw-skx-black",
+          "cw-sub-std",
+          "cw-sub-triplock"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "vintage-jtf7",
+      "name": "Vintage Case V-JTF-7",
+      "nameZh": "复古表壳 V-JTF-7",
+      "category": "Vintage Case",
+      "size": "39.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12.0mm",
+      "waterResistance": "100m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "Vintage Case 系列 V-JTF-7，复古风格表壳。",
+      "descriptionEn": "Vintage Case series V-JTF-7, classic vintage-styled watch case.",
+      "views": {
+        "front": "img/cases/vintage/Vintage-C-JTF-7.png",
+        "side": "img/cases/vintage/Vintage-C-JTF-7_1.png"
+      },
       "compatibleParts": {
         "bezel": [],
         "insert": [
