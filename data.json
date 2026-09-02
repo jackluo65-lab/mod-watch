@@ -921,7 +921,13 @@
         "front": "img/cases/pilot/Pilot-C-JTF-1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fx-1",
+          "bz-fx-3",
+          "bz-fx-4",
+          "bz-fx-6",
+          "bz-fx-7"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1011,7 +1017,13 @@
         "front": "img/cases/pilot/Pilot-C-JTF-3.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fx-1",
+          "bz-fx-3",
+          "bz-fx-4",
+          "bz-fx-6",
+          "bz-fx-7"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1101,7 +1113,13 @@
         "front": "img/cases/pilot/Pilot-C-JTF-4.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fx-1",
+          "bz-fx-3",
+          "bz-fx-4",
+          "bz-fx-6",
+          "bz-fx-7"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1191,7 +1209,13 @@
         "front": "img/cases/pilot/Pilot-C-JTF-6.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fx-1",
+          "bz-fx-3",
+          "bz-fx-4",
+          "bz-fx-6",
+          "bz-fx-7"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1281,7 +1305,13 @@
         "front": "img/cases/pilot/Pilot-C-JTF-7.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fx-1",
+          "bz-fx-3",
+          "bz-fx-4",
+          "bz-fx-6",
+          "bz-fx-7"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1795,6 +1825,66 @@
         "descriptionEn": "Explorer series bezel B-TX-7, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-7.png",
         "category": "Explorer"
+      },
+      {
+        "id": "bz-fx-1",
+        "name": "Bezel B-FX-1",
+        "nameZh": "表圈 B-FX-1",
+        "series": "pilot",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "飞行员系列表圈 B-FX-1，银色精钢简约表圈，专为 Pilot Case 设计。",
+        "descriptionEn": "Pilot series bezel B-FX-1, silver stainless-steel clean bezel, designed for Pilot Case.",
+        "image": "img/bezel/B-FX-1.png",
+        "category": "Pilot Case"
+      },
+      {
+        "id": "bz-fx-3",
+        "name": "Bezel B-FX-3",
+        "nameZh": "表圈 B-FX-3",
+        "series": "pilot",
+        "color": "#d4af37",
+        "material": "Steel",
+        "description": "飞行员系列表圈 B-FX-3，金色精钢表圈，为 Pilot Case 增添复古质感。",
+        "descriptionEn": "Pilot series bezel B-FX-3, gold stainless-steel bezel, adding vintage flair to Pilot Case.",
+        "image": "img/bezel/B-FX-3.png",
+        "category": "Pilot Case"
+      },
+      {
+        "id": "bz-fx-4",
+        "name": "Bezel B-FX-4",
+        "nameZh": "表圈 B-FX-4",
+        "series": "pilot",
+        "color": "#c9a38d",
+        "material": "Steel",
+        "description": "飞行员系列表圈 B-FX-4，玫瑰金精钢表圈，优雅搭配 Pilot Case。",
+        "descriptionEn": "Pilot series bezel B-FX-4, rose gold stainless-steel bezel, elegantly matching Pilot Case.",
+        "image": "img/bezel/B-FX-4.png",
+        "category": "Pilot Case"
+      },
+      {
+        "id": "bz-fx-6",
+        "name": "Bezel B-FX-6",
+        "nameZh": "表圈 B-FX-6",
+        "series": "pilot",
+        "color": "#e0e0e0",
+        "material": "Steel",
+        "description": "飞行员系列表圈 B-FX-6，高亮抛光银色表圈，凸显 Pilot Case 的现代线条。",
+        "descriptionEn": "Pilot series bezel B-FX-6, high-polish silver bezel highlighting the modern lines of Pilot Case.",
+        "image": "img/bezel/B-FX-6.png",
+        "category": "Pilot Case"
+      },
+      {
+        "id": "bz-fx-7",
+        "name": "Bezel B-FX-7",
+        "nameZh": "表圈 B-FX-7",
+        "series": "pilot",
+        "color": "#1a1a1a",
+        "material": "Steel",
+        "description": "飞行员系列表圈 B-FX-7，黑色 PVD 表圈，为 Pilot Case 注入运动气息。",
+        "descriptionEn": "Pilot series bezel B-FX-7, black PVD bezel, bringing a sporty feel to Pilot Case.",
+        "image": "img/bezel/B-FX-7.png",
+        "category": "Pilot Case"
       }
     ],
     "hands": [
