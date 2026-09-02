@@ -577,11 +577,6 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-jd-1",
-          "bz-jd-3",
-          "bz-jd-4",
-          "bz-jd-6",
-          "bz-jd-7",
           "bz-tx-1",
           "bz-tx-3",
           "bz-tx-4",
@@ -651,11 +646,6 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-jd-1",
-          "bz-jd-3",
-          "bz-jd-4",
-          "bz-jd-6",
-          "bz-jd-7",
           "bz-tx-1",
           "bz-tx-3",
           "bz-tx-4",
@@ -725,11 +715,6 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-jd-1",
-          "bz-jd-3",
-          "bz-jd-4",
-          "bz-jd-6",
-          "bz-jd-7",
           "bz-tx-1",
           "bz-tx-3",
           "bz-tx-4",
@@ -799,11 +784,6 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-jd-1",
-          "bz-jd-3",
-          "bz-jd-4",
-          "bz-jd-6",
-          "bz-jd-7",
           "bz-tx-1",
           "bz-tx-3",
           "bz-tx-4",
@@ -873,11 +853,6 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-jd-1",
-          "bz-jd-3",
-          "bz-jd-4",
-          "bz-jd-6",
-          "bz-jd-7",
           "bz-tx-1",
           "bz-tx-3",
           "bz-tx-4",
@@ -940,7 +915,8 @@
         "material": "Aluminum",
         "description": "阳极氧化铝插入，黑色经典配色，刻度清晰。",
         "descriptionEn": "Anodized aluminum insert in classic black with crisp markers.",
-        "image": "img/insert/in-skx-alu-black.png"
+        "image": "img/insert/in-skx-alu-black.png",
+        "category": "universal"
       },
       {
         "id": "in-skx-ceramic-black",
@@ -951,7 +927,8 @@
         "material": "Ceramic",
         "description": "黑色陶瓷插入，硬度高永不褪色，质感更好。",
         "descriptionEn": "Scratch-proof black ceramic insert that never fades. Premium feel.",
-        "image": "img/insert/in-skx-ceramic-black.png"
+        "image": "img/insert/in-skx-ceramic-black.png",
+        "category": "universal"
       },
       {
         "id": "in-skx-ceramic-blue",
@@ -962,7 +939,8 @@
         "material": "Ceramic",
         "description": "蓝色陶瓷插入，搭配蓝色字面效果出众。",
         "descriptionEn": "Blue ceramic insert — stunning when paired with a blue dial.",
-        "image": "img/insert/in-skx-ceramic-blue.png"
+        "image": "img/insert/in-skx-ceramic-blue.png",
+        "category": "universal"
       },
       {
         "id": "in-skx-alu-pepsi",
@@ -973,7 +951,8 @@
         "material": "Aluminum",
         "description": "经典百事红蓝配色铝插入，复古潜水表必备。",
         "descriptionEn": "Classic Pepsi red-blue insert, a retro diver must-have.",
-        "image": "img/insert/in-skx-alu-pepsi.png"
+        "image": "img/insert/in-skx-alu-pepsi.png",
+        "category": "universal"
       },
       {
         "id": "in-sub-ceramic-black",
@@ -984,7 +963,8 @@
         "material": "Ceramic",
         "description": "SUB 风格黑色陶瓷插入，经典低调。",
         "descriptionEn": "SUB-style black ceramic insert. Classic and understated.",
-        "image": "img/insert/in-sub-ceramic-black.png"
+        "image": "img/insert/in-sub-ceramic-black.png",
+        "category": "universal"
       },
       {
         "id": "in-sub-ceramic-green",
@@ -995,7 +975,8 @@
         "material": "Ceramic",
         "description": "SUB 风格绿色陶瓷插入，搭配绿色字面绝配。",
         "descriptionEn": "SUB-style green ceramic insert, perfect with a green dial.",
-        "image": "img/insert/in-sub-ceramic-green.png"
+        "image": "img/insert/in-sub-ceramic-green.png",
+        "category": "universal"
       },
       {
         "id": "in-sub-alu-red",
@@ -1006,7 +987,8 @@
         "material": "Aluminum",
         "description": "SUB 风格红色铝插入，醒目亮眼。",
         "descriptionEn": "SUB-style red aluminum insert, bold and eye-catching.",
-        "image": "img/insert/in-sub-alu-red.png"
+        "image": "img/insert/in-sub-alu-red.png",
+        "category": "universal"
       }
     ],
     "crystal": [
@@ -1019,7 +1001,8 @@
         "material": "Sapphire",
         "description": "穹顶蓝宝石表镜，弧面优雅，抗刮耐磨。",
         "descriptionEn": "Domed sapphire crystal, elegant curve, scratch-resistant.",
-        "image": "img/crystal/cr-skx-domed.png"
+        "image": "img/crystal/cr-skx-domed.png",
+        "category": "universal"
       },
       {
         "id": "cr-skx-flat",
@@ -1030,7 +1013,8 @@
         "material": "Sapphire",
         "description": "平面蓝宝石表镜，清晰通透，现代感强。",
         "descriptionEn": "Flat sapphire crystal, crystal clear, modern look.",
-        "image": "img/crystal/cr-skx-flat.png"
+        "image": "img/crystal/cr-skx-flat.png",
+        "category": "universal"
       },
       {
         "id": "cr-skx-double-domed",
@@ -1041,7 +1025,8 @@
         "material": "Sapphire",
         "description": "双面弧形蓝宝石表镜，内外均有弧度，复古质感。",
         "descriptionEn": "Double-domed sapphire, vintage feel with curves on both sides.",
-        "image": "img/crystal/cr-skx-double-domed.png"
+        "image": "img/crystal/cr-skx-double-domed.png",
+        "category": "universal"
       },
       {
         "id": "cr-skx-sapphire-ar",
@@ -1052,7 +1037,8 @@
         "material": "Sapphire + AR",
         "description": "防眩涂层蓝宝石表镜，强光下依然清晰可读。",
         "descriptionEn": "AR-coated sapphire, readable even under harsh glare.",
-        "image": "img/crystal/cr-skx-sapphire-ar.png"
+        "image": "img/crystal/cr-skx-sapphire-ar.png",
+        "category": "universal"
       },
       {
         "id": "cr-sub-sapphire-ar",
@@ -1063,7 +1049,8 @@
         "material": "Sapphire + AR",
         "description": "SUB 风格防眩蓝宝石表镜，透光率极高。",
         "descriptionEn": "SUB-style AR sapphire, maximum light transmission.",
-        "image": "img/crystal/cr-sub-sapphire-ar.png"
+        "image": "img/crystal/cr-sub-sapphire-ar.png",
+        "category": "universal"
       },
       {
         "id": "cr-sub-domed",
@@ -1074,7 +1061,8 @@
         "material": "Sapphire",
         "description": "SUB 风格穹顶蓝宝石表镜，经典弧面。",
         "descriptionEn": "SUB-style domed sapphire, classic curve.",
-        "image": "img/crystal/cr-sub-domed.png"
+        "image": "img/crystal/cr-sub-domed.png",
+        "category": "universal"
       },
       {
         "id": "cr-sub-flat",
@@ -1085,7 +1073,8 @@
         "material": "Sapphire",
         "description": "SUB 风格平面蓝宝石表镜，简约现代。",
         "descriptionEn": "SUB-style flat sapphire, clean and modern.",
-        "image": "img/crystal/cr-sub-flat.png"
+        "image": "img/crystal/cr-sub-flat.png",
+        "category": "universal"
       }
     ],
     "bezel": [
@@ -1098,7 +1087,8 @@
         "material": "Steel",
         "description": "光面不锈钢表圈，经典简约，耐磨耐腐蚀。",
         "descriptionEn": "Polished stainless bezel. Minimal, classic, corrosion-resistant.",
-        "image": "img/bezel/bz-skx-smooth.png"
+        "image": "img/bezel/bz-skx-smooth.png",
+        "category": "SKX"
       },
       {
         "id": "bz-skx-coin",
@@ -1109,7 +1099,8 @@
         "material": "Steel",
         "description": "经典齿纹设计，抓握感好，旋转手感清脆。",
         "descriptionEn": "Classic coin-edge grip with crisp ratcheting action.",
-        "image": "img/bezel/bz-skx-coin.png"
+        "image": "img/bezel/bz-skx-coin.png",
+        "category": "SKX"
       },
       {
         "id": "bz-skx-sub",
@@ -1120,7 +1111,8 @@
         "material": "Ceramic",
         "description": "陶瓷潜航者表圈，绿色陶瓷配色，耐磨不易刮花。",
         "descriptionEn": "Green ceramic SUB bezel, scratch resistant and fade-proof.",
-        "image": "img/bezel/bz-skx-sub.png"
+        "image": "img/bezel/bz-skx-sub.png",
+        "category": "SKX"
       },
       {
         "id": "bz-sub-ceramic",
@@ -1131,7 +1123,8 @@
         "material": "Ceramic",
         "description": "黑色陶瓷表圈，刻度清晰，永不褪色。",
         "descriptionEn": "Black ceramic bezel with crisp markers, never fades.",
-        "image": "img/bezel/bz-sub-ceramic.png"
+        "image": "img/bezel/bz-sub-ceramic.png",
+        "category": "SKX"
       },
       {
         "id": "bz-sub-alu",
@@ -1142,7 +1135,8 @@
         "material": "Aluminum",
         "description": "阳极氧化铝表圈，复古质感，色彩饱满。",
         "descriptionEn": "Anodized aluminum bezel with retro feel and rich color.",
-        "image": "img/bezel/bz-sub-alu.png"
+        "image": "img/bezel/bz-sub-alu.png",
+        "category": "SKX"
       },
       {
         "id": "bz-jd-1",
@@ -1153,7 +1147,8 @@
         "material": "Steel",
         "description": "经典系列表圈 B-JD-1，银色齿纹设计，与经典表壳完美搭配。",
         "descriptionEn": "Classic series bezel B-JD-1, silver coin-edge design, perfect match for Classic Case.",
-        "image": "img/bezel/B-JD-1.png"
+        "image": "img/bezel/B-JD-1.png",
+        "category": "Classic Case"
       },
       {
         "id": "bz-jd-3",
@@ -1164,7 +1159,8 @@
         "material": "Steel",
         "description": "经典系列表圈 B-JD-3，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-3, designed for Classic Case.",
-        "image": "img/bezel/B-JD-3.png"
+        "image": "img/bezel/B-JD-3.png",
+        "category": "Classic Case"
       },
       {
         "id": "bz-jd-4",
@@ -1175,7 +1171,8 @@
         "material": "Steel",
         "description": "经典系列表圈 B-JD-4，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-4, designed for Classic Case.",
-        "image": "img/bezel/B-JD-4.png"
+        "image": "img/bezel/B-JD-4.png",
+        "category": "Classic Case"
       },
       {
         "id": "bz-jd-6",
@@ -1186,7 +1183,8 @@
         "material": "Steel",
         "description": "经典系列表圈 B-JD-6，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-6, designed for Classic Case.",
-        "image": "img/bezel/B-JD-6.png"
+        "image": "img/bezel/B-JD-6.png",
+        "category": "Classic Case"
       },
       {
         "id": "bz-jd-7",
@@ -1197,7 +1195,8 @@
         "material": "Steel",
         "description": "经典系列表圈 B-JD-7，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-7, designed for Classic Case.",
-        "image": "img/bezel/B-JD-7.png"
+        "image": "img/bezel/B-JD-7.png",
+        "category": "Classic Case"
       },
       {
         "id": "bz-tx-1",
@@ -1208,7 +1207,8 @@
         "material": "Steel",
         "description": "探险家系列表圈 B-TX-1，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-1, designed exclusively for Explorer Case.",
-        "image": "img/bezel/B-TX-1.png"
+        "image": "img/bezel/B-TX-1.png",
+        "category": "Explorer"
       },
       {
         "id": "bz-tx-3",
@@ -1219,7 +1219,8 @@
         "material": "Steel",
         "description": "探险家系列表圈 B-TX-3，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-3, designed exclusively for Explorer Case.",
-        "image": "img/bezel/B-TX-3.png"
+        "image": "img/bezel/B-TX-3.png",
+        "category": "Explorer"
       },
       {
         "id": "bz-tx-4",
@@ -1230,7 +1231,8 @@
         "material": "Steel",
         "description": "探险家系列表圈 B-TX-4，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-4, designed exclusively for Explorer Case.",
-        "image": "img/bezel/B-TX-4.png"
+        "image": "img/bezel/B-TX-4.png",
+        "category": "Explorer"
       },
       {
         "id": "bz-tx-6",
@@ -1241,7 +1243,8 @@
         "material": "Steel",
         "description": "探险家系列表圈 B-TX-6，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-6, designed exclusively for Explorer Case.",
-        "image": "img/bezel/B-TX-6.png"
+        "image": "img/bezel/B-TX-6.png",
+        "category": "Explorer"
       },
       {
         "id": "bz-tx-7",
@@ -1252,7 +1255,8 @@
         "material": "Steel",
         "description": "探险家系列表圈 B-TX-7，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-7, designed exclusively for Explorer Case.",
-        "image": "img/bezel/B-TX-7.png"
+        "image": "img/bezel/B-TX-7.png",
+        "category": "Explorer"
       }
     ],
     "hands": [
@@ -1265,7 +1269,8 @@
         "material": "Steel",
         "description": "经典奔驰造型，夜光填充，辨识度高。",
         "descriptionEn": "Iconic Mercedes style with lume fill, instantly recognizable.",
-        "image": "img/hands/hd-mercedes.png"
+        "image": "img/hands/hd-mercedes.png",
+        "category": "universal"
       },
       {
         "id": "hd-sword",
@@ -1276,7 +1281,8 @@
         "material": "Steel",
         "description": "剑形指针，线条利落，风格硬朗。",
         "descriptionEn": "Sword hands with clean lines and a bold look.",
-        "image": "img/hands/hd-sword.png"
+        "image": "img/hands/hd-sword.png",
+        "category": "universal"
       },
       {
         "id": "hd-plongeur",
@@ -1287,7 +1293,8 @@
         "material": "Steel + Lume",
         "description": "橙色潜水风格，强夜光，水下可读性极佳。",
         "descriptionEn": "Orange plongeur style, strong lume, excellent underwater legibility.",
-        "image": "img/hands/hd-plongeur.png"
+        "image": "img/hands/hd-plongeur.png",
+        "category": "universal"
       },
       {
         "id": "hd-sub-mercedes",
@@ -1298,7 +1305,8 @@
         "material": "Steel",
         "description": "潜航者风格奔驰针，经典不过时。",
         "descriptionEn": "SUB-style Mercedes hands, a timeless classic.",
-        "image": "img/hands/hd-sub-mercedes.png"
+        "image": "img/hands/hd-sub-mercedes.png",
+        "category": "universal"
       },
       {
         "id": "hd-sub-sword",
@@ -1309,7 +1317,8 @@
         "material": "Steel",
         "description": "潜航者剑形针，造型更加精致。",
         "descriptionEn": "SUB-style sword hands with refined shaping.",
-        "image": "img/hands/hd-sub-sword.png"
+        "image": "img/hands/hd-sub-sword.png",
+        "category": "universal"
       }
     ],
     "dial": [
@@ -1322,7 +1331,8 @@
         "material": "Brass",
         "description": "经典黑色字面，百搭不出错。",
         "descriptionEn": "Classic black dial, goes with everything.",
-        "image": "img/dial/dl-skx-black.png"
+        "image": "img/dial/dl-skx-black.png",
+        "category": "universal"
       },
       {
         "id": "dl-skx-blue",
@@ -1333,7 +1343,8 @@
         "material": "Brass",
         "description": "深海蓝字面，阳光下呈现渐变效果。",
         "descriptionEn": "Deep sea blue with a sunburst gradient in sunlight.",
-        "image": "img/dial/dl-skx-blue.png"
+        "image": "img/dial/dl-skx-blue.png",
+        "category": "universal"
       },
       {
         "id": "dl-skx-pepsi",
@@ -1344,7 +1355,8 @@
         "material": "Brass",
         "description": "百事配色字面，经典红蓝圈搭配首选。",
         "descriptionEn": "Pepsi dial, the perfect match for a red-blue bezel.",
-        "image": "img/dial/dl-skx-pepsi.png"
+        "image": "img/dial/dl-skx-pepsi.png",
+        "category": "universal"
       },
       {
         "id": "dl-skx-orange",
@@ -1355,7 +1367,8 @@
         "material": "Brass",
         "description": "亮橙字面，运动感十足，年轻活力。",
         "descriptionEn": "Vivid orange dial, sporty and full of energy.",
-        "image": "img/dial/dl-skx-orange.png"
+        "image": "img/dial/dl-skx-orange.png",
+        "category": "universal"
       },
       {
         "id": "dl-sub-black",
@@ -1366,7 +1379,8 @@
         "material": "Brass",
         "description": "经典 SUB 黑面，致敬原版设计。",
         "descriptionEn": "Classic SUB black, true to the original.",
-        "image": "img/dial/dl-sub-black.png"
+        "image": "img/dial/dl-sub-black.png",
+        "category": "universal"
       },
       {
         "id": "dl-sub-green",
@@ -1377,7 +1391,8 @@
         "material": "Brass",
         "description": "墨绿 SUB 字面，低调有质感。",
         "descriptionEn": "Deep green SUB dial, understated character.",
-        "image": "img/dial/dl-sub-green.png"
+        "image": "img/dial/dl-sub-green.png",
+        "category": "universal"
       },
       {
         "id": "dl-sub-blue",
@@ -1388,7 +1403,8 @@
         "material": "Brass",
         "description": "深海蓝 SUB 字面，优雅大气。",
         "descriptionEn": "Deep sea blue SUB dial, elegant and refined.",
-        "image": "img/dial/dl-sub-blue.png"
+        "image": "img/dial/dl-sub-blue.png",
+        "category": "universal"
       }
     ],
     "chapterRing": [
@@ -1401,7 +1417,8 @@
         "material": "Steel",
         "description": "黑色内影圈，与黑色字面搭配协调。",
         "descriptionEn": "Black chapter ring, pairs seamlessly with a black dial.",
-        "image": "img/chapterRing/cr-skx-black.png"
+        "image": "img/chapterRing/cr-skx-black.png",
+        "category": "universal"
       },
       {
         "id": "cr-skx-blue",
@@ -1412,7 +1429,8 @@
         "material": "Steel",
         "description": "蓝色内影圈，搭配蓝色字面更出彩。",
         "descriptionEn": "Blue chapter ring, shines with a blue dial.",
-        "image": "img/chapterRing/cr-skx-blue.png"
+        "image": "img/chapterRing/cr-skx-blue.png",
+        "category": "universal"
       },
       {
         "id": "cr-skx-white",
@@ -1423,7 +1441,8 @@
         "material": "Steel",
         "description": "白色内影圈，对比度高，读数清晰。",
         "descriptionEn": "White chapter ring, high contrast for easy reading.",
-        "image": "img/chapterRing/cr-skx-white.png"
+        "image": "img/chapterRing/cr-skx-white.png",
+        "category": "universal"
       },
       {
         "id": "cr-sub-black",
@@ -1434,7 +1453,8 @@
         "material": "Steel",
         "description": "SUB 风格黑色内影圈，刻度精致。",
         "descriptionEn": "SUB-style black chapter ring with fine markers.",
-        "image": "img/chapterRing/cr-sub-black.png"
+        "image": "img/chapterRing/cr-sub-black.png",
+        "category": "universal"
       },
       {
         "id": "cr-sub-white",
@@ -1445,7 +1465,8 @@
         "material": "Steel",
         "description": "SUB 风格白色内影圈，经典配色。",
         "descriptionEn": "SUB-style white chapter ring, classic pairing.",
-        "image": "img/chapterRing/cr-sub-white.png"
+        "image": "img/chapterRing/cr-sub-white.png",
+        "category": "universal"
       }
     ],
     "crown": [
@@ -1458,7 +1479,8 @@
         "material": "Steel",
         "description": "标准表冠，手感顺滑，密封性好。",
         "descriptionEn": "Standard crown, smooth action and reliable sealing.",
-        "image": "img/crown/cw-skx-std.png"
+        "image": "img/crown/cw-skx-std.png",
+        "category": "universal"
       },
       {
         "id": "cw-skx-signed",
@@ -1469,7 +1491,8 @@
         "material": "Steel",
         "description": "带品牌标志表冠，细节更精致。",
         "descriptionEn": "Signed crown with brand logo, finer detail.",
-        "image": "img/crown/cw-skx-signed.png"
+        "image": "img/crown/cw-skx-signed.png",
+        "category": "universal"
       },
       {
         "id": "cw-skx-black",
@@ -1480,7 +1503,8 @@
         "material": "Steel + PVD",
         "description": "PVD 黑色表冠，与深色表壳搭配。",
         "descriptionEn": "PVD black crown for dark-toned builds.",
-        "image": "img/crown/cw-skx-black.png"
+        "image": "img/crown/cw-skx-black.png",
+        "category": "universal"
       },
       {
         "id": "cw-sub-std",
@@ -1491,7 +1515,8 @@
         "material": "Steel",
         "description": "潜航者标准表冠，经典造型。",
         "descriptionEn": "SUB-style standard crown, classic shape.",
-        "image": "img/crown/cw-sub-std.png"
+        "image": "img/crown/cw-sub-std.png",
+        "category": "universal"
       },
       {
         "id": "cw-sub-triplock",
@@ -1502,7 +1527,8 @@
         "material": "Steel",
         "description": "三扣锁防水表冠，防水性能更强。",
         "descriptionEn": "Triplock crown for enhanced water resistance.",
-        "image": "img/crown/cw-sub-triplock.png"
+        "image": "img/crown/cw-sub-triplock.png",
+        "category": "universal"
       }
     ],
     "caseback": [
@@ -1515,7 +1541,8 @@
         "material": "Steel",
         "description": "光面后盖，简约低调，可刻字。",
         "descriptionEn": "Plain caseback, minimal and engraveable.",
-        "image": "img/caseback/cb-skx-plain.png"
+        "image": "img/caseback/cb-skx-plain.png",
+        "category": "universal"
       },
       {
         "id": "cb-skx-exhibition",
@@ -1526,7 +1553,8 @@
         "material": "Steel + Sapphire",
         "description": "蓝宝石透底，可以欣赏机芯运转。",
         "descriptionEn": "Sapphire exhibition back — watch the movement at work.",
-        "image": "img/caseback/cb-skx-exhibition.png"
+        "image": "img/caseback/cb-skx-exhibition.png",
+        "category": "universal"
       },
       {
         "id": "cb-sub-plain",
@@ -1537,7 +1565,8 @@
         "material": "Steel",
         "description": "SUB 风格光面后盖，经典密封设计。",
         "descriptionEn": "SUB-style plain caseback, classic sealed design.",
-        "image": "img/caseback/cb-sub-plain.png"
+        "image": "img/caseback/cb-sub-plain.png",
+        "category": "universal"
       },
       {
         "id": "cb-sub-exhibition",
@@ -1548,7 +1577,8 @@
         "material": "Steel + Sapphire",
         "description": "SUB 风格透底后盖，展示机芯之美。",
         "descriptionEn": "SUB-style exhibition back, show off the movement.",
-        "image": "img/caseback/cb-sub-exhibition.png"
+        "image": "img/caseback/cb-sub-exhibition.png",
+        "category": "universal"
       },
       {
         "id": "cb-b-1",
@@ -1559,7 +1589,8 @@
         "material": "Steel",
         "description": "通用后盖，银色拉丝工艺，适配全部表壳系列。",
         "descriptionEn": "Universal brushed silver caseback, fits all case series.",
-        "image": "img/caseback/CB-B-1.png"
+        "image": "img/caseback/CB-B-1.png",
+        "category": "universal"
       },
       {
         "id": "cb-c-2",
@@ -1570,7 +1601,8 @@
         "material": "Steel",
         "description": "通用后盖，黑色表面，适配全部表壳系列。",
         "descriptionEn": "Universal black caseback, fits all case series.",
-        "image": "img/caseback/CB-C-2.png"
+        "image": "img/caseback/CB-C-2.png",
+        "category": "universal"
       },
       {
         "id": "cb-d-1",
@@ -1581,7 +1613,8 @@
         "material": "Steel",
         "description": "通用后盖，银色表面，适配全部表壳系列。",
         "descriptionEn": "Universal silver caseback, fits all case series.",
-        "image": "img/caseback/CB-D-1.png"
+        "image": "img/caseback/CB-D-1.png",
+        "category": "universal"
       },
       {
         "id": "cb-d-3",
@@ -1592,7 +1625,8 @@
         "material": "Steel",
         "description": "通用后盖，金色表面，适配全部表壳系列。",
         "descriptionEn": "Universal gold caseback, fits all case series.",
-        "image": "img/caseback/CB-D-3.png"
+        "image": "img/caseback/CB-D-3.png",
+        "category": "universal"
       },
       {
         "id": "cb-d-4",
@@ -1603,7 +1637,8 @@
         "material": "Steel",
         "description": "通用后盖，玫瑰金表面，适配全部表壳系列。",
         "descriptionEn": "Universal rose gold caseback, fits all case series.",
-        "image": "img/caseback/CB-D-4.png"
+        "image": "img/caseback/CB-D-4.png",
+        "category": "universal"
       },
       {
         "id": "cb-g-1",
@@ -1614,7 +1649,8 @@
         "material": "Steel",
         "description": "通用后盖，砂银（喷砂）工艺，适配全部表壳系列。",
         "descriptionEn": "Universal sandblasted silver caseback, fits all case series.",
-        "image": "img/caseback/CB-G-1.png"
+        "image": "img/caseback/CB-G-1.png",
+        "category": "universal"
       },
       {
         "id": "cb-g-2",
@@ -1625,7 +1661,8 @@
         "material": "Steel",
         "description": "通用后盖，黑色磨砂工艺，适配全部表壳系列。",
         "descriptionEn": "Universal matte black caseback, fits all case series.",
-        "image": "img/caseback/CB-G-2.png"
+        "image": "img/caseback/CB-G-2.png",
+        "category": "universal"
       }
     ],
     "strap": [
@@ -1638,7 +1675,8 @@
         "material": "Steel",
         "description": "纪念型钢带，佩戴舒适，质感高级。",
         "descriptionEn": "Jubilee bracelet, comfortable with a premium feel.",
-        "image": "img/strap/st-jubilee.png"
+        "image": "img/strap/st-jubilee.png",
+        "category": "universal"
       },
       {
         "id": "st-oyster",
@@ -1649,7 +1687,8 @@
         "material": "Steel",
         "description": "蚝式钢带，三珠设计，经典百搭。",
         "descriptionEn": "Oyster bracelet, three-link classic that goes with anything.",
-        "image": "img/strap/st-oyster.png"
+        "image": "img/strap/st-oyster.png",
+        "category": "universal"
       },
       {
         "id": "st-rubber-black",
@@ -1660,7 +1699,8 @@
         "material": "Rubber",
         "description": "黑色橡胶带，轻便防水，运动首选。",
         "descriptionEn": "Black rubber strap, lightweight and waterproof.",
-        "image": "img/strap/st-rubber-black.png"
+        "image": "img/strap/st-rubber-black.png",
+        "category": "universal"
       },
       {
         "id": "st-nato-olive",
@@ -1671,7 +1711,8 @@
         "material": "Nylon",
         "description": "橄榄绿 NATO 带，军事风格，透气舒适。",
         "descriptionEn": "Olive NATO strap, military vibe, breathable comfort.",
-        "image": "img/strap/st-nato-olive.png"
+        "image": "img/strap/st-nato-olive.png",
+        "category": "universal"
       },
       {
         "id": "st-nato-black",
@@ -1682,7 +1723,8 @@
         "material": "Nylon",
         "description": "黑色 NATO 带，百搭耐脏，风格硬朗。",
         "descriptionEn": "Black NATO strap, rugged and versatile.",
-        "image": "img/strap/st-nato-black.png"
+        "image": "img/strap/st-nato-black.png",
+        "category": "universal"
       },
       {
         "id": "st-nato-green",
@@ -1693,7 +1735,8 @@
         "material": "Nylon",
         "description": "军绿 NATO 带，搭配潜水表绝配。",
         "descriptionEn": "Green NATO strap, a perfect dive-watch match.",
-        "image": "img/strap/st-nato-green.png"
+        "image": "img/strap/st-nato-green.png",
+        "category": "universal"
       }
     ]
   }

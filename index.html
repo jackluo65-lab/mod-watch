@@ -903,7 +903,7 @@ function selectCase(id) {
   const keep = {};
   partTypes.forEach(type => {
     const sel = selections[type];
-    if (sel && (selectedCase.compatibleParts[type] || []).includes(sel.id)) keep[type] = sel;
+    if (sel && (selectedCase.compatibleParts[type] || []).includes(sel.id) && categoryMatches(sel, selectedCase)) keep[type] = sel;
   });
   selections = keep;
 
@@ -927,13 +927,20 @@ function selectCase(id) {
 const partTypes = ['bezel', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'crown', 'caseback', 'strap'];
 const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
 
+// 零件分类匹配：universal/无分类零件不受限，其余必须与当前表壳同分类
+function categoryMatches(part, caseObj) {
+  const pc = part.category;
+  if (!pc || pc === 'universal') return true;
+  return pc === caseObj.category;
+}
+
 // Render compatible parts
 function renderParts() {
   partTypes.forEach(type => {
     const listEl = document.getElementById('list-' + type);
     const descEl = document.getElementById('desc-' + type);
     const compatible = selectedCase.compatibleParts[type] || [];
-    const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id));
+    const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id) && categoryMatches(p, selectedCase));
 
     listEl.innerHTML = '';
     parts.forEach(part => {
