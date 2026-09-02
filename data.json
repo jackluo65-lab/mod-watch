@@ -1402,7 +1402,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-1_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1493,7 +1505,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-2_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1584,7 +1608,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-3_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1675,7 +1711,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-4_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1766,7 +1814,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-6_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -1857,7 +1917,19 @@
         "side": "img/cases/vintage/Vintage-C-JTF-7_1.png"
       },
       "compatibleParts": {
-        "bezel": [],
+        "bezel": [
+          "bz-fg-1",
+          "bz-fg-3",
+          "bz-fg-4",
+          "bz-fg-6",
+          "bz-fg-7",
+          "bz-fg-11",
+          "bz-fg-12",
+          "bz-fg-13",
+          "bz-fg-14",
+          "bz-fg-16",
+          "bz-fg-17"
+        ],
         "insert": [
           "in-skx-alu-black",
           "in-skx-ceramic-black",
@@ -2343,6 +2415,138 @@
         "descriptionEn": "Pilot series bezel B-FX-7, black PVD bezel, bringing a sporty feel to Pilot Case.",
         "image": "img/bezel/B-FX-7.png",
         "category": "Pilot Case"
+      },
+      {
+        "id": "bz-fg-1",
+        "name": "Bezel B-FG-1",
+        "nameZh": "表圈 B-FG-1",
+        "series": "vintage",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-1，银色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-1, silver stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-1.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-3",
+        "name": "Bezel B-FG-3",
+        "nameZh": "表圈 B-FG-3",
+        "series": "vintage",
+        "color": "#ffd700",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-3，金色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-3, gold stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-3.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-4",
+        "name": "Bezel B-FG-4",
+        "nameZh": "表圈 B-FG-4",
+        "series": "vintage",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-4，银色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-4, silver stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-4.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-6",
+        "name": "Bezel B-FG-6",
+        "nameZh": "表圈 B-FG-6",
+        "series": "vintage",
+        "color": "#111111",
+        "material": "Steel / PVD",
+        "description": "复古系列表圈 B-FG-6，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-6, black PVD coated bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-6.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-7",
+        "name": "Bezel B-FG-7",
+        "nameZh": "表圈 B-FG-7",
+        "series": "vintage",
+        "color": "#d4af37",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-7，金色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-7, gold stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-7.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-11",
+        "name": "Bezel B-FG-11",
+        "nameZh": "表圈 B-FG-11",
+        "series": "vintage",
+        "color": "#333333",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-11，深灰精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-11, dark grey stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-11.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-12",
+        "name": "Bezel B-FG-12",
+        "nameZh": "表圈 B-FG-12",
+        "series": "vintage",
+        "color": "#e5e5e5",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-12，浅灰精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-12, light grey stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-12.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-13",
+        "name": "Bezel B-FG-13",
+        "nameZh": "表圈 B-FG-13",
+        "series": "vintage",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-13，银色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-13, silver stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-13.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-14",
+        "name": "Bezel B-FG-14",
+        "nameZh": "表圈 B-FG-14",
+        "series": "vintage",
+        "color": "#1a1a1a",
+        "material": "Steel / PVD",
+        "description": "复古系列表圈 B-FG-14，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-14, black PVD coated bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-14.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-16",
+        "name": "Bezel B-FG-16",
+        "nameZh": "表圈 B-FG-16",
+        "series": "vintage",
+        "color": "#b8860b",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-16，复古金色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-16, vintage gold stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-16.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-17",
+        "name": "Bezel B-FG-17",
+        "nameZh": "表圈 B-FG-17",
+        "series": "vintage",
+        "color": "#aaaaaa",
+        "material": "Steel",
+        "description": "复古系列表圈 B-FG-17，枪灰色精钢表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-17, gunmetal stainless-steel bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-17.png",
+        "category": "Vintage Case"
       }
     ],
     "hands": [
