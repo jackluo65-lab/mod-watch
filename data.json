@@ -1404,6 +1404,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -1507,6 +1508,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -1610,6 +1612,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -1713,6 +1716,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -1816,6 +1820,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -1919,6 +1924,7 @@
       "compatibleParts": {
         "bezel": [
           "bz-fg-1",
+          "bz-fg-2",
           "bz-fg-3",
           "bz-fg-4",
           "bz-fg-6",
@@ -2426,6 +2432,18 @@
         "description": "复古系列表圈 B-FG-1，银色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-1, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-1.png",
+        "category": "Vintage Case"
+      },
+      {
+        "id": "bz-fg-2",
+        "name": "Bezel B-FG-2",
+        "nameZh": "表圈 B-FG-2",
+        "series": "vintage",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "复古系列表圈 B-FG-2，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
+        "descriptionEn": "Vintage series bezel B-FG-2, black PVD coated bezel, designed for Vintage Case.",
+        "image": "img/bezel/B-FG-2.png",
         "category": "Vintage Case"
       },
       {
