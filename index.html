@@ -1321,12 +1321,8 @@ function renderImgStack() {
   stack.innerHTML = '';
   svg.style.display = '';
   stack.style.display = 'none';
-  if (!selectedCase) {
-    comingSoon.style.display = 'none';
-    return;
-  }
 
-  // Side / back view images are not available yet — show Coming Soon placeholder
+  // Side / back view images are not available yet — always show Coming Soon placeholder
   if (currentView === 'side' || currentView === 'back') {
     comingSoon.style.display = 'flex';
     stack.style.display = 'none';
@@ -1334,6 +1330,7 @@ function renderImgStack() {
     return;
   }
   comingSoon.style.display = 'none';
+  if (!selectedCase) return;
 
   let urls = [];
   if (currentView === 'front') {
