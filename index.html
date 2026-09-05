@@ -362,9 +362,16 @@
     margin-bottom: 4px;
   }
   .case-card .size {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--accent);
     margin-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 8px;
+  }
+  .case-card .size span {
+    white-space: nowrap;
   }
   .case-card .desc {
     font-size: 11px;
@@ -927,7 +934,12 @@ const I18N = {
   lug:          { zh: '表耳', en: 'Lug' },
   thick:        { zh: '厚度', en: 'Thick' },
   wr:           { zh: '防水', en: 'WR' },
-  move:         { zh: '机芯', en: 'Movement' }
+  move:         { zh: '机芯', en: 'Movement' },
+  diameter:     { zh: '直径', en: 'Diameter' },
+  lugToLug:     { zh: '表耳间距', en: 'Lug-to-lug' },
+  lugSpan:      { zh: '耳距', en: 'L2L' },
+  thkShort:     { zh: '厚', en: 'Thk' },
+  lugShort:     { zh: '耳宽', en: 'Lug' }
 };
 function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
@@ -1027,7 +1039,7 @@ function buildCaseRep(cs, count) {
     </div>
     <div class="rep-info">
       <h4>${partName(cs)}</h4>
-      <div class="rep-meta">${cs.size} / ${cs.lugWidth} · ${partDesc(cs)}</div>
+      <div class="rep-meta">Ø ${cs.size} · ${t('lugSpan')} ${cs.lugToLug} · ${t('thkShort')} ${cs.thickness} · ${t('lugShort')} ${cs.lugWidth}</div>
       <div class="rep-hint">${hintDefault}</div>
     </div>
     <div class="rep-arrow">
@@ -1051,7 +1063,12 @@ function buildCaseCard(cs) {
       <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
     </div>
     <h4>${partName(cs)}</h4>
-    <div class="size">${cs.size} / ${cs.lugWidth}</div>
+    <div class="size">
+      <span>Ø ${cs.size}</span>
+      <span>${t('lugSpan')} ${cs.lugToLug}</span>
+      <span>${t('thkShort')} ${cs.thickness}</span>
+      <span>${t('lugShort')} ${cs.lugWidth}</span>
+    </div>
     <div class="desc">${partDesc(cs).substring(0, 40)}...</div>
   `;
   return card;
@@ -1101,7 +1118,7 @@ function selectCase(id) {
   // Update preview info
   document.getElementById('previewName').textContent = partName(selectedCase);
   document.getElementById('previewSpecs').innerHTML =
-    `${selectedCase.size} | ${t('lug')} ${selectedCase.lugWidth} | ${t('thick')} ${selectedCase.thickness}<br>` +
+    `${t('diameter')} ${selectedCase.size} | ${t('lugToLug')} ${selectedCase.lugToLug} | ${t('thick')} ${selectedCase.thickness} | ${t('lug')} ${selectedCase.lugWidth}<br>` +
     `${t('wr')} ${selectedCase.waterResistance} | ${t('move')} ${selectedCase.movement}<br>` +
     `${partDesc(selectedCase)}`;
 
