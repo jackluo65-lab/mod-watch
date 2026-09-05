@@ -122,6 +122,40 @@
     object-fit: contain;
     pointer-events: none;
   }
+  /* Coming Soon placeholder (side / back views before images are ready) */
+  #viewComingSoon {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+  #viewComingSoon .cs-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 6px;
+  }
+  #viewComingSoon .cs-sub {
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 1px;
+  }
+  #viewComingSoon .cs-icon {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
 
   /* View toggle */
   .view-toggle {
@@ -693,6 +727,11 @@
       </div>
       <div class="preview-canvas" id="previewCanvas">
         <div id="imgStack"></div>
+        <div id="viewComingSoon">
+          <div class="cs-icon">TBD</div>
+          <div class="cs-title">敬请期待</div>
+          <div class="cs-sub">该视角图片即将上线 / Coming Soon</div>
+        </div>
         <svg viewBox="0 0 380 480" id="previewSvg">
           <defs>
             <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
@@ -897,6 +936,8 @@ const I18N = {
   viewFront:    { zh: '正视图', en: 'Front' },
   viewSide:     { zh: '侧视图', en: 'Side' },
   viewBack:     { zh: '背视图', en: 'Back' },
+  comingSoon:   { zh: '敬请期待', en: 'Coming Soon' },
+  comingSoonSub:{ zh: '该视角图片即将上线', en: 'Images for this view are coming soon' },
   stepCase:     { zh: '第 1 步 · 选择表壳系列', en: 'Step 1 · Choose Your Case' },
   guideCase:    { zh: '每一枚好表，都从一枚好壳开始。选择您的表壳系列', en: 'Every great watch begins with a great case. Pick your case series' },
   guides: {
@@ -1276,10 +1317,23 @@ const frontLayerOrder = ['strap', 'case', 'chapterRing', 'insert', 'crystal', 'd
 function renderImgStack() {
   const stack = document.getElementById('imgStack');
   const svg = document.getElementById('previewSvg');
+  const comingSoon = document.getElementById('viewComingSoon');
   stack.innerHTML = '';
   svg.style.display = '';
   stack.style.display = 'none';
-  if (!selectedCase) return;
+  if (!selectedCase) {
+    comingSoon.style.display = 'none';
+    return;
+  }
+
+  // Side / back view images are not available yet — show Coming Soon placeholder
+  if (currentView === 'side' || currentView === 'back') {
+    comingSoon.style.display = 'flex';
+    stack.style.display = 'none';
+    svg.style.display = 'none';
+    return;
+  }
+  comingSoon.style.display = 'none';
 
   let urls = [];
   if (currentView === 'front') {
@@ -1523,6 +1577,8 @@ function applyStaticTexts() {
   document.querySelector('.view-btn[data-view="front"]').textContent = t('viewFront');
   document.querySelector('.view-btn[data-view="side"]').textContent = t('viewSide');
   document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
+  document.querySelector('#viewComingSoon .cs-title').textContent = t('comingSoon');
+  document.querySelector('#viewComingSoon .cs-sub').textContent = t('comingSoonSub');
   document.getElementById('finishTitle').textContent = t('finishTitle');
   document.getElementById('finishSub').innerHTML = t('finishSub');
   document.getElementById('summaryTitle').textContent = t('summaryTitle');
