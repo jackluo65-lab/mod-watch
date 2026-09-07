@@ -426,6 +426,46 @@
     height: 100%;
     object-fit: contain;
   }
+  /* Hover zoom: enlarge the photo inside its icon */
+  .case-card .case-icon img,
+  .case-series-rep .case-icon img {
+    transition: transform .25s ease;
+  }
+  .case-card:hover .case-icon img,
+  .case-series-rep:hover .case-icon img {
+    transform: scale(1.18);
+  }
+  /* Hover zoom: enlarged detail popup */
+  #caseZoom {
+    position: fixed;
+    z-index: 9999;
+    display: none;
+    width: 240px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 28px rgba(0,0,0,.10);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .18s ease;
+  }
+  #caseZoom.show {
+    opacity: 1;
+  }
+  #caseZoom img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+  }
+  #caseZoom .cz-name {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text2);
+    text-align: center;
+    letter-spacing: .5px;
+  }
   .case-card h4 {
     font-size: 14px;
     margin-bottom: 4px;
@@ -974,6 +1014,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- Hover zoom popup: enlarged case detail -->
+<div id="caseZoom">
+  <img id="caseZoomImg" src="" alt="">
+  <div class="cz-name" id="caseZoomName"></div>
 </div>
 
 <script>
@@ -1697,6 +1743,59 @@ function quoteAlert() {
 goToStep(0);
 applyStaticTexts();
 renderImgStack();
+
+// ===== Hover zoom: show enlarged case photo next to the cursor =====
+(function initCaseZoom() {
+  const zoom = document.getElementById('caseZoom');
+  const zoomImg = document.getElementById('caseZoomImg');
+  const zoomName = document.getElementById('caseZoomName');
+  if (!zoom || !zoomImg) return;
+  // Touch devices: no hover, keep it disabled
+  if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) {
+    zoom.remove();
+    return;
+  }
+
+  function show(icon) {
+    const img = icon.querySelector('img');
+    if (!img || !img.src) return;
+    const card = icon.closest('.case-card') || icon.closest('.case-series-rep');
+    const title = card && card.querySelector('h4');
+    zoomImg.src = img.src;
+    zoomName.textContent = title ? title.textContent.trim() : '';
+    zoom.style.display = 'block';
+    const r = icon.getBoundingClientRect();
+    const zw = zoom.offsetWidth, zh = zoom.offsetHeight;
+    let left = r.right + 16;
+    if (left + zw > window.innerWidth - 8) left = Math.max(8, r.left - zw - 16);
+    let top = r.top + r.height / 2 - zh / 2;
+    top = Math.min(Math.max(8, top), Math.max(8, window.innerHeight - zh - 8));
+    zoom.style.left = left + 'px';
+    zoom.style.top = top + 'px';
+    requestAnimationFrame(() => zoom.classList.add('show'));
+  }
+
+  function hide() {
+    zoom.classList.remove('show');
+  }
+
+  document.addEventListener('mouseover', e => {
+    const icon = e.target.closest && e.target.closest('.case-icon');
+    if (!icon) return;
+    if (!icon.closest('.case-card') && !icon.closest('.case-series-rep')) return;
+    show(icon);
+  });
+
+  document.addEventListener('mouseout', e => {
+    const icon = e.target.closest && e.target.closest('.case-icon');
+    if (!icon) return;
+    // ignore moves between children inside the same icon
+    if (e.relatedTarget && icon.contains(e.relatedTarget)) return;
+    hide();
+  });
+
+  window.addEventListener('scroll', hide, true);
+})();
 
 // ===== Living watch: classic 10:08 pose + ticking seconds =====
 (function initHands() {
