@@ -1215,16 +1215,22 @@ function selectCase(id) {
   highlightSelectedCase();
 
   // Update preview info
-  document.getElementById('previewName').textContent = partName(selectedCase);
-  document.getElementById('previewSpecs').innerHTML =
-    `${t('diameter')} ${selectedCase.size} | ${t('lugToLug')} ${selectedCase.lugToLug} | ${t('thick')} ${selectedCase.thickness} | ${t('lug')} ${selectedCase.lugWidth}<br>` +
-    `${t('wr')} ${selectedCase.waterResistance} | ${t('move')} ${selectedCase.movement}<br>` +
-    `${partDesc(selectedCase)}`;
+  refreshPreviewInfo();
 
   // Render parts and go to step 2
   renderParts();
   updatePreview();
   goToStep(1);
+}
+
+// Preview panel title + specs line (re-rendered on language switch too)
+function refreshPreviewInfo() {
+  if (!selectedCase) return;
+  document.getElementById('previewName').textContent = partName(selectedCase);
+  document.getElementById('previewSpecs').innerHTML =
+    `${t('diameter')} ${selectedCase.size} | ${t('lugToLug')} ${selectedCase.lugToLug} | ${t('thick')} ${selectedCase.thickness} | ${t('lug')} ${selectedCase.lugWidth}<br>` +
+    `${t('wr')} ${selectedCase.waterResistance} | ${t('move')} ${selectedCase.movement}<br>` +
+    `${partDesc(selectedCase)}`;
 }
 
 // Part type mapping
@@ -1671,6 +1677,7 @@ function setLang(l) {
   if (selectedCase) {
     // restore selected case highlight
     document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === selectedCase.id));
+    refreshPreviewInfo();
     renderParts();
     updatePreview();
     updateSummary();
