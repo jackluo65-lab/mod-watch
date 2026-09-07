@@ -521,6 +521,22 @@
     height: 100%;
     object-fit: contain;
   }
+  /* Coming Soon fallback inside case icons (no real photo yet) */
+  .case-icon .icon-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #bbb;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border: 1px dashed #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2px;
+  }
   .case-series-rep .rep-info {
     flex: 1;
     min-width: 0;
@@ -1106,8 +1122,9 @@ function renderCaseGrid() {
 function buildCaseRep(cs, count) {
   const rep = document.createElement('div');
   rep.className = 'case-series-rep';
+  const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
   const caseImg = (cs.views && cs.views.front)
-    ? `<img src="${cs.views.front}" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">`
+    ? `<img src="${cs.views.front}" alt="" onload="const _f=this.parentElement.querySelector('.icon-empty'); if(_f){_f.style.display='none';}" onerror="this.remove()">`
     : '';
   const hintDefault = LANG === 'zh'
     ? `点击查看该系列全部 ${count} 款`
@@ -1116,7 +1133,7 @@ function buildCaseRep(cs, count) {
   rep.innerHTML = `
     <div class="case-icon">
       ${caseImg}
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
+      <div class="icon-empty">${emptyTxt}</div>
     </div>
     <div class="rep-info">
       <h4>${partName(cs)}</h4>
@@ -1135,13 +1152,14 @@ function buildCaseCard(cs) {
   const card = document.createElement('div');
   card.className = 'case-card';
   card.dataset.id = cs.id;
+  const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
   const caseImg = (cs.views && cs.views.front)
-    ? `<img src="${cs.views.front}" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">`
+    ? `<img src="${cs.views.front}" alt="" onload="const _f=this.parentElement.querySelector('.icon-empty'); if(_f){_f.style.display='none';}" onerror="this.remove()">`
     : '';
   card.innerHTML = `
     <div class="case-icon">
       ${caseImg}
-      <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="#888" stroke-width="2"/><circle cx="30" cy="30" r="18" fill="#222" stroke="#555" stroke-width="1"/></svg>
+      <div class="icon-empty">${emptyTxt}</div>
     </div>
     <h4>${partName(cs)}</h4>
     <div class="size">
@@ -1410,7 +1428,12 @@ function renderImgStack() {
     };
     probe.onerror = () => {
       failed++;
-      if (failed === urls.length) { stack.style.display = 'none'; svg.style.display = ''; }
+      if (failed === urls.length) {
+        // Nothing to show for this view — display Coming Soon instead of the demo drawing
+        stack.style.display = 'none';
+        comingSoon.style.display = 'flex';
+        svg.style.display = 'none';
+      }
     };
     probe.src = u;
   });
