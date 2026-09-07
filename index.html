@@ -122,6 +122,33 @@
     object-fit: contain;
     pointer-events: none;
   }
+  /* Magnifier lens following the cursor over the main preview */
+  #lens {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18);
+    overflow: hidden;
+    display: none;
+    pointer-events: none;
+    z-index: 20;
+  }
+  #lens.show { display: block; }
+  #lensInner {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #lensInner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   /* Coming Soon placeholder (side / back views before images are ready) */
   #viewComingSoon {
     position: absolute;
@@ -904,6 +931,8 @@
             <rect x="140" y="420" width="100" height="60" rx="4" fill="#222" stroke="#444" stroke-width="1"/>
           </g>
         </svg>
+        <!-- Magnifier lens (follows cursor over the preview) -->
+        <div id="lens"><div id="lensInner"></div></div>
       </div>
       <div class="preview-info">
         <h3 id="previewName">请选择表壳</h3>
@@ -1822,6 +1851,60 @@ renderImgStack();
   });
 
   window.addEventListener('scroll', hide, true);
+})();
+
+// ===== Magnifier lens on the main preview (zoom wherever the cursor is) =====
+(function initLens() {
+  const canvas = document.getElementById('previewCanvas');
+  const stack = document.getElementById('imgStack');
+  const lens = document.getElementById('lens');
+  const inner = document.getElementById('lensInner');
+  if (!canvas || !stack || !lens || !inner) return;
+  // pure touch devices: no cursor to follow
+  if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+    lens.remove();
+    return;
+  }
+  const ZOOM = 2.6;
+  const LENS_SIZE = 170;   // must match the CSS size (lens is hidden before first use)
+
+  function syncLayers() {
+    const srcs = Array.from(stack.querySelectorAll('img')).map(i => i.src).join('|');
+    const cur = Array.from(inner.querySelectorAll('img')).map(i => i.src).join('|');
+    if (!srcs) return false;
+    if (srcs !== cur) {
+      inner.innerHTML = srcs.split('|').map(s => `<img src="${s}" alt="">`).join('');
+    }
+    return true;
+  }
+
+  function move(e) {
+    // only when real layered photos are on screen
+    if (getComputedStyle(stack).display === 'none') { lens.classList.remove('show'); return; }
+    if (!stack.querySelectorAll('img').length) { lens.classList.remove('show'); return; }
+    if (!syncLayers()) { lens.classList.remove('show'); return; }
+
+    const r = canvas.getBoundingClientRect();
+    const W = r.width, H = r.height, L = lens.offsetWidth || LENS_SIZE;
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    if (x < 0 || y < 0 || x > W || y > H) { lens.classList.remove('show'); return; }
+
+    // enlarge the whole stack, then shift so the cursor point sits in the lens centre
+    inner.style.width = (W * ZOOM) + 'px';
+    inner.style.height = (H * ZOOM) + 'px';
+    inner.style.left = (L / 2 - x * ZOOM) + 'px';
+    inner.style.top = (L / 2 - y * ZOOM) + 'px';
+
+    // keep the lens itself inside the canvas
+    const lx = Math.min(Math.max(0, x - L / 2), Math.max(0, W - L));
+    const ly = Math.min(Math.max(0, y - L / 2), Math.max(0, H - L));
+    lens.style.left = lx + 'px';
+    lens.style.top = ly + 'px';
+    lens.classList.add('show');
+  }
+
+  canvas.addEventListener('mousemove', move);
+  canvas.addEventListener('mouseleave', () => lens.classList.remove('show'));
 })();
 
 // ===== Living watch: classic 10:08 pose + ticking seconds =====
