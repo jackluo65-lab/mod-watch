@@ -1750,25 +1750,27 @@ renderImgStack();
   const zoomImg = document.getElementById('caseZoomImg');
   const zoomName = document.getElementById('caseZoomName');
   if (!zoom || !zoomImg) return;
-  // Touch devices: no hover, keep it disabled
-  if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) {
+  // Only disable on devices that explicitly cannot hover (pure touch screens)
+  if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
     zoom.remove();
     return;
   }
 
-  function show(icon) {
-    const img = icon.querySelector('img');
-    if (!img || !img.src) return;
-    const card = icon.closest('.case-card') || icon.closest('.case-series-rep');
-    const title = card && card.querySelector('h4');
+  // Show the enlarged photo for a case card (works anywhere on the card)
+  function show(target) {
+    const card = target.closest('.case-card') || target.closest('.case-series-rep');
+    if (!card) return;
+    const img = card.querySelector('.case-icon img');
+    if (!img || !img.src) return;   // no photo (e.g. SKX) -> nothing to zoom
+    const title = card.querySelector('h4');
     zoomImg.src = img.src;
     zoomName.textContent = title ? title.textContent.trim() : '';
     zoom.style.display = 'block';
-    const r = icon.getBoundingClientRect();
+    const box = (card.querySelector('.case-icon') || card).getBoundingClientRect();
     const zw = zoom.offsetWidth, zh = zoom.offsetHeight;
-    let left = r.right + 16;
-    if (left + zw > window.innerWidth - 8) left = Math.max(8, r.left - zw - 16);
-    let top = r.top + r.height / 2 - zh / 2;
+    let left = box.right + 16;
+    if (left + zw > window.innerWidth - 8) left = Math.max(8, box.left - zw - 16);
+    let top = box.top + box.height / 2 - zh / 2;
     top = Math.min(Math.max(8, top), Math.max(8, window.innerHeight - zh - 8));
     zoom.style.left = left + 'px';
     zoom.style.top = top + 'px';
@@ -1780,17 +1782,17 @@ renderImgStack();
   }
 
   document.addEventListener('mouseover', e => {
-    const icon = e.target.closest && e.target.closest('.case-icon');
-    if (!icon) return;
-    if (!icon.closest('.case-card') && !icon.closest('.case-series-rep')) return;
-    show(icon);
+    if (!e.target.closest) return;
+    const card = e.target.closest('.case-card, .case-series-rep');
+    if (card) show(card);
   });
 
   document.addEventListener('mouseout', e => {
-    const icon = e.target.closest && e.target.closest('.case-icon');
-    if (!icon) return;
-    // ignore moves between children inside the same icon
-    if (e.relatedTarget && icon.contains(e.relatedTarget)) return;
+    if (!e.target.closest) return;
+    const card = e.target.closest('.case-card, .case-series-rep');
+    if (!card) return;
+    // ignore moves between children inside the same card
+    if (e.relatedTarget && card.contains(e.relatedTarget)) return;
     hide();
   });
 
