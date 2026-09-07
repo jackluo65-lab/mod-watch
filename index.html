@@ -156,6 +156,41 @@
     font-size: 12px;
     letter-spacing: 1px;
   }
+  /* Empty-state hero: white background, black text, shown until a case is chosen */
+  #emptyHint {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+    background: #ffffff;
+    padding: 20px;
+  }
+  #emptyHint::before {
+    content: '';
+    width: 46px;
+    height: 46px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50%;
+    box-shadow: inset 0 -10px 0 -8px #1a1a1a, inset 0 10px 0 -8px #1a1a1a;
+    opacity: .85;
+    margin-bottom: 4px;
+  }
+  #emptyHint .eh-zh {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+  #emptyHint .eh-en {
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 1px;
+  }
 
   /* View toggle */
   .view-toggle {
@@ -727,6 +762,10 @@
       </div>
       <div class="preview-canvas" id="previewCanvas">
         <div id="imgStack"></div>
+        <div id="emptyHint" style="display:flex">
+          <div class="eh-zh">选择一款表壳，创建你的手表</div>
+          <div class="eh-en">Choose a Case, Create Your Watch</div>
+        </div>
         <div id="viewComingSoon">
           <div class="cs-icon">TBD</div>
           <div class="cs-title">敬请期待</div>
@@ -933,6 +972,7 @@ try { LANG = localStorage.getItem('mw-lang') || 'zh'; } catch (e) {}
 const I18N = {
   tagline:      { zh: 'Craft Your Time — 慢慢来，打造只属于你的那一枚', en: 'Craft Your Time — take it slow, build the one that is truly yours' },
   previewSelect:{ zh: '请选择表壳', en: 'Select a case' },
+  heroPick:     { zh: '选择一款表壳，创建你的手表', en: 'Choose a Case, Create Your Watch' },
   viewFront:    { zh: '正视图', en: 'Front' },
   viewSide:     { zh: '侧视图', en: 'Side' },
   viewBack:     { zh: '背视图', en: 'Back' },
@@ -1318,9 +1358,11 @@ function renderImgStack() {
   const stack = document.getElementById('imgStack');
   const svg = document.getElementById('previewSvg');
   const comingSoon = document.getElementById('viewComingSoon');
+  const emptyHint = document.getElementById('emptyHint');
   stack.innerHTML = '';
   svg.style.display = '';
   stack.style.display = 'none';
+  emptyHint.style.display = 'none';
 
   // Side / back view images are not available yet — always show Coming Soon placeholder
   if (currentView === 'side' || currentView === 'back') {
@@ -1330,7 +1372,13 @@ function renderImgStack() {
     return;
   }
   comingSoon.style.display = 'none';
-  if (!selectedCase) return;
+  // No case chosen yet — show the hero prompt (white bg, black text) instead of a placeholder watch
+  if (!selectedCase) {
+    emptyHint.style.display = 'flex';
+    stack.style.display = 'none';
+    svg.style.display = 'none';
+    return;
+  }
 
   let urls = [];
   if (currentView === 'front') {
@@ -1565,6 +1613,7 @@ function resetAll() {
   document.getElementById('previewName').textContent = t('previewSelect');
   document.getElementById('previewSpecs').innerHTML = '';
   goToStep(0);
+  renderImgStack();
 }
 
 // ===== Language toggle =====
@@ -1576,6 +1625,13 @@ function applyStaticTexts() {
   document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
   document.querySelector('#viewComingSoon .cs-title').textContent = t('comingSoon');
   document.querySelector('#viewComingSoon .cs-sub').textContent = t('comingSoonSub');
+  // Hero prompt: current language as headline, the other language as subtitle
+  const heroMain = LANG === 'zh' ? I18N.heroPick.zh : I18N.heroPick.en;
+  const heroSub  = LANG === 'zh' ? I18N.heroPick.en : I18N.heroPick.zh;
+  const ehZh = document.querySelector('#emptyHint .eh-zh');
+  const ehEn = document.querySelector('#emptyHint .eh-en');
+  ehZh.textContent = heroMain;
+  ehEn.textContent = heroSub;
   document.getElementById('finishTitle').textContent = t('finishTitle');
   document.getElementById('finishSub').innerHTML = t('finishSub');
   document.getElementById('summaryTitle').textContent = t('summaryTitle');
@@ -1610,6 +1666,7 @@ function quoteAlert() {
 // Init wizard
 goToStep(0);
 applyStaticTexts();
+renderImgStack();
 
 // ===== Living watch: classic 10:08 pose + ticking seconds =====
 (function initHands() {
