@@ -459,6 +459,18 @@
     object-fit: contain;
     display: block;
   }
+  #caseZoom .cz-empty {
+    height: 260px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border: 1px dashed #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+  }
   #caseZoom .cz-name {
     margin-top: 8px;
     font-size: 12px;
@@ -1019,6 +1031,7 @@
 <!-- Hover zoom popup: enlarged case detail -->
 <div id="caseZoom">
   <img id="caseZoomImg" src="" alt="">
+  <div class="cz-empty" id="caseZoomEmpty">敬请期待</div>
   <div class="cz-name" id="caseZoomName"></div>
 </div>
 
@@ -1761,9 +1774,21 @@ renderImgStack();
     const card = target.closest('.case-card') || target.closest('.case-series-rep');
     if (!card) return;
     const img = card.querySelector('.case-icon img');
-    if (!img || !img.src) return;   // no photo (e.g. SKX) -> nothing to zoom
+    const empty = document.getElementById('caseZoomEmpty');
     const title = card.querySelector('h4');
-    zoomImg.src = img.src;
+    if (img && img.src) {
+      // real photo available -> show enlarged detail
+      zoomImg.src = img.src;
+      zoomImg.style.display = '';
+      if (empty) empty.style.display = 'none';
+    } else {
+      // no photo yet (e.g. SKX) -> still give feedback instead of nothing
+      zoomImg.style.display = 'none';
+      if (empty) {
+        empty.style.display = 'flex';
+        empty.textContent = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
+      }
+    }
     zoomName.textContent = title ? title.textContent.trim() : '';
     zoom.style.display = 'block';
     const box = (card.querySelector('.case-icon') || card).getBoundingClientRect();
