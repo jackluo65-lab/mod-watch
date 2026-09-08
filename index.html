@@ -594,22 +594,38 @@
     border-bottom: 1px solid var(--border);
   }
 
-  /* Case series block (vertical accordion) */
+  /* Case series — vertical product cards in a grid (namoki style) */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 14px;
+    margin-bottom: 32px;
+    align-items: start;
+  }
   .case-series {
     background: var(--surface);
     border: 2px solid var(--border);
     border-radius: var(--radius);
-    margin-bottom: 12px;
     overflow: hidden;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .case-series:not(.expanded):hover {
+    border-color: var(--accent-dim);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
   }
   .case-series.expanded {
+    grid-column: 1 / -1;
     border-color: var(--accent-dim);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: start;
   }
   .case-series-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 9px 16px;
+    padding: 9px 14px;
     font-size: 12px;
     font-weight: 600;
     color: var(--text2);
@@ -617,95 +633,101 @@
     letter-spacing: 1px;
     background: var(--surface2);
     border-bottom: 1px solid var(--border);
+    cursor: pointer;
   }
   .case-series-header .count {
     font-weight: 400;
     letter-spacing: 0;
     color: var(--text2);
   }
+  .case-series.expanded .case-series-header {
+    grid-column: 1 / -1;
+    cursor: default;
+  }
+  /* Collapsed: vertical card — photo on top, info below */
   .case-series-rep {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
+    text-align: center;
+    gap: 0;
+    padding: 0;
     cursor: pointer;
-    transition: background .2s;
-    border-left: 3px solid transparent;
-  }
-  .case-series-rep:hover {
-    background: var(--surface2);
-  }
-  .case-series-rep.selected-rep {
-    border-left-color: var(--accent);
-    background: #fffdf7;
   }
   .case-series-rep .case-icon {
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
+    width: 100%;
+    height: 170px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
   }
   .case-series-rep .case-icon img {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    inset: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     object-fit: contain;
   }
   /* Coming Soon fallback inside case icons (no real photo yet) */
   .case-icon .icon-empty {
     position: absolute;
-    inset: 0;
+    inset: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
     color: #bbb;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
     border: 1px dashed #e0e0e0;
     border-radius: 8px;
     text-align: center;
     padding: 2px;
   }
+  .case-series-rep.selected-rep {
+    box-shadow: inset 0 0 0 2px var(--accent);
+    background: #fffdf7;
+  }
   .case-series-rep .rep-info {
     flex: 1;
     min-width: 0;
+    width: 100%;
+    padding: 4px 14px 14px;
   }
   .case-series-rep .rep-info h4 {
     font-size: 14px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
   .case-series-rep .rep-meta {
-    font-size: 12px;
+    font-size: 11.5px;
     color: var(--text2);
     line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .case-series-rep .rep-hint {
     font-size: 11px;
     color: var(--accent);
-    margin-top: 3px;
+    margin-top: 5px;
   }
   .case-series-rep .rep-arrow {
-    flex-shrink: 0;
     color: var(--text2);
+    margin-top: 6px;
     transition: transform .25s ease;
   }
   .case-series.expanded .case-series-rep .rep-arrow {
     transform: rotate(180deg);
   }
+  /* Expanded: series card on the left, variant grid on the right */
+  .case-series.expanded .case-series-rep {
+    border-right: 1px dashed var(--border);
+    height: 100%;
+  }
   .case-series-variants {
     display: none;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 12px;
-    padding: 14px 16px 16px;
-    border-top: 1px dashed var(--border);
+    padding: 16px;
   }
   .case-series.expanded .case-series-variants {
     display: grid;
@@ -880,6 +902,8 @@
     .header { padding: 16px 20px; }
     .progress-step .step-label { display: none; }
     .progress-step { padding-top: 2px; }
+    .case-series.expanded { grid-template-columns: 1fr; }
+    .case-series.expanded .case-series-rep { border-right: none; border-bottom: 1px dashed var(--border); }
   }
 
   /* Living hands: classic 10:08 pose + ticking seconds */
@@ -1247,6 +1271,7 @@ function renderCaseGrid() {
     count.textContent = LANG === 'zh' ? `${cases.length} 款` : `${cases.length} models`;
     header.appendChild(document.createTextNode(caseCategoryLabel(category)));
     header.appendChild(count);
+    header.addEventListener('click', () => toggleSeries(series));
     series.appendChild(header);
 
     // Representative: only the first case, click to expand/collapse
