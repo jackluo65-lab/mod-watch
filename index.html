@@ -1292,7 +1292,30 @@ function renderCaseGrid() {
     grid.appendChild(series);
   });
 
+  caseGridOrder = groups.map(g => g[0]);   // remember the natural order
   if (selectedCase) highlightSelectedCase();
+  applySeriesOrder();
+}
+
+// Original (natural) order of the series, and the "selected series first" behaviour
+let caseGridOrder = [];
+
+// While the customer is on the case-selection step, park the chosen series first.
+// As soon as they move on (or reset), the natural order comes back.
+function applySeriesOrder() {
+  const grid = document.getElementById('caseGrid');
+  if (!grid) return;
+  const pin = currentStep === 0 && selectedCase;
+  if (pin) {
+    const cat = selectedCase.category || (LANG === 'zh' ? '表壳' : 'Cases');
+    const el = grid.querySelector(`.case-series[data-category="${cat}"]`);
+    if (el && grid.firstElementChild !== el) grid.prepend(el);
+  } else {
+    caseGridOrder.forEach(cat => {
+      const el = grid.querySelector(`.case-series[data-category="${cat}"]`);
+      if (el) grid.appendChild(el);
+    });
+  }
 }
 
 // Representative card for a series (shows the first case only)
@@ -1744,6 +1767,7 @@ function goToStep(i) {
 
   // Visibility
   document.getElementById('caseGrid').style.display = i === 0 ? '' : 'none';
+  applySeriesOrder();   // chosen series first while picking; natural order once they move on
   document.getElementById('partsSection').classList.toggle('visible', i >= 1 && !isFinish);
   document.querySelectorAll('.part-group').forEach(g => {
     g.classList.toggle('active', !isFinish && step && g.dataset.part === step.type);
