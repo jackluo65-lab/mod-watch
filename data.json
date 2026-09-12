@@ -609,9 +609,9 @@
       "category": "SKX 3.8 Case"
     },
     {
-      "id": "skx38-more-1",
-      "name": "SKX 3.8 MORE Case",
-      "nameZh": "SKX 3.8 MORE 表壳",
+      "id": "skx38-more-n1",
+      "name": "SKX 3.8 MORE Case SKX-N-1",
+      "nameZh": "SKX 3.8 MORE 表壳 SKX-N-1 光亮 银色壳",
       "size": "42.0mm",
       "lugWidth": "22 mm",
       "lugToLug": "46.0mm",
@@ -619,9 +619,87 @@
       "waterResistance": "200m",
       "crystal": "Sapphire ",
       "movement": "NH35 / NH36",
-      "description": "SKX 3.8 MORE 系列表壳，图片即将上线。",
-      "descriptionEn": "SKX 3.8 MORE case series — photo coming soon.",
-      "views": {},
+      "description": "SKX 3.8 MORE 系列表壳，型号 SKX-N-1，光亮 银色壳。",
+      "descriptionEn": "SKX 3.8 MORE case series, model SKX-N-1, Polished Silver.",
+      "views": {
+        "front": "img/cases/skx38-more/SKX-N-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX 3.8 MORE CASE"
+    },
+    {
+      "id": "skx38-more-n7",
+      "name": "SKX 3.8 MORE Case SKX-N-7",
+      "nameZh": "SKX 3.8 MORE 表壳 SKX-N-7 哑光 黑色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 MORE 系列表壳，型号 SKX-N-7，哑光 黑色壳。",
+      "descriptionEn": "SKX 3.8 MORE case series, model SKX-N-7, Matte Black.",
+      "views": {
+        "front": "img/cases/skx38-more/SKX-N-7.png"
+      },
       "compatibleParts": {
         "bezel": [
           "bz-bc-1",
