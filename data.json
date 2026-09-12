@@ -18,9 +18,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -89,9 +94,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -160,9 +170,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -231,9 +246,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -302,9 +322,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -373,9 +398,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -444,9 +474,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -515,9 +550,14 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-skx-smooth",
-          "bz-skx-coin",
-          "bz-skx-sub"
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -3060,6 +3100,102 @@
         "descriptionEn": "Vintage series bezel B-FG-17, gunmetal stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-17.png",
         "category": "Vintage Case"
+      },
+      {
+        "id": "bz-bc-1",
+        "name": "Bezel B-C-1 (Matte LX Silver)",
+        "nameZh": "表圈 B-C-1（哑光 LX 银色）",
+        "series": "skx38",
+        "color": "#c0c0c0",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-C-1，哑光 LX工艺，银色。",
+        "descriptionEn": "Bezel B-C-1 for SKX 3.8 case, Matte LX finish, Silver.",
+        "image": "img/bezel/B-C-1.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-bc-2",
+        "name": "Bezel B-C-2 (Matte LX Black)",
+        "nameZh": "表圈 B-C-2（哑光 LX 黑色）",
+        "series": "skx38",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 专用表圈 B-C-2，哑光 LX工艺，黑色。",
+        "descriptionEn": "Bezel B-C-2 for SKX 3.8 case, Matte LX finish, Black.",
+        "image": "img/bezel/B-C-2.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-bc-3",
+        "name": "Bezel B-C-3 (Matte LX Gold)",
+        "nameZh": "表圈 B-C-3（哑光 LX 金色）",
+        "series": "skx38",
+        "color": "#d4af37",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-C-3，哑光 LX工艺，金色。",
+        "descriptionEn": "Bezel B-C-3 for SKX 3.8 case, Matte LX finish, Gold.",
+        "image": "img/bezel/B-C-3.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-bf-4",
+        "name": "Bezel B-F-4 (Matte LX Rose Gold)",
+        "nameZh": "表圈 B-F-4（哑光 LX 玫瑰金）",
+        "series": "skx38",
+        "color": "#b76e79",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-F-4，哑光 LX工艺，玫瑰金。",
+        "descriptionEn": "Bezel B-F-4 for SKX 3.8 case, Matte LX finish, Rose Gold.",
+        "image": "img/bezel/B-F-4.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-be-1",
+        "name": "Bezel B-E-1 (Polished LX Silver)",
+        "nameZh": "表圈 B-E-1（光亮 LX 银色）",
+        "series": "skx38",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-E-1，光亮 LX工艺，银色。",
+        "descriptionEn": "Bezel B-E-1 for SKX 3.8 case, Polished LX finish, Silver.",
+        "image": "img/bezel/B-E-1.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-ba-2",
+        "name": "Bezel B-A-2 (Polished LX Black)",
+        "nameZh": "表圈 B-A-2（光亮 LX 黑色）",
+        "series": "skx38",
+        "color": "#1a1a1a",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 专用表圈 B-A-2，光亮 LX工艺，黑色。",
+        "descriptionEn": "Bezel B-A-2 for SKX 3.8 case, Polished LX finish, Black.",
+        "image": "img/bezel/B-A-2.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-ba-3",
+        "name": "Bezel B-A-3 (Polished LX Gold)",
+        "nameZh": "表圈 B-A-3（光亮 LX 金色）",
+        "series": "skx38",
+        "color": "#ffd700",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-A-3，光亮 LX工艺，金色。",
+        "descriptionEn": "Bezel B-A-3 for SKX 3.8 case, Polished LX finish, Gold.",
+        "image": "img/bezel/B-A-3.png",
+        "category": "SKX 3.8 Case"
+      },
+      {
+        "id": "bz-be-4",
+        "name": "Bezel B-E-4 (Polished LX Rose Gold)",
+        "nameZh": "表圈 B-E-4（光亮 LX 玫瑰金）",
+        "series": "skx38",
+        "color": "#d4a5a5",
+        "material": "Steel",
+        "description": "SKX 3.8 专用表圈 B-E-4，光亮 LX工艺，玫瑰金。",
+        "descriptionEn": "Bezel B-E-4 for SKX 3.8 case, Polished LX finish, Rose Gold.",
+        "image": "img/bezel/B-E-4.png",
+        "category": "SKX 3.8 Case"
       }
     ],
     "hands": [
