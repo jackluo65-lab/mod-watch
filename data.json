@@ -609,6 +609,80 @@
       "category": "SKX 3.8 Case"
     },
     {
+      "id": "skx38-more-1",
+      "name": "SKX 3.8 MORE Case",
+      "nameZh": "SKX 3.8 MORE 表壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 MORE 系列表壳，图片即将上线。",
+      "descriptionEn": "SKX 3.8 MORE case series — photo coming soon.",
+      "views": {},
+      "compatibleParts": {
+        "bezel": [
+          "bz-bc-1",
+          "bz-bc-2",
+          "bz-bc-3",
+          "bz-bf-4",
+          "bz-be-1",
+          "bz-ba-2",
+          "bz-ba-3",
+          "bz-be-4"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX 3.8 MORE CASE"
+    },
+    {
       "id": "skx30",
       "name": "SKX 3.0 Case",
       "nameZh": "SKX 3.0 表壳",
@@ -3111,7 +3185,7 @@
         "description": "SKX 3.8 专用表圈 B-C-1，哑光 LX工艺，银色。",
         "descriptionEn": "Bezel B-C-1 for SKX 3.8 case, Matte LX finish, Silver.",
         "image": "img/bezel/B-C-1.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-bc-2",
@@ -3123,7 +3197,7 @@
         "description": "SKX 3.8 专用表圈 B-C-2，哑光 LX工艺，黑色。",
         "descriptionEn": "Bezel B-C-2 for SKX 3.8 case, Matte LX finish, Black.",
         "image": "img/bezel/B-C-2.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-bc-3",
@@ -3135,7 +3209,7 @@
         "description": "SKX 3.8 专用表圈 B-C-3，哑光 LX工艺，金色。",
         "descriptionEn": "Bezel B-C-3 for SKX 3.8 case, Matte LX finish, Gold.",
         "image": "img/bezel/B-C-3.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-bf-4",
@@ -3147,7 +3221,7 @@
         "description": "SKX 3.8 专用表圈 B-F-4，哑光 LX工艺，玫瑰金。",
         "descriptionEn": "Bezel B-F-4 for SKX 3.8 case, Matte LX finish, Rose Gold.",
         "image": "img/bezel/B-F-4.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-be-1",
@@ -3159,7 +3233,7 @@
         "description": "SKX 3.8 专用表圈 B-E-1，光亮 LX工艺，银色。",
         "descriptionEn": "Bezel B-E-1 for SKX 3.8 case, Polished LX finish, Silver.",
         "image": "img/bezel/B-E-1.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-ba-2",
@@ -3171,7 +3245,7 @@
         "description": "SKX 3.8 专用表圈 B-A-2，光亮 LX工艺，黑色。",
         "descriptionEn": "Bezel B-A-2 for SKX 3.8 case, Polished LX finish, Black.",
         "image": "img/bezel/B-A-2.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-ba-3",
@@ -3183,7 +3257,7 @@
         "description": "SKX 3.8 专用表圈 B-A-3，光亮 LX工艺，金色。",
         "descriptionEn": "Bezel B-A-3 for SKX 3.8 case, Polished LX finish, Gold.",
         "image": "img/bezel/B-A-3.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       },
       {
         "id": "bz-be-4",
@@ -3195,7 +3269,7 @@
         "description": "SKX 3.8 专用表圈 B-E-4，光亮 LX工艺，玫瑰金。",
         "descriptionEn": "Bezel B-E-4 for SKX 3.8 case, Polished LX finish, Rose Gold.",
         "image": "img/bezel/B-E-4.png",
-        "category": "SKX 3.8 Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
       }
     ],
     "hands": [

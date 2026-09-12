@@ -1442,7 +1442,8 @@ const availablePartsCount = {};
 function categoryMatches(part, caseObj) {
   const pc = part.category;
   if (!pc || pc === 'universal') return true;
-  return pc === caseObj.category;
+  // A part can serve several series: category may list them comma separated
+  return pc.split(',').map(s => s.trim()).includes(caseObj.category);
 }
 
 // Render compatible parts
