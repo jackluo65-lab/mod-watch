@@ -626,14 +626,16 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-bc-1",
-          "bz-bc-2",
-          "bz-bc-3",
-          "bz-bf-4",
-          "bz-be-1",
-          "bz-ba-2",
-          "bz-ba-3",
-          "bz-be-4"
+          "bz-b-n-21",
+          "bz-b-n-27",
+          "bz-b-n-31",
+          "bz-b-n-37",
+          "bz-b-n-41",
+          "bz-b-n-47",
+          "bz-b-n-51",
+          "bz-b-n-57",
+          "bz-b-n-61",
+          "bz-b-n-67"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -702,14 +704,16 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-bc-1",
-          "bz-bc-2",
-          "bz-bc-3",
-          "bz-bf-4",
-          "bz-be-1",
-          "bz-ba-2",
-          "bz-ba-3",
-          "bz-be-4"
+          "bz-b-n-21",
+          "bz-b-n-27",
+          "bz-b-n-31",
+          "bz-b-n-37",
+          "bz-b-n-41",
+          "bz-b-n-47",
+          "bz-b-n-51",
+          "bz-b-n-57",
+          "bz-b-n-61",
+          "bz-b-n-67"
         ],
         "insert": [
           "in-skx-alu-black",
@@ -3348,6 +3352,126 @@
         "descriptionEn": "Bezel B-E-4 for SKX 3.8 case, Polished LX finish, Rose Gold.",
         "image": "img/bezel/B-E-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-21",
+        "name": "Bezel B-N-21 (Polished MM300 Silver)",
+        "nameZh": "表圈 B-N-21（光亮 MM300 银色）",
+        "series": "skx38-more",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-21，MM300 款式，光亮，银色。",
+        "descriptionEn": "Bezel B-N-21 for SKX 3.8 MORE case, MM300 style, polished, Silver.",
+        "image": "img/bezel/B-N-21.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-27",
+        "name": "Bezel B-N-27 (MM300 Black)",
+        "nameZh": "表圈 B-N-27（MM300 黑色）",
+        "series": "skx38-more",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-27，MM300 款式，黑色。",
+        "descriptionEn": "Bezel B-N-27 for SKX 3.8 MORE case, MM300 style, Black.",
+        "image": "img/bezel/B-N-27.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-31",
+        "name": "Bezel B-N-31 (Polished Knurled Silver)",
+        "nameZh": "表圈 B-N-31（光亮 Knurled 银色）",
+        "series": "skx38-more",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-31，Knurled 款式，光亮，银色。",
+        "descriptionEn": "Bezel B-N-31 for SKX 3.8 MORE case, Knurled style, polished, Silver.",
+        "image": "img/bezel/B-N-31.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-37",
+        "name": "Bezel B-N-37 (Matte Knurled Black)",
+        "nameZh": "表圈 B-N-37（哑光 Knurled 黑色）",
+        "series": "skx38-more",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-37，Knurled 款式，哑光，黑色。",
+        "descriptionEn": "Bezel B-N-37 for SKX 3.8 MORE case, Knurled style, matte, Black.",
+        "image": "img/bezel/B-N-37.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-41",
+        "name": "Bezel B-N-41 (Polished Seamaster Silver)",
+        "nameZh": "表圈 B-N-41（光亮 Seamaster 银色）",
+        "series": "skx38-more",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-41，Seamaster 款式，光亮，银色。",
+        "descriptionEn": "Bezel B-N-41 for SKX 3.8 MORE case, Seamaster style, polished, Silver.",
+        "image": "img/bezel/B-N-41.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-47",
+        "name": "Bezel B-N-47 (Matte Seamaster Black)",
+        "nameZh": "表圈 B-N-47（哑光 Seamaster 黑色）",
+        "series": "skx38-more",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-47，Seamaster 款式，哑光，黑色。",
+        "descriptionEn": "Bezel B-N-47 for SKX 3.8 MORE case, Seamaster style, matte, Black.",
+        "image": "img/bezel/B-N-47.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-51",
+        "name": "Bezel B-N-51 (Polished Turbine Silver)",
+        "nameZh": "表圈 B-N-51（光亮 Turbine 银色）",
+        "series": "skx38-more",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-51，Turbine 款式，光亮，银色。",
+        "descriptionEn": "Bezel B-N-51 for SKX 3.8 MORE case, Turbine style, polished, Silver.",
+        "image": "img/bezel/B-N-51.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-57",
+        "name": "Bezel B-N-57 (Matte Turbine Black)",
+        "nameZh": "表圈 B-N-57（哑光 Turbine 黑色）",
+        "series": "skx38-more",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-57，Turbine 款式，哑光，黑色。",
+        "descriptionEn": "Bezel B-N-57 for SKX 3.8 MORE case, Turbine style, matte, Black.",
+        "image": "img/bezel/B-N-57.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-61",
+        "name": "Bezel B-N-61 (Polished Pilot Silver)",
+        "nameZh": "表圈 B-N-61（光亮 Pilot 银色）",
+        "series": "skx38-more",
+        "color": "#e8e8e8",
+        "material": "Steel",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-61，Pilot 款式，光亮，银色。",
+        "descriptionEn": "Bezel B-N-61 for SKX 3.8 MORE case, Pilot style, polished, Silver.",
+        "image": "img/bezel/B-N-61.png",
+        "category": "SKX 3.8 MORE CASE"
+      },
+      {
+        "id": "bz-b-n-67",
+        "name": "Bezel B-N-67 (Matte Pilot Black)",
+        "nameZh": "表圈 B-N-67（哑光 Pilot 黑色）",
+        "series": "skx38-more",
+        "color": "#222222",
+        "material": "Steel / PVD",
+        "description": "SKX 3.8 MORE 专用表圈 B-N-67，Pilot 款式，哑光，黑色。",
+        "descriptionEn": "Bezel B-N-67 for SKX 3.8 MORE case, Pilot style, matte, Black.",
+        "image": "img/bezel/B-N-67.png",
+        "category": "SKX 3.8 MORE CASE"
       }
     ],
     "hands": [
