@@ -1,9 +1,9 @@
 {
   "caseSeries": [
     {
-      "id": "skx38",
-      "name": "SKX 3.8 Case",
-      "nameZh": "SKX 3.8 表壳",
+      "id": "skx38-b1",
+      "name": "SKX 3.8 Case SKX-B-1",
+      "nameZh": "SKX 3.8 表壳 SKX-B-1 哑光 银色壳",
       "size": "42.0mm",
       "lugWidth": "22 mm",
       "lugToLug": "46.0mm",
@@ -11,12 +11,507 @@
       "waterResistance": "200m",
       "crystal": "Sapphire ",
       "movement": "NH35 / NH36",
-      "description": "经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。做工扎实，兼容 NH 系列机芯，是入门级改装的热门选择。",
-      "descriptionEn": "Classic SKX-style dive case with crown at 3:38, perfect for daily wear. Solid build, compatible with NH movements — a favorite for first-time modders.",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-B-1，哑光 银色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-B-1, Matte Silver. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
       "views": {
-        "front": "img/cases/skx38/front.png",
-        "side": "img/cases/skx38/side.png",
-        "back": "img/cases/skx38/back.png"
+        "front": "img/cases/skx38/SKX-B-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-b2",
+      "name": "SKX 3.8 Case SKX-B-2",
+      "nameZh": "SKX 3.8 表壳 SKX-B-2 哑光 黑色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-B-2，哑光 黑色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-B-2, Matte Black. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-B-2.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-b3",
+      "name": "SKX 3.8 Case SKX-B-3",
+      "nameZh": "SKX 3.8 表壳 SKX-B-3 哑光 金色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-B-3，哑光 金色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-B-3, Matte Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-B-3.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-f4",
+      "name": "SKX 3.8 Case SKX-F-4",
+      "nameZh": "SKX 3.8 表壳 SKX-F-4 哑光 玫瑰金壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-F-4，哑光 玫瑰金壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-F-4, Matte Rose Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-F-4.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-c1",
+      "name": "SKX 3.8 Case SKX-C-1",
+      "nameZh": "SKX 3.8 表壳 SKX-C-1 光亮 银色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-C-1，光亮 银色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-C-1, Polished Silver. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-C-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-c2",
+      "name": "SKX 3.8 Case SKX-C-2",
+      "nameZh": "SKX 3.8 表壳 SKX-C-2 光亮 黑色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-C-2，光亮 黑色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-C-2, Polished Black. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-C-2.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-c3",
+      "name": "SKX 3.8 Case SKX-C-3",
+      "nameZh": "SKX 3.8 表壳 SKX-C-3 光亮 金色壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-C-3，光亮 金色壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-C-3, Polished Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-C-3.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-skx-smooth",
+          "bz-skx-coin",
+          "bz-skx-sub"
+        ],
+        "insert": [
+          "in-skx-alu-black",
+          "in-skx-ceramic-black",
+          "in-skx-ceramic-blue"
+        ],
+        "crystal": [
+          "cr-skx-domed",
+          "cr-skx-flat",
+          "cr-skx-double-domed"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi"
+        ],
+        "chapterRing": [
+          "cr-skx-black",
+          "cr-skx-blue",
+          "cr-skx-white"
+        ],
+        "crown": [
+          "cw-skx-std",
+          "cw-skx-signed"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      },
+      "category": "SKX"
+    },
+    {
+      "id": "skx38-e4",
+      "name": "SKX 3.8 Case SKX-E-4",
+      "nameZh": "SKX 3.8 表壳 SKX-E-4 光亮 玫瑰金壳",
+      "size": "42.0mm",
+      "lugWidth": "22 mm",
+      "lugToLug": "46.0mm",
+      "thickness": "12 mm",
+      "waterResistance": "200m",
+      "crystal": "Sapphire ",
+      "movement": "NH35 / NH36",
+      "description": "SKX 3.8 潜水表壳，型号 SKX-E-4，光亮 玫瑰金壳。经典 SKX 风格潜水表壳，3.8 点钟位置表冠，合日常佩戴。",
+      "descriptionEn": "SKX 3.8 dive case, model SKX-E-4, Polished Rose Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "views": {
+        "front": "img/cases/skx38/SKX-E-4.png"
       },
       "compatibleParts": {
         "bezel": [
