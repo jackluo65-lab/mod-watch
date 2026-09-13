@@ -1223,8 +1223,8 @@ function typeLabel(type) {
   return LANG === 'zh' ? zh[type] : en[type];
 }
 
-// Load data
-fetch('data.json')
+// Load data (timestamp keeps CDNs/browsers from serving a stale catalogue)
+fetch('data.json?t=' + Date.now())
   .then(r => r.json())
   .then(d => { DATA = d; renderCaseGrid(); })
   .catch(() => {
