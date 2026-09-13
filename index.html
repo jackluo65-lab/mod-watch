@@ -330,6 +330,22 @@
     border-bottom: 1px solid var(--border);
   }
 
+  /* Step counter — phones/tablets only: the dot row hides the step labels up there */
+  .step-counter { display: none; }
+  @media (max-width: 960px) {
+    .step-counter {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 11.5px;
+      letter-spacing: .5px;
+      color: var(--text2);
+    }
+    .step-counter b { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 0; }
+  }
+
   /* Step-by-step wizard */
   .progress-bar {
     display: flex;
@@ -906,6 +922,208 @@
     .case-series.expanded .case-series-rep { border-right: none; border-bottom: 1px dashed var(--border); }
   }
 
+  /* ---- Touch devices: hover styles must not stick after a tap ---- */
+  @media (hover: none) {
+    .case-card:hover,
+    .case-series:not(.expanded):hover,
+    .part-item:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .case-card:hover,
+    .part-item:hover { border-color: var(--border); }
+    .case-series:not(.expanded):hover { border-color: var(--border); }
+    .case-card.selected,
+    .part-item.selected { border-color: var(--accent); }
+    .progress-step.done:hover .step-dot { transform: none; box-shadow: none; }
+    .view-btn:hover:not(.active) { border-color: var(--border); color: var(--text2); }
+  }
+
+  /* ---- Tablets: keep the desktop side-by-side layout, pin the action bar ---- */
+  @media (min-width: 641px) and (max-width: 960px) {
+    .main {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 16px 96px;
+    }
+    .preview-panel {
+      width: 296px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 16px;
+      z-index: 60;
+    }
+    .preview-box { padding: 14px 12px; }
+    .preview-canvas { width: 100%; height: 300px; margin-bottom: 8px; }
+    .view-toggle { gap: 6px; margin-bottom: 10px; }
+    .view-btn { padding: 6px 12px; font-size: 11.5px; }
+    .preview-info h3 { font-size: 14px; }
+    .preview-info .specs { font-size: 11px; line-height: 1.5; }
+    .config-panel { min-width: 0; scroll-margin-top: 16px; }
+    .progress-bar { margin-bottom: 12px; }
+    .case-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+    .part-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .part-item { min-width: 0; }
+    .step-nav,
+    .cta-row {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 80;
+      margin: 0;
+      padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.97);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -2px 12px rgba(0,0,0,.06);
+    }
+    .step-nav .btn,
+    .cta-row .btn { min-height: 46px; }
+    .cta-row { gap: 12px; }
+  }
+
+  /* ---- Phones: sticky mini preview + fixed action bar + denser lists ---- */
+  @media (max-width: 640px) {
+    html { -webkit-text-size-adjust: 100%; }
+
+    /* Header stays compact and scrolls away */
+    .header { padding: 10px 14px; }
+    .header .logo { font-size: 16px; letter-spacing: 2px; }
+    #tagline { display: none; }
+    .lang-btn { padding: 8px 14px; min-height: 38px; font-size: 12px; }
+
+    .main {
+      flex-direction: column;
+      gap: 0;
+      padding: 0 0 92px;
+    }
+
+    /* Preview: pinned to the top so the watch stays visible while picking parts */
+    .preview-panel {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      width: 100%;
+    }
+    .preview-box {
+      border: none;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0;
+      padding: 8px 12px 10px;
+      gap: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      background: #ffffff;
+    }
+    .preview-canvas { width: 100%; height: 168px; margin-bottom: 4px; }
+    .view-toggle { gap: 6px; margin-bottom: 6px; }
+    /* No case chosen yet: the hero prompt needs less room than a real photo */
+    .preview-panel.is-empty .view-toggle { display: none; }
+    .preview-panel.is-empty .preview-canvas { height: 148px; }
+    .view-btn { padding: 6px 12px; min-height: 34px; font-size: 11.5px; border-radius: 18px; }
+    .preview-info h3 { font-size: 13px; margin-bottom: 2px; }
+    .preview-info .specs {
+      font-size: 11px;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .preview-zoom-hint { padding: 3px 9px; font-size: 10.5px; right: 6px; bottom: 6px; }
+    #emptyHint { gap: 8px; padding: 10px; }
+    #emptyHint::before { width: 30px; height: 30px; margin-bottom: 0; }
+    #emptyHint .eh-zh { font-size: 15px; letter-spacing: 1px; line-height: 1.5; }
+    #emptyHint .eh-en { font-size: 11px; }
+    #viewComingSoon { gap: 6px; }
+    #viewComingSoon .cs-icon { width: 40px; height: 40px; font-size: 10px; }
+    #viewComingSoon .cs-title { font-size: 16px; letter-spacing: 3px; }
+    #viewComingSoon .cs-sub { font-size: 11px; }
+
+    /* Config column: full width, comfortable padding */
+    .config-panel { padding: 14px 14px 0; scroll-margin-top: 292px; }
+    .progress-bar { margin-bottom: 10px; padding-top: 0; }
+    .progress-step .step-dot { width: 12px; height: 12px; }
+    .progress-step:not(:last-child)::after { top: 6px; }
+    .step-title { font-size: 16px; margin-bottom: 6px; }
+    .step-guide { font-size: 12.5px; padding: 9px 12px; margin-bottom: 14px; }
+
+    /* Case series: shorter cards, 44px+ tap targets */
+    .case-grid { gap: 10px; margin-bottom: 20px; }
+    .case-series-header { min-height: 44px; padding: 10px 14px; font-size: 11.5px; }
+    .case-series-rep .case-icon { height: 128px; }
+    .case-series-rep .rep-info { padding: 4px 12px 12px; }
+    .case-series-rep .rep-info h4 { font-size: 13px; }
+    .case-series-variants { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 12px; }
+    .case-card { padding: 10px; }
+    .case-card .case-icon { width: 100%; height: 92px; margin: 0 auto 8px; }
+    .case-card h4 { font-size: 12.5px; }
+    .case-card .desc { font-size: 11px; }
+
+    /* Part options: two per row, fewer scrolls */
+    .part-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .part-item { min-width: 0; padding: 9px 10px; gap: 8px; }
+    .part-swatch { width: 30px; height: 30px; }
+    .part-info h5 { font-size: 12px; }
+    .part-info .mat { font-size: 10.5px; }
+    .part-desc { font-size: 11.5px; padding: 8px 10px; }
+
+    /* Action bar pinned to the bottom — always reachable */
+    .step-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 80;
+      margin: 0;
+      gap: 10px;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.97);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -2px 12px rgba(0,0,0,.06);
+    }
+    .step-nav .btn { flex: 1; min-height: 46px; font-size: 14px; padding: 12px 10px; }
+
+    /* Finish screen actions also pinned */
+    .cta-row {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 80;
+      margin: 0;
+      gap: 10px;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.97);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -2px 12px rgba(0,0,0,.06);
+    }
+    .cta-row .btn { flex: 1; min-height: 46px; font-size: 14px; }
+    .summary-bar { margin-bottom: 16px; }
+
+    /* Lightbox must fit the phone screen */
+    #lightbox { padding: 12px; }
+    #lightbox .lb-box { padding: 12px; max-width: 96vw; }
+    #lightbox .lb-stage { width: 86vw; height: 66vh; }
+    #lightbox .lb-title { font-size: 13px; margin-top: 10px; }
+    #lightbox .lb-hint { font-size: 11px; }
+    #lightbox .lb-close { width: 44px; height: 44px; top: 0; right: 0; font-size: 22px; }
+  }
+
+  /* Short phones (iPhone SE class): give the option list more of the screen */
+  @media (max-width: 640px) and (max-height: 760px) {
+    .preview-canvas { height: 118px; }
+    .preview-panel.is-empty .preview-canvas { height: 106px; }
+    .preview-info .specs {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+    }
+    .view-btn { padding: 5px 11px; min-height: 30px; }
+    .view-toggle { margin-bottom: 4px; }
+  }
+
   /* Living hands: classic 10:08 pose + ticking seconds */
   #hourHand, #minuteHand, #secondHand {
     transform-origin: 190px 240px;
@@ -1021,6 +1239,7 @@
 
   <!-- Config Panel -->
   <div class="config-panel">
+    <div class="step-counter" id="stepCounter"></div>
     <div class="progress-bar" id="progressBar"></div>
     <div class="step-title" id="stepTitle">第 1 步 · 选择表壳系列</div>
     <div class="step-guide" id="stepGuide">先选择一个表壳系列，后续所有配件会自动匹配兼容款式</div>
@@ -1596,6 +1815,9 @@ function renderImgStack() {
   svg.style.display = '';
   stack.style.display = 'none';
   emptyHint.style.display = 'none';
+  // Phones: before a case is picked the side/back toggle is meaningless — reclaim the space
+  document.querySelector('.preview-panel')
+    .classList.toggle('is-empty', !selectedCase && currentView === 'front');
 
   // Side / back view images are not available yet — always show Coming Soon placeholder
   if (currentView === 'side' || currentView === 'back') {
@@ -1741,6 +1963,16 @@ function renderProgressBar() {
     }
     bar.appendChild(stepEl);
   });
+
+  // Compact "step x of y" line — the dot labels are hidden on phones
+  const counter = document.getElementById('stepCounter');
+  if (counter) {
+    const total = allSteps.length;
+    const isFinishNow = currentStep >= stepOrder.length;
+    counter.innerHTML = LANG === 'zh'
+      ? `<b>${isFinishNow ? '全部完成' : '第 ' + (currentStep + 1) + ' 步'}</b><span>共 ${total} 步</span>`
+      : `<b>${isFinishNow ? 'All done' : 'Step ' + (currentStep + 1)}</b><span>of ${total}</span>`;
+  }
 }
 
 function goToStep(i) {
@@ -1791,6 +2023,8 @@ function goToStep(i) {
   btnPrev.style.visibility = i === 0 ? 'hidden' : 'visible';
   btnPrev.textContent = isFinish ? t('prevFinish') : t('prev');
   btnNext.style.display = isFinish ? 'none' : '';
+  // Finish screen has its own action bar — keep the step nav from stacking on top of it on phones
+  document.querySelector('.step-nav').style.display = isFinish ? 'none' : '';
   btnNext.textContent = i === stepOrder.length - 1 ? t('nextFinish') : t('next');
   // Disable next until current step has a selection (or no options are available)
   const stepReady = i === 0
