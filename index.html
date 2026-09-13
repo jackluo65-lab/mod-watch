@@ -1323,9 +1323,13 @@ function buildCaseRep(cs, count) {
   const rep = document.createElement('div');
   rep.className = 'case-series-rep';
   const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
-  const caseImg = (cs.views && cs.views.front)
-    ? `<img src="${cs.views.front}" alt="" onload="const _f=this.parentElement.querySelector('.icon-empty'); if(_f){_f.style.display='none';}" onerror="this.remove()">`
+  const repSrc = cs.views && cs.views.front;
+  // Never let the placeholder cover a photo that is simply still downloading —
+  // reveal it only when the image actually fails to load.
+  const caseImg = repSrc
+    ? `<img src="${repSrc}" alt="" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
     : '';
+  const emptyBox = `<div class="icon-empty"${repSrc ? ' style="display:none"' : ''}>${emptyTxt}</div>`;
   const hintDefault = LANG === 'zh'
     ? `点击查看该系列全部 ${count} 款`
     : `Click to view all ${count} cases`;
@@ -1333,7 +1337,7 @@ function buildCaseRep(cs, count) {
   rep.innerHTML = `
     <div class="case-icon">
       ${caseImg}
-      <div class="icon-empty">${emptyTxt}</div>
+      ${emptyBox}
     </div>
     <div class="rep-info">
       <h4>${partName(cs)}</h4>
@@ -1353,13 +1357,17 @@ function buildCaseCard(cs) {
   card.className = 'case-card';
   card.dataset.id = cs.id;
   const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
-  const caseImg = (cs.views && cs.views.front)
-    ? `<img src="${cs.views.front}" alt="" onload="const _f=this.parentElement.querySelector('.icon-empty'); if(_f){_f.style.display='none';}" onerror="this.remove()">`
+  const cardSrc = cs.views && cs.views.front;
+  // Never let the placeholder cover a photo that is simply still downloading —
+  // reveal it only when the image actually fails to load.
+  const caseImg = cardSrc
+    ? `<img src="${cardSrc}" alt="" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
     : '';
+  const emptyBox = `<div class="icon-empty"${cardSrc ? ' style="display:none"' : ''}>${emptyTxt}</div>`;
   card.innerHTML = `
     <div class="case-icon">
       ${caseImg}
-      <div class="icon-empty">${emptyTxt}</div>
+      ${emptyBox}
     </div>
     <h4>${partName(cs)}</h4>
     <div class="size">
