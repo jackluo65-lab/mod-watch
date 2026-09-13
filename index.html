@@ -1623,17 +1623,16 @@ function renderImgStack() {
   }
   if (!urls.length) return;
 
+  // Append every layer right away, in the order given by frontLayerOrder, and pin the
+  // stacking order with an explicit z-index. Waiting for a preload probe used to let a
+  // slow layer land on top of a faster one (the case photo could cover the bezel).
   let failed = 0;
-  urls.forEach(u => {
-    const probe = new Image();
-    probe.onload = () => {
-      const el = document.createElement('img');
-      el.src = u;
-      stack.appendChild(el);
-      stack.style.display = 'block';
-      svg.style.display = 'none';
-    };
-    probe.onerror = () => {
+  urls.forEach((u, i) => {
+    const el = document.createElement('img');
+    el.alt = '';
+    el.style.zIndex = String(i + 1);
+    el.onerror = () => {
+      el.remove();
       failed++;
       if (failed === urls.length) {
         // Nothing to show for this view — display Coming Soon instead of the demo drawing
@@ -1642,8 +1641,11 @@ function renderImgStack() {
         svg.style.display = 'none';
       }
     };
-    probe.src = u;
+    el.src = u;
+    stack.appendChild(el);
   });
+  stack.style.display = 'block';
+  svg.style.display = 'none';
 }
 
 function drawHourMarkers() {
