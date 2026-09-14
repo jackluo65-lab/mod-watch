@@ -3923,7 +3923,8 @@
         "description": "经典系列表圈 B-JD-1，银色齿纹设计，与经典表壳完美搭配。",
         "descriptionEn": "Classic series bezel B-JD-1, silver coin-edge design, perfect match for Classic Case.",
         "image": "img/bezel/B-JD-1.png",
-        "category": "Classic Case"
+        "category": "Classic Case",
+        "innerR": 218.8
       },
       {
         "id": "bz-jd-3",
@@ -3935,7 +3936,8 @@
         "description": "经典系列表圈 B-JD-3，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-3, designed for Classic Case.",
         "image": "img/bezel/B-JD-3.png",
-        "category": "Classic Case"
+        "category": "Classic Case",
+        "innerR": 220.6
       },
       {
         "id": "bz-jd-4",
@@ -3947,7 +3949,8 @@
         "description": "经典系列表圈 B-JD-4，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-4, designed for Classic Case.",
         "image": "img/bezel/B-JD-4.png",
-        "category": "Classic Case"
+        "category": "Classic Case",
+        "innerR": 220.4
       },
       {
         "id": "bz-jd-6",
@@ -3959,7 +3962,8 @@
         "description": "经典系列表圈 B-JD-6，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-6, designed for Classic Case.",
         "image": "img/bezel/B-JD-6.png",
-        "category": "Classic Case"
+        "category": "Classic Case",
+        "innerR": 218.6
       },
       {
         "id": "bz-jd-7",
@@ -3971,7 +3975,8 @@
         "description": "经典系列表圈 B-JD-7，专为经典表壳设计。",
         "descriptionEn": "Classic series bezel B-JD-7, designed for Classic Case.",
         "image": "img/bezel/B-JD-7.png",
-        "category": "Classic Case"
+        "category": "Classic Case",
+        "innerR": 219.1
       },
       {
         "id": "bz-tx-1",
@@ -3983,7 +3988,8 @@
         "description": "探险家系列表圈 B-TX-1，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-1, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-1.png",
-        "category": "Explorer"
+        "category": "Explorer",
+        "innerR": 221.2
       },
       {
         "id": "bz-tx-3",
@@ -3995,7 +4001,8 @@
         "description": "探险家系列表圈 B-TX-3，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-3, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-3.png",
-        "category": "Explorer"
+        "category": "Explorer",
+        "innerR": 220.5
       },
       {
         "id": "bz-tx-4",
@@ -4007,7 +4014,8 @@
         "description": "探险家系列表圈 B-TX-4，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-4, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-4.png",
-        "category": "Explorer"
+        "category": "Explorer",
+        "innerR": 213.7
       },
       {
         "id": "bz-tx-6",
@@ -4019,7 +4027,8 @@
         "description": "探险家系列表圈 B-TX-6，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-6, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-6.png",
-        "category": "Explorer"
+        "category": "Explorer",
+        "innerR": 219.5
       },
       {
         "id": "bz-tx-7",
@@ -4031,7 +4040,8 @@
         "description": "探险家系列表圈 B-TX-7，专为 Explorer 表壳设计。",
         "descriptionEn": "Explorer series bezel B-TX-7, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-7.png",
-        "category": "Explorer"
+        "category": "Explorer",
+        "innerR": 218.7
       },
       {
         "id": "bz-fx-1",
@@ -4043,7 +4053,8 @@
         "description": "飞行员系列表圈 B-FX-1，银色精钢简约表圈，专为 Pilot Case 设计。",
         "descriptionEn": "Pilot series bezel B-FX-1, silver stainless-steel clean bezel, designed for Pilot Case.",
         "image": "img/bezel/B-FX-1.png",
-        "category": "Pilot Case"
+        "category": "Pilot Case",
+        "innerR": 215.9
       },
       {
         "id": "bz-fx-3",
@@ -4055,7 +4066,8 @@
         "description": "飞行员系列表圈 B-FX-3，金色精钢表圈，为 Pilot Case 增添复古质感。",
         "descriptionEn": "Pilot series bezel B-FX-3, gold stainless-steel bezel, adding vintage flair to Pilot Case.",
         "image": "img/bezel/B-FX-3.png",
-        "category": "Pilot Case"
+        "category": "Pilot Case",
+        "innerR": 215.9
       },
       {
         "id": "bz-fx-4",
@@ -4067,7 +4079,8 @@
         "description": "飞行员系列表圈 B-FX-4，玫瑰金精钢表圈，优雅搭配 Pilot Case。",
         "descriptionEn": "Pilot series bezel B-FX-4, rose gold stainless-steel bezel, elegantly matching Pilot Case.",
         "image": "img/bezel/B-FX-4.png",
-        "category": "Pilot Case"
+        "category": "Pilot Case",
+        "innerR": 215.9
       },
       {
         "id": "bz-fx-6",
@@ -4079,7 +4092,8 @@
         "description": "飞行员系列表圈 B-FX-6，高亮抛光银色表圈，凸显 Pilot Case 的现代线条。",
         "descriptionEn": "Pilot series bezel B-FX-6, high-polish silver bezel highlighting the modern lines of Pilot Case.",
         "image": "img/bezel/B-FX-6.png",
-        "category": "Pilot Case"
+        "category": "Pilot Case",
+        "innerR": 218.3
       },
       {
         "id": "bz-fx-7",
@@ -4091,7 +4105,8 @@
         "description": "飞行员系列表圈 B-FX-7，黑色 PVD 表圈，为 Pilot Case 注入运动气息。",
         "descriptionEn": "Pilot series bezel B-FX-7, black PVD bezel, bringing a sporty feel to Pilot Case.",
         "image": "img/bezel/B-FX-7.png",
-        "category": "Pilot Case"
+        "category": "Pilot Case",
+        "innerR": 218.3
       },
       {
         "id": "bz-fg-1",
@@ -4103,7 +4118,8 @@
         "description": "复古系列表圈 B-FG-1，银色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-1, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-1.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 227.2
       },
       {
         "id": "bz-fg-2",
@@ -4115,7 +4131,8 @@
         "description": "复古系列表圈 B-FG-2，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-2, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-2.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 230.0
       },
       {
         "id": "bz-fg-3",
@@ -4127,7 +4144,8 @@
         "description": "复古系列表圈 B-FG-3，金色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-3, gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-3.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 227.2
       },
       {
         "id": "bz-fg-4",
@@ -4139,7 +4157,8 @@
         "description": "复古系列表圈 B-FG-4，银色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-4, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-4.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 227.2
       },
       {
         "id": "bz-fg-6",
@@ -4151,7 +4170,8 @@
         "description": "复古系列表圈 B-FG-6，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-6, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-6.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 230.9
       },
       {
         "id": "bz-fg-7",
@@ -4163,7 +4183,8 @@
         "description": "复古系列表圈 B-FG-7，金色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-7, gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-7.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 230.9
       },
       {
         "id": "bz-fg-11",
@@ -4175,7 +4196,8 @@
         "description": "复古系列表圈 B-FG-11，深灰精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-11, dark grey stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-11.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 226.6
       },
       {
         "id": "bz-fg-12",
@@ -4187,7 +4209,8 @@
         "description": "复古系列表圈 B-FG-12，浅灰精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-12, light grey stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-12.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 226.6
       },
       {
         "id": "bz-fg-13",
@@ -4199,7 +4222,8 @@
         "description": "复古系列表圈 B-FG-13，银色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-13, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-13.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 226.6
       },
       {
         "id": "bz-fg-14",
@@ -4211,7 +4235,8 @@
         "description": "复古系列表圈 B-FG-14，黑色 PVD 涂层表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-14, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-14.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 226.6
       },
       {
         "id": "bz-fg-16",
@@ -4223,7 +4248,8 @@
         "description": "复古系列表圈 B-FG-16，复古金色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-16, vintage gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-16.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 228.5
       },
       {
         "id": "bz-fg-17",
@@ -4235,7 +4261,8 @@
         "description": "复古系列表圈 B-FG-17，枪灰色精钢表圈，专为 Vintage Case 设计。",
         "descriptionEn": "Vintage series bezel B-FG-17, gunmetal stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-17.png",
-        "category": "Vintage Case"
+        "category": "Vintage Case",
+        "innerR": 227.5
       },
       {
         "id": "bz-bc-1",
@@ -4247,7 +4274,8 @@
         "description": "SKX 3.8 专用表圈 B-C-1，哑光 LX工艺，银色。",
         "descriptionEn": "Bezel B-C-1 for SKX 3.8 case, Matte LX finish, Silver.",
         "image": "img/bezel/B-C-1.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 219.1
       },
       {
         "id": "bz-bc-2",
@@ -4259,7 +4287,8 @@
         "description": "SKX 3.8 专用表圈 B-C-2，哑光 LX工艺，黑色。",
         "descriptionEn": "Bezel B-C-2 for SKX 3.8 case, Matte LX finish, Black.",
         "image": "img/bezel/B-C-2.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 218.9
       },
       {
         "id": "bz-bc-3",
@@ -4271,7 +4300,8 @@
         "description": "SKX 3.8 专用表圈 B-C-3，哑光 LX工艺，金色。",
         "descriptionEn": "Bezel B-C-3 for SKX 3.8 case, Matte LX finish, Gold.",
         "image": "img/bezel/B-C-3.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 216.8
       },
       {
         "id": "bz-bf-4",
@@ -4283,7 +4313,8 @@
         "description": "SKX 3.8 专用表圈 B-F-4，哑光 LX工艺，玫瑰金。",
         "descriptionEn": "Bezel B-F-4 for SKX 3.8 case, Matte LX finish, Rose Gold.",
         "image": "img/bezel/B-F-4.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 219.1
       },
       {
         "id": "bz-be-1",
@@ -4295,7 +4326,8 @@
         "description": "SKX 3.8 专用表圈 B-E-1，光亮 LX工艺，银色。",
         "descriptionEn": "Bezel B-E-1 for SKX 3.8 case, Polished LX finish, Silver.",
         "image": "img/bezel/B-E-1.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 219.7
       },
       {
         "id": "bz-ba-2",
@@ -4307,7 +4339,8 @@
         "description": "SKX 3.8 专用表圈 B-A-2，光亮 LX工艺，黑色。",
         "descriptionEn": "Bezel B-A-2 for SKX 3.8 case, Polished LX finish, Black.",
         "image": "img/bezel/B-A-2.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 219.8
       },
       {
         "id": "bz-ba-3",
@@ -4319,7 +4352,8 @@
         "description": "SKX 3.8 专用表圈 B-A-3，光亮 LX工艺，金色。",
         "descriptionEn": "Bezel B-A-3 for SKX 3.8 case, Polished LX finish, Gold.",
         "image": "img/bezel/B-A-3.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 220.1
       },
       {
         "id": "bz-be-4",
@@ -4331,7 +4365,8 @@
         "description": "SKX 3.8 专用表圈 B-E-4，光亮 LX工艺，玫瑰金。",
         "descriptionEn": "Bezel B-E-4 for SKX 3.8 case, Polished LX finish, Rose Gold.",
         "image": "img/bezel/B-E-4.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "innerR": 224.6
       },
       {
         "id": "bz-b-n-21",
@@ -4343,7 +4378,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-21，MM300 款式，光亮，银色。",
         "descriptionEn": "Bezel B-N-21 for SKX 3.8 MORE case, MM300 style, polished, Silver.",
         "image": "img/bezel/B-N-21.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 219.8
       },
       {
         "id": "bz-b-n-27",
@@ -4355,7 +4391,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-27，MM300 款式，黑色。",
         "descriptionEn": "Bezel B-N-27 for SKX 3.8 MORE case, MM300 style, Black.",
         "image": "img/bezel/B-N-27.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 219.4
       },
       {
         "id": "bz-b-n-31",
@@ -4367,7 +4404,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-31，Knurled 款式，光亮，银色。",
         "descriptionEn": "Bezel B-N-31 for SKX 3.8 MORE case, Knurled style, polished, Silver.",
         "image": "img/bezel/B-N-31.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 220.4
       },
       {
         "id": "bz-b-n-37",
@@ -4379,7 +4417,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-37，Knurled 款式，哑光，黑色。",
         "descriptionEn": "Bezel B-N-37 for SKX 3.8 MORE case, Knurled style, matte, Black.",
         "image": "img/bezel/B-N-37.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 221.1
       },
       {
         "id": "bz-b-n-41",
@@ -4391,7 +4430,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-41，Seamaster 款式，光亮，银色。",
         "descriptionEn": "Bezel B-N-41 for SKX 3.8 MORE case, Seamaster style, polished, Silver.",
         "image": "img/bezel/B-N-41.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 223.3
       },
       {
         "id": "bz-b-n-47",
@@ -4403,7 +4443,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-47，Seamaster 款式，哑光，黑色。",
         "descriptionEn": "Bezel B-N-47 for SKX 3.8 MORE case, Seamaster style, matte, Black.",
         "image": "img/bezel/B-N-47.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 222.1
       },
       {
         "id": "bz-b-n-51",
@@ -4415,7 +4456,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-51，Turbine 款式，光亮，银色。",
         "descriptionEn": "Bezel B-N-51 for SKX 3.8 MORE case, Turbine style, polished, Silver.",
         "image": "img/bezel/B-N-51.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 219.5
       },
       {
         "id": "bz-b-n-57",
@@ -4427,7 +4469,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-57，Turbine 款式，哑光，黑色。",
         "descriptionEn": "Bezel B-N-57 for SKX 3.8 MORE case, Turbine style, matte, Black.",
         "image": "img/bezel/B-N-57.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 219.7
       },
       {
         "id": "bz-b-n-61",
@@ -4439,7 +4482,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-61，Pilot 款式，光亮，银色。",
         "descriptionEn": "Bezel B-N-61 for SKX 3.8 MORE case, Pilot style, polished, Silver.",
         "image": "img/bezel/B-N-61.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 229.4
       },
       {
         "id": "bz-b-n-67",
@@ -4451,7 +4495,8 @@
         "description": "SKX 3.8 MORE 专用表圈 B-N-67，Pilot 款式，哑光，黑色。",
         "descriptionEn": "Bezel B-N-67 for SKX 3.8 MORE case, Pilot style, matte, Black.",
         "image": "img/bezel/B-N-67.png",
-        "category": "SKX 3.8 MORE CASE"
+        "category": "SKX 3.8 MORE CASE",
+        "innerR": 227.6
       }
     ],
     "hands": [

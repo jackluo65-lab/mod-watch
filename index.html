@@ -1811,6 +1811,18 @@ function updatePreview() {
 let currentView = 'front';
 const frontLayerOrder = ['strap', 'case', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'bezel', 'crown'];
 
+// The chapter ring (inner shadow ring) is a universal part, but each bezel has a
+// slightly different inner-hole radius (about 212-230px on the 800x1000 canvas).
+// Scaling the ring to the selected bezel keeps its outer edge tucked under the
+// bezel — no visible gap — and keeps the visible ring width constant.
+const CR_BASE_R = 209.5;   // chapter-ring content radius in the source photo
+const CR_TUCK = 4;         // canvas px hidden under the bezel
+function chapterRingScale() {
+  const bz = selections.bezel;
+  if (!bz || !bz.innerR) return 1;
+  return Math.min(1.35, Math.max(1, (bz.innerR + CR_TUCK) / CR_BASE_R));
+}
+
 function renderImgStack() {
   const stack = document.getElementById('imgStack');
   const svg = document.getElementById('previewSvg');
@@ -1840,43 +1852,46 @@ function renderImgStack() {
     return;
   }
 
-  let urls = [];
+  let layers = [];
   if (currentView === 'front') {
     frontLayerOrder.forEach(k => {
       if (k === 'case') {
-        if (selectedCase.views && selectedCase.views.front) urls.push(selectedCase.views.front);
+        if (selectedCase.views && selectedCase.views.front) layers.push({ url: selectedCase.views.front, type: 'case' });
       } else if (selections[k] && selections[k].image) {
-        urls.push(selections[k].image);
+        layers.push({ url: selections[k].image, type: k });
       }
     });
   } else if (currentView === 'side') {
-    if (selectedCase.views && selectedCase.views.side) urls.push(selectedCase.views.side);
+    if (selectedCase.views && selectedCase.views.side) layers.push({ url: selectedCase.views.side, type: 'case' });
   } else {
     const cb = selections.caseback;
-    if (cb && cb.image) urls.push(cb.image);
-    else if (selectedCase.views && selectedCase.views.back) urls.push(selectedCase.views.back);
+    if (cb && cb.image) layers.push({ url: cb.image, type: 'caseback' });
+    else if (selectedCase.views && selectedCase.views.back) layers.push({ url: selectedCase.views.back, type: 'case' });
   }
-  if (!urls.length) return;
+  if (!layers.length) return;
 
   // Append every layer right away, in the order given by frontLayerOrder, and pin the
   // stacking order with an explicit z-index. Waiting for a preload probe used to let a
   // slow layer land on top of a faster one (the case photo could cover the bezel).
+  const crScale = chapterRingScale();
   let failed = 0;
-  urls.forEach((u, i) => {
+  layers.forEach((layer, i) => {
     const el = document.createElement('img');
     el.alt = '';
     el.style.zIndex = String(i + 1);
+    // Fit the chapter ring to the chosen bezel's inner hole
+    if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
     el.onerror = () => {
       el.remove();
       failed++;
-      if (failed === urls.length) {
+      if (failed === layers.length) {
         // Nothing to show for this view — display Coming Soon instead of the demo drawing
         stack.style.display = 'none';
         comingSoon.style.display = 'flex';
         svg.style.display = 'none';
       }
     };
-    el.src = u;
+    el.src = layer.url;
     stack.appendChild(el);
   });
   stack.style.display = 'block';
@@ -2241,7 +2256,14 @@ renderImgStack();
 
   function open() {
     if (!canOpen()) return;
-    stage.innerHTML = currentSrcs().map(s => `<img src="${s}" alt="">`).join('');
+    // Clone the stacked layers so the enlarged view keeps the same z-order and the
+    // chapter-ring fit transform used in the preview.
+    stage.innerHTML = '';
+    Array.from(stack.querySelectorAll('img')).forEach(src => {
+      const clone = src.cloneNode(true);
+      clone.removeAttribute('onerror');
+      stage.appendChild(clone);
+    });
     title.textContent = (document.getElementById('previewName') || {}).textContent || '';
     hint.textContent = LANG === 'zh' ? '点击空白处或按 Esc 关闭' : 'Click anywhere or press Esc to close';
     box.classList.add('show');
