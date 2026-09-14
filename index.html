@@ -243,6 +243,41 @@
     font-size: 12px;
     letter-spacing: 1px;
   }
+  /* A dropped image request used to silently remove its layer — which looks exactly
+     like "the part never got stacked". Surface it and offer a retry. */
+  #loadHint {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 8px;
+    border: 1px solid #f0d9a8;
+    border-radius: 6px;
+    background: #fffaef;
+    font-size: 12px;
+    color: #8a6d3b;
+    z-index: 20;
+  }
+  #loadHint .lh-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #loadHint .lh-btn {
+    border: 1px solid #d8c08a;
+    border-radius: 4px;
+    background: #fff;
+    color: #8a6d3b;
+    font-size: 12px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  #loadHint .lh-btn:hover { background: #fdf3dd; }
   /* Empty-state hero: white background, black text, shown until a case is chosen */
   #emptyHint {
     position: absolute;
@@ -1168,6 +1203,10 @@
           <div class="cs-title">敬请期待</div>
           <div class="cs-sub">该视角图片即将上线 / Coming Soon</div>
         </div>
+        <div id="loadHint">
+          <span class="lh-text" id="loadHintText">部分图片加载失败</span>
+          <button type="button" class="lh-btn" id="loadHintRetry">重新加载</button>
+        </div>
         <svg viewBox="0 0 380 480" id="previewSvg">
           <defs>
             <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
@@ -1392,6 +1431,8 @@ const I18N = {
   viewFront:    { zh: '正视图', en: 'Front' },
   viewSide:     { zh: '侧视图', en: 'Side' },
   viewBack:     { zh: '背视图', en: 'Back' },
+  loadFail:     { zh: '部分图片加载失败', en: 'Some images failed to load' },
+  reload:       { zh: '重新加载', en: 'Retry' },
   comingSoon:   { zh: '敬请期待', en: 'Coming Soon' },
   comingSoonSub:{ zh: '该视角图片即将上线', en: 'Images for this view are coming soon' },
   stepCase:     { zh: '第 1 步 · 选择表壳系列', en: 'Step 1 · Choose Your Case' },
@@ -1823,12 +1864,34 @@ function chapterRingScale() {
   return Math.min(1.35, Math.max(1, (bz.innerR + CR_TUCK) / CR_BASE_R));
 }
 
-function renderImgStack() {
+// ===== Layer loading guard =====
+// Every render gets a token so a late callback from a replaced render cannot touch the
+// preview any more. Failed layers are retried with a cache-busting param (some proxies
+// cache the failure) and then reported instead of disappearing silently.
+let renderToken = 0;
+const PREVIEW_IMG_TRIES = 3;
+
+function showLoadHint() {
+  const h = document.getElementById('loadHint');
+  if (h) h.style.display = 'flex';
+}
+function hideLoadHint() {
+  const h = document.getElementById('loadHint');
+  if (h) h.style.display = 'none';
+}
+function reloadPreviewImages() {
+  hideLoadHint();
+  if (selectedCase) renderImgStack(true);
+}
+
+// `bust` re-requests every layer with a fresh URL — used by the retry button.
+function renderImgStack(bust) {
   const stack = document.getElementById('imgStack');
   const svg = document.getElementById('previewSvg');
   const comingSoon = document.getElementById('viewComingSoon');
   const emptyHint = document.getElementById('emptyHint');
   stack.innerHTML = '';
+  hideLoadHint();
   svg.style.display = '';
   stack.style.display = 'none';
   emptyHint.style.display = 'none';
@@ -1873,17 +1936,30 @@ function renderImgStack() {
   // Append every layer right away, in the order given by frontLayerOrder, and pin the
   // stacking order with an explicit z-index. Waiting for a preload probe used to let a
   // slow layer land on top of a faster one (the case photo could cover the bezel).
+  const token = ++renderToken;
   const crScale = chapterRingScale();
   let failed = 0;
+  let arrived = 0;
   layers.forEach((layer, i) => {
     const el = document.createElement('img');
     el.alt = '';
     el.style.zIndex = String(i + 1);
     // Fit the chapter ring to the chosen bezel's inner hole
     if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
+    // A single dropped request used to delete the layer for good, which looks exactly
+    // like "the part was never stacked". Retry a couple of times before giving up, and
+    // ignore callbacks from a render that a newer one has already replaced.
+    const base = bust ? layer.url + (layer.url.includes('?') ? '&' : '?') + 't=' + Date.now() : layer.url;
+    let tries = 0;
     el.onerror = () => {
-      el.remove();
+      if (token !== renderToken) return;
+      if (++tries < PREVIEW_IMG_TRIES) {
+        el.src = base + (base.includes('?') ? '&' : '?') + 'r=' + tries;
+        return;
+      }
       failed++;
+      el.style.display = 'none';   // keep the slot so the layer order never shifts
+      showLoadHint();
       if (failed === layers.length) {
         // Nothing to show for this view — display Coming Soon instead of the demo drawing
         stack.style.display = 'none';
@@ -1891,12 +1967,22 @@ function renderImgStack() {
         svg.style.display = 'none';
       }
     };
-    el.src = layer.url;
+    el.onload = () => {
+      if (token !== renderToken) return;
+      if (++arrived === layers.length) hideLoadHint();
+    };
+    el.src = base;
     stack.appendChild(el);
   });
   stack.style.display = 'block';
   svg.style.display = 'none';
 }
+
+// Retry button for the failed-image hint
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('loadHintRetry');
+  if (btn) btn.addEventListener('click', e => { e.stopPropagation(); reloadPreviewImages(); });
+});
 
 function drawHourMarkers() {
   const g = document.getElementById('hourMarkers');
@@ -2120,6 +2206,8 @@ function applyStaticTexts() {
   document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
   document.querySelector('#viewComingSoon .cs-title').textContent = t('comingSoon');
   document.querySelector('#viewComingSoon .cs-sub').textContent = t('comingSoonSub');
+  document.getElementById('loadHintText').textContent = t('loadFail');
+  document.getElementById('loadHintRetry').textContent = t('reload');
   // Hero prompt: current language as headline, the other language as subtitle
   const heroMain = LANG === 'zh' ? I18N.heroPick.zh : I18N.heroPick.en;
   const heroSub  = LANG === 'zh' ? I18N.heroPick.en : I18N.heroPick.zh;
@@ -2242,8 +2330,14 @@ renderImgStack();
   const closeBtn = document.getElementById('lbClose');
   if (!canvas || !stack || !box || !stage) return;
 
+  // Only layers that actually rendered — a failed layer keeps its DOM slot hidden
+  function liveLayers() {
+    return Array.from(stack.querySelectorAll('img'))
+      .filter(i => i.style.display !== 'none' && i.naturalWidth > 0);
+  }
+
   function currentSrcs() {
-    return Array.from(stack.querySelectorAll('img')).map(i => i.src);
+    return liveLayers().map(i => i.src);
   }
 
   function canOpen() {
@@ -2259,9 +2353,10 @@ renderImgStack();
     // Clone the stacked layers so the enlarged view keeps the same z-order and the
     // chapter-ring fit transform used in the preview.
     stage.innerHTML = '';
-    Array.from(stack.querySelectorAll('img')).forEach(src => {
+    liveLayers().forEach(src => {
       const clone = src.cloneNode(true);
       clone.removeAttribute('onerror');
+      clone.removeAttribute('onload');
       stage.appendChild(clone);
     });
     title.textContent = (document.getElementById('previewName') || {}).textContent || '';
