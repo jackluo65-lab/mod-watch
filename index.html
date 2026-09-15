@@ -1735,7 +1735,7 @@ function renderParts() {
       item.dataset.id = part.id;
       item.dataset.type = type;
       item.innerHTML = `
-        <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.image}" alt="" onerror="this.remove()">` : ''}</div>
+        <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.swatch || part.image}" alt="" onerror="this.remove()">` : ''}</div>
         <div class="part-info">
           <h5>${partName(part)}</h5>
           <div class="mat">${part.material}</div>
