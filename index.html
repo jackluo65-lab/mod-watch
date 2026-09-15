@@ -1853,7 +1853,9 @@ let currentView = 'front';
 // Bezel inserts sit ON TOP of the bezel (that is how a sloped ceramic insert is
 // mounted on the real part: 38 mm insert on a 40 mm bezel, the metal only shows as a
 // thin outer lip). Drawing them below the bezel hid all but the inner 11 px of the ring.
-const frontLayerOrder = ['strap', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert', 'crown'];
+// Crowns render BELOW the case: the tube (front) is physically hidden under
+// the case flank / crown guards, only the head sticks out at the 3:30 pocket.
+const frontLayerOrder = ['strap', 'crown', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert'];
 
 // The chapter ring (inner shadow ring) is a universal part. Its outer edge has to stay
 // hidden — either under the bezel's inner hole (about 212-230px on the 800x1000 canvas)
