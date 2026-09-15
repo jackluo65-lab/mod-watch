@@ -1850,15 +1850,24 @@ function updatePreview() {
 
 // ===== Real image layered preview =====
 let currentView = 'front';
-const frontLayerOrder = ['strap', 'case', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'bezel', 'crown'];
+// Bezel inserts sit ON TOP of the bezel (that is how a sloped ceramic insert is
+// mounted on the real part: 38 mm insert on a 40 mm bezel, the metal only shows as a
+// thin outer lip). Drawing them below the bezel hid all but the inner 11 px of the ring.
+const frontLayerOrder = ['strap', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert', 'crown'];
 
-// The chapter ring (inner shadow ring) is a universal part, but each bezel has a
-// slightly different inner-hole radius (about 212-230px on the 800x1000 canvas).
-// Scaling the ring to the selected bezel keeps its outer edge tucked under the
-// bezel — no visible gap — and keeps the visible ring width constant.
-const CR_BASE_R = 209.5;   // chapter-ring content radius in the source photo
-const CR_TUCK = 4;         // canvas px hidden under the bezel
+// The chapter ring (inner shadow ring) is a universal part. Its outer edge has to stay
+// hidden — either under the bezel's inner hole (about 212-230px on the 800x1000 canvas)
+// when no insert is fitted, or under the insert's inner hole (210px) when one is,
+// otherwise a bright gap shows between the parts.
+const CR_BASE_R = 209.5;      // chapter-ring content radius in the source photo
+const CR_TUCK = 4;            // canvas px hidden under the bezel / insert
+const INSERT_INNER_R = 210;   // insert inner-hole radius in the source photo
 function chapterRingScale() {
+  const ins = selections.insert;
+  if (ins && ins.image) {
+    const r = ins.innerR || INSERT_INNER_R;
+    return Math.min(1.35, Math.max(1, (r + CR_TUCK) / CR_BASE_R));
+  }
   const bz = selections.bezel;
   if (!bz || !bz.innerR) return 1;
   return Math.min(1.35, Math.max(1, (bz.innerR + CR_TUCK) / CR_BASE_R));
