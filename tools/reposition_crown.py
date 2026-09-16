@@ -39,7 +39,11 @@ THUMB_DIR = os.path.join(OUT_DIR, 'thumb')
 
 # ---- placement parameters ---------------------------------------------------
 CASE = os.path.join(HERE, 'img/cases/skx38/SKX-B-1.png')
-PROTRUDE = 44          # px the crown head sticks out past the case edge (~0.15 R)
+PROTRUDE = 38          # px the crown head sticks out past the case edge (~0.13 R)
+# Calibrated against the factory reference photo: its crown head is centred at t=0.843
+# (a fraction of the case outer radius) with the head spanning t 0.554..1.131.
+# 38 reproduces that as 0.844 / 0.564..1.124. 44 put the head at 0.920 - i.e. the head
+# sat OUTSIDE the case's crown notch instead of nestled in its centre.
 THUMB = 256
 # -----------------------------------------------------------------------------
 
