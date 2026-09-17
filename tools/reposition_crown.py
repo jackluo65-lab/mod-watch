@@ -40,6 +40,11 @@ THUMB_DIR = os.path.join(OUT_DIR, 'thumb')
 # ---- placement parameters ---------------------------------------------------
 CASE = os.path.join(HERE, 'img/cases/skx38/SKX-B-1.png')
 PROTRUDE = 38          # px the crown head sticks out past the case edge (~0.13 R)
+# Final hand nudge on the 800x1000 canvas, applied AFTER the radial placement.
+# Negative X = left, positive Y = down. Requested by the user after eyeballing the
+# render: the crown read a touch too far up-right, so shift it slightly down-left.
+NUDGE_X = -5
+NUDGE_Y = +5
 # Calibrated against the factory reference photo: its crown head is centred at t=0.843
 # (a fraction of the case outer radius) with the head spanning t 0.554..1.131.
 # 38 reproduces that as 0.844 / 0.564..1.124. 44 put the head at 0.920 - i.e. the head
@@ -145,8 +150,8 @@ def transform(path, C, prof, phi_hole):
     r_edge = prof[int(math.floor(phi_hole + 180)) % 360]
     ph = math.radians(phi_hole)
     ux, uy = math.cos(ph), math.sin(ph)
-    tgt = (C[0] + (r_edge + PROTRUDE - L) * ux,
-           C[1] + (r_edge + PROTRUDE - L) * uy)
+    tgt = (C[0] + (r_edge + PROTRUDE - L) * ux + NUDGE_X,
+           C[1] + (r_edge + PROTRUDE - L) * uy + NUDGE_Y)
     dx, dy = round(tgt[0] - tip[0]), round(tgt[1] - tip[1])
     canvas = Image.new('RGBA', img.size, (0, 0, 0, 0))
     canvas.paste(rotated, (dx, dy), rotated)
@@ -155,12 +160,16 @@ def transform(path, C, prof, phi_hole):
 
 
 def main():
-    global PROTRUDE
+    global PROTRUDE, NUDGE_X, NUDGE_Y
+    NUDGE_X, NUDGE_Y = -5, 5
     ap = argparse.ArgumentParser()
     ap.add_argument('--dry', action='store_true', help='only report, do not write')
     ap.add_argument('--protrude', type=float, default=PROTRUDE)
+    ap.add_argument('--nudge-x', type=float, default=NUDGE_X)
+    ap.add_argument('--nudge-y', type=float, default=NUDGE_Y)
     args = ap.parse_args()
     PROTRUDE = args.protrude
+    NUDGE_X, NUDGE_Y = args.nudge_x, args.nudge_y
 
     C, R, prof, phi_hole, hole_xy, npx = case_geometry(CASE)
     r_edge = prof[int(math.floor(phi_hole + 180)) % 360]
