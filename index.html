@@ -1803,7 +1803,6 @@ function updatePreview() {
   // Case body color (SVG fallback)
   let caseFill = '#2a2a2a';
   if (selectedCase.id === 'skx30') caseFill = '#333';
-  else if (selectedCase.id.startsWith('classic-')) caseFill = '#d4d4d4';
   caseEl.querySelector('ellipse').setAttribute('fill', caseFill);
 
   // Bezel
