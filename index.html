@@ -1802,7 +1802,7 @@ function updatePreview() {
 
   // Case body color (SVG fallback)
   let caseFill = '#2a2a2a';
-  if (selectedCase.id === 'skx30') caseFill = '#333';
+  if (selectedCase.id.startsWith('skx30')) caseFill = '#333';
   caseEl.querySelector('ellipse').setAttribute('fill', caseFill);
 
   // Bezel
