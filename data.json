@@ -9526,7 +9526,11 @@
           "dl-skx-blue"
         ],
         "chapterRing": [],
-        "crown": [],
+        "crown": [
+          "wc3-cl-1",
+          "wc3-cl-3",
+          "wc3-cl-4"
+        ],
         "caseback": [
           "cb-skx-plain",
           "cb-skx-exhibition",
@@ -9581,7 +9585,11 @@
           "dl-skx-blue"
         ],
         "chapterRing": [],
-        "crown": [],
+        "crown": [
+          "wc3-cl-1",
+          "wc3-cl-3",
+          "wc3-cl-4"
+        ],
         "caseback": [
           "cb-skx-plain",
           "cb-skx-exhibition",
@@ -9636,7 +9644,11 @@
           "dl-skx-blue"
         ],
         "chapterRing": [],
-        "crown": [],
+        "crown": [
+          "wc3-cl-1",
+          "wc3-cl-3",
+          "wc3-cl-4"
+        ],
         "caseback": [
           "cb-skx-plain",
           "cb-skx-exhibition",
@@ -13202,6 +13214,45 @@
         "image": "img/crown/WC3-T-4.png",
         "swatch": "img/crown/thumb/WC3-T-4.png",
         "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
+      },
+      {
+        "id": "wc3-cl-1",
+        "name": "WC-CL-1 Polished Silver, Pumpkin",
+        "nameZh": "WC-CL-1 亮银 南瓜头",
+        "series": "clretro",
+        "color": "#a19f9a",
+        "material": "Stainless Steel",
+        "description": "Classic Retro 专属表把 WC-CL-1 亮银 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "descriptionEn": "Dedicated Classic Retro crown WC-CL-1, Polished Silver, Pumpkin — fits the Classic Retro case only.",
+        "image": "img/crown/WC3-CL-1.png",
+        "swatch": "img/crown/thumb/WC3-CL-1.png",
+        "category": "Classic Retro Case"
+      },
+      {
+        "id": "wc3-cl-3",
+        "name": "WC-CL-3 Polished Gold, Pumpkin",
+        "nameZh": "WC-CL-3 亮金 南瓜头",
+        "series": "clretro",
+        "color": "#b8a454",
+        "material": "Stainless Steel",
+        "description": "Classic Retro 专属表把 WC-CL-3 亮金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "descriptionEn": "Dedicated Classic Retro crown WC-CL-3, Polished Gold, Pumpkin — fits the Classic Retro case only.",
+        "image": "img/crown/WC3-CL-3.png",
+        "swatch": "img/crown/thumb/WC3-CL-3.png",
+        "category": "Classic Retro Case"
+      },
+      {
+        "id": "wc3-cl-4",
+        "name": "WC-CL-4 Polished Rose Gold, Pumpkin",
+        "nameZh": "WC-CL-4 亮玫瑰金 南瓜头",
+        "series": "clretro",
+        "color": "#bd9a7f",
+        "material": "Stainless Steel",
+        "description": "Classic Retro 专属表把 WC-CL-4 亮玫瑰金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "descriptionEn": "Dedicated Classic Retro crown WC-CL-4, Polished Rose Gold, Pumpkin — fits the Classic Retro case only.",
+        "image": "img/crown/WC3-CL-4.png",
+        "swatch": "img/crown/thumb/WC3-CL-4.png",
+        "category": "Classic Retro Case"
       }
     ],
     "caseback": [
