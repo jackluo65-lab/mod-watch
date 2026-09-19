@@ -1854,7 +1854,17 @@ let currentView = 'front';
 // thin outer lip). Drawing them below the bezel hid all but the inner 11 px of the ring.
 // Crowns render BELOW the case: the tube (front) is physically hidden under
 // the case flank / crown guards, only the head sticks out at the 3:30 pocket.
+// One exception, driven by the part itself: a crown whose head is drawn to sit OVER the
+// case's protruding tube (the Classic Retro pumpkin crown, `aboveCase: true`) has to cover
+// it, so it is stacked just above the case. The shared 22-crown set keeps the default —
+// under the case — which is exactly what hides its own tube behind the guards.
 const frontLayerOrder = ['strap', 'crown', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert'];
+function activeLayerOrder() {
+  if (!(selections.crown && selections.crown.aboveCase)) return frontLayerOrder;
+  const order = frontLayerOrder.filter(k => k !== 'crown');
+  order.splice(order.indexOf('case') + 1, 0, 'crown');
+  return order;
+}
 
 // The chapter ring (inner shadow ring) is a universal part. Its outer edge has to stay
 // hidden — either under the bezel's inner hole (about 212-230px on the 800x1000 canvas)
@@ -1927,7 +1937,7 @@ function renderImgStack(bust) {
 
   let layers = [];
   if (currentView === 'front') {
-    frontLayerOrder.forEach(k => {
+    activeLayerOrder().forEach(k => {
       if (k === 'case') {
         if (selectedCase.views && selectedCase.views.front) layers.push({ url: selectedCase.views.front, type: 'case' });
       } else if (selections[k] && selections[k].image) {
@@ -1943,7 +1953,7 @@ function renderImgStack(bust) {
   }
   if (!layers.length) return;
 
-  // Append every layer right away, in the order given by frontLayerOrder, and pin the
+  // Append every layer right away, in the order given by activeLayerOrder(), and pin the
   // stacking order with an explicit z-index. Waiting for a preload probe used to let a
   // slow layer land on top of a faster one (the case photo could cover the bezel).
   const token = ++renderToken;

@@ -13226,7 +13226,8 @@
         "descriptionEn": "Dedicated Classic Retro crown WC-CL-1, Polished Silver, Pumpkin — fits the Classic Retro case only.",
         "image": "img/crown/WC3-CL-1.png",
         "swatch": "img/crown/thumb/WC3-CL-1.png",
-        "category": "Classic Retro Case"
+        "category": "Classic Retro Case",
+        "aboveCase": true
       },
       {
         "id": "wc3-cl-3",
@@ -13239,7 +13240,8 @@
         "descriptionEn": "Dedicated Classic Retro crown WC-CL-3, Polished Gold, Pumpkin — fits the Classic Retro case only.",
         "image": "img/crown/WC3-CL-3.png",
         "swatch": "img/crown/thumb/WC3-CL-3.png",
-        "category": "Classic Retro Case"
+        "category": "Classic Retro Case",
+        "aboveCase": true
       },
       {
         "id": "wc3-cl-4",
@@ -13252,7 +13254,8 @@
         "descriptionEn": "Dedicated Classic Retro crown WC-CL-4, Polished Rose Gold, Pumpkin — fits the Classic Retro case only.",
         "image": "img/crown/WC3-CL-4.png",
         "swatch": "img/crown/thumb/WC3-CL-4.png",
-        "category": "Classic Retro Case"
+        "category": "Classic Retro Case",
+        "aboveCase": true
       }
     ],
     "caseback": [
