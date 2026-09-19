@@ -1956,6 +1956,15 @@ function renderImgStack(bust) {
     el.style.zIndex = String(i + 1);
     // Fit the chapter ring to the chosen bezel's inner hole
     if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
+    // The crown art is shared by every family, but a shell can have its crown tube a few
+    // source-pixels higher or lower than the others. Such a case carries crownOffsetY in
+    // canvas px (see SKX Samurai, -6) and the shift is applied here, so a family that needs
+    // a different crown position no longer needs its own copy of all 22 crown images.
+    // A percentage is used rather than px because the layer box is stretched to the preview
+    // (object-fit: contain); the box keeps the canvas' 4:5 ratio, so px / 10 is the percent.
+    if (layer.type === 'crown' && selectedCase.crownOffsetY) {
+      el.style.transform = `translateY(${(selectedCase.crownOffsetY / 10).toFixed(3)}%)`;
+    }
     // A single dropped request used to delete the layer for good, which looks exactly
     // like "the part was never stacked". Retry a couple of times before giving up, and
     // ignore callbacks from a render that a newer one has already replaced.

@@ -8120,7 +8120,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-12",
@@ -8347,7 +8348,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-16",
@@ -8574,7 +8576,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-17",
@@ -8801,7 +8804,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-18",
@@ -9028,7 +9032,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-19",
@@ -9255,7 +9260,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     },
     {
       "id": "smr-ws-20",
@@ -9482,7 +9488,8 @@
           "st-nato-black"
         ]
       },
-      "category": "SKX Samurai Case"
+      "category": "SKX Samurai Case",
+      "crownOffsetY": -6
     }
   ],
   "parts": {
