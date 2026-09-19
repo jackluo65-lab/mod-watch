@@ -9490,6 +9490,273 @@
       },
       "category": "SKX Samurai Case",
       "crownOffsetY": -6
+    },
+    {
+      "id": "clretro-cl1",
+      "name": "Classic Retro Case C-CL-1",
+      "nameZh": "经典复古表壳 C-CL-1 亮银壳",
+      "category": "Classic Retro Case",
+      "size": "38.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "45.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "经典复古表壳系列 C-CL-1，亮银壳。38mm 圆形复古壳身，表冠位于 3.0 点位，适配 B-CL 系列表圈。",
+      "descriptionEn": "Classic Retro case series C-CL-1, Polished Silver. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "views": {
+        "front": "img/cases/clretro/C-CL-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-cl-1",
+          "bz-cl-3",
+          "bz-cl-4"
+        ],
+        "insert": [],
+        "crystal": [],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "clretro-cl3",
+      "name": "Classic Retro Case C-CL-3",
+      "nameZh": "经典复古表壳 C-CL-3 亮金壳",
+      "category": "Classic Retro Case",
+      "size": "38.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "45.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "经典复古表壳系列 C-CL-3，亮金壳。38mm 圆形复古壳身，表冠位于 3.0 点位，适配 B-CL 系列表圈。",
+      "descriptionEn": "Classic Retro case series C-CL-3, Polished Gold. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "views": {
+        "front": "img/cases/clretro/C-CL-3.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-cl-1",
+          "bz-cl-3",
+          "bz-cl-4"
+        ],
+        "insert": [],
+        "crystal": [],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
+    },
+    {
+      "id": "clretro-cl4",
+      "name": "Classic Retro Case C-CL-4",
+      "nameZh": "经典复古表壳 C-CL-4 亮玫金壳",
+      "category": "Classic Retro Case",
+      "size": "38.0mm",
+      "lugWidth": "20mm",
+      "lugToLug": "45.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "经典复古表壳系列 C-CL-4，亮玫金壳。38mm 圆形复古壳身，表冠位于 3.0 点位，适配 B-CL 系列表圈。",
+      "descriptionEn": "Classic Retro case series C-CL-4, Polished Rose Gold. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "views": {
+        "front": "img/cases/clretro/C-CL-4.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-cl-1",
+          "bz-cl-3",
+          "bz-cl-4"
+        ],
+        "insert": [],
+        "crystal": [],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive"
+        ]
+      }
     }
   ],
   "parts": {
@@ -11944,6 +12211,45 @@
         "image": "img/bezel/B-WS-20.png",
         "category": "SKX Samurai Case",
         "innerR": 217.0
+      },
+      {
+        "id": "bz-cl-1",
+        "name": "Bezel B-CL-1",
+        "nameZh": "表圈 B-CL-1",
+        "series": "clretro",
+        "color": "#b8b8b6",
+        "material": "Steel",
+        "description": "经典复古系列表圈 B-CL-1，与经典复古表壳配套。无插入槽位。",
+        "descriptionEn": "Classic Retro series bezel B-CL-1, matching the Classic Retro case. No insert seat.",
+        "image": "img/bezel/B-CL-1.png",
+        "category": "Classic Retro Case",
+        "innerR": 198.0
+      },
+      {
+        "id": "bz-cl-3",
+        "name": "Bezel B-CL-3",
+        "nameZh": "表圈 B-CL-3",
+        "series": "clretro",
+        "color": "#c8b26b",
+        "material": "Steel",
+        "description": "经典复古系列表圈 B-CL-3，与经典复古表壳配套。无插入槽位。",
+        "descriptionEn": "Classic Retro series bezel B-CL-3, matching the Classic Retro case. No insert seat.",
+        "image": "img/bezel/B-CL-3.png",
+        "category": "Classic Retro Case",
+        "innerR": 198.0
+      },
+      {
+        "id": "bz-cl-4",
+        "name": "Bezel B-CL-4",
+        "nameZh": "表圈 B-CL-4",
+        "series": "clretro",
+        "color": "#ccac94",
+        "material": "Steel",
+        "description": "经典复古系列表圈 B-CL-4，与经典复古表壳配套。无插入槽位。",
+        "descriptionEn": "Classic Retro series bezel B-CL-4, matching the Classic Retro case. No insert seat.",
+        "image": "img/bezel/B-CL-4.png",
+        "category": "Classic Retro Case",
+        "innerR": 197.4
       }
     ],
     "hands": [
