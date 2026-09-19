@@ -139,7 +139,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -363,7 +366,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -587,7 +593,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -811,7 +820,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -1035,7 +1047,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -1259,7 +1274,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -1483,7 +1501,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -1707,7 +1728,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -1933,7 +1957,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -2159,7 +2186,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-double-domed"
+          "cr-skx-double-domed",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -2388,7 +2418,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -2621,7 +2654,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -2854,7 +2890,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -3087,7 +3126,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -3320,7 +3362,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -3553,7 +3598,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -3786,7 +3834,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -4019,7 +4070,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -4252,7 +4306,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -4476,7 +4533,10 @@
         "crystal": [
           "cr-sub-sapphire-ar",
           "cr-sub-domed",
-          "cr-sub-flat"
+          "cr-sub-flat",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-sub-mercedes",
@@ -8033,7 +8093,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -8261,7 +8324,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -8489,7 +8555,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -8717,7 +8786,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -8945,7 +9017,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -9173,7 +9248,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -9401,7 +9479,10 @@
         "crystal": [
           "cr-skx-domed",
           "cr-skx-flat",
-          "cr-skx-sapphire-ar"
+          "cr-skx-sapphire-ar",
+          "cr-sjg02-c",
+          "cr-sjg02-r",
+          "cr-sjg02-b"
         ],
         "hands": [
           "hd-mercedes",
@@ -11084,6 +11165,45 @@
         "image": "img/placeholder/blank.png",
         "swatch": "img/placeholder/swatch/cr-sub-flat.png",
         "category": "universal"
+      },
+      {
+        "id": "cr-sjg02-c",
+        "name": "Crystal SJG02 Clear",
+        "nameZh": "表镜 SJG02 清晰涂层",
+        "series": "sjg02",
+        "color": "#f2f6f9",
+        "material": "Sapphire",
+        "description": "SJG02 表镜，清晰涂层。适配斜面插入（beveled insert），与 SKX 3.8 / 3.8 MORE / 3.0 / 武士 / SUB 表壳配套。",
+        "descriptionEn": "Crystal SJG02 Clear — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
+        "image": "img/crystal/cr-sjg02-c.png",
+        "swatch": "img/crystal/thumb/cr-sjg02-c.png",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+      },
+      {
+        "id": "cr-sjg02-r",
+        "name": "Crystal SJG02 Red Tint",
+        "nameZh": "表镜 SJG02 红色涂层",
+        "series": "sjg02",
+        "color": "#8f0279",
+        "material": "Sapphire",
+        "description": "SJG02 表镜，红色涂层。适配斜面插入（beveled insert），与 SKX 3.8 / 3.8 MORE / 3.0 / 武士 / SUB 表壳配套。",
+        "descriptionEn": "Crystal SJG02 Red Tint — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
+        "image": "img/crystal/cr-sjg02-r.png",
+        "swatch": "img/crystal/thumb/cr-sjg02-r.png",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+      },
+      {
+        "id": "cr-sjg02-b",
+        "name": "Crystal SJG02 Blue Tint",
+        "nameZh": "表镜 SJG02 蓝色涂层",
+        "series": "sjg02",
+        "color": "#7aa4fc",
+        "material": "Sapphire",
+        "description": "SJG02 表镜，蓝色涂层。适配斜面插入（beveled insert），与 SKX 3.8 / 3.8 MORE / 3.0 / 武士 / SUB 表壳配套。",
+        "descriptionEn": "Crystal SJG02 Blue Tint — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
+        "image": "img/crystal/cr-sjg02-b.png",
+        "swatch": "img/crystal/thumb/cr-sjg02-b.png",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
       }
     ],
     "bezel": [
