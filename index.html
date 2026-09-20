@@ -1881,6 +1881,11 @@ function crScaleFor(r) {
   return Math.min(1.35, Math.max(CR_MIN_SCALE, (r + CR_TUCK) / CR_BASE_R));
 }
 function chapterRingScale() {
+  // A family may ship its own copy of the rings already cut to its aperture
+  // (AP: img/chapterRing/ap/*, flagged `prefit`). Those must render at 1:1 —
+  // running them through the formula below would shrink them a second time.
+  const cr = selections.chapterRing;
+  if (cr && cr.prefit) return 1;
   const ins = selections.insert;
   if (ins && ins.image) return crScaleFor(ins.innerR || INSERT_INNER_R);
   const bz = selections.bezel;
