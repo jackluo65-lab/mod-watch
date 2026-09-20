@@ -1867,21 +1867,25 @@ function activeLayerOrder() {
 }
 
 // The chapter ring (inner shadow ring) is a universal part. Its outer edge has to stay
-// hidden — either under the bezel's inner hole (about 212-230px on the 800x1000 canvas)
-// when no insert is fitted, or under the insert's inner hole (210px) when one is,
-// otherwise a bright gap shows between the parts.
+// hidden — either under the bezel's inner hole when no insert is fitted, or under the
+// insert's inner hole (210px) when one is, otherwise a bright gap shows between the parts.
+// Two directions are needed: every legacy bezel's hole is 216-227px, i.e. bigger than the
+// ring, so the ring is scaled UP to tuck 4px under it; but the Classic Retro (198) and AP
+// (191) bezels have a smaller hole than the ring, so there the ring has to shrink instead —
+// otherwise the whole ring disappears under the bezel (AP kept only a 3.4px sliver).
 const CR_BASE_R = 209.5;      // chapter-ring content radius in the source photo
 const CR_TUCK = 4;            // canvas px hidden under the bezel / insert
 const INSERT_INNER_R = 210;   // insert inner-hole radius in the source photo
+const CR_MIN_SCALE = 0.85;    // never shrink so far the ring leaves the dial edge behind
+function crScaleFor(r) {
+  return Math.min(1.35, Math.max(CR_MIN_SCALE, (r + CR_TUCK) / CR_BASE_R));
+}
 function chapterRingScale() {
   const ins = selections.insert;
-  if (ins && ins.image) {
-    const r = ins.innerR || INSERT_INNER_R;
-    return Math.min(1.35, Math.max(1, (r + CR_TUCK) / CR_BASE_R));
-  }
+  if (ins && ins.image) return crScaleFor(ins.innerR || INSERT_INNER_R);
   const bz = selections.bezel;
   if (!bz || !bz.innerR) return 1;
-  return Math.min(1.35, Math.max(1, (bz.innerR + CR_TUCK) / CR_BASE_R));
+  return crScaleFor(bz.innerR);
 }
 
 // ===== Layer loading guard =====
