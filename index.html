@@ -1863,7 +1863,13 @@ let currentView = 'front';
 //   - the AP crystal sits above `chapterRing` — glass covers the whole stack, so it must not be
 //     clipped by the enlarged rehaut underneath it.
 // Parts without the field keep their normal slot, so every other family renders exactly as before.
-const frontLayerOrder = ['strap', 'crown', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert'];
+//
+// The dial sits UNDER the chapter ring and the crystal, which is the order the watch goes together
+// in: dial -> hands -> rehaut -> glass. It matters now that real dial art exists — the dial has to
+// be wide enough that the rehaut's bore never shows bare case behind it (the widest family, Vintage,
+// has an inner edge at r207), and a dial that wide would cover the rehaut completely if it were
+// drawn on top. Underneath, it is simply clipped by the ring, which is how the real part sits.
+const frontLayerOrder = ['strap', 'crown', 'case', 'dial', 'chapterRing', 'crystal', 'hands', 'bezel', 'insert'];
 function activeLayerOrder() {
   const moving = partTypes.filter(t => selections[t] && frontLayerOrder.includes(selections[t].above));
   if (!moving.length) return frontLayerOrder;
