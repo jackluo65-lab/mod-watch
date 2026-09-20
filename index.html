@@ -1854,25 +1854,27 @@ let currentView = 'front';
 // thin outer lip). Drawing them below the bezel hid all but the inner 11 px of the ring.
 // Crowns render BELOW the case: the tube (front) is physically hidden under
 // the case flank / crown guards, only the head sticks out at the 3:30 pocket.
-// One exception, driven by the part itself: a crown whose head is drawn to sit OVER the
-// case's protruding tube (the Classic Retro pumpkin crown, `aboveCase: true`) has to cover
-// it, so it is stacked just above the case. The shared 22-crown set keeps the default —
-// under the case — which is exactly what hides its own tube behind the guards.
+// A part can override its slot with a single field, `above: '<layer>'`, and be stacked directly on
+// top of that layer instead. Three real cases so far:
+//   - the Classic Retro pumpkin crown sits above `case`, because its head is drawn to cover the
+//     case's protruding tube (the shared 22-crown set keeps the default and hides its tube);
+//   - an AP chapter ring (cut to the bezel's inner cone, `prefit`) sits above `bezel`, otherwise
+//     the bezel's own cone paints straight over it;
+//   - the AP crystal sits above `chapterRing` — glass covers the whole stack, so it must not be
+//     clipped by the enlarged rehaut underneath it.
+// Parts without the field keep their normal slot, so every other family renders exactly as before.
 const frontLayerOrder = ['strap', 'crown', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert'];
 function activeLayerOrder() {
-  let order = frontLayerOrder.slice();
-  // A crown drawn to cover the case's protruding tube has to sit just above the case.
-  if (selections.crown && selections.crown.aboveCase) {
-    order = order.filter(k => k !== 'crown');
-    order.splice(order.indexOf('case') + 1, 0, 'crown');
-  }
-  // Some bezels carry a wide inner cone that reads as part of the aperture (AP: 26px, r 192-218).
-  // A ring drawn underneath disappears into that cone and looks a size too small, so such a ring
-  // asks to be stacked above the bezel instead. Its artwork is already cut to that diameter
-  // (`prefit`), so its outer edge stops at the bezel's flat top face and does not cover it.
-  if (selections.chapterRing && selections.chapterRing.aboveBezel) {
-    order = order.filter(k => k !== 'chapterRing');
-    order.splice(order.indexOf('bezel') + 1, 0, 'chapterRing');
+  const moving = partTypes.filter(t => selections[t] && frontLayerOrder.includes(selections[t].above));
+  if (!moving.length) return frontLayerOrder;
+  const order = frontLayerOrder.filter(t => !moving.includes(t));
+  // Several passes so a chain resolves: crystal -> chapterRing -> bezel.
+  for (let pass = 0; pass < 3; pass++) {
+    moving.forEach(t => {
+      if (order.includes(t)) return;
+      const at = order.indexOf(selections[t].above);
+      if (at >= 0) order.splice(at + 1, 0, t);
+    });
   }
   return order;
 }

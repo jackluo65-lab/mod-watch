@@ -11661,7 +11661,9 @@
         "descriptionEn": "Crystal SJG42C, Clear — AP front crystal, made for the AP case.",
         "image": "img/crystal/SJG42C.png",
         "swatch": "img/crystal/thumb/SJG42C.png",
-        "category": "AP Case"
+        "category": "AP Case",
+        "above": "chapterRing",
+        "prefit": true
       },
       {
         "id": "cr-sjg42b",
@@ -11674,7 +11676,9 @@
         "descriptionEn": "Crystal SJG42B, Blue — AP front crystal, made for the AP case.",
         "image": "img/crystal/SJG42B.png",
         "swatch": "img/crystal/thumb/SJG42B.png",
-        "category": "AP Case"
+        "category": "AP Case",
+        "above": "chapterRing",
+        "prefit": true
       },
       {
         "id": "cr-sjg42r",
@@ -11687,7 +11691,9 @@
         "descriptionEn": "Crystal SJG42R, Red — AP front crystal, made for the AP case.",
         "image": "img/crystal/SJG42R.png",
         "swatch": "img/crystal/thumb/SJG42R.png",
-        "category": "AP Case"
+        "category": "AP Case",
+        "above": "chapterRing",
+        "prefit": true
       }
     ],
     "bezel": [
@@ -13262,7 +13268,7 @@
         "image": "img/chapterRing/ap/cr-g-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-g-5",
@@ -13276,7 +13282,7 @@
         "image": "img/chapterRing/ap/cr-g-5.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-g-8",
@@ -13290,7 +13296,7 @@
         "image": "img/chapterRing/ap/cr-g-8.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-h-1",
@@ -13304,7 +13310,7 @@
         "image": "img/chapterRing/ap/cr-h-1.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-h-2",
@@ -13318,7 +13324,7 @@
         "image": "img/chapterRing/ap/cr-h-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-h-3",
@@ -13332,7 +13338,7 @@
         "image": "img/chapterRing/ap/cr-h-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-h-4",
@@ -13346,7 +13352,7 @@
         "image": "img/chapterRing/ap/cr-h-4.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-i-1",
@@ -13360,7 +13366,7 @@
         "image": "img/chapterRing/ap/cr-i-1.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-i-2",
@@ -13374,7 +13380,7 @@
         "image": "img/chapterRing/ap/cr-i-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-1",
@@ -13388,7 +13394,7 @@
         "image": "img/chapterRing/ap/cr-j-1.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-10",
@@ -13402,7 +13408,7 @@
         "image": "img/chapterRing/ap/cr-j-10.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-11",
@@ -13416,7 +13422,7 @@
         "image": "img/chapterRing/ap/cr-j-11.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-12",
@@ -13430,7 +13436,7 @@
         "image": "img/chapterRing/ap/cr-j-12.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-2",
@@ -13444,7 +13450,7 @@
         "image": "img/chapterRing/ap/cr-j-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-3",
@@ -13458,7 +13464,7 @@
         "image": "img/chapterRing/ap/cr-j-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-4",
@@ -13472,7 +13478,7 @@
         "image": "img/chapterRing/ap/cr-j-4.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-5",
@@ -13486,7 +13492,7 @@
         "image": "img/chapterRing/ap/cr-j-5.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-6",
@@ -13500,7 +13506,7 @@
         "image": "img/chapterRing/ap/cr-j-6.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-7",
@@ -13514,7 +13520,7 @@
         "image": "img/chapterRing/ap/cr-j-7.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-8",
@@ -13528,7 +13534,7 @@
         "image": "img/chapterRing/ap/cr-j-8.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-j-9",
@@ -13542,7 +13548,7 @@
         "image": "img/chapterRing/ap/cr-j-9.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-k-1",
@@ -13556,7 +13562,7 @@
         "image": "img/chapterRing/ap/cr-k-1.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-k-2",
@@ -13570,7 +13576,7 @@
         "image": "img/chapterRing/ap/cr-k-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-k-3",
@@ -13584,7 +13590,7 @@
         "image": "img/chapterRing/ap/cr-k-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-k-4",
@@ -13598,7 +13604,7 @@
         "image": "img/chapterRing/ap/cr-k-4.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-l-1",
@@ -13612,7 +13618,7 @@
         "image": "img/chapterRing/ap/cr-l-1.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-l-2",
@@ -13626,7 +13632,7 @@
         "image": "img/chapterRing/ap/cr-l-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-l-3",
@@ -13640,7 +13646,7 @@
         "image": "img/chapterRing/ap/cr-l-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-l-4",
@@ -13654,7 +13660,7 @@
         "image": "img/chapterRing/ap/cr-l-4.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-m-2",
@@ -13668,7 +13674,7 @@
         "image": "img/chapterRing/ap/cr-m-2.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-m-3",
@@ -13682,7 +13688,7 @@
         "image": "img/chapterRing/ap/cr-m-3.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-m-4",
@@ -13696,7 +13702,7 @@
         "image": "img/chapterRing/ap/cr-m-4.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       },
       {
         "id": "cr-ap-m-5",
@@ -13710,7 +13716,7 @@
         "image": "img/chapterRing/ap/cr-m-5.png",
         "category": "AP Case",
         "prefit": true,
-        "aboveBezel": true
+        "above": "bezel"
       }
     ],
     "crown": [
@@ -14220,7 +14226,7 @@
         "image": "img/crown/WC3-CL-1.png",
         "swatch": "img/crown/thumb/WC3-CL-1.png",
         "category": "Classic Retro Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-cl-3",
@@ -14234,7 +14240,7 @@
         "image": "img/crown/WC3-CL-3.png",
         "swatch": "img/crown/thumb/WC3-CL-3.png",
         "category": "Classic Retro Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-cl-4",
@@ -14248,7 +14254,7 @@
         "image": "img/crown/WC3-CL-4.png",
         "swatch": "img/crown/thumb/WC3-CL-4.png",
         "category": "Classic Retro Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-ap-1",
@@ -14262,7 +14268,7 @@
         "image": "img/crown/WC3-AP-1.png",
         "swatch": "img/crown/thumb/WC3-AP-1.png",
         "category": "AP Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-ap-2",
@@ -14276,7 +14282,7 @@
         "image": "img/crown/WC3-AP-2.png",
         "swatch": "img/crown/thumb/WC3-AP-2.png",
         "category": "AP Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-ap-3",
@@ -14290,7 +14296,7 @@
         "image": "img/crown/WC3-AP-3.png",
         "swatch": "img/crown/thumb/WC3-AP-3.png",
         "category": "AP Case",
-        "aboveCase": true
+        "above": "case"
       },
       {
         "id": "wc3-ap-4",
@@ -14304,7 +14310,7 @@
         "image": "img/crown/WC3-AP-4.png",
         "swatch": "img/crown/thumb/WC3-AP-4.png",
         "category": "AP Case",
-        "aboveCase": true
+        "above": "case"
       }
     ],
     "caseback": [
