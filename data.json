@@ -13261,7 +13261,8 @@
         "descriptionEn": "CR-G-3 Orange chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-g-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-g-5",
@@ -13274,7 +13275,8 @@
         "descriptionEn": "CR-G-5 Blue chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-g-5.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-g-8",
@@ -13287,7 +13289,8 @@
         "descriptionEn": "CR-G-8 Yellow, Black Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-g-8.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-h-1",
@@ -13300,7 +13303,8 @@
         "descriptionEn": "CR-H-1 Black, No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-h-1.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-h-2",
@@ -13313,7 +13317,8 @@
         "descriptionEn": "CR-H-2 Silver, No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-h-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-h-3",
@@ -13326,7 +13331,8 @@
         "descriptionEn": "CR-H-3 Gold, No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-h-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-h-4",
@@ -13339,7 +13345,8 @@
         "descriptionEn": "CR-H-4 Rose Gold, No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-h-4.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-i-1",
@@ -13352,7 +13359,8 @@
         "descriptionEn": "CR-I-1 Black, Sandblasted No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-i-1.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-i-2",
@@ -13365,7 +13373,8 @@
         "descriptionEn": "CR-I-2 Silver, Sandblasted No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-i-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-1",
@@ -13378,7 +13387,8 @@
         "descriptionEn": "CR-J-1 Black, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-1.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-10",
@@ -13391,7 +13401,8 @@
         "descriptionEn": "CR-J-10 Blue, White Markers Blue-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-10.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-11",
@@ -13404,7 +13415,8 @@
         "descriptionEn": "CR-J-11 Blue, White Markers Blue-Green-White Markers Green-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-11.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-12",
@@ -13417,7 +13429,8 @@
         "descriptionEn": "CR-J-12 Green, White Markers Green-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-12.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-2",
@@ -13430,7 +13443,8 @@
         "descriptionEn": "CR-J-2 Silver, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-3",
@@ -13443,7 +13457,8 @@
         "descriptionEn": "CR-J-3 Gold, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-4",
@@ -13456,7 +13471,8 @@
         "descriptionEn": "CR-J-4 Rose Gold, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-4.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-5",
@@ -13469,7 +13485,8 @@
         "descriptionEn": "CR-J-5 Blue, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-5.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-6",
@@ -13482,7 +13499,8 @@
         "descriptionEn": "CR-J-6 White, White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-6.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-7",
@@ -13495,7 +13513,8 @@
         "descriptionEn": "CR-J-7 Yellow, White Markers Yellow-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-7.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-8",
@@ -13508,7 +13527,8 @@
         "descriptionEn": "CR-J-8 Red, White Markers Red-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-8.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-j-9",
@@ -13521,7 +13541,8 @@
         "descriptionEn": "CR-J-9 Orange, White Markers Orange-White Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-j-9.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-k-1",
@@ -13534,7 +13555,8 @@
         "descriptionEn": "CR-K-1 Silver, Polished No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-k-1.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-k-2",
@@ -13547,7 +13569,8 @@
         "descriptionEn": "CR-K-2 Black, Polished No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-k-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-k-3",
@@ -13560,7 +13583,8 @@
         "descriptionEn": "CR-K-3 Gold, Polished No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-k-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-k-4",
@@ -13573,7 +13597,8 @@
         "descriptionEn": "CR-K-4 Rose Gold, Polished No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-k-4.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-l-1",
@@ -13586,7 +13611,8 @@
         "descriptionEn": "CR-L-1 Silver, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-l-1.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-l-2",
@@ -13599,7 +13625,8 @@
         "descriptionEn": "CR-L-2 Black, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-l-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-l-3",
@@ -13612,7 +13639,8 @@
         "descriptionEn": "CR-L-3 Gold, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-l-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-l-4",
@@ -13625,7 +13653,8 @@
         "descriptionEn": "CR-L-4 Rose Gold, with Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-l-4.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-m-2",
@@ -13638,7 +13667,8 @@
         "descriptionEn": "CR-M-2 Black, No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-m-2.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-m-3",
@@ -13651,7 +13681,8 @@
         "descriptionEn": "CR-M-3 Yellow, Matte No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-m-3.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-m-4",
@@ -13664,7 +13695,8 @@
         "descriptionEn": "CR-M-4 Rose Gold, Matte No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-m-4.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       },
       {
         "id": "cr-ap-m-5",
@@ -13677,7 +13709,8 @@
         "descriptionEn": "CR-M-5 White, Sandblasted Bead-blasted No Markers chapter ring, cut to the AP case's aperture.",
         "image": "img/chapterRing/ap/cr-m-5.png",
         "category": "AP Case",
-        "prefit": true
+        "prefit": true,
+        "aboveBezel": true
       }
     ],
     "crown": [

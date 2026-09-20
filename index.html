@@ -1860,9 +1860,20 @@ let currentView = 'front';
 // under the case — which is exactly what hides its own tube behind the guards.
 const frontLayerOrder = ['strap', 'crown', 'case', 'chapterRing', 'crystal', 'dial', 'hands', 'bezel', 'insert'];
 function activeLayerOrder() {
-  if (!(selections.crown && selections.crown.aboveCase)) return frontLayerOrder;
-  const order = frontLayerOrder.filter(k => k !== 'crown');
-  order.splice(order.indexOf('case') + 1, 0, 'crown');
+  let order = frontLayerOrder.slice();
+  // A crown drawn to cover the case's protruding tube has to sit just above the case.
+  if (selections.crown && selections.crown.aboveCase) {
+    order = order.filter(k => k !== 'crown');
+    order.splice(order.indexOf('case') + 1, 0, 'crown');
+  }
+  // Some bezels carry a wide inner cone that reads as part of the aperture (AP: 26px, r 192-218).
+  // A ring drawn underneath disappears into that cone and looks a size too small, so such a ring
+  // asks to be stacked above the bezel instead. Its artwork is already cut to that diameter
+  // (`prefit`), so its outer edge stops at the bezel's flat top face and does not cover it.
+  if (selections.chapterRing && selections.chapterRing.aboveBezel) {
+    order = order.filter(k => k !== 'chapterRing');
+    order.splice(order.indexOf('bezel') + 1, 0, 'chapterRing');
+  }
   return order;
 }
 
