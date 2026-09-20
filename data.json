@@ -9667,6 +9667,446 @@
           "st-nato-olive"
         ]
       }
+    },
+    {
+      "id": "ap-c1",
+      "name": "AP Case C-AP-1",
+      "nameZh": "AP 表壳 C-AP-1 银 拉丝",
+      "category": "AP Case",
+      "size": "42.0mm",
+      "lugWidth": "26mm",
+      "lugToLug": "52.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "新款 AP 表壳 C-AP-1，银 拉丝。42mm 一体化表耳壳身，表冠位于 3.0 点位，适配 B-AP 系列表圈与 AP 专用表把 / SJG42 表镜。",
+      "descriptionEn": "New AP case C-AP-1, Brushed Silver. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "views": {
+        "front": "img/cases/ap/C-AP-1.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-ap-1",
+          "bz-ap-2",
+          "bz-ap-3",
+          "bz-ap-4"
+        ],
+        "insert": [],
+        "crystal": [
+          "cr-sjg42c",
+          "cr-sjg42b",
+          "cr-sjg42r"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [
+          "wc3-ap-1",
+          "wc3-ap-2",
+          "wc3-ap-3",
+          "wc3-ap-4"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "ap-c2",
+      "name": "AP Case C-AP-2",
+      "nameZh": "AP 表壳 C-AP-2 黑",
+      "category": "AP Case",
+      "size": "42.0mm",
+      "lugWidth": "26mm",
+      "lugToLug": "52.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "新款 AP 表壳 C-AP-2，黑。42mm 一体化表耳壳身，表冠位于 3.0 点位，适配 B-AP 系列表圈与 AP 专用表把 / SJG42 表镜。",
+      "descriptionEn": "New AP case C-AP-2, Black. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "views": {
+        "front": "img/cases/ap/C-AP-2.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-ap-1",
+          "bz-ap-2",
+          "bz-ap-3",
+          "bz-ap-4"
+        ],
+        "insert": [],
+        "crystal": [
+          "cr-sjg42c",
+          "cr-sjg42b",
+          "cr-sjg42r"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [
+          "wc3-ap-1",
+          "wc3-ap-2",
+          "wc3-ap-3",
+          "wc3-ap-4"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "ap-c3",
+      "name": "AP Case C-AP-3",
+      "nameZh": "AP 表壳 C-AP-3 金 拉丝",
+      "category": "AP Case",
+      "size": "42.0mm",
+      "lugWidth": "26mm",
+      "lugToLug": "52.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "新款 AP 表壳 C-AP-3，金 拉丝。42mm 一体化表耳壳身，表冠位于 3.0 点位，适配 B-AP 系列表圈与 AP 专用表把 / SJG42 表镜。",
+      "descriptionEn": "New AP case C-AP-3, Brushed Gold. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "views": {
+        "front": "img/cases/ap/C-AP-3.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-ap-1",
+          "bz-ap-2",
+          "bz-ap-3",
+          "bz-ap-4"
+        ],
+        "insert": [],
+        "crystal": [
+          "cr-sjg42c",
+          "cr-sjg42b",
+          "cr-sjg42r"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [
+          "wc3-ap-1",
+          "wc3-ap-2",
+          "wc3-ap-3",
+          "wc3-ap-4"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
+    },
+    {
+      "id": "ap-c4",
+      "name": "AP Case C-AP-4",
+      "nameZh": "AP 表壳 C-AP-4 玫金 拉丝",
+      "category": "AP Case",
+      "size": "42.0mm",
+      "lugWidth": "26mm",
+      "lugToLug": "52.0mm",
+      "thickness": "11.0mm",
+      "waterResistance": "50m",
+      "crystal": "Sapphire",
+      "movement": "NH35 / NH36",
+      "description": "新款 AP 表壳 C-AP-4，玫金 拉丝。42mm 一体化表耳壳身，表冠位于 3.0 点位，适配 B-AP 系列表圈与 AP 专用表把 / SJG42 表镜。",
+      "descriptionEn": "New AP case C-AP-4, Brushed Rose Gold. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "views": {
+        "front": "img/cases/ap/C-AP-4.png"
+      },
+      "compatibleParts": {
+        "bezel": [
+          "bz-ap-1",
+          "bz-ap-2",
+          "bz-ap-3",
+          "bz-ap-4"
+        ],
+        "insert": [],
+        "crystal": [
+          "cr-sjg42c",
+          "cr-sjg42b",
+          "cr-sjg42r"
+        ],
+        "chapterRing": [
+          "cr-g-3",
+          "cr-g-5",
+          "cr-g-8",
+          "cr-h-1",
+          "cr-h-2",
+          "cr-h-3",
+          "cr-h-4",
+          "cr-i-1",
+          "cr-i-2",
+          "cr-j-1",
+          "cr-j-10",
+          "cr-j-11",
+          "cr-j-12",
+          "cr-j-2",
+          "cr-j-3",
+          "cr-j-4",
+          "cr-j-5",
+          "cr-j-6",
+          "cr-j-7",
+          "cr-j-8",
+          "cr-j-9",
+          "cr-k-1",
+          "cr-k-2",
+          "cr-k-3",
+          "cr-k-4",
+          "cr-l-1",
+          "cr-l-2",
+          "cr-l-3",
+          "cr-l-4",
+          "cr-m-2",
+          "cr-m-3",
+          "cr-m-4",
+          "cr-m-5"
+        ],
+        "crown": [
+          "wc3-ap-1",
+          "wc3-ap-2",
+          "wc3-ap-3",
+          "wc3-ap-4"
+        ],
+        "hands": [
+          "hd-mercedes",
+          "hd-sword",
+          "hd-plongeur",
+          "hd-sub-mercedes",
+          "hd-sub-sword"
+        ],
+        "dial": [
+          "dl-skx-black",
+          "dl-skx-blue",
+          "dl-skx-pepsi",
+          "dl-skx-orange",
+          "dl-sub-black",
+          "dl-sub-green",
+          "dl-sub-blue"
+        ],
+        "caseback": [
+          "cb-skx-plain",
+          "cb-skx-exhibition",
+          "cb-sub-plain",
+          "cb-sub-exhibition",
+          "cb-b-1",
+          "cb-c-2",
+          "cb-d-1",
+          "cb-d-3",
+          "cb-d-4",
+          "cb-g-1",
+          "cb-g-2"
+        ],
+        "strap": [
+          "st-jubilee",
+          "st-oyster",
+          "st-rubber-black",
+          "st-nato-olive",
+          "st-nato-black",
+          "st-nato-green"
+        ]
+      }
     }
   ],
   "parts": {
@@ -11209,6 +11649,45 @@
         "image": "img/crystal/SJG02B.png",
         "swatch": "img/crystal/thumb/SJG02B.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+      },
+      {
+        "id": "cr-sjg42c",
+        "name": "Crystal SJG42C",
+        "nameZh": "表镜 SJG42C 清晰涂层",
+        "series": "sjg42",
+        "color": "#eef2f6",
+        "material": "Sapphire",
+        "description": "SJG42C 表镜，清晰涂层。AP 专用前表镜，与 AP 表壳配套。",
+        "descriptionEn": "Crystal SJG42C, Clear — AP front crystal, made for the AP case.",
+        "image": "img/crystal/SJG42C.png",
+        "swatch": "img/crystal/thumb/SJG42C.png",
+        "category": "AP Case"
+      },
+      {
+        "id": "cr-sjg42b",
+        "name": "Crystal SJG42B",
+        "nameZh": "表镜 SJG42B 蓝色涂层",
+        "series": "sjg42",
+        "color": "#5b86d8",
+        "material": "Sapphire",
+        "description": "SJG42B 表镜，蓝色涂层。AP 专用前表镜，与 AP 表壳配套。",
+        "descriptionEn": "Crystal SJG42B, Blue — AP front crystal, made for the AP case.",
+        "image": "img/crystal/SJG42B.png",
+        "swatch": "img/crystal/thumb/SJG42B.png",
+        "category": "AP Case"
+      },
+      {
+        "id": "cr-sjg42r",
+        "name": "Crystal SJG42R",
+        "nameZh": "表镜 SJG42R 红色涂层",
+        "series": "sjg42",
+        "color": "#c05aa8",
+        "material": "Sapphire",
+        "description": "SJG42R 表镜，红色涂层。AP 专用前表镜，与 AP 表壳配套。",
+        "descriptionEn": "Crystal SJG42R, Red — AP front crystal, made for the AP case.",
+        "image": "img/crystal/SJG42R.png",
+        "swatch": "img/crystal/thumb/SJG42R.png",
+        "category": "AP Case"
       }
     ],
     "bezel": [
@@ -12160,6 +12639,58 @@
         "image": "img/bezel/B-CL-4.png",
         "category": "Classic Retro Case",
         "innerR": 197.4
+      },
+      {
+        "id": "bz-ap-1",
+        "name": "Bezel B-AP-1",
+        "nameZh": "表圈 B-AP-1",
+        "series": "ap",
+        "color": "#b0b0ac",
+        "material": "Stainless Steel",
+        "description": "AP 系列表圈 B-AP-1，八颗外露螺丝，与 AP 表壳配套。无插入槽位。",
+        "descriptionEn": "AP series bezel B-AP-1 with eight exposed screws, matching the AP case. No insert seat.",
+        "image": "img/bezel/B-AP-1.png",
+        "category": "AP Case",
+        "innerR": 191.0
+      },
+      {
+        "id": "bz-ap-2",
+        "name": "Bezel B-AP-2",
+        "nameZh": "表圈 B-AP-2",
+        "series": "ap",
+        "color": "#333330",
+        "material": "Stainless Steel",
+        "description": "AP 系列表圈 B-AP-2，八颗外露螺丝，与 AP 表壳配套。无插入槽位。",
+        "descriptionEn": "AP series bezel B-AP-2 with eight exposed screws, matching the AP case. No insert seat.",
+        "image": "img/bezel/B-AP-2.png",
+        "category": "AP Case",
+        "innerR": 192.5
+      },
+      {
+        "id": "bz-ap-3",
+        "name": "Bezel B-AP-3",
+        "nameZh": "表圈 B-AP-3",
+        "series": "ap",
+        "color": "#c3a267",
+        "material": "Stainless Steel",
+        "description": "AP 系列表圈 B-AP-3，八颗外露螺丝，与 AP 表壳配套。无插入槽位。",
+        "descriptionEn": "AP series bezel B-AP-3 with eight exposed screws, matching the AP case. No insert seat.",
+        "image": "img/bezel/B-AP-3.png",
+        "category": "AP Case",
+        "innerR": 192.1
+      },
+      {
+        "id": "bz-ap-4",
+        "name": "Bezel B-AP-4",
+        "nameZh": "表圈 B-AP-4",
+        "series": "ap",
+        "color": "#cea682",
+        "material": "Stainless Steel",
+        "description": "AP 系列表圈 B-AP-4，八颗外露螺丝，与 AP 表壳配套。无插入槽位。",
+        "descriptionEn": "AP series bezel B-AP-4 with eight exposed screws, matching the AP case. No insert seat.",
+        "image": "img/bezel/B-AP-4.png",
+        "category": "AP Case",
+        "innerR": 192.1
       }
     ],
     "hands": [
@@ -13255,6 +13786,62 @@
         "image": "img/crown/WC3-CL-4.png",
         "swatch": "img/crown/thumb/WC3-CL-4.png",
         "category": "Classic Retro Case",
+        "aboveCase": true
+      },
+      {
+        "id": "wc3-ap-1",
+        "name": "C-AP-1 Brushed Silver Crown",
+        "nameZh": "C-AP-1 银 拉丝 表把",
+        "series": "ap",
+        "color": "#b0b0ac",
+        "material": "Stainless Steel",
+        "description": "AP 专属表把 C-AP-1 银 拉丝，仅适配 AP 表壳。",
+        "descriptionEn": "Dedicated AP crown C-AP-1, Brushed Silver — fits the AP case only.",
+        "image": "img/crown/WC3-AP-1.png",
+        "swatch": "img/crown/thumb/WC3-AP-1.png",
+        "category": "AP Case",
+        "aboveCase": true
+      },
+      {
+        "id": "wc3-ap-2",
+        "name": "C-AP-2 Black Crown",
+        "nameZh": "C-AP-2 黑 表把",
+        "series": "ap",
+        "color": "#333330",
+        "material": "Stainless Steel",
+        "description": "AP 专属表把 C-AP-2 黑，仅适配 AP 表壳。",
+        "descriptionEn": "Dedicated AP crown C-AP-2, Black — fits the AP case only.",
+        "image": "img/crown/WC3-AP-2.png",
+        "swatch": "img/crown/thumb/WC3-AP-2.png",
+        "category": "AP Case",
+        "aboveCase": true
+      },
+      {
+        "id": "wc3-ap-3",
+        "name": "C-AP-3 Brushed Gold Crown",
+        "nameZh": "C-AP-3 金 拉丝 表把",
+        "series": "ap",
+        "color": "#c3a267",
+        "material": "Stainless Steel",
+        "description": "AP 专属表把 C-AP-3 金 拉丝，仅适配 AP 表壳。",
+        "descriptionEn": "Dedicated AP crown C-AP-3, Brushed Gold — fits the AP case only.",
+        "image": "img/crown/WC3-AP-3.png",
+        "swatch": "img/crown/thumb/WC3-AP-3.png",
+        "category": "AP Case",
+        "aboveCase": true
+      },
+      {
+        "id": "wc3-ap-4",
+        "name": "C-AP-4 Brushed Rose Gold Crown",
+        "nameZh": "C-AP-4 玫金 拉丝 表把",
+        "series": "ap",
+        "color": "#cea682",
+        "material": "Stainless Steel",
+        "description": "AP 专属表把 C-AP-4 玫金 拉丝，仅适配 AP 表壳。",
+        "descriptionEn": "Dedicated AP crown C-AP-4, Brushed Rose Gold — fits the AP case only.",
+        "image": "img/crown/WC3-AP-4.png",
+        "swatch": "img/crown/thumb/WC3-AP-4.png",
+        "category": "AP Case",
         "aboveCase": true
       }
     ],
