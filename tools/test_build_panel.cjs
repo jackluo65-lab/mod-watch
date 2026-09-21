@@ -15,6 +15,24 @@ const TAG = process.env.TAG || 'local';
   await p.goto(URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await p.waitForTimeout(2500);
 
+  // 0) the entry lives in the view-switcher row, right of "back", and stays visible
+  //    before a case is chosen
+  const entry = await p.evaluate(() => {
+    const btn = document.getElementById('buildBtn');
+    const back = document.querySelector('.view-btn[data-view="back"]').getBoundingClientRect();
+    const r = btn.getBoundingClientRect();
+    const st = getComputedStyle(btn);
+    return {
+      inToggle: !!btn.closest('.view-toggle'),
+      rightOfBack: r.left >= back.right - 1,
+      visibleWithoutCase: r.width > 0 && st.display !== 'none',
+      dark: st.backgroundColor === 'rgb(28, 26, 23)',
+      headerGone: !document.querySelector('.header-right .hdr-btn'),
+      label: document.getElementById('buildBtnLabel').textContent,
+    };
+  });
+  console.log('entry:', JSON.stringify(entry));
+
   // 1) open the panel with nothing chosen yet
   await p.evaluate(() => document.getElementById('buildBtn').click());
   await p.waitForTimeout(400);
@@ -89,6 +107,19 @@ const TAG = process.env.TAG || 'local';
   });
   console.log('copy:', JSON.stringify(copied).slice(0, 260));
 
+  // 8b) the badge counts the steps still empty — read it with the panel open so both
+  //     numbers come from the same render
+  await p.evaluate(() => openBuildPanel());
+  await p.waitForTimeout(500);
+  const badge = await p.evaluate(() => ({
+    text: document.getElementById('buildCount').textContent,
+    shown: getComputedStyle(document.getElementById('buildCount')).display !== 'none',
+    empties: document.querySelectorAll('#bpList .bp-row.empty').length,
+  }));
+  await p.evaluate(() => closeBuildPanel());
+  await p.waitForTimeout(200);
+  console.log('badge:', JSON.stringify(badge));
+
   // 9) the finish page shows the same rows with numbers
   await p.evaluate(() => { closeBuildPanel(); });
   await p.waitForTimeout(300);
@@ -109,7 +140,12 @@ const TAG = process.env.TAG || 'local';
   console.log('finish page:', JSON.stringify(finish));
 
   const checks = [
-    ['页头有「我的配置」入口，点开面板', empty.shown && empty.copyBtn],
+    ['入口在视图切换那一排、位于背视图右侧', entry.inToggle && entry.rightOfBack],
+    ['入口样式醒目（深色实底按钮）', entry.dark && entry.label.length > 0],
+    ['没选表壳时入口依然可见可点', entry.visibleWithoutCase],
+    ['顶部那个不显眼的入口已移除', entry.headerGone],
+    ['入口点一下就能打开面板', empty.shown && empty.copyBtn],
+    ['按钮上的徽标数字 = 面板里还没选的步骤数', badge.text === String(badge.empties)],
     ['未选任何零件时也列出全部 10 个步骤', empty.rows === 10],
     ['未选的步骤标为「未选择」', empty.empties === 10],
     ['表壳行提示还没选表壳', /还没选表壳/.test(empty.first)],
