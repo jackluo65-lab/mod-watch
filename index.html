@@ -1912,6 +1912,26 @@ function chapterRingScale() {
   return crScaleFor(bz.innerR);
 }
 
+// The hand set is photographed so its second-hand tip sits HAND_TIP_BASE canvas px from the
+// pivot at 1:1, and it follows the aperture the same way the ring does: the tip lands
+// HAND_TIP_TUCK px inside the ring's bore, whichever family / insert is selected. The scale
+// is about the preview centre — which is where the pivot (and the dial's centre hole) sits,
+// so the hub stays centred on every family.
+const HAND_TIP_BASE = 200;     // second-hand tip radius in the hand artwork at scale 1
+const HAND_TIP_TUCK = 5;       // canvas px the tip stops short of the ring's bore
+const CR_INNER_R = 187.6;      // bore radius of the stock ring artwork
+function handsScale() {
+  const ring = selections.chapterRing;
+  const ins = selections.insert;
+  const bz = selections.bezel;
+  const aperture = (ins && ins.innerR) || (bz && bz.innerR) || 0;
+  if (!aperture) return 1;
+  const bore = ring
+    ? ((ring.boreR != null ? ring.boreR : CR_INNER_R) * chapterRingScale())
+    : aperture;                  // no ring fitted — the aperture itself is the limit
+  return Math.min(1.4, Math.max(0.6, (bore - HAND_TIP_TUCK) / HAND_TIP_BASE));
+}
+
 // ===== Layer loading guard =====
 // Every render gets a token so a late callback from a replaced render cannot touch the
 // preview any more. Failed layers are retried with a cache-busting param (some proxies
@@ -1994,6 +2014,8 @@ function renderImgStack(bust) {
     el.style.zIndex = String(i + 1);
     // Fit the chapter ring to the chosen bezel's inner hole
     if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
+    // Hands follow the same aperture, so the second-hand tip always stops just inside the ring
+    if (layer.type === 'hands' && handsScale() !== 1) el.style.transform = `scale(${handsScale().toFixed(4)})`;
     // The crown art is shared by every family, but a shell can have its crown tube a few
     // source-pixels higher or lower than the others. Such a case carries crownOffsetY in
     // canvas px (see SKX Samurai, -6) and the shift is applied here, so a family that needs
