@@ -27,7 +27,7 @@ const TAG = process.env.TAG || 'local';
       for (let i = 0; i < 14; i++) {
         const t = await p.evaluate(() => document.getElementById('stepTitle').textContent);
         if (t.includes(kw)) return true;
-        await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item'); if (c) c.click(); });
+        await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
         await p.waitForTimeout(200);
         await p.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });
         await p.waitForTimeout(400);
@@ -35,9 +35,9 @@ const TAG = process.env.TAG || 'local';
       return false;
     };
     if (!(await stepTo('表针'))) { console.log(`[${cat}] ⚠️ 未到表针步骤`); continue; }
-    const n = await p.evaluate(() => document.querySelectorAll('.part-group.active .part-item').length);
+    const n = await p.evaluate(() => document.querySelectorAll('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').length);
     const first = await p.evaluate(() => {
-      const c = document.querySelector('.part-group.active .part-item');
+      const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])');
       const txt = c ? (c.querySelector('h5') || c).textContent.trim() : '-';
       if (c) c.click();
       return txt;

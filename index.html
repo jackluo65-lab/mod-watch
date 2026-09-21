@@ -950,6 +950,84 @@
   }
   .btn-outline:hover { border-color: var(--accent); }
 
+  /* ===== Custom dial: upload card + editor ===== */
+  .part-item.part-upload {
+    border-style: dashed;
+    border-color: var(--accent-dim, var(--accent));
+    background: #fcfaf6;
+  }
+  .part-item.part-upload .part-swatch {
+    background: #f1ece2;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .part-item.part-upload .part-swatch svg { width: 62%; height: 62%; }
+  .part-item .pi-edit {
+    position: absolute; top: 6px; right: 6px;
+    width: 26px; height: 26px; padding: 0;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border); border-radius: 50%;
+    background: #fff; color: var(--text-dim, #8a8a8a); cursor: pointer;
+    font-size: 13px; line-height: 1;
+  }
+  .part-item .pi-edit:hover { border-color: var(--accent); color: var(--accent); }
+  .part-item { position: relative; }
+
+  #dialEditor {
+    position: fixed; inset: 0; z-index: 10050;
+    display: none; align-items: center; justify-content: center;
+    background: rgba(28, 24, 18, .58);
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+    padding: 16px;
+  }
+  #dialEditor.show { display: flex; }
+  .de-box {
+    background: #fff; border-radius: var(--radius);
+    width: min(520px, 100%); max-height: 94vh; overflow-y: auto;
+    padding: 18px 20px 16px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+  }
+  .de-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .de-head h3 { font-size: 17px; font-weight: 600; letter-spacing: .02em; margin: 0; }
+  .de-x {
+    border: 0; background: transparent; cursor: pointer;
+    font-size: 26px; line-height: 1; color: var(--text-dim, #999); padding: 0 4px;
+  }
+  .de-x:hover { color: var(--accent); }
+  .de-drop {
+    border: 2px dashed var(--border); border-radius: var(--radius);
+    padding: 22px 14px; text-align: center; background: #fcfaf6;
+    transition: border-color .2s, background .2s;
+  }
+  .de-drop.over { border-color: var(--accent); background: #faf5ea; }
+  .de-drop svg { width: 38px; height: 38px; opacity: .55; margin-bottom: 8px; }
+  .de-drop p { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+  .de-drop span { display: block; font-size: 12px; color: var(--text-dim, #999); margin-bottom: 12px; }
+  .de-stage { text-align: center; }
+  #deCanvas {
+    width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;
+    background: #f6f3ee; border-radius: 8px; border: 1px solid var(--border);
+    touch-action: none; cursor: grab;
+  }
+  #deCanvas.grabbing { cursor: grabbing; }
+  .de-tip { font-size: 12px; color: var(--text-dim, #999); margin: 8px 0 0; line-height: 1.5; }
+  .de-controls { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .de-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .de-row label { min-width: 34px; color: var(--text-dim, #8a8a8a); }
+  .de-row input[type=range] { flex: 1; accent-color: var(--accent); }
+  .de-row .de-val { min-width: 46px; text-align: right; font-variant-numeric: tabular-nums; color: var(--text-dim, #8a8a8a); }
+  .de-foot { display: flex; gap: 10px; margin-top: 16px; }
+  .de-btn {
+    flex: 1; padding: 11px 16px; border-radius: var(--radius);
+    border: 1px solid var(--border); background: #fff; color: var(--text);
+    font-size: 14px; font-weight: 600; cursor: pointer; transition: all .18s;
+  }
+  .de-btn:hover { border-color: var(--accent); }
+  .de-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .de-btn.primary[disabled] { opacity: .45; cursor: not-allowed; }
+  .de-btn.ghost { background: #fff; }
+  .de-note { font-size: 12px; color: #c0392b; margin-top: 8px; min-height: 16px; }
+
   /* Responsive */
   @media (max-width: 960px) {
     .main { flex-direction: column; padding: 20px; }
@@ -1415,6 +1493,57 @@
   <div class="cz-name" id="caseZoomName"></div>
 </div>
 
+<!-- Custom dial uploader: pick a picture, we cut it to the dial disc; the customer
+     can then drag / zoom / rotate it before it goes into the build. -->
+<div id="dialEditor" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="de-box">
+    <div class="de-head">
+      <h3 id="deTitle">调整你的字面</h3>
+      <button class="de-x" id="deClose" type="button" aria-label="Close">&times;</button>
+    </div>
+
+    <div class="de-drop" id="deDrop">
+      <input type="file" id="deFile" accept="image/*" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5"></path>
+        <path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path>
+      </svg>
+      <p id="dePickTitle">选择图片</p>
+      <span id="dePickSub">支持 JPG / PNG，也可以把图片拖进来</span>
+      <button class="de-btn" id="dePick" type="button">选择图片</button>
+    </div>
+
+    <div id="deStageWrap" style="display:none">
+      <div class="de-stage">
+        <canvas id="deCanvas" width="800" height="1000"></canvas>
+      </div>
+      <p class="de-tip" id="deTip"></p>
+      <div class="de-controls">
+        <div class="de-row">
+          <label for="deZoom" id="deZoomLab">缩放</label>
+          <input type="range" id="deZoom" min="20" max="400" step="1" value="100">
+          <span class="de-val" id="deZoomVal">100%</span>
+        </div>
+        <div class="de-row">
+          <label for="deRotate" id="deRotLab">旋转</label>
+          <input type="range" id="deRotate" min="-180" max="180" step="1" value="0">
+          <span class="de-val" id="deRotVal">0°</span>
+        </div>
+        <div class="de-row">
+          <button class="de-btn ghost" id="deCenter" type="button" style="flex:0 0 auto">居中重置</button>
+          <button class="de-btn ghost" id="deReplace" type="button" style="flex:1">选择图片</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="de-note" id="deNote"></div>
+    <div class="de-foot">
+      <button class="de-btn ghost" id="deCancel" type="button">取消</button>
+      <button class="de-btn primary" id="deApply" type="button" disabled>使用这张图</button>
+    </div>
+  </div>
+</div>
+
 <script>
 let DATA = null;
 let selectedCase = null;
@@ -1477,11 +1606,31 @@ const I18N = {
   lugToLug:     { zh: '表耳间距', en: 'Lug-to-lug' },
   lugSpan:      { zh: '耳距', en: 'L2L' },
   thkShort:     { zh: '厚', en: 'Thk' },
-  lugShort:     { zh: '耳宽', en: 'Lug' }
+  lugShort:     { zh: '耳宽', en: 'Lug' },
+  // Custom dial upload
+  uploadDial:   { zh: '上传自己的字面', en: 'Upload your own dial' },
+  uploadSub:    { zh: 'JPG / PNG · 自动适配表盘', en: 'JPG / PNG · sized to the dial' },
+  deTitle:      { zh: '调整你的字面', en: 'Adjust your dial' },
+  dePick:       { zh: '选择图片', en: 'Choose an image' },
+  deDropSub:    { zh: '支持 JPG / PNG，也可以把图片拖进来', en: 'JPG or PNG — or drop the file here' },
+  deZoom:       { zh: '缩放', en: 'Zoom' },
+  deRotate:     { zh: '旋转', en: 'Rotate' },
+  deCenter:     { zh: '居中重置', en: 'Center' },
+  deCancel:     { zh: '取消', en: 'Cancel' },
+  deApply:      { zh: '使用这张图', en: 'Use this image' },
+  deTip:        { zh: '虚线内是装上内影圈后能看到的范围，其余部分会被内影圈盖住', en: 'Inside the dashed circle is what shows with the chapter ring fitted — the rest is hidden underneath' },
+  deEdit:       { zh: '调整', en: 'Adjust' },
+  deCustomName: { zh: '我的字面', en: 'My Dial' },
+  deCustomMat:  { zh: '自定义图片', en: 'Your own image' },
+  deCustomDesc: { zh: '你上传的图片，已按这枚表壳的字面尺寸裁切。', en: 'Your uploaded image, cut to this case\u2019s dial size.' },
+  deBadFile:    { zh: '这个文件读不出来，换一张试试', en: 'That file could not be read — please try another' },
+  deNoImage:    { zh: '请先选一张图片', en: 'Pick an image first' }
 };
 function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
 function partDesc(p) { return LANG === 'zh' ? p.description : (p.descriptionEn || p.description); }
+// Uploaded parts carry both languages; catalogue parts just have one material string
+function partMaterial(p) { return LANG === 'zh' ? (p.matZh || p.material) : (p.matEn || p.material); }
 function typeLabel(type) {
   const zh = { case: '表壳', bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
   const en = { case: 'Case', bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', crystal: 'Crystal', dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' };
@@ -1680,12 +1829,17 @@ function selectCase(id) {
 
   // Keep selections that are still compatible with the new case,
   // so customers can go back to fix the case without re-picking everything.
+  // An uploaded dial is not in any catalogue — it always survives, and is re-cut
+  // to the new family's disc below.
   const keep = {};
   partTypes.forEach(type => {
     const sel = selections[type];
-    if (sel && (selectedCase.compatibleParts[type] || []).includes(sel.id) && categoryMatches(sel, selectedCase)) keep[type] = sel;
+    if (!sel) return;
+    if (sel.custom) { keep[type] = sel; return; }
+    if ((selectedCase.compatibleParts[type] || []).includes(sel.id) && categoryMatches(sel, selectedCase)) keep[type] = sel;
   });
   selections = keep;
+  rebuildCustomDial();
 
   // Update UI: highlight variant card + representative, collapse all series
   document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
@@ -1743,12 +1897,49 @@ function renderParts() {
         <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.swatch || part.image}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</div>
         <div class="part-info">
           <h5>${partName(part)}</h5>
-          <div class="mat">${part.material}</div>
+          <div class="mat">${partMaterial(part)}</div>
         </div>
       `;
       item.addEventListener('click', () => selectPart(type, part));
       listEl.appendChild(item);
     });
+
+    // Dial step: lead with "upload your own", followed by the customer's entry once
+    // they have one. Neither counts as a catalogue part (availablePartsCount stays
+    // the presets' length, so the step's skip logic is untouched).
+    if (type === 'dial') {
+      const up = document.createElement('div');
+      up.className = 'part-item part-upload';
+      up.dataset.type = 'dial';
+      up.dataset.id = '__upload__';
+      up.innerHTML = `
+        <div class="part-swatch">${UPLOAD_ICON}</div>
+        <div class="part-info">
+          <h5>${t('uploadDial')}</h5>
+          <div class="mat">${t('uploadSub')}</div>
+        </div>
+      `;
+      up.addEventListener('click', openDialEditor);
+      listEl.insertBefore(up, listEl.firstChild);
+
+      if (customDialPart) {
+        const own = document.createElement('div');
+        own.className = 'part-item';
+        own.dataset.type = 'dial';
+        own.dataset.id = customDialPart.id;
+        own.innerHTML = `
+          <div class="part-swatch" style="background:${customDialPart.color}"><img src="${customDialPart.swatch}" alt="" decoding="async"></div>
+          <div class="part-info">
+            <h5>${partName(customDialPart)}</h5>
+            <div class="mat">${partMaterial(customDialPart)}</div>
+          </div>
+          <button class="pi-edit" type="button" title="${t('deEdit')}">&#9998;</button>
+        `;
+        own.addEventListener('click', () => selectPart('dial', customDialPart));
+        own.querySelector('.pi-edit').addEventListener('click', e => { e.stopPropagation(); openDialEditor(); });
+        listEl.insertBefore(own, up.nextSibling);
+      }
+    }
 
     // Restore selected state after re-render
     if (selections[type]) {
@@ -1789,6 +1980,287 @@ function selectPart(type, part) {
   updatePreview();
   updateSummary();
 }
+
+// ===== Custom dial: the customer's own picture, cut to the dial disc =====
+// Preset dials are cut to a fixed disc radius per family (r207 everywhere, r216 on
+// Vintage) because the chapter ring sits ON TOP of the dial: anything smaller than
+// its bore shows a gap, anything past the disc radius is hidden anyway. A uploaded
+// picture is fitted on that same disc, and the guides in the editor show exactly
+// which part of it will survive the ring.
+const DIAL_CV_W = 800, DIAL_CV_H = 1000, DIAL_CX = 400, DIAL_CY = 500;
+const CUSTOM_DIAL_ID = 'dl-custom';
+const UPLOAD_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:#b08a3e"><path d="M12 15V5m0 0L8 9m4-4 4 4"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>`;
+
+let customDialSrc = null;    // { bitmap, zoom, dxr, dyr, angle }  offsets are ratios of the disc radius
+let customDialPart = null;   // the entry currently living in selections.dial
+
+// Which disc radius does this family's preset dials use?
+function dialDiscRadius(caseObj) {
+  const list = (caseObj && caseObj.compatibleParts && caseObj.compatibleParts.dial) || [];
+  for (const id of list) {
+    const p = (DATA.parts.dial || []).find(x => x.id === id);
+    const m = p && p.image ? p.image.match(/\/d(\d+)\//) : null;
+    if (m) return +m[1];
+  }
+  return 207;
+}
+// How much of the disc actually stays visible once ring + insert are on
+function dialVisibleRadius() {
+  const ring = selections.chapterRing, ins = selections.insert, bz = selections.bezel;
+  const aperture = (ins && ins.innerR) || (bz && bz.innerR) || 0;
+  if (ring) return (ring.boreR != null ? ring.boreR : CR_INNER_R) * chapterRingScale();
+  return aperture || dialDiscRadius(selectedCase);
+}
+
+function paintCustomDial(ctx, opts) {
+  const s = customDialSrc;
+  const R = opts.radius;
+  ctx.clearRect(0, 0, DIAL_CV_W, DIAL_CV_H);
+  if (!s) return;
+  const scale = (2 * R / Math.min(s.bitmap.width, s.bitmap.height)) * s.zoom;
+  ctx.save();
+  ctx.beginPath(); ctx.arc(DIAL_CX, DIAL_CY, R, 0, Math.PI * 2); ctx.clip();
+  ctx.imageSmoothingEnabled = true;
+  if ('imageSmoothingQuality' in ctx) ctx.imageSmoothingQuality = 'high';
+  ctx.translate(DIAL_CX + s.dxr * R, DIAL_CY + s.dyr * R);
+  ctx.rotate(s.angle * Math.PI / 180);
+  const w = s.bitmap.width * scale, h = s.bitmap.height * scale;
+  ctx.drawImage(s.bitmap, -w / 2, -h / 2, w, h);
+  ctx.restore();
+
+  if (opts.guides) {
+    const vis = Math.min(opts.visible || R, R);
+    // 1) beyond the disc: the picture is cut away here
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, 0, DIAL_CV_W, DIAL_CV_H);
+    ctx.arc(DIAL_CX, DIAL_CY, R, 0, Math.PI * 2, true);
+    ctx.fillStyle = 'rgba(120,112,96,.10)';
+    ctx.fill('evenodd');
+    ctx.restore();
+    // 2) between the disc edge and the bore: hidden under the chapter ring
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(DIAL_CX, DIAL_CY, R, 0, Math.PI * 2);
+    ctx.arc(DIAL_CX, DIAL_CY, vis, 0, Math.PI * 2, true);
+    ctx.fillStyle = 'rgba(255,255,255,.78)';
+    ctx.fill('evenodd');
+    ctx.restore();
+    // 3) the two boundaries
+    ctx.save();
+    ctx.setLineDash([9, 7]); ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(70,56,34,.65)';
+    ctx.beginPath(); ctx.arc(DIAL_CX, DIAL_CY, vis, 0, Math.PI * 2); ctx.stroke();
+    ctx.setLineDash([]); ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(70,56,34,.38)';
+    ctx.beginPath(); ctx.arc(DIAL_CX, DIAL_CY, R, 0, Math.PI * 2); ctx.stroke();
+    ctx.restore();
+  }
+}
+
+function buildCustomDialPart() {
+  if (!customDialSrc) return null;
+  const R = dialDiscRadius(selectedCase);
+  const out = document.createElement('canvas');
+  out.width = DIAL_CV_W; out.height = DIAL_CV_H;
+  paintCustomDial(out.getContext('2d'), { radius: R });
+  const thumb = document.createElement('canvas');
+  thumb.width = 256; thumb.height = 320;
+  thumb.getContext('2d').drawImage(out, 0, 0, 256, 320);
+  const zh = LANG === 'zh';
+  return {
+    id: CUSTOM_DIAL_ID,
+    name: 'My Dial', nameZh: '我的字面',
+    description: '你上传的图片，已按这枚表壳的字面尺寸裁切。',
+    descriptionEn: 'Your uploaded image, cut to this case\u2019s dial size.',
+    material: zh ? '自定义图片' : 'Your own image',
+    matZh: '自定义图片', matEn: 'Your own image',
+    color: '#8a8377', category: 'universal',
+    image: out.toDataURL('image/png'),
+    swatch: thumb.toDataURL('image/png'),
+    radius: R, custom: true
+  };
+}
+// Re-cut the upload whenever the case changes (r207 and r216 are not the same disc)
+function rebuildCustomDial() {
+  if (!customDialSrc || !customDialPart) return;
+  customDialPart = buildCustomDialPart();
+  selections.dial = customDialPart;
+}
+
+function editorEls() {
+  return {
+    modal: document.getElementById('dialEditor'),
+    drop: document.getElementById('deDrop'),
+    stage: document.getElementById('deStageWrap'),
+    canvas: document.getElementById('deCanvas'),
+    file: document.getElementById('deFile'),
+    note: document.getElementById('deNote'),
+    apply: document.getElementById('deApply'),
+    zoom: document.getElementById('deZoom'),
+    rotate: document.getElementById('deRotate'),
+    zoomVal: document.getElementById('deZoomVal'),
+    rotVal: document.getElementById('deRotVal')
+  };
+}
+
+function applyEditorTexts() {
+  const zh = LANG === 'zh';
+  const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+  set('deTitle', zh ? '调整你的字面' : 'Adjust your dial');
+  set('dePickTitle', zh ? '选择图片' : 'Choose an image');
+  set('dePickSub', zh ? '支持 JPG / PNG，也可以把图片拖进来' : 'JPG or PNG — or drop the file here');
+  set('dePick', zh ? '选择图片' : 'Choose an image');
+  set('deTip', zh ? '虚线内是装上内影圈后能看到的范围，其余部分会被内影圈盖住' : 'Inside the dashed circle is what shows once the chapter ring is fitted — the rest is hidden underneath');
+  set('deZoomLab', zh ? '缩放' : 'Zoom');
+  set('deRotLab', zh ? '旋转' : 'Rotate');
+  set('deCenter', zh ? '居中重置' : 'Center');
+  set('deReplace', zh ? '换一张图片' : 'Replace image');
+  set('deCancel', zh ? '取消' : 'Cancel');
+  set('deApply', zh ? '使用这张图' : 'Use this image');
+}
+
+function paintEditorCanvas() {
+  const { canvas } = editorEls();
+  if (!canvas || !customDialSrc) return;
+  paintCustomDial(canvas.getContext('2d'), {
+    radius: dialDiscRadius(selectedCase),
+    visible: dialVisibleRadius(),
+    guides: true
+  });
+}
+function syncEditorControls() {
+  const { zoom, rotate, zoomVal, rotVal } = editorEls();
+  if (!customDialSrc) return;
+  zoom.value = Math.round(customDialSrc.zoom * 100);
+  rotate.value = Math.round(customDialSrc.angle);
+  zoomVal.textContent = Math.round(customDialSrc.zoom * 100) + '%';
+  rotVal.textContent = Math.round(customDialSrc.angle) + '\u00B0';
+}
+function showEditorStage(on) {
+  const { drop, stage, apply } = editorEls();
+  drop.style.display = on ? 'none' : 'block';
+  stage.style.display = on ? 'block' : 'none';
+  apply.disabled = !on;
+}
+function openDialEditor() {
+  const { modal, note } = editorEls();
+  applyEditorTexts();
+  note.textContent = '';
+  showEditorStage(!!customDialSrc);
+  if (customDialSrc) { syncEditorControls(); paintEditorCanvas(); }
+  modal.classList.add('show');
+  modal.setAttribute('aria-hidden', 'false');
+}
+function closeDialEditor() {
+  const { modal } = editorEls();
+  modal.classList.remove('show');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+function loadDialFile(file) {
+  return new Promise((resolve, reject) => {
+    if (typeof createImageBitmap === 'function') {
+      createImageBitmap(file, { imageOrientation: 'from-image' })
+        .then(resolve)
+        .catch(() => createImageBitmap(file).then(resolve).catch(() => decodeViaImg()));
+    } else decodeViaImg();
+    function decodeViaImg() {
+      const url = URL.createObjectURL(file);
+      const im = new Image();
+      im.onload = () => { URL.revokeObjectURL(url); resolve(im); };
+      im.onerror = () => { URL.revokeObjectURL(url); reject(new Error('decode failed')); };
+      im.src = url;
+    }
+  });
+}
+
+async function handleDialFile(file) {
+  const { note } = editorEls();
+  if (!file) return;
+  note.textContent = '';
+  if (file.type && !/^image\//.test(file.type)) { note.textContent = t('deBadFile'); return; }
+  try {
+    const bitmap = await loadDialFile(file);
+    customDialSrc = { bitmap, zoom: 1, dxr: 0, dyr: 0, angle: 0 };
+    showEditorStage(true);
+    syncEditorControls();
+    paintEditorCanvas();
+  } catch (e) {
+    note.textContent = t('deBadFile');
+  }
+}
+
+function applyCustomDial() {
+  const { note } = editorEls();
+  if (!customDialSrc) { note.textContent = t('deNoImage'); return; }
+  customDialPart = buildCustomDialPart();
+  renderParts();                              // the edit card only exists after the list is rebuilt
+  selectPart('dial', customDialPart);         // selection, guide, preview, summary
+  closeDialEditor();
+}
+
+(function initDialEditor() {
+  const { modal, drop, file, canvas, zoom, rotate, apply } = editorEls();
+  if (!modal) return;
+  document.getElementById('dePick').addEventListener('click', () => file.click());
+  document.getElementById('deReplace').addEventListener('click', () => file.click());
+  document.getElementById('deClose').addEventListener('click', closeDialEditor);
+  document.getElementById('deCancel').addEventListener('click', closeDialEditor);
+  document.getElementById('deCenter').addEventListener('click', () => {
+    if (!customDialSrc) return;
+    customDialSrc.zoom = 1; customDialSrc.dxr = 0; customDialSrc.dyr = 0; customDialSrc.angle = 0;
+    syncEditorControls(); paintEditorCanvas();
+  });
+  apply.addEventListener('click', applyCustomDial);
+  file.addEventListener('change', e => {
+    const f = e.target.files && e.target.files[0];
+    e.target.value = '';
+    handleDialFile(f);
+  });
+  ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => {
+    const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if (f) handleDialFile(f);
+  });
+  zoom.addEventListener('input', e => {
+    if (!customDialSrc) return;
+    customDialSrc.zoom = Math.max(0.2, Math.min(4, (+e.target.value) / 100));
+    editorEls().zoomVal.textContent = Math.round(customDialSrc.zoom * 100) + '%';
+    paintEditorCanvas();
+  });
+  rotate.addEventListener('input', e => {
+    if (!customDialSrc) return;
+    customDialSrc.angle = +e.target.value;
+    editorEls().rotVal.textContent = customDialSrc.angle + '\u00B0';
+    paintEditorCanvas();
+  });
+  modal.addEventListener('click', e => { if (e.target === modal) closeDialEditor(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('show')) closeDialEditor(); });
+
+  // drag the picture inside the preview with mouse or finger
+  let dragging = false, lastX = 0, lastY = 0;
+  canvas.addEventListener('pointerdown', e => {
+    if (!customDialSrc) return;
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    canvas.classList.add('grabbing');
+    try { canvas.setPointerCapture(e.pointerId); } catch (err) {}
+    e.preventDefault();
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (!dragging || !customDialSrc) return;
+    const rect = canvas.getBoundingClientRect();
+    const k = DIAL_CV_W / Math.max(1, rect.width);
+    const R = dialDiscRadius(selectedCase) || 207;
+    customDialSrc.dxr += (e.clientX - lastX) * k / R;
+    customDialSrc.dyr += (e.clientY - lastY) * k / R;
+    lastX = e.clientX; lastY = e.clientY;
+    paintEditorCanvas();
+  });
+  const stopDrag = () => { dragging = false; canvas.classList.remove('grabbing'); };
+  canvas.addEventListener('pointerup', stopDrag);
+  canvas.addEventListener('pointercancel', stopDrag);
+  canvas.addEventListener('pointerleave', stopDrag);
+})();
 
 // Update SVG preview
 function updatePreview() {

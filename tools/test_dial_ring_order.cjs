@@ -34,7 +34,7 @@ const TAG = process.env.TAG || 'local';
       for (let i = 0; i < 12; i++) {
         const t = await p.evaluate(() => document.getElementById('stepTitle').textContent);
         if (t.includes(kw)) return true;
-        await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item'); if (c) c.click(); });
+        await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
         await p.waitForTimeout(200);
         await p.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });
         await p.waitForTimeout(380);
@@ -46,10 +46,10 @@ const TAG = process.env.TAG || 'local';
       console.log(`[${cat}] ⚠️ 未到达字面步骤 (pick=${picked}, 步骤=${await p.evaluate(() => document.getElementById('stepTitle').textContent)})`);
       fail++; continue;
     }
-    await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item'); if (c) c.click(); });
+    await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
     await p.waitForTimeout(600);
     await stepTo('表针');
-    await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item'); if (c) c.click(); });
+    await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
     await p.waitForTimeout(700);
 
     const st = await p.evaluate(() => {

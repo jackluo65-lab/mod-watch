@@ -24,7 +24,7 @@ const TAG = process.env.TAG || 'local';
     for (let i = 0; i < 16; i++) {
       const t = await p.evaluate(() => document.getElementById('stepTitle').textContent);
       if (t.includes(kw)) return true;
-      await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item'); if (c) c.click(); });
+      await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
       await p.waitForTimeout(180);
       await p.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });
       await p.waitForTimeout(400);
@@ -32,11 +32,11 @@ const TAG = process.env.TAG || 'local';
     return false;
   };
   const pickFirst = async () => p.evaluate(() => {
-    const c = document.querySelector('.part-group.active .part-item');
+    const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])');
     if (c) c.click();
     return c ? (c.querySelector('.part-item-name, h5') || c).textContent.trim().split('\n')[0] : '-';
   });
-  const countInStep = async () => p.evaluate(() => document.querySelectorAll('.part-group.active .part-item').length);
+  const countInStep = async () => p.evaluate(() => document.querySelectorAll('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').length);
 
   await p.evaluate(() => {
     const s = [...document.querySelectorAll('.case-series')].find(x => x.dataset.category === 'Vintage Case');
