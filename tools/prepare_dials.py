@@ -58,12 +58,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", required=True)
     ap.add_argument("--out", default="img/dial")
-    ap.add_argument("--radius", type=float, default=216.0,
-                    help="disc radius on the 800x1000 canvas (user-specified 2026-09-20). A dial "
-                         "has to be a little wider than the chapter ring it sits under: the ring's "
-                         "bore varies with the bezel, 196.9-207.0 across the families, so 216 "
-                         "clears the widest bore by 9px while still tucking under every ring band "
-                         "(ring outer edges run 219.9-231.2).")
+    ap.add_argument("--radius", type=float, default=207.0,
+                    help="disc radius on the 800x1000 canvas. Two cuts are in use: 207 for every "
+                         "family except Vintage, 216 for Vintage (the reference look the user "
+                         "picked). 207 is drawn ABOVE the chapter ring (`above: chapterRing`) so "
+                         "its visible diameter stops being capped by the ring's bore, and it still "
+                         "leaves 9-14px of the ring's tick band showing on every family.")
     ap.add_argument("--dry", action="store_true")
     args = ap.parse_args()
 
