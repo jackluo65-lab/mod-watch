@@ -922,6 +922,11 @@
   .summary-item:last-child { border-bottom: none; }
   .summary-item .label { color: var(--text2); }
   .summary-item .value { color: var(--text); }
+  .summary-item .scode {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px; font-weight: 700; color: var(--accent);
+    margin-left: 6px; letter-spacing: .02em;
+  }
 
   /* CTA */
   .cta-row {
@@ -1027,6 +1032,69 @@
   .de-btn.primary[disabled] { opacity: .45; cursor: not-allowed; }
   .de-btn.ghost { background: #fff; }
   .de-note { font-size: 12px; color: #c0392b; margin-top: 8px; min-height: 16px; }
+
+  /* ===== My Build panel: what is chosen, with part numbers ===== */
+  .hdr-btn {
+    border: 1px solid var(--border); background: #fff; color: var(--text);
+    border-radius: var(--radius); padding: 6px 12px; font-size: 13px; font-weight: 600;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; transition: all .18s;
+  }
+  .hdr-btn:hover { border-color: var(--accent); color: var(--accent); }
+  #buildPanel {
+    position: fixed; inset: 0; z-index: 10040;
+    display: none; align-items: center; justify-content: center;
+    background: rgba(28, 24, 18, .58);
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+    padding: 16px;
+  }
+  #buildPanel.show { display: flex; }
+  .bp-box {
+    background: #fff; border-radius: var(--radius);
+    width: min(520px, 100%); max-height: 92vh; overflow-y: auto;
+    padding: 18px 20px 18px; box-sizing: border-box;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .3);
+  }
+  .bp-head { display: flex; align-items: center; justify-content: space-between; }
+  .bp-head h3 { font-size: 17px; font-weight: 600; margin: 0; }
+  .bp-x { border: 0; background: transparent; cursor: pointer; font-size: 26px; line-height: 1; color: var(--text-dim, #999); padding: 0 4px; }
+  .bp-x:hover { color: var(--accent); }
+  .bp-sub { font-size: 12.5px; color: var(--text-dim, #999); margin: 4px 0 10px; }
+  .bp-list { border-top: 1px solid #f0ece4; }
+  .bp-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0ece4; }
+  .bp-thumb {
+    width: 38px; height: 38px; flex: 0 0 38px; border-radius: 8px; background: #f6f3ee;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .bp-thumb img { width: 100%; height: 100%; object-fit: contain; }
+  .bp-info { flex: 1; min-width: 0; }
+  .bp-type { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim, #a09a90); }
+  .bp-name { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bp-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px; font-weight: 700; color: var(--accent); white-space: nowrap; letter-spacing: .02em;
+  }
+  .bp-row.empty .bp-name, .bp-row.empty .bp-code { color: #c2bcb2; font-weight: 400; }
+  .bp-actions { margin-top: 12px; }
+  .bp-find { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 14px; }
+  .bp-find h4 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
+  .bp-find .bp-hint { font-size: 12px; color: var(--text-dim, #999); margin: 0 0 9px; }
+  .bp-find-row { display: flex; gap: 8px; }
+  .bp-find-row input {
+    flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--border);
+    border-radius: var(--radius); font-size: 14px; font-family: inherit; color: var(--text);
+    text-transform: uppercase;
+  }
+  .bp-find-row input:focus { outline: none; border-color: var(--accent); }
+  .bp-msg { font-size: 12.5px; margin-top: 9px; min-height: 18px; line-height: 1.55; }
+  .bp-msg.ok { color: #1f7a4d; }
+  .bp-msg.warn { color: #a9700a; }
+  .bp-msg.err { color: #c0392b; }
+  .bp-msg button {
+    margin: 7px 6px 0 0; padding: 5px 11px; font-size: 12px; font-family: inherit;
+    border: 1px solid var(--border); border-radius: 999px; background: #fff; cursor: pointer;
+  }
+  .bp-msg button:hover { border-color: var(--accent); color: var(--accent); }
 
   /* Responsive */
   @media (max-width: 960px) {
@@ -1257,6 +1325,7 @@
   <div class="logo">MOD WATCH</div>
   <div class="header-right">
     <span id="tagline">Craft Your Time — 慢慢来，打造只属于你的那一枚</span>
+    <button class="hdr-btn" id="buildBtn" type="button" onclick="openBuildPanel()">我的配置</button>
     <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
   </div>
 </div>
@@ -1544,6 +1613,31 @@
   </div>
 </div>
 
+<!-- My Build: everything chosen so far, with the part numbers, plus a lookup so a
+     customer who already has a number (B-JD-1, C-JTF-1, D1067 …) can type it in. -->
+<div id="buildPanel" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="bp-box">
+    <div class="bp-head">
+      <h3 id="bpTitle">我的配置</h3>
+      <button class="bp-x" id="bpClose" type="button" aria-label="Close">&times;</button>
+    </div>
+    <p class="bp-sub" id="bpSub">目前选好的零件与编号</p>
+    <div class="bp-list" id="bpList"></div>
+    <div class="bp-actions">
+      <button class="de-btn ghost" id="bpCopy" type="button">复制清单</button>
+    </div>
+    <div class="bp-find">
+      <h4 id="bpFindTitle">有指定的零件编号？直接输入</h4>
+      <p class="bp-hint" id="bpFindHint">输入后自动切换成对应的零件，预览会同步更新</p>
+      <div class="bp-find-row">
+        <input id="bpCode" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="例如 B-JD-1、C-JTF-1、D1067">
+        <button class="de-btn primary" id="bpApply" type="button" style="flex:0 0 auto">查找</button>
+      </div>
+      <div class="bp-msg" id="bpMsg"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 let DATA = null;
 let selectedCase = null;
@@ -1624,7 +1718,24 @@ const I18N = {
   deCustomMat:  { zh: '自定义图片', en: 'Your own image' },
   deCustomDesc: { zh: '你上传的图片，已按这枚表壳的字面尺寸裁切。', en: 'Your uploaded image, cut to this case\u2019s dial size.' },
   deBadFile:    { zh: '这个文件读不出来，换一张试试', en: 'That file could not be read — please try another' },
-  deNoImage:    { zh: '请先选一张图片', en: 'Pick an image first' }
+  deNoImage:    { zh: '请先选一张图片', en: 'Pick an image first' },
+  // My Build panel
+  buildBtn:     { zh: '我的配置', en: 'My Build' },
+  bpSub:        { zh: '目前选好的零件与编号', en: 'The parts and part numbers you have chosen' },
+  bpNotChosen:  { zh: '未选择', en: 'Not chosen' },
+  bpCopy:       { zh: '复制清单', en: 'Copy list' },
+  bpCopied:     { zh: '已复制，可直接发给厂家', en: 'Copied — paste it to your supplier' },
+  bpFindTitle:  { zh: '有指定的零件编号？直接输入', en: 'Have a part number? Enter it here' },
+  bpFindPh:     { zh: '例如 B-JD-1、C-JTF-1、D1067', en: 'e.g. B-JD-1, C-JTF-1, D1067' },
+  bpFind:       { zh: '查找', en: 'Find' },
+  bpEmpty:      { zh: '请先输入编号', en: 'Enter a part number first' },
+  bpNotFound:   { zh: '没找到这个编号，检查一下有没有输错', en: 'No part matches that number — check the spelling' },
+  bpApplied:    { zh: '已应用：', en: 'Applied: ' },
+  bpAlready:    { zh: '这个零件已经在配置里了：', en: 'Already in your build: ' },
+  bpNeedCase:   { zh: '这个编号属于下面这些表壳，点一下先切换：', en: 'That part fits these cases — tap one to switch:' },
+  bpSwitched:   { zh: '已切换到表壳 ', en: 'Switched to case ' },
+  bpCopyHead:   { zh: 'MOD WATCH 配置清单', en: 'MOD WATCH build' },
+  bpNoCase:     { zh: '还没选表壳', en: 'No case yet' }
 };
 function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
@@ -2262,6 +2373,190 @@ function applyCustomDial() {
   canvas.addEventListener('pointerleave', stopDrag);
 })();
 
+// ===== My Build: what is chosen, with part numbers, plus a number lookup =====
+// Every catalogue entry carries a `code` — its factory model number, taken from the
+// artwork file name (SKX-B-1, B-JD-1, CR-G-3, D1067 …). Customers often arrive with
+// a number already, so they can type it in and the build switches to that part.
+function normalizeCode(s) {
+  return String(s == null ? '' : s).toUpperCase().replace(/[^A-Z0-9]/g, '');
+}
+function escHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// One row per wizard step, in order — chosen or not
+function buildRows() {
+  const rows = [{
+    type: 'case', label: typeLabel('case'),
+    name: selectedCase ? partName(selectedCase) : t('bpNoCase'),
+    code: selectedCase ? (selectedCase.code || '') : '',
+    thumb: selectedCase ? (selectedCase.swatch || (selectedCase.views && selectedCase.views.front) || '') : '',
+    empty: !selectedCase
+  }];
+  stepOrder.forEach(step => {
+    if (step.type === 'case' || !partTypes.includes(step.type)) return;
+    const sel = selections[step.type];
+    rows.push(sel ? {
+      type: step.type, label: typeLabel(step.type), name: partName(sel),
+      code: sel.code || '', thumb: sel.swatch || sel.image || '', empty: false
+    } : {
+      type: step.type, label: typeLabel(step.type), name: t('bpNotChosen'),
+      code: '', thumb: '', empty: true
+    });
+  });
+  return rows;
+}
+
+function renderBuildPanel() {
+  const list = document.getElementById('bpList');
+  if (!list) return;
+  list.innerHTML = buildRows().map(r => `
+    <div class="bp-row${r.empty ? ' empty' : ''}">
+      <div class="bp-thumb">${r.thumb ? `<img src="${escHtml(r.thumb)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</div>
+      <div class="bp-info">
+        <div class="bp-type">${escHtml(r.label)}</div>
+        <div class="bp-name">${escHtml(r.name)}</div>
+      </div>
+      <div class="bp-code">${r.code ? escHtml(r.code) : '\u2014'}</div>
+    </div>
+  `).join('');
+}
+
+function buildPlainText() {
+  return [t('bpCopyHead')].concat(
+    buildRows().map(r => `${r.label} ${r.code || '\u2014'}${r.empty ? '' : ' ' + r.name}`)
+  ).join('\n');
+}
+
+function setBpMsg(text, cls, buttons) {
+  const el = document.getElementById('bpMsg');
+  if (!el) return;
+  el.className = 'bp-msg' + (cls ? ' ' + cls : '');
+  el.innerHTML = escHtml(text) + (buttons || []).map((b, i) => `<button type="button" data-i="${i}">${escHtml(b.label)}</button>`).join('');
+  (buttons || []).forEach((b, i) => {
+    const btn = el.querySelector(`button[data-i="${i}"]`);
+    if (btn) btn.addEventListener('click', b.onClick);
+  });
+}
+
+function copyBuildList() {
+  const text = buildPlainText();
+  const done = () => setBpMsg(t('bpCopied'), 'ok');
+  const fallback = () => {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) { setBpMsg(text.replace(/\n/g, ' · '), 'warn'); }
+    ta.remove();
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(fallback);
+  } else fallback();
+}
+
+function findCodeHits(raw) {
+  const q = normalizeCode(raw);
+  if (!q) return null;
+  const cases = DATA.caseSeries.filter(c => normalizeCode(c.code) === q);
+  const parts = [];
+  Object.keys(DATA.parts).forEach(type => {
+    (DATA.parts[type] || []).forEach(p => { if (normalizeCode(p.code) === q) parts.push({ type, part: p }); });
+  });
+  return { q, cases, parts };
+}
+
+function applyCodeLookup() {
+  const input = document.getElementById('bpCode');
+  const raw = (input && input.value || '').trim();
+  if (!raw) { setBpMsg(t('bpEmpty'), 'warn'); return; }
+  const hits = findCodeHits(raw);
+  if (!hits || (!hits.cases.length && !hits.parts.length)) { setBpMsg(t('bpNotFound'), 'err'); return; }
+
+  // 1) a part this case can take right now (dial/ring numbers exist in two sizes —
+  //    the compatible one is the one the customer means)
+  if (selectedCase) {
+    const usable = hits.parts.filter(h =>
+      (selectedCase.compatibleParts[h.type] || []).includes(h.part.id) && categoryMatches(h.part, selectedCase));
+    if (usable.length) {
+      const h = usable[0];
+      if (selections[h.type] && selections[h.type].id === h.part.id) {
+        setBpMsg(t('bpAlready') + typeLabel(h.type) + ' · ' + h.part.code, 'ok');
+      } else {
+        selectPart(h.type, h.part);
+        setBpMsg(t('bpApplied') + typeLabel(h.type) + ' · ' + h.part.code + ' · ' + partName(h.part), 'ok');
+      }
+      renderBuildPanel();
+      return;
+    }
+  }
+  // 2) the number is a case
+  if (hits.cases.length) {
+    const c = hits.cases[0];
+    if (selectedCase && selectedCase.id === c.id) {
+      setBpMsg(t('bpAlready') + typeLabel('case') + ' · ' + c.code, 'ok');
+    } else {
+      selectCase(c.id);
+      setBpMsg(t('bpSwitched') + c.code + ' · ' + partName(c), 'ok');
+    }
+    renderBuildPanel();
+    return;
+  }
+  // 3) a part that needs another case first — offer a one-tap switch
+  const h = hits.parts[0];
+  const owners = DATA.caseSeries.filter(c =>
+    (c.compatibleParts[h.type] || []).includes(h.part.id) && categoryMatches(h.part, c));
+  if (!owners.length) { setBpMsg(t('bpNotFound'), 'err'); return; }
+  setBpMsg(t('bpNeedCase') + typeLabel(h.type) + ' ' + h.part.code, 'warn',
+    owners.slice(0, 3).map(o => ({ label: o.code || o.id, onClick: () => { selectCase(o.id); setTimeout(applyCodeLookup, 80); } })));
+  renderBuildPanel();
+}
+
+function applyBuildPanelTexts() {
+  const zh = LANG === 'zh';
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  set('buildBtn', zh ? '我的配置' : 'My Build');
+  set('bpTitle', zh ? '我的配置' : 'My Build');
+  set('bpSub', zh ? '目前选好的零件与编号' : 'The parts and part numbers you have chosen');
+  set('bpCopy', zh ? '复制清单' : 'Copy list');
+  set('bpFindTitle', zh ? '有指定的零件编号？直接输入' : 'Have a part number? Enter it here');
+  set('bpFindHint', zh ? '输入后自动切换成对应的零件，预览会同步更新' : 'We switch the build to that part and the preview updates');
+  set('bpApply', zh ? '查找' : 'Find');
+  const inp = document.getElementById('bpCode');
+  if (inp) inp.placeholder = zh ? '例如 B-JD-1、C-JTF-1、D1067' : 'e.g. B-JD-1, C-JTF-1, D1067';
+}
+
+function openBuildPanel() {
+  const p = document.getElementById('buildPanel');
+  if (!p) return;
+  applyBuildPanelTexts();
+  renderBuildPanel();
+  setBpMsg('', '');
+  p.classList.add('show');
+  p.setAttribute('aria-hidden', 'false');
+  const inp = document.getElementById('bpCode');
+  if (inp && window.matchMedia && window.matchMedia('(min-width: 961px)').matches) setTimeout(() => inp.focus(), 60);
+}
+function closeBuildPanel() {
+  const p = document.getElementById('buildPanel');
+  if (!p) return;
+  p.classList.remove('show');
+  p.setAttribute('aria-hidden', 'true');
+}
+
+(function initBuildPanel() {
+  const p = document.getElementById('buildPanel');
+  if (!p) return;
+  document.getElementById('bpClose').addEventListener('click', closeBuildPanel);
+  document.getElementById('bpCopy').addEventListener('click', copyBuildList);
+  document.getElementById('bpApply').addEventListener('click', applyCodeLookup);
+  document.getElementById('bpCode').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); applyCodeLookup(); }
+  });
+  p.addEventListener('click', e => { if (e.target === p) closeBuildPanel(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && p.classList.contains('show')) closeBuildPanel(); });
+  applyBuildPanelTexts();
+})();
+
 // Update SVG preview
 function updatePreview() {
   if (!selectedCase) return;
@@ -2558,15 +2853,14 @@ function drawHourMarkers() {
 // Update summary
 function updateSummary() {
   const el = document.getElementById('summaryList');
-  el.innerHTML = '';
-  if (selectedCase) {
-    el.innerHTML += `<div class="summary-item"><span class="label">${t('caseLabel')}</span><span class="value">${partName(selectedCase)}</span></div>`;
-  }
-  partTypes.forEach(type => {
-    if (selections[type]) {
-      el.innerHTML += `<div class="summary-item"><span class="label">${typeLabel(type)}</span><span class="value">${partName(selections[type])}</span></div>`;
-    }
-  });
+  if (!el) return;
+  // Same rows as the My Build panel: every step, its name and its part number
+  el.innerHTML = buildRows().map(r => `
+    <div class="summary-item">
+      <span class="label">${escHtml(r.label)}</span>
+      <span class="value">${escHtml(r.name)}${r.code ? ` <span class="scode">${r.code}</span>` : ''}</span>
+    </div>
+  `).join('');
 }
 
 // View toggle
@@ -2776,6 +3070,7 @@ function applyStaticTexts() {
   document.getElementById('summaryTitle').textContent = t('summaryTitle');
   document.getElementById('btnQuote').textContent = t('getQuote');
   document.getElementById('btnReset').textContent = t('reset');
+  applyBuildPanelTexts();
   if (!selectedCase) document.getElementById('previewName').textContent = t('previewSelect');
 }
 

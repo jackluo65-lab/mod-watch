@@ -2,6 +2,7 @@
   "caseSeries": [
     {
       "id": "skx38-b1",
+      "code": "SKX-B-1",
       "name": "SKX 3.8 Case SKX-B-1",
       "nameZh": "SKX 3.8 表壳 SKX-B-1 哑光 银色壳",
       "size": "42.0mm",
@@ -253,6 +254,7 @@
     },
     {
       "id": "skx38-b2",
+      "code": "SKX-B-2",
       "name": "SKX 3.8 Case SKX-B-2",
       "nameZh": "SKX 3.8 表壳 SKX-B-2 哑光 黑色壳",
       "size": "42.0mm",
@@ -504,6 +506,7 @@
     },
     {
       "id": "skx38-b3",
+      "code": "SKX-B-3",
       "name": "SKX 3.8 Case SKX-B-3",
       "nameZh": "SKX 3.8 表壳 SKX-B-3 哑光 金色壳",
       "size": "42.0mm",
@@ -755,6 +758,7 @@
     },
     {
       "id": "skx38-f4",
+      "code": "SKX-F-4",
       "name": "SKX 3.8 Case SKX-F-4",
       "nameZh": "SKX 3.8 表壳 SKX-F-4 哑光 玫瑰金壳",
       "size": "42.0mm",
@@ -1006,6 +1010,7 @@
     },
     {
       "id": "skx38-c1",
+      "code": "SKX-C-1",
       "name": "SKX 3.8 Case SKX-C-1",
       "nameZh": "SKX 3.8 表壳 SKX-C-1 光亮 银色壳",
       "size": "42.0mm",
@@ -1257,6 +1262,7 @@
     },
     {
       "id": "skx38-c2",
+      "code": "SKX-C-2",
       "name": "SKX 3.8 Case SKX-C-2",
       "nameZh": "SKX 3.8 表壳 SKX-C-2 光亮 黑色壳",
       "size": "42.0mm",
@@ -1508,6 +1514,7 @@
     },
     {
       "id": "skx38-c3",
+      "code": "SKX-C-3",
       "name": "SKX 3.8 Case SKX-C-3",
       "nameZh": "SKX 3.8 表壳 SKX-C-3 光亮 金色壳",
       "size": "42.0mm",
@@ -1759,6 +1766,7 @@
     },
     {
       "id": "skx38-e4",
+      "code": "SKX-E-4",
       "name": "SKX 3.8 Case SKX-E-4",
       "nameZh": "SKX 3.8 表壳 SKX-E-4 光亮 玫瑰金壳",
       "size": "42.0mm",
@@ -2010,6 +2018,7 @@
     },
     {
       "id": "skx38-more-n1",
+      "code": "SKX-N-1",
       "name": "SKX 3.8 MORE Case SKX-N-1",
       "nameZh": "SKX 3.8 MORE 表壳 SKX-N-1 光亮 银色壳",
       "size": "42.0mm",
@@ -2263,6 +2272,7 @@
     },
     {
       "id": "skx38-more-n7",
+      "code": "SKX-N-7",
       "name": "SKX 3.8 MORE Case SKX-N-7",
       "nameZh": "SKX 3.8 MORE 表壳 SKX-N-7 哑光 黑色壳",
       "size": "42.0mm",
@@ -2516,6 +2526,7 @@
     },
     {
       "id": "skx30-b1",
+      "code": "SK3-B1",
       "name": "SKX 3.0 Case SK3-B1",
       "nameZh": "SKX 3.0 表壳 SK3-B1 银磨砂",
       "size": "42.0mm",
@@ -2777,6 +2788,7 @@
     },
     {
       "id": "skx30-b2",
+      "code": "SK3-B2",
       "name": "SKX 3.0 Case SK3-B2",
       "nameZh": "SKX 3.0 表壳 SK3-B2 黑砂",
       "size": "42.0mm",
@@ -3038,6 +3050,7 @@
     },
     {
       "id": "skx30-b3",
+      "code": "SK3-B3",
       "name": "SKX 3.0 Case SK3-B3",
       "nameZh": "SKX 3.0 表壳 SK3-B3 金色砂",
       "size": "42.0mm",
@@ -3299,6 +3312,7 @@
     },
     {
       "id": "skx30-b4",
+      "code": "SK3-B4",
       "name": "SKX 3.0 Case SK3-B4",
       "nameZh": "SKX 3.0 表壳 SK3-B4 玫金砂",
       "size": "42.0mm",
@@ -3560,6 +3574,7 @@
     },
     {
       "id": "skx30-b5",
+      "code": "SK3-B5",
       "name": "SKX 3.0 Case SK3-B5",
       "nameZh": "SKX 3.0 表壳 SK3-B5 蓝砂",
       "size": "42.0mm",
@@ -3821,6 +3836,7 @@
     },
     {
       "id": "skx30-c1",
+      "code": "SK3-C1",
       "name": "SKX 3.0 Case SK3-C1",
       "nameZh": "SKX 3.0 表壳 SK3-C1 银光亮",
       "size": "42.0mm",
@@ -4082,6 +4098,7 @@
     },
     {
       "id": "skx30-a2",
+      "code": "SK3-A2",
       "name": "SKX 3.0 Case SK3-A2",
       "nameZh": "SKX 3.0 表壳 SK3-A2 黑光亮",
       "size": "42.0mm",
@@ -4343,6 +4360,7 @@
     },
     {
       "id": "skx30-a3",
+      "code": "SK3-A3",
       "name": "SKX 3.0 Case SK3-A3",
       "nameZh": "SKX 3.0 表壳 SK3-A3 金色光亮",
       "size": "42.0mm",
@@ -4604,6 +4622,7 @@
     },
     {
       "id": "skx30-a4",
+      "code": "SK3-A4",
       "name": "SKX 3.0 Case SK3-A4",
       "nameZh": "SKX 3.0 表壳 SK3-A4 亮玫金",
       "size": "42.0mm",
@@ -4865,6 +4884,7 @@
     },
     {
       "id": "skxsub",
+      "code": "FRONT",
       "name": "SKX SUB Case",
       "nameZh": "SKX 潜航者表壳",
       "size": "41.0mm",
@@ -5117,6 +5137,7 @@
     },
     {
       "id": "classic-jtf1",
+      "code": "C-JTF-1",
       "name": "Classic Case C-JTF-1",
       "nameZh": "经典表壳 C-JTF-1 亮银壳",
       "category": "Classic Case",
@@ -5262,6 +5283,7 @@
     },
     {
       "id": "classic-jtf3",
+      "code": "C-JTF-3",
       "name": "Classic Case C-JTF-3",
       "nameZh": "经典表壳 C-JTF-3 亮金壳",
       "category": "Classic Case",
@@ -5407,6 +5429,7 @@
     },
     {
       "id": "classic-jtf4",
+      "code": "C-JTF-4",
       "name": "Classic Case C-JTF-4",
       "nameZh": "经典表壳 C-JTF-4 亮玫金壳",
       "category": "Classic Case",
@@ -5552,6 +5575,7 @@
     },
     {
       "id": "classic-jtf6",
+      "code": "C-JTF-6",
       "name": "Classic Case C-JTF-6",
       "nameZh": "经典表壳 C-JTF-6 砂银壳",
       "category": "Classic Case",
@@ -5697,6 +5721,7 @@
     },
     {
       "id": "classic-jtf7",
+      "code": "C-JTF-7",
       "name": "Classic Case C-JTF-7",
       "nameZh": "经典表壳 C-JTF-7 砂黑壳",
       "category": "Classic Case",
@@ -5842,6 +5867,7 @@
     },
     {
       "id": "explorer-jtf1",
+      "code": "EXPLORER-C-JTF-1",
       "name": "Explorer Case EXPLORER-C-JTF-1",
       "nameZh": "探险家表壳 EXPLORER-C-JTF-1 亮银壳",
       "category": "Explorer",
@@ -5987,6 +6013,7 @@
     },
     {
       "id": "explorer-jtf3",
+      "code": "EXPLORER-C-JTF-3",
       "name": "Explorer Case EXPLORER-C-JTF-3",
       "nameZh": "探险家表壳 EXPLORER-C-JTF-3 亮金壳",
       "category": "Explorer",
@@ -6132,6 +6159,7 @@
     },
     {
       "id": "explorer-jtf4",
+      "code": "EXPLORER-C-JTF-4",
       "name": "Explorer Case EXPLORER-C-JTF-4",
       "nameZh": "探险家表壳 EXPLORER-C-JTF-4 亮玫金壳",
       "category": "Explorer",
@@ -6277,6 +6305,7 @@
     },
     {
       "id": "explorer-jtf5",
+      "code": "EXPLORER-C-JTF-5",
       "name": "Explorer Case EXPLORER-C-JTF-5",
       "nameZh": "探险家表壳 EXPLORER-C-JTF-5 砂银壳",
       "category": "Explorer",
@@ -6422,6 +6451,7 @@
     },
     {
       "id": "explorer-jtf6",
+      "code": "EXPLORER-C-JTF-6",
       "name": "Explorer Case EXPLORER-C-JTF-6",
       "nameZh": "探险家表壳 EXPLORER-C-JTF-6 砂黑壳",
       "category": "Explorer",
@@ -6567,6 +6597,7 @@
     },
     {
       "id": "pilot-jtf1",
+      "code": "PILOT-C-JTF-1",
       "name": "Pilot Case PILOT-C-JTF-1",
       "nameZh": "飞行员表壳 PILOT-C-JTF-1 亮银壳",
       "category": "Pilot Case",
@@ -6721,6 +6752,7 @@
     },
     {
       "id": "pilot-jtf3",
+      "code": "PILOT-C-JTF-3",
       "name": "Pilot Case PILOT-C-JTF-3",
       "nameZh": "飞行员表壳 PILOT-C-JTF-3 亮金壳",
       "category": "Pilot Case",
@@ -6875,6 +6907,7 @@
     },
     {
       "id": "pilot-jtf4",
+      "code": "PILOT-C-JTF-4",
       "name": "Pilot Case PILOT-C-JTF-4",
       "nameZh": "飞行员表壳 PILOT-C-JTF-4 亮玫金壳",
       "category": "Pilot Case",
@@ -7029,6 +7062,7 @@
     },
     {
       "id": "pilot-jtf6",
+      "code": "PILOT-C-JTF-6",
       "name": "Pilot Case PILOT-C-JTF-6",
       "nameZh": "飞行员表壳 PILOT-C-JTF-6 砂银壳",
       "category": "Pilot Case",
@@ -7183,6 +7217,7 @@
     },
     {
       "id": "pilot-jtf7",
+      "code": "PILOT-C-JTF-7",
       "name": "Pilot Case PILOT-C-JTF-7",
       "nameZh": "飞行员表壳 PILOT-C-JTF-7 砂黑壳",
       "category": "Pilot Case",
@@ -7337,6 +7372,7 @@
     },
     {
       "id": "vintage-jtf1",
+      "code": "VINTAGE-C-JTF-1",
       "name": "Vintage Case V-JTF-1",
       "nameZh": "复古表壳 V-JTF-1",
       "category": "Vintage Case",
@@ -7607,6 +7643,7 @@
     },
     {
       "id": "vintage-jtf2",
+      "code": "VINTAGE-C-JTF-2",
       "name": "Vintage Case V-JTF-2",
       "nameZh": "复古表壳 V-JTF-2",
       "category": "Vintage Case",
@@ -7877,6 +7914,7 @@
     },
     {
       "id": "vintage-jtf3",
+      "code": "VINTAGE-C-JTF-3",
       "name": "Vintage Case V-JTF-3",
       "nameZh": "复古表壳 V-JTF-3",
       "category": "Vintage Case",
@@ -8147,6 +8185,7 @@
     },
     {
       "id": "vintage-jtf4",
+      "code": "VINTAGE-C-JTF-4",
       "name": "Vintage Case V-JTF-4",
       "nameZh": "复古表壳 V-JTF-4",
       "category": "Vintage Case",
@@ -8417,6 +8456,7 @@
     },
     {
       "id": "vintage-jtf6",
+      "code": "VINTAGE-C-JTF-6",
       "name": "Vintage Case V-JTF-6",
       "nameZh": "复古表壳 V-JTF-6",
       "category": "Vintage Case",
@@ -8687,6 +8727,7 @@
     },
     {
       "id": "vintage-jtf7",
+      "code": "VINTAGE-C-JTF-7",
       "name": "Vintage Case V-JTF-7",
       "nameZh": "复古表壳 V-JTF-7",
       "category": "Vintage Case",
@@ -8957,6 +8998,7 @@
     },
     {
       "id": "smr-ws-11",
+      "code": "SMR-WS-11",
       "name": "SKX Samurai Case SMR-WS-11",
       "nameZh": "SKX Samurai 表壳 SMR-WS-11 砂银",
       "size": "42.0mm",
@@ -9213,6 +9255,7 @@
     },
     {
       "id": "smr-ws-12",
+      "code": "SMR-WS-12",
       "name": "SKX Samurai Case SMR-WS-12",
       "nameZh": "SKX Samurai 表壳 SMR-WS-12 哑光黑",
       "size": "42.0mm",
@@ -9469,6 +9512,7 @@
     },
     {
       "id": "smr-ws-16",
+      "code": "SMR-WS-16",
       "name": "SKX Samurai Case SMR-WS-16",
       "nameZh": "SKX Samurai 表壳 SMR-WS-16 亮银",
       "size": "42.0mm",
@@ -9725,6 +9769,7 @@
     },
     {
       "id": "smr-ws-17",
+      "code": "SMR-WS-17",
       "name": "SKX Samurai Case SMR-WS-17",
       "nameZh": "SKX Samurai 表壳 SMR-WS-17 抛光黑",
       "size": "42.0mm",
@@ -9981,6 +10026,7 @@
     },
     {
       "id": "smr-ws-18",
+      "code": "SMR-WS-18",
       "name": "SKX Samurai Case SMR-WS-18",
       "nameZh": "SKX Samurai 表壳 SMR-WS-18 金",
       "size": "42.0mm",
@@ -10237,6 +10283,7 @@
     },
     {
       "id": "smr-ws-19",
+      "code": "SMR-WS-19",
       "name": "SKX Samurai Case SMR-WS-19",
       "nameZh": "SKX Samurai 表壳 SMR-WS-19 玫金",
       "size": "42.0mm",
@@ -10493,6 +10540,7 @@
     },
     {
       "id": "smr-ws-20",
+      "code": "SMR-WS-20",
       "name": "SKX Samurai Case SMR-WS-20",
       "nameZh": "SKX Samurai 表壳 SMR-WS-20 蓝",
       "size": "42.0mm",
@@ -10749,6 +10797,7 @@
     },
     {
       "id": "clretro-cl1",
+      "code": "C-CL-1",
       "name": "Classic Retro Case C-CL-1",
       "nameZh": "经典复古表壳 C-CL-1 亮银壳",
       "category": "Classic Retro Case",
@@ -10836,6 +10885,7 @@
     },
     {
       "id": "clretro-cl3",
+      "code": "C-CL-3",
       "name": "Classic Retro Case C-CL-3",
       "nameZh": "经典复古表壳 C-CL-3 亮金壳",
       "category": "Classic Retro Case",
@@ -10923,6 +10973,7 @@
     },
     {
       "id": "clretro-cl4",
+      "code": "C-CL-4",
       "name": "Classic Retro Case C-CL-4",
       "nameZh": "经典复古表壳 C-CL-4 亮玫金壳",
       "category": "Classic Retro Case",
@@ -11010,6 +11061,7 @@
     },
     {
       "id": "ap-c1",
+      "code": "C-AP-1",
       "name": "AP Case C-AP-1",
       "nameZh": "AP 表壳 C-AP-1 银 拉丝",
       "category": "AP Case",
@@ -11141,6 +11193,7 @@
     },
     {
       "id": "ap-c2",
+      "code": "C-AP-2",
       "name": "AP Case C-AP-2",
       "nameZh": "AP 表壳 C-AP-2 黑",
       "category": "AP Case",
@@ -11272,6 +11325,7 @@
     },
     {
       "id": "ap-c3",
+      "code": "C-AP-3",
       "name": "AP Case C-AP-3",
       "nameZh": "AP 表壳 C-AP-3 金 拉丝",
       "category": "AP Case",
@@ -11403,6 +11457,7 @@
     },
     {
       "id": "ap-c4",
+      "code": "C-AP-4",
       "name": "AP Case C-AP-4",
       "nameZh": "AP 表壳 C-AP-4 玫金 拉丝",
       "category": "AP Case",
@@ -11537,6 +11592,7 @@
     "insert": [
       {
         "id": "d-gmt-11",
+        "code": "D-GMT-11",
         "name": "D-GMT-11",
         "nameZh": "D-GMT-11",
         "series": "universal",
@@ -11551,6 +11607,7 @@
       },
       {
         "id": "d-gmt-10",
+        "code": "D-GMT-10",
         "name": "D-GMT-10",
         "nameZh": "D-GMT-10",
         "series": "universal",
@@ -11565,6 +11622,7 @@
       },
       {
         "id": "b-gmt-4",
+        "code": "B-GMT-4",
         "name": "B-GMT-4",
         "nameZh": "B-GMT-4",
         "series": "universal",
@@ -11579,6 +11637,7 @@
       },
       {
         "id": "d-gmt-1",
+        "code": "D-GMT-1",
         "name": "D-GMT-1",
         "nameZh": "D-GMT-1",
         "series": "universal",
@@ -11593,6 +11652,7 @@
       },
       {
         "id": "b-gmt-6",
+        "code": "B-GMT-6",
         "name": "B-GMT-6",
         "nameZh": "B-GMT-6",
         "series": "universal",
@@ -11607,6 +11667,7 @@
       },
       {
         "id": "b-gmt-2",
+        "code": "B-GMT-2",
         "name": "B-GMT-2",
         "nameZh": "B-GMT-2",
         "series": "universal",
@@ -11621,6 +11682,7 @@
       },
       {
         "id": "d-gmt-14",
+        "code": "D-GMT-14",
         "name": "D-GMT-14",
         "nameZh": "D-GMT-14",
         "series": "universal",
@@ -11635,6 +11697,7 @@
       },
       {
         "id": "d-gmt-13",
+        "code": "D-GMT-13",
         "name": "D-GMT-13",
         "nameZh": "D-GMT-13 黑_绿圈 白字",
         "series": "universal",
@@ -11649,6 +11712,7 @@
       },
       {
         "id": "b-gmt-5",
+        "code": "B-GMT-5",
         "name": "B-GMT-5",
         "nameZh": "B-GMT-5",
         "series": "universal",
@@ -11663,6 +11727,7 @@
       },
       {
         "id": "d-gmt-18",
+        "code": "D-GMT-18",
         "name": "D-GMT-18",
         "nameZh": "D-GMT-18 黑灰色圈 黄字",
         "series": "universal",
@@ -11677,6 +11742,7 @@
       },
       {
         "id": "d-gmt-17",
+        "code": "D-GMT-17",
         "name": "D-GMT-17",
         "nameZh": "D-GMT-17",
         "series": "universal",
@@ -11691,6 +11757,7 @@
       },
       {
         "id": "d-gmt-16",
+        "code": "D-GMT-16",
         "name": "D-GMT-16",
         "nameZh": "D-GMT-16",
         "series": "universal",
@@ -11705,6 +11772,7 @@
       },
       {
         "id": "d-gmt-21",
+        "code": "D-GMT-21",
         "name": "D-GMT-21",
         "nameZh": "D-GMT-21",
         "series": "universal",
@@ -11719,6 +11787,7 @@
       },
       {
         "id": "d-gmt-20",
+        "code": "D-GMT-20",
         "name": "D-GMT-20",
         "nameZh": "D-GMT-20",
         "series": "universal",
@@ -11733,6 +11802,7 @@
       },
       {
         "id": "d-gmt-3",
+        "code": "D-GMT-3",
         "name": "D-GMT-3",
         "nameZh": "D-GMT-3",
         "series": "universal",
@@ -11747,6 +11817,7 @@
       },
       {
         "id": "d-gmt-5",
+        "code": "D-GMT-5",
         "name": "D-GMT-5",
         "nameZh": "D-GMT-5",
         "series": "universal",
@@ -11761,6 +11832,7 @@
       },
       {
         "id": "d-gmt-19",
+        "code": "D-GMT-19",
         "name": "D-GMT-19",
         "nameZh": "D-GMT-19 真红.黑色圈 白字",
         "series": "universal",
@@ -11775,6 +11847,7 @@
       },
       {
         "id": "d-gmt-4",
+        "code": "D-GMT-4",
         "name": "D-GMT-4",
         "nameZh": "D-GMT-4 黑咖 双色圈",
         "series": "universal",
@@ -11789,6 +11862,7 @@
       },
       {
         "id": "d-gmt-6",
+        "code": "D-GMT-6",
         "name": "D-GMT-6",
         "nameZh": "D-GMT-6",
         "series": "universal",
@@ -11803,6 +11877,7 @@
       },
       {
         "id": "kbs-10",
+        "code": "KBS-10",
         "name": "KBS-10",
         "nameZh": "KBS-10",
         "series": "universal",
@@ -11817,6 +11892,7 @@
       },
       {
         "id": "kbs-1",
+        "code": "KBS-1",
         "name": "KBS-1",
         "nameZh": "KBS-1 黑圈 空白无刻度",
         "series": "universal",
@@ -11831,6 +11907,7 @@
       },
       {
         "id": "d-gmt-8",
+        "code": "D-GMT-8",
         "name": "D-GMT-8",
         "nameZh": "D-GMT-8",
         "series": "universal",
@@ -11845,6 +11922,7 @@
       },
       {
         "id": "kbs-3",
+        "code": "KBS-3",
         "name": "KBS-3",
         "nameZh": "KBS-3",
         "series": "universal",
@@ -11859,6 +11937,7 @@
       },
       {
         "id": "kbs-8",
+        "code": "KBS-8",
         "name": "KBS-8",
         "nameZh": "KBS-8",
         "series": "universal",
@@ -11873,6 +11952,7 @@
       },
       {
         "id": "o-gmt-2",
+        "code": "O-GMT-2",
         "name": "O-GMT-2",
         "nameZh": "O-GMT-2 炭黑色 带绿光珠",
         "series": "universal",
@@ -11887,6 +11967,7 @@
       },
       {
         "id": "kbs-4",
+        "code": "KBS-4",
         "name": "KBS-4",
         "nameZh": "KBS-4",
         "series": "universal",
@@ -11901,6 +11982,7 @@
       },
       {
         "id": "o-gmt-4",
+        "code": "O-GMT-4",
         "name": "O-GMT-4",
         "nameZh": "O-GMT-4",
         "series": "universal",
@@ -11915,6 +11997,7 @@
       },
       {
         "id": "o-gmt-6",
+        "code": "O-GMT-6",
         "name": "O-GMT-6",
         "nameZh": "O-GMT-6 炭黑圈 红字",
         "series": "universal",
@@ -11929,6 +12012,7 @@
       },
       {
         "id": "o-gmt-7",
+        "code": "O-GMT-7",
         "name": "O-GMT-7",
         "nameZh": "O-GMT-7 蓝字",
         "series": "universal",
@@ -11943,6 +12027,7 @@
       },
       {
         "id": "osm-10",
+        "code": "OSM-10",
         "name": "OSM-10",
         "nameZh": "OSM-10 藏蓝+白色 白字",
         "series": "universal",
@@ -11957,6 +12042,7 @@
       },
       {
         "id": "osm-1",
+        "code": "OSM-1",
         "name": "OSM-1",
         "nameZh": "OSM-1 黑圈 白字",
         "series": "universal",
@@ -11971,6 +12057,7 @@
       },
       {
         "id": "osm-11",
+        "code": "OSM-11",
         "name": "OSM-11",
         "nameZh": "OSM-11 藏蓝+红色+米黄字",
         "series": "universal",
@@ -11985,6 +12072,7 @@
       },
       {
         "id": "osm-12",
+        "code": "OSM-12",
         "name": "OSM-12",
         "nameZh": "OSM-12 藏蓝+米白+白字",
         "series": "universal",
@@ -11999,6 +12087,7 @@
       },
       {
         "id": "osm-14",
+        "code": "OSM-14",
         "name": "OSM-14",
         "nameZh": "OSM-14 藏蓝+黄字",
         "series": "universal",
@@ -12013,6 +12102,7 @@
       },
       {
         "id": "osm-13",
+        "code": "OSM-13",
         "name": "OSM-13",
         "nameZh": "OSM-13 藏蓝+橘黄+白字",
         "series": "universal",
@@ -12027,6 +12117,7 @@
       },
       {
         "id": "osm-15",
+        "code": "OSM-15",
         "name": "OSM-15",
         "nameZh": "OSM-15 藏蓝圈 白字",
         "series": "universal",
@@ -12041,6 +12132,7 @@
       },
       {
         "id": "osm-16",
+        "code": "OSM-16",
         "name": "OSM-16",
         "nameZh": "OSM-16",
         "series": "universal",
@@ -12055,6 +12147,7 @@
       },
       {
         "id": "osm-3",
+        "code": "OSM-3",
         "name": "OSM-3",
         "nameZh": "OSM-3 黑圈 金字",
         "series": "universal",
@@ -12069,6 +12162,7 @@
       },
       {
         "id": "osm-2",
+        "code": "OSM-2",
         "name": "OSM-2",
         "nameZh": "OSM-2 湛蓝圈 白字",
         "series": "universal",
@@ -12083,6 +12177,7 @@
       },
       {
         "id": "osm-4",
+        "code": "OSM-4",
         "name": "OSM-4",
         "nameZh": "OSM-4 蓝红圈 白字",
         "series": "universal",
@@ -12097,6 +12192,7 @@
       },
       {
         "id": "osm-6",
+        "code": "OSM-6",
         "name": "OSM-6",
         "nameZh": "OSM-6 蓝圈 白字",
         "series": "universal",
@@ -12111,6 +12207,7 @@
       },
       {
         "id": "osm-7",
+        "code": "OSM-7",
         "name": "OSM-7",
         "nameZh": "OSM-7 黑圈 白字",
         "series": "universal",
@@ -12125,6 +12222,7 @@
       },
       {
         "id": "osm-9",
+        "code": "OSM-9",
         "name": "OSM-9",
         "nameZh": "OSM-9 藏蓝+米黄 白字",
         "series": "universal",
@@ -12139,6 +12237,7 @@
       },
       {
         "id": "rym-1",
+        "code": "RYM-1",
         "name": "RYM-1",
         "nameZh": "RYM-1",
         "series": "universal",
@@ -12153,6 +12252,7 @@
       },
       {
         "id": "osm-8",
+        "code": "OSM-8",
         "name": "OSM-8",
         "nameZh": "OSM-8 绿圈 白字",
         "series": "universal",
@@ -12167,6 +12267,7 @@
       },
       {
         "id": "rym-3",
+        "code": "RYM-3",
         "name": "RYM-3",
         "nameZh": "RYM-3 金圈 凸字",
         "series": "universal",
@@ -12181,6 +12282,7 @@
       },
       {
         "id": "rym-2",
+        "code": "RYM-2",
         "name": "RYM-2",
         "nameZh": "RYM-2",
         "series": "universal",
@@ -12195,6 +12297,7 @@
       },
       {
         "id": "rym-5",
+        "code": "RYM-5",
         "name": "RYM-5",
         "nameZh": "RYM-5",
         "series": "universal",
@@ -12209,6 +12312,7 @@
       },
       {
         "id": "rym-4",
+        "code": "RYM-4",
         "name": "RYM-4",
         "nameZh": "RYM-4",
         "series": "universal",
@@ -12223,6 +12327,7 @@
       },
       {
         "id": "rym-8",
+        "code": "RYM-8",
         "name": "RYM-8",
         "nameZh": "RYM-8 藏蓝色 凸字",
         "series": "universal",
@@ -12237,6 +12342,7 @@
       },
       {
         "id": "s-ct-1",
+        "code": "S-CT-1",
         "name": "S-CT-1",
         "nameZh": "S-CT-1",
         "series": "universal",
@@ -12251,6 +12357,7 @@
       },
       {
         "id": "s-ct-2",
+        "code": "S-CT-2",
         "name": "S-CT-2",
         "nameZh": "S-CT-2 蓝圈 白字",
         "series": "universal",
@@ -12265,6 +12372,7 @@
       },
       {
         "id": "s-ct-3",
+        "code": "S-CT-3",
         "name": "S-CT-3",
         "nameZh": "S-CT-3",
         "series": "universal",
@@ -12279,6 +12387,7 @@
       },
       {
         "id": "s-ct-7",
+        "code": "S-CT-7",
         "name": "S-CT-7",
         "nameZh": "S-CT-7 绿圈 白_金字 [时区+城市名]",
         "series": "universal",
@@ -12293,6 +12402,7 @@
       },
       {
         "id": "s-ct-5",
+        "code": "S-CT-5",
         "name": "S-CT-5",
         "nameZh": "S-CT-5",
         "series": "universal",
@@ -12307,6 +12417,7 @@
       },
       {
         "id": "s-ct-8",
+        "code": "S-CT-8",
         "name": "S-CT-8",
         "nameZh": "S-CT-8",
         "series": "universal",
@@ -12321,6 +12432,7 @@
       },
       {
         "id": "s-gmt-10",
+        "code": "S-GMT-10",
         "name": "S-GMT-10",
         "nameZh": "S-GMT-10",
         "series": "universal",
@@ -12335,6 +12447,7 @@
       },
       {
         "id": "s-gmt-11",
+        "code": "S-GMT-11",
         "name": "S-GMT-11",
         "nameZh": "S-GMT-11 藏蓝圈 黑字",
         "series": "universal",
@@ -12349,6 +12462,7 @@
       },
       {
         "id": "s-gmt-12",
+        "code": "S-GMT-12",
         "name": "S-GMT-12",
         "nameZh": "S-GMT-12 白圈",
         "series": "universal",
@@ -12363,6 +12477,7 @@
       },
       {
         "id": "s-gmt-13",
+        "code": "S-GMT-13",
         "name": "S-GMT-13",
         "nameZh": "S-GMT-13",
         "series": "universal",
@@ -12377,6 +12492,7 @@
       },
       {
         "id": "s-gmt-14",
+        "code": "S-GMT-14",
         "name": "S-GMT-14",
         "nameZh": "S-GMT-14 黑圈 红字",
         "series": "universal",
@@ -12391,6 +12507,7 @@
       },
       {
         "id": "s-gmt-15",
+        "code": "S-GMT-15",
         "name": "S-GMT-15",
         "nameZh": "S-GMT-15",
         "series": "universal",
@@ -12405,6 +12522,7 @@
       },
       {
         "id": "s-gmt-16",
+        "code": "S-GMT-16",
         "name": "S-GMT-16",
         "nameZh": "S-GMT-16 黑圈 橙字",
         "series": "universal",
@@ -12419,6 +12537,7 @@
       },
       {
         "id": "s-gmt-18r",
+        "code": "S-GMT-18R",
         "name": "S-GMT-18R",
         "nameZh": "S-GMT-18R 黑圈 白字（红▼）",
         "series": "universal",
@@ -12433,6 +12552,7 @@
       },
       {
         "id": "s-gmt-17",
+        "code": "S-GMT-17",
         "name": "S-GMT-17",
         "nameZh": "S-GMT-17",
         "series": "universal",
@@ -12447,6 +12567,7 @@
       },
       {
         "id": "s-gmt-21",
+        "code": "S-GMT-21",
         "name": "S-GMT-21",
         "nameZh": "S-GMT-21 黑圈 黄字（白点）",
         "series": "universal",
@@ -12461,6 +12582,7 @@
       },
       {
         "id": "s-gmt-2",
+        "code": "S-GMT-2",
         "name": "S-GMT-2",
         "nameZh": "S-GMT-2",
         "series": "universal",
@@ -12475,6 +12597,7 @@
       },
       {
         "id": "s-gmt-20",
+        "code": "S-GMT-20",
         "name": "S-GMT-20",
         "nameZh": "S-GMT-20",
         "series": "universal",
@@ -12489,6 +12612,7 @@
       },
       {
         "id": "s-gmt-22",
+        "code": "S-GMT-22",
         "name": "S-GMT-22",
         "nameZh": "S-GMT-22 黑圈 蓝字（白点）",
         "series": "universal",
@@ -12503,6 +12627,7 @@
       },
       {
         "id": "s-gmt-23",
+        "code": "S-GMT-23",
         "name": "S-GMT-23",
         "nameZh": "S-GMT-23",
         "series": "universal",
@@ -12517,6 +12642,7 @@
       },
       {
         "id": "s-gmt-3",
+        "code": "S-GMT-3",
         "name": "S-GMT-3",
         "nameZh": "S-GMT-3",
         "series": "universal",
@@ -12531,6 +12657,7 @@
       },
       {
         "id": "s-gmt-5",
+        "code": "S-GMT-5",
         "name": "S-GMT-5",
         "nameZh": "S-GMT-5",
         "series": "universal",
@@ -12545,6 +12672,7 @@
       },
       {
         "id": "s-gmt-4",
+        "code": "S-GMT-4",
         "name": "S-GMT-4",
         "nameZh": "S-GMT-4 绿圈黄字",
         "series": "universal",
@@ -12559,6 +12687,7 @@
       },
       {
         "id": "s-gmt-6",
+        "code": "S-GMT-6",
         "name": "S-GMT-6",
         "nameZh": "S-GMT-6",
         "series": "universal",
@@ -12573,6 +12702,7 @@
       },
       {
         "id": "s-gmt-8",
+        "code": "S-GMT-8",
         "name": "S-GMT-8",
         "nameZh": "S-GMT-8",
         "series": "universal",
@@ -12587,6 +12717,7 @@
       },
       {
         "id": "s-gmt-7",
+        "code": "S-GMT-7",
         "name": "S-GMT-7",
         "nameZh": "S-GMT-7",
         "series": "universal",
@@ -12601,6 +12732,7 @@
       },
       {
         "id": "s-gmt-9",
+        "code": "S-GMT-9",
         "name": "S-GMT-9",
         "nameZh": "S-GMT-9",
         "series": "universal",
@@ -12615,6 +12747,7 @@
       },
       {
         "id": "saa-1",
+        "code": "SAA-1",
         "name": "SAA-1",
         "nameZh": "SAA-1 黑圈+凹白字",
         "series": "universal",
@@ -12629,6 +12762,7 @@
       },
       {
         "id": "saa-2",
+        "code": "SAA-2",
         "name": "SAA-2",
         "nameZh": "SAA-2 黑圈+凹浅粉字",
         "series": "universal",
@@ -12643,6 +12777,7 @@
       },
       {
         "id": "saa-3",
+        "code": "SAA-3",
         "name": "SAA-3",
         "nameZh": "SAA-3 蓝圈+凹白字",
         "series": "universal",
@@ -12657,6 +12792,7 @@
       },
       {
         "id": "saa-4",
+        "code": "SAA-4",
         "name": "SAA-4",
         "nameZh": "SAA-4 绿圈+凹白字",
         "series": "universal",
@@ -12671,6 +12807,7 @@
       },
       {
         "id": "saa-5",
+        "code": "SAA-5",
         "name": "SAA-5",
         "nameZh": "SAA-5 白圈+凹黑字",
         "series": "universal",
@@ -12685,6 +12822,7 @@
       },
       {
         "id": "saa-6",
+        "code": "SAA-6",
         "name": "SAA-6",
         "nameZh": "SAA-6 黑蓝双色圈+白字",
         "series": "universal",
@@ -12699,6 +12837,7 @@
       },
       {
         "id": "saa-7",
+        "code": "SAA-7",
         "name": "SAA-7",
         "nameZh": "SAA-7 黑圈+金字",
         "series": "universal",
@@ -12713,6 +12852,7 @@
       },
       {
         "id": "saa-8",
+        "code": "SAA-8",
         "name": "SAA-8",
         "nameZh": "SAA-8 黑圈 白字（红12点）",
         "series": "universal",
@@ -12727,6 +12867,7 @@
       },
       {
         "id": "sub-1",
+        "code": "SUB-1",
         "name": "SUB-1",
         "nameZh": "SUB-1",
         "series": "universal",
@@ -12741,6 +12882,7 @@
       },
       {
         "id": "sub-10",
+        "code": "SUB-10",
         "name": "SUB-10",
         "nameZh": "SUB-10",
         "series": "universal",
@@ -12755,6 +12897,7 @@
       },
       {
         "id": "sub-13",
+        "code": "SUB-13",
         "name": "SUB-13",
         "nameZh": "SUB-13 黑圈 白字",
         "series": "universal",
@@ -12769,6 +12912,7 @@
       },
       {
         "id": "sub-12",
+        "code": "SUB-12",
         "name": "SUB-12",
         "nameZh": "SUB-12",
         "series": "universal",
@@ -12783,6 +12927,7 @@
       },
       {
         "id": "sub-14",
+        "code": "SUB-14",
         "name": "SUB-14",
         "nameZh": "SUB-14",
         "series": "universal",
@@ -12797,6 +12942,7 @@
       },
       {
         "id": "sub-2",
+        "code": "SUB-2",
         "name": "SUB-2",
         "nameZh": "SUB-2",
         "series": "universal",
@@ -12811,6 +12957,7 @@
       },
       {
         "id": "sub-3",
+        "code": "SUB-3",
         "name": "SUB-3",
         "nameZh": "SUB-3",
         "series": "universal",
@@ -12825,6 +12972,7 @@
       },
       {
         "id": "sub-4",
+        "code": "SUB-4",
         "name": "SUB-4",
         "nameZh": "SUB-4 蓝圈 金色字",
         "series": "universal",
@@ -12839,6 +12987,7 @@
       },
       {
         "id": "sub-5",
+        "code": "SUB-5",
         "name": "SUB-5",
         "nameZh": "SUB-5 绿圈金字",
         "series": "universal",
@@ -12853,6 +13002,7 @@
       },
       {
         "id": "sub-7",
+        "code": "SUB-7",
         "name": "SUB-7",
         "nameZh": "SUB-7",
         "series": "universal",
@@ -12867,6 +13017,7 @@
       },
       {
         "id": "sub-6",
+        "code": "SUB-6",
         "name": "SUB-6",
         "nameZh": "SUB-6",
         "series": "universal",
@@ -12881,6 +13032,7 @@
       },
       {
         "id": "sub-8",
+        "code": "SUB-8",
         "name": "SUB-8",
         "nameZh": "SUB-8",
         "series": "universal",
@@ -12895,6 +13047,7 @@
       },
       {
         "id": "sub-9",
+        "code": "SUB-9",
         "name": "SUB-9",
         "nameZh": "SUB-9",
         "series": "universal",
@@ -12909,6 +13062,7 @@
       },
       {
         "id": "suy-12",
+        "code": "SUY-12",
         "name": "SUY-12",
         "nameZh": "SUY-12 浅蓝字",
         "series": "universal",
@@ -12923,6 +13077,7 @@
       },
       {
         "id": "suy-6",
+        "code": "SUY-6",
         "name": "SUY-6",
         "nameZh": "SUY-6",
         "series": "universal",
@@ -12937,6 +13092,7 @@
       },
       {
         "id": "suy-9",
+        "code": "SUY-9",
         "name": "SUY-9",
         "nameZh": "SUY-9",
         "series": "universal",
@@ -12951,6 +13107,7 @@
       },
       {
         "id": "txw-1b",
+        "code": "TXW-1B",
         "name": "TXW-1b",
         "nameZh": "TXW-1b 黑圈（红_银白刻度点）",
         "series": "universal",
@@ -12965,6 +13122,7 @@
       },
       {
         "id": "txw-2b",
+        "code": "TXW-2B",
         "name": "TXW-2b",
         "nameZh": "TXW-2b",
         "series": "universal",
@@ -12979,6 +13137,7 @@
       },
       {
         "id": "txw-3b",
+        "code": "TXW-3B",
         "name": "TXW-3b",
         "nameZh": "TXW-3b 黑圈 玫金_银白刻度",
         "series": "universal",
@@ -12993,6 +13152,7 @@
       },
       {
         "id": "txw-4b",
+        "code": "TXW-4B",
         "name": "TXW-4b",
         "nameZh": "TXW-4b",
         "series": "universal",
@@ -13007,6 +13167,7 @@
       },
       {
         "id": "txw-5b",
+        "code": "TXW-5B",
         "name": "TXW-5b",
         "nameZh": "TXW-5b 黑圈（蓝_银白刻度点）",
         "series": "universal",
@@ -13021,6 +13182,7 @@
       },
       {
         "id": "txw-6b",
+        "code": "TXW-6B",
         "name": "TXW-6b",
         "nameZh": "TXW-6b",
         "series": "universal",
@@ -13037,6 +13199,7 @@
     "crystal": [
       {
         "id": "cr-sjg02c",
+        "code": "SJG02C",
         "name": "Crystal SJG02C",
         "nameZh": "表镜 SJG02C 清晰涂层",
         "series": "sjg02",
@@ -13050,6 +13213,7 @@
       },
       {
         "id": "cr-sjg02r",
+        "code": "SJG02R",
         "name": "Crystal SJG02R",
         "nameZh": "表镜 SJG02R 红色涂层",
         "series": "sjg02",
@@ -13063,6 +13227,7 @@
       },
       {
         "id": "cr-sjg02b",
+        "code": "SJG02B",
         "name": "Crystal SJG02B",
         "nameZh": "表镜 SJG02B 蓝色涂层",
         "series": "sjg02",
@@ -13076,6 +13241,7 @@
       },
       {
         "id": "cr-sjg42c",
+        "code": "SJG42C",
         "name": "Crystal SJG42C",
         "nameZh": "表镜 SJG42C 清晰涂层",
         "series": "sjg42",
@@ -13091,6 +13257,7 @@
       },
       {
         "id": "cr-sjg42b",
+        "code": "SJG42B",
         "name": "Crystal SJG42B",
         "nameZh": "表镜 SJG42B 蓝色涂层",
         "series": "sjg42",
@@ -13106,6 +13273,7 @@
       },
       {
         "id": "cr-sjg42r",
+        "code": "SJG42R",
         "name": "Crystal SJG42R",
         "nameZh": "表镜 SJG42R 红色涂层",
         "series": "sjg42",
@@ -13123,6 +13291,7 @@
     "bezel": [
       {
         "id": "bz-skx-smooth",
+        "code": "",
         "name": "Smooth Bezel",
         "nameZh": "光面表圈",
         "series": "skx38",
@@ -13136,6 +13305,7 @@
       },
       {
         "id": "bz-skx-coin",
+        "code": "",
         "name": "Coin Edge Bezel",
         "nameZh": "齿纹表圈",
         "series": "skx38",
@@ -13149,6 +13319,7 @@
       },
       {
         "id": "bz-skx-sub",
+        "code": "",
         "name": "SUB Style Bezel",
         "nameZh": "潜航者表圈",
         "series": "skx38",
@@ -13162,6 +13333,7 @@
       },
       {
         "id": "bz-sub-ceramic",
+        "code": "",
         "name": "Ceramic SUB Bezel",
         "nameZh": "陶瓷潜航圈",
         "series": "skxsub",
@@ -13175,6 +13347,7 @@
       },
       {
         "id": "bz-sub-alu",
+        "code": "",
         "name": "Aluminum SUB Bezel",
         "nameZh": "铝制潜航圈",
         "series": "skxsub",
@@ -13188,6 +13361,7 @@
       },
       {
         "id": "bz-jd-1",
+        "code": "B-JD-1",
         "name": "Bezel B-JD-1",
         "nameZh": "表圈 B-JD-1",
         "series": "classic",
@@ -13201,6 +13375,7 @@
       },
       {
         "id": "bz-jd-3",
+        "code": "B-JD-3",
         "name": "Bezel B-JD-3",
         "nameZh": "表圈 B-JD-3",
         "series": "classic",
@@ -13214,6 +13389,7 @@
       },
       {
         "id": "bz-jd-4",
+        "code": "B-JD-4",
         "name": "Bezel B-JD-4",
         "nameZh": "表圈 B-JD-4",
         "series": "classic",
@@ -13227,6 +13403,7 @@
       },
       {
         "id": "bz-jd-6",
+        "code": "B-JD-6",
         "name": "Bezel B-JD-6",
         "nameZh": "表圈 B-JD-6",
         "series": "classic",
@@ -13240,6 +13417,7 @@
       },
       {
         "id": "bz-jd-7",
+        "code": "B-JD-7",
         "name": "Bezel B-JD-7",
         "nameZh": "表圈 B-JD-7",
         "series": "classic",
@@ -13253,6 +13431,7 @@
       },
       {
         "id": "bz-tx-1",
+        "code": "B-TX-1",
         "name": "Bezel B-TX-1",
         "nameZh": "表圈 B-TX-1",
         "series": "explorer",
@@ -13266,6 +13445,7 @@
       },
       {
         "id": "bz-tx-3",
+        "code": "B-TX-3",
         "name": "Bezel B-TX-3",
         "nameZh": "表圈 B-TX-3",
         "series": "explorer",
@@ -13279,6 +13459,7 @@
       },
       {
         "id": "bz-tx-4",
+        "code": "B-TX-4",
         "name": "Bezel B-TX-4",
         "nameZh": "表圈 B-TX-4",
         "series": "explorer",
@@ -13292,6 +13473,7 @@
       },
       {
         "id": "bz-tx-6",
+        "code": "B-TX-6",
         "name": "Bezel B-TX-6",
         "nameZh": "表圈 B-TX-6",
         "series": "explorer",
@@ -13305,6 +13487,7 @@
       },
       {
         "id": "bz-tx-7",
+        "code": "B-TX-7",
         "name": "Bezel B-TX-7",
         "nameZh": "表圈 B-TX-7",
         "series": "explorer",
@@ -13318,6 +13501,7 @@
       },
       {
         "id": "bz-fx-1",
+        "code": "B-FX-1",
         "name": "Bezel B-FX-1",
         "nameZh": "表圈 B-FX-1",
         "series": "pilot",
@@ -13331,6 +13515,7 @@
       },
       {
         "id": "bz-fx-3",
+        "code": "B-FX-3",
         "name": "Bezel B-FX-3",
         "nameZh": "表圈 B-FX-3",
         "series": "pilot",
@@ -13344,6 +13529,7 @@
       },
       {
         "id": "bz-fx-4",
+        "code": "B-FX-4",
         "name": "Bezel B-FX-4",
         "nameZh": "表圈 B-FX-4",
         "series": "pilot",
@@ -13357,6 +13543,7 @@
       },
       {
         "id": "bz-fx-6",
+        "code": "B-FX-6",
         "name": "Bezel B-FX-6",
         "nameZh": "表圈 B-FX-6",
         "series": "pilot",
@@ -13370,6 +13557,7 @@
       },
       {
         "id": "bz-fx-7",
+        "code": "B-FX-7",
         "name": "Bezel B-FX-7",
         "nameZh": "表圈 B-FX-7",
         "series": "pilot",
@@ -13383,6 +13571,7 @@
       },
       {
         "id": "bz-fg-1",
+        "code": "B-FG-1",
         "name": "Bezel B-FG-1",
         "nameZh": "表圈 B-FG-1",
         "series": "vintage",
@@ -13396,6 +13585,7 @@
       },
       {
         "id": "bz-fg-2",
+        "code": "B-FG-2",
         "name": "Bezel B-FG-2",
         "nameZh": "表圈 B-FG-2",
         "series": "vintage",
@@ -13409,6 +13599,7 @@
       },
       {
         "id": "bz-fg-3",
+        "code": "B-FG-3",
         "name": "Bezel B-FG-3",
         "nameZh": "表圈 B-FG-3",
         "series": "vintage",
@@ -13422,6 +13613,7 @@
       },
       {
         "id": "bz-fg-4",
+        "code": "B-FG-4",
         "name": "Bezel B-FG-4",
         "nameZh": "表圈 B-FG-4",
         "series": "vintage",
@@ -13435,6 +13627,7 @@
       },
       {
         "id": "bz-fg-6",
+        "code": "B-FG-6",
         "name": "Bezel B-FG-6",
         "nameZh": "表圈 B-FG-6",
         "series": "vintage",
@@ -13448,6 +13641,7 @@
       },
       {
         "id": "bz-fg-7",
+        "code": "B-FG-7",
         "name": "Bezel B-FG-7",
         "nameZh": "表圈 B-FG-7",
         "series": "vintage",
@@ -13461,6 +13655,7 @@
       },
       {
         "id": "bz-fg-11",
+        "code": "B-FG-11",
         "name": "Bezel B-FG-11",
         "nameZh": "表圈 B-FG-11",
         "series": "vintage",
@@ -13474,6 +13669,7 @@
       },
       {
         "id": "bz-fg-12",
+        "code": "B-FG-12",
         "name": "Bezel B-FG-12",
         "nameZh": "表圈 B-FG-12",
         "series": "vintage",
@@ -13487,6 +13683,7 @@
       },
       {
         "id": "bz-fg-13",
+        "code": "B-FG-13",
         "name": "Bezel B-FG-13",
         "nameZh": "表圈 B-FG-13",
         "series": "vintage",
@@ -13500,6 +13697,7 @@
       },
       {
         "id": "bz-fg-14",
+        "code": "B-FG-14",
         "name": "Bezel B-FG-14",
         "nameZh": "表圈 B-FG-14",
         "series": "vintage",
@@ -13513,6 +13711,7 @@
       },
       {
         "id": "bz-fg-16",
+        "code": "B-FG-16",
         "name": "Bezel B-FG-16",
         "nameZh": "表圈 B-FG-16",
         "series": "vintage",
@@ -13526,6 +13725,7 @@
       },
       {
         "id": "bz-fg-17",
+        "code": "B-FG-17",
         "name": "Bezel B-FG-17",
         "nameZh": "表圈 B-FG-17",
         "series": "vintage",
@@ -13539,6 +13739,7 @@
       },
       {
         "id": "bz-bc-1",
+        "code": "B-C-1",
         "name": "Bezel B-C-1 (Matte LX Silver)",
         "nameZh": "表圈 B-C-1（哑光 LX 银色）",
         "series": "skx38",
@@ -13552,6 +13753,7 @@
       },
       {
         "id": "bz-bc-2",
+        "code": "B-C-2",
         "name": "Bezel B-C-2 (Matte LX Black)",
         "nameZh": "表圈 B-C-2（哑光 LX 黑色）",
         "series": "skx38",
@@ -13565,6 +13767,7 @@
       },
       {
         "id": "bz-bc-3",
+        "code": "B-C-3",
         "name": "Bezel B-C-3 (Matte LX Gold)",
         "nameZh": "表圈 B-C-3（哑光 LX 金色）",
         "series": "skx38",
@@ -13578,6 +13781,7 @@
       },
       {
         "id": "bz-bf-4",
+        "code": "B-F-4",
         "name": "Bezel B-F-4 (Matte LX Rose Gold)",
         "nameZh": "表圈 B-F-4（哑光 LX 玫瑰金）",
         "series": "skx38",
@@ -13591,6 +13795,7 @@
       },
       {
         "id": "bz-be-1",
+        "code": "B-E-1",
         "name": "Bezel B-E-1 (Polished LX Silver)",
         "nameZh": "表圈 B-E-1（光亮 LX 银色）",
         "series": "skx38",
@@ -13604,6 +13809,7 @@
       },
       {
         "id": "bz-ba-2",
+        "code": "B-A-2",
         "name": "Bezel B-A-2 (Polished LX Black)",
         "nameZh": "表圈 B-A-2（光亮 LX 黑色）",
         "series": "skx38",
@@ -13617,6 +13823,7 @@
       },
       {
         "id": "bz-ba-3",
+        "code": "B-A-3",
         "name": "Bezel B-A-3 (Polished LX Gold)",
         "nameZh": "表圈 B-A-3（光亮 LX 金色）",
         "series": "skx38",
@@ -13630,6 +13837,7 @@
       },
       {
         "id": "bz-be-4",
+        "code": "B-E-4",
         "name": "Bezel B-E-4 (Polished LX Rose Gold)",
         "nameZh": "表圈 B-E-4（光亮 LX 玫瑰金）",
         "series": "skx38",
@@ -13643,6 +13851,7 @@
       },
       {
         "id": "bz-b-n-21",
+        "code": "B-N-21",
         "name": "Bezel B-N-21 (Polished MM300 Silver)",
         "nameZh": "表圈 B-N-21（光亮 MM300 银色）",
         "series": "skx38-more",
@@ -13656,6 +13865,7 @@
       },
       {
         "id": "bz-b-n-27",
+        "code": "B-N-27",
         "name": "Bezel B-N-27 (MM300 Black)",
         "nameZh": "表圈 B-N-27（MM300 黑色）",
         "series": "skx38-more",
@@ -13669,6 +13879,7 @@
       },
       {
         "id": "bz-b-n-31",
+        "code": "B-N-31",
         "name": "Bezel B-N-31 (Polished Knurled Silver)",
         "nameZh": "表圈 B-N-31（光亮 Knurled 银色）",
         "series": "skx38-more",
@@ -13682,6 +13893,7 @@
       },
       {
         "id": "bz-b-n-37",
+        "code": "B-N-37",
         "name": "Bezel B-N-37 (Matte Knurled Black)",
         "nameZh": "表圈 B-N-37（哑光 Knurled 黑色）",
         "series": "skx38-more",
@@ -13695,6 +13907,7 @@
       },
       {
         "id": "bz-b-n-41",
+        "code": "B-N-41",
         "name": "Bezel B-N-41 (Polished Seamaster Silver)",
         "nameZh": "表圈 B-N-41（光亮 Seamaster 银色）",
         "series": "skx38-more",
@@ -13708,6 +13921,7 @@
       },
       {
         "id": "bz-b-n-47",
+        "code": "B-N-47",
         "name": "Bezel B-N-47 (Matte Seamaster Black)",
         "nameZh": "表圈 B-N-47（哑光 Seamaster 黑色）",
         "series": "skx38-more",
@@ -13721,6 +13935,7 @@
       },
       {
         "id": "bz-b-n-51",
+        "code": "B-N-51",
         "name": "Bezel B-N-51 (Polished Turbine Silver)",
         "nameZh": "表圈 B-N-51（光亮 Turbine 银色）",
         "series": "skx38-more",
@@ -13734,6 +13949,7 @@
       },
       {
         "id": "bz-b-n-57",
+        "code": "B-N-57",
         "name": "Bezel B-N-57 (Matte Turbine Black)",
         "nameZh": "表圈 B-N-57（哑光 Turbine 黑色）",
         "series": "skx38-more",
@@ -13747,6 +13963,7 @@
       },
       {
         "id": "bz-b-n-61",
+        "code": "B-N-61",
         "name": "Bezel B-N-61 (Polished Pilot Silver)",
         "nameZh": "表圈 B-N-61（光亮 Pilot 银色）",
         "series": "skx38-more",
@@ -13760,6 +13977,7 @@
       },
       {
         "id": "bz-b-n-67",
+        "code": "B-N-67",
         "name": "Bezel B-N-67 (Matte Pilot Black)",
         "nameZh": "表圈 B-N-67（哑光 Pilot 黑色）",
         "series": "skx38-more",
@@ -13773,6 +13991,7 @@
       },
       {
         "id": "bz-sk3-j-1",
+        "code": "B-J-1",
         "name": "Bezel B-J-1",
         "nameZh": "表圈 B-J-1",
         "series": "skx30",
@@ -13786,6 +14005,7 @@
       },
       {
         "id": "bz-sk3-j-2",
+        "code": "B-J-2",
         "name": "Bezel B-J-2",
         "nameZh": "表圈 B-J-2",
         "series": "skx30",
@@ -13799,6 +14019,7 @@
       },
       {
         "id": "bz-sk3-a-3",
+        "code": "B-SK3-A-3",
         "name": "Bezel B-A-3",
         "nameZh": "表圈 B-A-3",
         "series": "skx30",
@@ -13812,6 +14033,7 @@
       },
       {
         "id": "bz-sk3-b-3",
+        "code": "B-B-3",
         "name": "Bezel B-B-3",
         "nameZh": "表圈 B-B-3",
         "series": "skx30",
@@ -13825,6 +14047,7 @@
       },
       {
         "id": "bz-sk3-j-4",
+        "code": "B-J-4",
         "name": "Bezel B-J-4",
         "nameZh": "表圈 B-J-4",
         "series": "skx30",
@@ -13838,6 +14061,7 @@
       },
       {
         "id": "bz-sk3-g-4",
+        "code": "B-G-4",
         "name": "Bezel B-G-4",
         "nameZh": "表圈 B-G-4",
         "series": "skx30",
@@ -13851,6 +14075,7 @@
       },
       {
         "id": "bz-sk3-j-6",
+        "code": "B-J-6",
         "name": "Bezel B-J-6",
         "nameZh": "表圈 B-J-6",
         "series": "skx30",
@@ -13864,6 +14089,7 @@
       },
       {
         "id": "bz-sk3-j-7",
+        "code": "B-J-7",
         "name": "Bezel B-J-7",
         "nameZh": "表圈 B-J-7",
         "series": "skx30",
@@ -13877,6 +14103,7 @@
       },
       {
         "id": "bz-sk3-d-2",
+        "code": "B-D-2",
         "name": "Bezel B-D-2",
         "nameZh": "表圈 B-D-2",
         "series": "skx30",
@@ -13890,6 +14117,7 @@
       },
       {
         "id": "bz-sk3-c-3",
+        "code": "B-SK3-C-3",
         "name": "Bezel B-C-3",
         "nameZh": "表圈 B-C-3",
         "series": "skx30",
@@ -13903,6 +14131,7 @@
       },
       {
         "id": "bz-sk3-d-3",
+        "code": "B-D-3",
         "name": "Bezel B-D-3",
         "nameZh": "表圈 B-D-3",
         "series": "skx30",
@@ -13916,6 +14145,7 @@
       },
       {
         "id": "bz-sk3-j-9",
+        "code": "B-J-9",
         "name": "Bezel B-J-9",
         "nameZh": "表圈 B-J-9",
         "series": "skx30",
@@ -13929,6 +14159,7 @@
       },
       {
         "id": "bz-sk3-blue-coin",
+        "code": "BLUE-COIN",
         "name": "Bezel Blue Matte Coin",
         "nameZh": "蓝色 磨砂 齿纹圈",
         "series": "skx30",
@@ -13942,6 +14173,7 @@
       },
       {
         "id": "bz-smr-ws-11",
+        "code": "B-WS-11",
         "name": "Bezel B-WS-11, Matte Silver",
         "nameZh": "表圈 B-WS-11 砂银",
         "series": "smr",
@@ -13955,6 +14187,7 @@
       },
       {
         "id": "bz-smr-ws-12",
+        "code": "B-WS-12",
         "name": "Bezel B-WS-12, Matte Black",
         "nameZh": "表圈 B-WS-12 哑光黑",
         "series": "smr",
@@ -13968,6 +14201,7 @@
       },
       {
         "id": "bz-smr-ws-16",
+        "code": "B-WS-16",
         "name": "Bezel B-WS-16, Polished Silver",
         "nameZh": "表圈 B-WS-16 亮银",
         "series": "smr",
@@ -13981,6 +14215,7 @@
       },
       {
         "id": "bz-smr-ws-17",
+        "code": "B-WS-17",
         "name": "Bezel B-WS-17, Polished Black",
         "nameZh": "表圈 B-WS-17 抛光黑",
         "series": "smr",
@@ -13994,6 +14229,7 @@
       },
       {
         "id": "bz-smr-ws-18",
+        "code": "B-WS-18",
         "name": "Bezel B-WS-18, Gold",
         "nameZh": "表圈 B-WS-18 金",
         "series": "smr",
@@ -14007,6 +14243,7 @@
       },
       {
         "id": "bz-smr-ws-19",
+        "code": "B-WS-19",
         "name": "Bezel B-WS-19, Rose Gold",
         "nameZh": "表圈 B-WS-19 玫金",
         "series": "smr",
@@ -14020,6 +14257,7 @@
       },
       {
         "id": "bz-smr-ws-20",
+        "code": "B-WS-20",
         "name": "Bezel B-WS-20, Blue",
         "nameZh": "表圈 B-WS-20 蓝",
         "series": "smr",
@@ -14033,6 +14271,7 @@
       },
       {
         "id": "bz-cl-1",
+        "code": "B-CL-1",
         "name": "Bezel B-CL-1",
         "nameZh": "表圈 B-CL-1",
         "series": "clretro",
@@ -14046,6 +14285,7 @@
       },
       {
         "id": "bz-cl-3",
+        "code": "B-CL-3",
         "name": "Bezel B-CL-3",
         "nameZh": "表圈 B-CL-3",
         "series": "clretro",
@@ -14059,6 +14299,7 @@
       },
       {
         "id": "bz-cl-4",
+        "code": "B-CL-4",
         "name": "Bezel B-CL-4",
         "nameZh": "表圈 B-CL-4",
         "series": "clretro",
@@ -14072,6 +14313,7 @@
       },
       {
         "id": "bz-ap-1",
+        "code": "B-AP-1",
         "name": "Bezel B-AP-1",
         "nameZh": "表圈 B-AP-1",
         "series": "ap",
@@ -14085,6 +14327,7 @@
       },
       {
         "id": "bz-ap-2",
+        "code": "B-AP-2",
         "name": "Bezel B-AP-2",
         "nameZh": "表圈 B-AP-2",
         "series": "ap",
@@ -14098,6 +14341,7 @@
       },
       {
         "id": "bz-ap-3",
+        "code": "B-AP-3",
         "name": "Bezel B-AP-3",
         "nameZh": "表圈 B-AP-3",
         "series": "ap",
@@ -14111,6 +14355,7 @@
       },
       {
         "id": "bz-ap-4",
+        "code": "B-AP-4",
         "name": "Bezel B-AP-4",
         "nameZh": "表圈 B-AP-4",
         "series": "ap",
@@ -14126,6 +14371,7 @@
     "hands": [
       {
         "id": "hd-h-4-gold",
+        "code": "H-4",
         "name": "H-4 Gold Hands",
         "nameZh": "H-4 金色 三针（时/分/秒）",
         "series": "universal",
@@ -14140,6 +14386,7 @@
       },
       {
         "id": "hd-h-11-rose",
+        "code": "H-11",
         "name": "H-11 Rose Gold Hands",
         "nameZh": "H-11 玫瑰金 三针（时/分/秒）",
         "series": "universal",
@@ -14154,6 +14401,7 @@
       },
       {
         "id": "hd-h-12-black",
+        "code": "H-12",
         "name": "H-12 Black Hands",
         "nameZh": "H-12 黑色 三针（时/分/秒）",
         "series": "universal",
@@ -14168,6 +14416,7 @@
       },
       {
         "id": "hd-h-13-silver",
+        "code": "H-13",
         "name": "H-13 Silver Hands",
         "nameZh": "H-13 银色 三针（时/分/秒）",
         "series": "universal",
@@ -14184,6 +14433,7 @@
     "dial": [
       {
         "id": "dl-d207-wd-d1067",
+        "code": "D1067",
         "name": "D1067 Silver Roman Numeral (Date) – Slate Black",
         "nameZh": "银罗马数字字面（日历）· 石板黑",
         "series": "roman",
@@ -14197,6 +14447,7 @@
       },
       {
         "id": "dl-d216-wd-d1067",
+        "code": "D1067",
         "name": "D1067 Silver Roman Numeral (Date) – Slate Black",
         "nameZh": "银罗马数字字面（日历）· 石板黑",
         "series": "roman",
@@ -14210,6 +14461,7 @@
       },
       {
         "id": "dl-d207-wd-d1019",
+        "code": "D1019",
         "name": "D1019 Roman Numeral (Date) – Dark Blue",
         "nameZh": "罗马数字字面（日历）· 深蓝",
         "series": "roman",
@@ -14223,6 +14475,7 @@
       },
       {
         "id": "dl-d216-wd-d1019",
+        "code": "D1019",
         "name": "D1019 Roman Numeral (Date) – Dark Blue",
         "nameZh": "罗马数字字面（日历）· 深蓝",
         "series": "roman",
@@ -14236,6 +14489,7 @@
       },
       {
         "id": "dl-d207-wd-d1021",
+        "code": "D1021",
         "name": "D1021 Roman Numeral (Date) – Silver",
         "nameZh": "罗马数字字面（日历）· 银色",
         "series": "roman",
@@ -14249,6 +14503,7 @@
       },
       {
         "id": "dl-d216-wd-d1021",
+        "code": "D1021",
         "name": "D1021 Roman Numeral (Date) – Silver",
         "nameZh": "罗马数字字面（日历）· 银色",
         "series": "roman",
@@ -14262,6 +14517,7 @@
       },
       {
         "id": "dl-d207-wd-d1020",
+        "code": "D1020",
         "name": "D1020 Rose Gold Roman Numeral (Date) – Slate Black",
         "nameZh": "玫瑰金罗马数字字面（日历）· 石板黑",
         "series": "roman",
@@ -14275,6 +14531,7 @@
       },
       {
         "id": "dl-d216-wd-d1020",
+        "code": "D1020",
         "name": "D1020 Rose Gold Roman Numeral (Date) – Slate Black",
         "nameZh": "玫瑰金罗马数字字面（日历）· 石板黑",
         "series": "roman",
@@ -14288,6 +14545,7 @@
       },
       {
         "id": "dl-d207-wd-d1018",
+        "code": "D1018",
         "name": "D1018 Roman Numeral (Date) – Pink",
         "nameZh": "罗马数字字面（日历）· 粉色",
         "series": "roman",
@@ -14301,6 +14559,7 @@
       },
       {
         "id": "dl-d216-wd-d1018",
+        "code": "D1018",
         "name": "D1018 Roman Numeral (Date) – Pink",
         "nameZh": "罗马数字字面（日历）· 粉色",
         "series": "roman",
@@ -14314,6 +14573,7 @@
       },
       {
         "id": "dl-d207-wd-d1006",
+        "code": "D1006",
         "name": "D1006 Explorer Style – MOP White",
         "nameZh": "探险家风格字面 · 白贝母",
         "series": "explorer",
@@ -14327,6 +14587,7 @@
       },
       {
         "id": "dl-d216-wd-d1006",
+        "code": "D1006",
         "name": "D1006 Explorer Style – MOP White",
         "nameZh": "探险家风格字面 · 白贝母",
         "series": "explorer",
@@ -14340,6 +14601,7 @@
       },
       {
         "id": "dl-d207-wd-d1005",
+        "code": "D1005",
         "name": "D1005 Explorer Style – MOP Black",
         "nameZh": "探险家风格字面 · 黑贝母",
         "series": "explorer",
@@ -14353,6 +14615,7 @@
       },
       {
         "id": "dl-d216-wd-d1005",
+        "code": "D1005",
         "name": "D1005 Explorer Style – MOP Black",
         "nameZh": "探险家风格字面 · 黑贝母",
         "series": "explorer",
@@ -14366,6 +14629,7 @@
       },
       {
         "id": "dl-d207-wd-d1004",
+        "code": "D1004",
         "name": "D1004 Explorer Style – White",
         "nameZh": "探险家风格字面 · 白色",
         "series": "explorer",
@@ -14379,6 +14643,7 @@
       },
       {
         "id": "dl-d216-wd-d1004",
+        "code": "D1004",
         "name": "D1004 Explorer Style – White",
         "nameZh": "探险家风格字面 · 白色",
         "series": "explorer",
@@ -14392,6 +14657,7 @@
       },
       {
         "id": "dl-d207-wd-d0983",
+        "code": "D0983",
         "name": "D0983 Arabic Dial – Sunburst Blue (minute marker)",
         "nameZh": "阿拉伯数字字面 · 太阳纹蓝（含分钟刻度）",
         "series": "arabic",
@@ -14405,6 +14671,7 @@
       },
       {
         "id": "dl-d216-wd-d0983",
+        "code": "D0983",
         "name": "D0983 Arabic Dial – Sunburst Blue (minute marker)",
         "nameZh": "阿拉伯数字字面 · 太阳纹蓝（含分钟刻度）",
         "series": "arabic",
@@ -14418,6 +14685,7 @@
       },
       {
         "id": "dl-d207-wd-d0982",
+        "code": "D0982",
         "name": "D0982 Arabic Dial – Sunburst Black (minute marker)",
         "nameZh": "阿拉伯数字字面 · 太阳纹黑（含分钟刻度）",
         "series": "arabic",
@@ -14431,6 +14699,7 @@
       },
       {
         "id": "dl-d216-wd-d0982",
+        "code": "D0982",
         "name": "D0982 Arabic Dial – Sunburst Black (minute marker)",
         "nameZh": "阿拉伯数字字面 · 太阳纹黑（含分钟刻度）",
         "series": "arabic",
@@ -14444,6 +14713,7 @@
       },
       {
         "id": "dl-d207-wd-d0981",
+        "code": "D0981",
         "name": "D0981 Explorer Style – Matte Blue",
         "nameZh": "探险家风格字面 · 哑光蓝",
         "series": "explorer",
@@ -14457,6 +14727,7 @@
       },
       {
         "id": "dl-d216-wd-d0981",
+        "code": "D0981",
         "name": "D0981 Explorer Style – Matte Blue",
         "nameZh": "探险家风格字面 · 哑光蓝",
         "series": "explorer",
@@ -14470,6 +14741,7 @@
       },
       {
         "id": "dl-d207-wd-d0980",
+        "code": "D0980",
         "name": "D0980 Explorer Style – Matte Black (Rose Gold)",
         "nameZh": "探险家风格字面 · 哑光黑（玫瑰金刻度）",
         "series": "explorer",
@@ -14483,6 +14755,7 @@
       },
       {
         "id": "dl-d216-wd-d0980",
+        "code": "D0980",
         "name": "D0980 Explorer Style – Matte Black (Rose Gold)",
         "nameZh": "探险家风格字面 · 哑光黑（玫瑰金刻度）",
         "series": "explorer",
@@ -14496,6 +14769,7 @@
       },
       {
         "id": "dl-d207-wd-d0979",
+        "code": "D0979",
         "name": "D0979 Explorer Style – Matte Black (Gold)",
         "nameZh": "探险家风格字面 · 哑光黑（金色刻度）",
         "series": "explorer",
@@ -14509,6 +14783,7 @@
       },
       {
         "id": "dl-d216-wd-d0979",
+        "code": "D0979",
         "name": "D0979 Explorer Style – Matte Black (Gold)",
         "nameZh": "探险家风格字面 · 哑光黑（金色刻度）",
         "series": "explorer",
@@ -14522,6 +14797,7 @@
       },
       {
         "id": "dl-d207-wd-d0978",
+        "code": "D0978",
         "name": "D0978 Explorer Style – Matte Black (Silver)",
         "nameZh": "探险家风格字面 · 哑光黑（银色刻度）",
         "series": "explorer",
@@ -14535,6 +14811,7 @@
       },
       {
         "id": "dl-d216-wd-d0978",
+        "code": "D0978",
         "name": "D0978 Explorer Style – Matte Black (Silver)",
         "nameZh": "探险家风格字面 · 哑光黑（银色刻度）",
         "series": "explorer",
@@ -14548,6 +14825,7 @@
       },
       {
         "id": "dl-d207-wd-d0886",
+        "code": "D0886",
         "name": "D0886 62MAS Style – Sunburst Dark Blue (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹深蓝（星期日历）",
         "series": "62mas",
@@ -14561,6 +14839,7 @@
       },
       {
         "id": "dl-d216-wd-d0886",
+        "code": "D0886",
         "name": "D0886 62MAS Style – Sunburst Dark Blue (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹深蓝（星期日历）",
         "series": "62mas",
@@ -14574,6 +14853,7 @@
       },
       {
         "id": "dl-d207-wd-d0885",
+        "code": "D0885",
         "name": "D0885 62MAS Style – Sunburst Black (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹黑（星期日历）",
         "series": "62mas",
@@ -14587,6 +14867,7 @@
       },
       {
         "id": "dl-d216-wd-d0885",
+        "code": "D0885",
         "name": "D0885 62MAS Style – Sunburst Black (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹黑（星期日历）",
         "series": "62mas",
@@ -14600,6 +14881,7 @@
       },
       {
         "id": "dl-d207-wd-d0884",
+        "code": "D0884",
         "name": "D0884 62MAS Style – Sunburst Green (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹绿（星期日历）",
         "series": "62mas",
@@ -14613,6 +14895,7 @@
       },
       {
         "id": "dl-d216-wd-d0884",
+        "code": "D0884",
         "name": "D0884 62MAS Style – Sunburst Green (Day/Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹绿（星期日历）",
         "series": "62mas",
@@ -14626,6 +14909,7 @@
       },
       {
         "id": "dl-d207-wd-d0883",
+        "code": "D0883",
         "name": "D0883 62MAS Style – Sunburst Dark Blue (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹深蓝（日历）",
         "series": "62mas",
@@ -14639,6 +14923,7 @@
       },
       {
         "id": "dl-d216-wd-d0883",
+        "code": "D0883",
         "name": "D0883 62MAS Style – Sunburst Dark Blue (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹深蓝（日历）",
         "series": "62mas",
@@ -14652,6 +14937,7 @@
       },
       {
         "id": "dl-d207-wd-d0882",
+        "code": "D0882",
         "name": "D0882 62MAS Style – Sunburst Black (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹黑（日历）",
         "series": "62mas",
@@ -14665,6 +14951,7 @@
       },
       {
         "id": "dl-d216-wd-d0882",
+        "code": "D0882",
         "name": "D0882 62MAS Style – Sunburst Black (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹黑（日历）",
         "series": "62mas",
@@ -14678,6 +14965,7 @@
       },
       {
         "id": "dl-d207-wd-d0881",
+        "code": "D0881",
         "name": "D0881 62MAS Style – Sunburst Green (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹绿（日历）",
         "series": "62mas",
@@ -14691,6 +14979,7 @@
       },
       {
         "id": "dl-d216-wd-d0881",
+        "code": "D0881",
         "name": "D0881 62MAS Style – Sunburst Green (Date)",
         "nameZh": "62MAS 风格字面 · 太阳纹绿（日历）",
         "series": "62mas",
@@ -14704,6 +14993,7 @@
       },
       {
         "id": "dl-d207-wd-d0875",
+        "code": "D0875",
         "name": "D0875 Arabic Dial – Sunburst Gold",
         "nameZh": "阿拉伯数字字面 · 太阳纹金",
         "series": "arabic",
@@ -14717,6 +15007,7 @@
       },
       {
         "id": "dl-d216-wd-d0875",
+        "code": "D0875",
         "name": "D0875 Arabic Dial – Sunburst Gold",
         "nameZh": "阿拉伯数字字面 · 太阳纹金",
         "series": "arabic",
@@ -14730,6 +15021,7 @@
       },
       {
         "id": "dl-d207-wd-d0379",
+        "code": "D0379",
         "name": "D0379 Sandwich Dial – Sunburst Dark Blue",
         "nameZh": "三明治字面 · 太阳纹深蓝",
         "series": "sandwich",
@@ -14743,6 +15035,7 @@
       },
       {
         "id": "dl-d216-wd-d0379",
+        "code": "D0379",
         "name": "D0379 Sandwich Dial – Sunburst Dark Blue",
         "nameZh": "三明治字面 · 太阳纹深蓝",
         "series": "sandwich",
@@ -14756,6 +15049,7 @@
       },
       {
         "id": "dl-d207-wd-d0378",
+        "code": "D0378",
         "name": "D0378 Sandwich Dial – Sunburst Red Wine",
         "nameZh": "三明治字面 · 太阳纹酒红",
         "series": "sandwich",
@@ -14769,6 +15063,7 @@
       },
       {
         "id": "dl-d216-wd-d0378",
+        "code": "D0378",
         "name": "D0378 Sandwich Dial – Sunburst Red Wine",
         "nameZh": "三明治字面 · 太阳纹酒红",
         "series": "sandwich",
@@ -14782,6 +15077,7 @@
       },
       {
         "id": "dl-d207-wd-d0377",
+        "code": "D0377",
         "name": "D0377 Sandwich Dial – Sunburst Black",
         "nameZh": "三明治字面 · 太阳纹黑",
         "series": "sandwich",
@@ -14795,6 +15091,7 @@
       },
       {
         "id": "dl-d216-wd-d0377",
+        "code": "D0377",
         "name": "D0377 Sandwich Dial – Sunburst Black",
         "nameZh": "三明治字面 · 太阳纹黑",
         "series": "sandwich",
@@ -14808,6 +15105,7 @@
       },
       {
         "id": "dl-d207-wd-d0231",
+        "code": "D0231",
         "name": "D0231 Sandwich Dial – Matte Blue",
         "nameZh": "三明治字面 · 哑光蓝",
         "series": "sandwich",
@@ -14821,6 +15119,7 @@
       },
       {
         "id": "dl-d216-wd-d0231",
+        "code": "D0231",
         "name": "D0231 Sandwich Dial – Matte Blue",
         "nameZh": "三明治字面 · 哑光蓝",
         "series": "sandwich",
@@ -14834,6 +15133,7 @@
       },
       {
         "id": "dl-d207-wd-d0220",
+        "code": "D0220",
         "name": "D0220 MM300 Style – White",
         "nameZh": "MM300 风格字面 · 白色",
         "series": "mm300",
@@ -14847,6 +15147,7 @@
       },
       {
         "id": "dl-d216-wd-d0220",
+        "code": "D0220",
         "name": "D0220 MM300 Style – White",
         "nameZh": "MM300 风格字面 · 白色",
         "series": "mm300",
@@ -14860,6 +15161,7 @@
       },
       {
         "id": "dl-d207-wd-d0226",
+        "code": "D0226",
         "name": "D0226 MM300 Style – Orange",
         "nameZh": "MM300 风格字面 · 橙色",
         "series": "mm300",
@@ -14873,6 +15175,7 @@
       },
       {
         "id": "dl-d216-wd-d0226",
+        "code": "D0226",
         "name": "D0226 MM300 Style – Orange",
         "nameZh": "MM300 风格字面 · 橙色",
         "series": "mm300",
@@ -14886,6 +15189,7 @@
       },
       {
         "id": "dl-d207-wd-d0227",
+        "code": "D0227",
         "name": "D0227 MM300 Style – Yellow",
         "nameZh": "MM300 风格字面 · 黄色",
         "series": "mm300",
@@ -14899,6 +15203,7 @@
       },
       {
         "id": "dl-d216-wd-d0227",
+        "code": "D0227",
         "name": "D0227 MM300 Style – Yellow",
         "nameZh": "MM300 风格字面 · 黄色",
         "series": "mm300",
@@ -14914,6 +15219,7 @@
     "chapterRing": [
       {
         "id": "cr-g-3",
+        "code": "CR-G-3",
         "name": "CR-G-3 Orange",
         "nameZh": "CR-G-3 橙圈 黑 刻度",
         "series": "universal",
@@ -14927,6 +15233,7 @@
       },
       {
         "id": "cr-g-5",
+        "code": "CR-G-5",
         "name": "CR-G-5 Blue",
         "nameZh": "CR-G-5 蓝圈 黑 刻度",
         "series": "universal",
@@ -14940,6 +15247,7 @@
       },
       {
         "id": "cr-g-8",
+        "code": "CR-G-8",
         "name": "CR-G-8 Yellow, Black Markers",
         "nameZh": "CR-G-8 黄圈 黑刻度",
         "series": "universal",
@@ -14953,6 +15261,7 @@
       },
       {
         "id": "cr-h-1",
+        "code": "CR-H-1",
         "name": "CR-H-1 Black, No Markers",
         "nameZh": "CR-H-1 黑色 无刻度",
         "series": "universal",
@@ -14966,6 +15275,7 @@
       },
       {
         "id": "cr-h-2",
+        "code": "CR-H-2",
         "name": "CR-H-2 Silver, No Markers",
         "nameZh": "CR-H-2 银色 无刻度",
         "series": "universal",
@@ -14979,6 +15289,7 @@
       },
       {
         "id": "cr-h-3",
+        "code": "CR-H-3",
         "name": "CR-H-3 Gold, No Markers",
         "nameZh": "CR-H-3 金色 无刻度",
         "series": "universal",
@@ -14992,6 +15303,7 @@
       },
       {
         "id": "cr-h-4",
+        "code": "CR-H-4",
         "name": "CR-H-4 Rose Gold, No Markers",
         "nameZh": "CR-H-4 玫瑰金色 无刻度",
         "series": "universal",
@@ -15005,6 +15317,7 @@
       },
       {
         "id": "cr-i-1",
+        "code": "CR-I-1",
         "name": "CR-I-1 Black, Sandblasted No Markers",
         "nameZh": "CR-I-1 黑 砂圈 无刻度",
         "series": "universal",
@@ -15018,6 +15331,7 @@
       },
       {
         "id": "cr-i-2",
+        "code": "CR-I-2",
         "name": "CR-I-2 Silver, Sandblasted No Markers",
         "nameZh": "CR-I-2 银 砂圈 无刻度",
         "series": "universal",
@@ -15031,6 +15345,7 @@
       },
       {
         "id": "cr-j-1",
+        "code": "CR-J-1",
         "name": "CR-J-1 Black, with Markers",
         "nameZh": "CR-J-1 黑色 带刻度",
         "series": "universal",
@@ -15044,6 +15359,7 @@
       },
       {
         "id": "cr-j-10",
+        "code": "CR-J-10",
         "name": "CR-J-10 Blue, White Markers Blue-White Markers",
         "nameZh": "CR-J-10 黑圈 蓝白刻度",
         "series": "universal",
@@ -15057,6 +15373,7 @@
       },
       {
         "id": "cr-j-11",
+        "code": "CR-J-11",
         "name": "CR-J-11 Blue, White Markers Blue-Green-White Markers Green-White Markers",
         "nameZh": "CR-J-11 黑圈 蓝绿白刻度",
         "series": "universal",
@@ -15070,6 +15387,7 @@
       },
       {
         "id": "cr-j-12",
+        "code": "CR-J-12",
         "name": "CR-J-12 Green, White Markers Green-White Markers",
         "nameZh": "CR-J-12 黑圈 绿白刻度",
         "series": "universal",
@@ -15083,6 +15401,7 @@
       },
       {
         "id": "cr-j-2",
+        "code": "CR-J-2",
         "name": "CR-J-2 Silver, with Markers",
         "nameZh": "CR-J-2 银色 带刻度",
         "series": "universal",
@@ -15096,6 +15415,7 @@
       },
       {
         "id": "cr-j-3",
+        "code": "CR-J-3",
         "name": "CR-J-3 Gold, with Markers",
         "nameZh": "CR-J-3 金色 带刻度",
         "series": "universal",
@@ -15109,6 +15429,7 @@
       },
       {
         "id": "cr-j-4",
+        "code": "CR-J-4",
         "name": "CR-J-4 Rose Gold, with Markers",
         "nameZh": "CR-J-4 玫瑰金色 带刻度",
         "series": "universal",
@@ -15122,6 +15443,7 @@
       },
       {
         "id": "cr-j-5",
+        "code": "CR-J-5",
         "name": "CR-J-5 Blue, with Markers",
         "nameZh": "CR-J-5 蓝色 带刻度",
         "series": "universal",
@@ -15135,6 +15457,7 @@
       },
       {
         "id": "cr-j-6",
+        "code": "CR-J-6",
         "name": "CR-J-6 White, White Markers",
         "nameZh": "CR-J-6 黑圈 白刻度",
         "series": "universal",
@@ -15148,6 +15471,7 @@
       },
       {
         "id": "cr-j-7",
+        "code": "CR-J-7",
         "name": "CR-J-7 Yellow, White Markers Yellow-White Markers",
         "nameZh": "CR-J-7 黑圈 黄白刻度",
         "series": "universal",
@@ -15161,6 +15485,7 @@
       },
       {
         "id": "cr-j-8",
+        "code": "CR-J-8",
         "name": "CR-J-8 Red, White Markers Red-White Markers",
         "nameZh": "CR-J-8 黑圈 红白刻度",
         "series": "universal",
@@ -15174,6 +15499,7 @@
       },
       {
         "id": "cr-j-9",
+        "code": "CR-J-9",
         "name": "CR-J-9 Orange, White Markers Orange-White Markers",
         "nameZh": "CR-J-9 黑圈 橙白刻度",
         "series": "universal",
@@ -15187,6 +15513,7 @@
       },
       {
         "id": "cr-k-1",
+        "code": "CR-K-1",
         "name": "CR-K-1 Silver, Polished No Markers",
         "nameZh": "CR-K-1 银 光亮无刻度",
         "series": "universal",
@@ -15200,6 +15527,7 @@
       },
       {
         "id": "cr-k-2",
+        "code": "CR-K-2",
         "name": "CR-K-2 Black, Polished No Markers",
         "nameZh": "CR-K-2 黑 光亮无刻度",
         "series": "universal",
@@ -15213,6 +15541,7 @@
       },
       {
         "id": "cr-k-3",
+        "code": "CR-K-3",
         "name": "CR-K-3 Gold, Polished No Markers",
         "nameZh": "CR-K-3 金 光亮无刻度",
         "series": "universal",
@@ -15226,6 +15555,7 @@
       },
       {
         "id": "cr-k-4",
+        "code": "CR-K-4",
         "name": "CR-K-4 Rose Gold, Polished No Markers",
         "nameZh": "CR-K-4 玫瑰金 光亮无刻度",
         "series": "universal",
@@ -15239,6 +15569,7 @@
       },
       {
         "id": "cr-l-1",
+        "code": "CR-L-1",
         "name": "CR-L-1 Silver, with Markers",
         "nameZh": "CR-L-1 银 带刻度",
         "series": "universal",
@@ -15252,6 +15583,7 @@
       },
       {
         "id": "cr-l-2",
+        "code": "CR-L-2",
         "name": "CR-L-2 Black, with Markers",
         "nameZh": "CR-L-2 黑 带刻度",
         "series": "universal",
@@ -15265,6 +15597,7 @@
       },
       {
         "id": "cr-l-3",
+        "code": "CR-L-3",
         "name": "CR-L-3 Gold, with Markers",
         "nameZh": "CR-L-3 金 带刻度",
         "series": "universal",
@@ -15278,6 +15611,7 @@
       },
       {
         "id": "cr-l-4",
+        "code": "CR-L-4",
         "name": "CR-L-4 Rose Gold, with Markers",
         "nameZh": "CR-L-4 玫瑰金 带刻度",
         "series": "universal",
@@ -15291,6 +15625,7 @@
       },
       {
         "id": "cr-m-2",
+        "code": "CR-M-2",
         "name": "CR-M-2 Black, No Markers",
         "nameZh": "CR-M-2 黑 无刻度",
         "series": "universal",
@@ -15304,6 +15639,7 @@
       },
       {
         "id": "cr-m-3",
+        "code": "CR-M-3",
         "name": "CR-M-3 Yellow, Matte No Markers",
         "nameZh": "CR-M-3 黄圈 哑光 无刻度",
         "series": "universal",
@@ -15317,6 +15653,7 @@
       },
       {
         "id": "cr-m-4",
+        "code": "CR-M-4",
         "name": "CR-M-4 Rose Gold, Matte No Markers",
         "nameZh": "CR-M-4 玫金 哑光 无刻度",
         "series": "universal",
@@ -15330,6 +15667,7 @@
       },
       {
         "id": "cr-m-5",
+        "code": "CR-M-5",
         "name": "CR-M-5 White, Sandblasted Bead-blasted No Markers",
         "nameZh": "CR-M-5 白色喷砂圈 无刻度",
         "series": "universal",
@@ -15343,6 +15681,7 @@
       },
       {
         "id": "cr-ap-g-3",
+        "code": "CR-G-3",
         "name": "CR-G-3 Orange",
         "nameZh": "CR-G-3 橙圈 黑 刻度",
         "series": "ap",
@@ -15358,6 +15697,7 @@
       },
       {
         "id": "cr-ap-g-5",
+        "code": "CR-G-5",
         "name": "CR-G-5 Blue",
         "nameZh": "CR-G-5 蓝圈 黑 刻度",
         "series": "ap",
@@ -15373,6 +15713,7 @@
       },
       {
         "id": "cr-ap-g-8",
+        "code": "CR-G-8",
         "name": "CR-G-8 Yellow, Black Markers",
         "nameZh": "CR-G-8 黄圈 黑刻度",
         "series": "ap",
@@ -15388,6 +15729,7 @@
       },
       {
         "id": "cr-ap-h-1",
+        "code": "CR-H-1",
         "name": "CR-H-1 Black, No Markers",
         "nameZh": "CR-H-1 黑色 无刻度",
         "series": "ap",
@@ -15403,6 +15745,7 @@
       },
       {
         "id": "cr-ap-h-2",
+        "code": "CR-H-2",
         "name": "CR-H-2 Silver, No Markers",
         "nameZh": "CR-H-2 银色 无刻度",
         "series": "ap",
@@ -15418,6 +15761,7 @@
       },
       {
         "id": "cr-ap-h-3",
+        "code": "CR-H-3",
         "name": "CR-H-3 Gold, No Markers",
         "nameZh": "CR-H-3 金色 无刻度",
         "series": "ap",
@@ -15433,6 +15777,7 @@
       },
       {
         "id": "cr-ap-h-4",
+        "code": "CR-H-4",
         "name": "CR-H-4 Rose Gold, No Markers",
         "nameZh": "CR-H-4 玫瑰金色 无刻度",
         "series": "ap",
@@ -15448,6 +15793,7 @@
       },
       {
         "id": "cr-ap-i-1",
+        "code": "CR-I-1",
         "name": "CR-I-1 Black, Sandblasted No Markers",
         "nameZh": "CR-I-1 黑 砂圈 无刻度",
         "series": "ap",
@@ -15463,6 +15809,7 @@
       },
       {
         "id": "cr-ap-i-2",
+        "code": "CR-I-2",
         "name": "CR-I-2 Silver, Sandblasted No Markers",
         "nameZh": "CR-I-2 银 砂圈 无刻度",
         "series": "ap",
@@ -15478,6 +15825,7 @@
       },
       {
         "id": "cr-ap-j-1",
+        "code": "CR-J-1",
         "name": "CR-J-1 Black, with Markers",
         "nameZh": "CR-J-1 黑色 带刻度",
         "series": "ap",
@@ -15493,6 +15841,7 @@
       },
       {
         "id": "cr-ap-j-10",
+        "code": "CR-J-10",
         "name": "CR-J-10 Blue, White Markers Blue-White Markers",
         "nameZh": "CR-J-10 黑圈 蓝白刻度",
         "series": "ap",
@@ -15508,6 +15857,7 @@
       },
       {
         "id": "cr-ap-j-11",
+        "code": "CR-J-11",
         "name": "CR-J-11 Blue, White Markers Blue-Green-White Markers Green-White Markers",
         "nameZh": "CR-J-11 黑圈 蓝绿白刻度",
         "series": "ap",
@@ -15523,6 +15873,7 @@
       },
       {
         "id": "cr-ap-j-12",
+        "code": "CR-J-12",
         "name": "CR-J-12 Green, White Markers Green-White Markers",
         "nameZh": "CR-J-12 黑圈 绿白刻度",
         "series": "ap",
@@ -15538,6 +15889,7 @@
       },
       {
         "id": "cr-ap-j-2",
+        "code": "CR-J-2",
         "name": "CR-J-2 Silver, with Markers",
         "nameZh": "CR-J-2 银色 带刻度",
         "series": "ap",
@@ -15553,6 +15905,7 @@
       },
       {
         "id": "cr-ap-j-3",
+        "code": "CR-J-3",
         "name": "CR-J-3 Gold, with Markers",
         "nameZh": "CR-J-3 金色 带刻度",
         "series": "ap",
@@ -15568,6 +15921,7 @@
       },
       {
         "id": "cr-ap-j-4",
+        "code": "CR-J-4",
         "name": "CR-J-4 Rose Gold, with Markers",
         "nameZh": "CR-J-4 玫瑰金色 带刻度",
         "series": "ap",
@@ -15583,6 +15937,7 @@
       },
       {
         "id": "cr-ap-j-5",
+        "code": "CR-J-5",
         "name": "CR-J-5 Blue, with Markers",
         "nameZh": "CR-J-5 蓝色 带刻度",
         "series": "ap",
@@ -15598,6 +15953,7 @@
       },
       {
         "id": "cr-ap-j-6",
+        "code": "CR-J-6",
         "name": "CR-J-6 White, White Markers",
         "nameZh": "CR-J-6 黑圈 白刻度",
         "series": "ap",
@@ -15613,6 +15969,7 @@
       },
       {
         "id": "cr-ap-j-7",
+        "code": "CR-J-7",
         "name": "CR-J-7 Yellow, White Markers Yellow-White Markers",
         "nameZh": "CR-J-7 黑圈 黄白刻度",
         "series": "ap",
@@ -15628,6 +15985,7 @@
       },
       {
         "id": "cr-ap-j-8",
+        "code": "CR-J-8",
         "name": "CR-J-8 Red, White Markers Red-White Markers",
         "nameZh": "CR-J-8 黑圈 红白刻度",
         "series": "ap",
@@ -15643,6 +16001,7 @@
       },
       {
         "id": "cr-ap-j-9",
+        "code": "CR-J-9",
         "name": "CR-J-9 Orange, White Markers Orange-White Markers",
         "nameZh": "CR-J-9 黑圈 橙白刻度",
         "series": "ap",
@@ -15658,6 +16017,7 @@
       },
       {
         "id": "cr-ap-k-1",
+        "code": "CR-K-1",
         "name": "CR-K-1 Silver, Polished No Markers",
         "nameZh": "CR-K-1 银 光亮无刻度",
         "series": "ap",
@@ -15673,6 +16033,7 @@
       },
       {
         "id": "cr-ap-k-2",
+        "code": "CR-K-2",
         "name": "CR-K-2 Black, Polished No Markers",
         "nameZh": "CR-K-2 黑 光亮无刻度",
         "series": "ap",
@@ -15688,6 +16049,7 @@
       },
       {
         "id": "cr-ap-k-3",
+        "code": "CR-K-3",
         "name": "CR-K-3 Gold, Polished No Markers",
         "nameZh": "CR-K-3 金 光亮无刻度",
         "series": "ap",
@@ -15703,6 +16065,7 @@
       },
       {
         "id": "cr-ap-k-4",
+        "code": "CR-K-4",
         "name": "CR-K-4 Rose Gold, Polished No Markers",
         "nameZh": "CR-K-4 玫瑰金 光亮无刻度",
         "series": "ap",
@@ -15718,6 +16081,7 @@
       },
       {
         "id": "cr-ap-l-1",
+        "code": "CR-L-1",
         "name": "CR-L-1 Silver, with Markers",
         "nameZh": "CR-L-1 银 带刻度",
         "series": "ap",
@@ -15733,6 +16097,7 @@
       },
       {
         "id": "cr-ap-l-2",
+        "code": "CR-L-2",
         "name": "CR-L-2 Black, with Markers",
         "nameZh": "CR-L-2 黑 带刻度",
         "series": "ap",
@@ -15748,6 +16113,7 @@
       },
       {
         "id": "cr-ap-l-3",
+        "code": "CR-L-3",
         "name": "CR-L-3 Gold, with Markers",
         "nameZh": "CR-L-3 金 带刻度",
         "series": "ap",
@@ -15763,6 +16129,7 @@
       },
       {
         "id": "cr-ap-l-4",
+        "code": "CR-L-4",
         "name": "CR-L-4 Rose Gold, with Markers",
         "nameZh": "CR-L-4 玫瑰金 带刻度",
         "series": "ap",
@@ -15778,6 +16145,7 @@
       },
       {
         "id": "cr-ap-m-2",
+        "code": "CR-M-2",
         "name": "CR-M-2 Black, No Markers",
         "nameZh": "CR-M-2 黑 无刻度",
         "series": "ap",
@@ -15793,6 +16161,7 @@
       },
       {
         "id": "cr-ap-m-3",
+        "code": "CR-M-3",
         "name": "CR-M-3 Yellow, Matte No Markers",
         "nameZh": "CR-M-3 黄圈 哑光 无刻度",
         "series": "ap",
@@ -15808,6 +16177,7 @@
       },
       {
         "id": "cr-ap-m-4",
+        "code": "CR-M-4",
         "name": "CR-M-4 Rose Gold, Matte No Markers",
         "nameZh": "CR-M-4 玫金 哑光 无刻度",
         "series": "ap",
@@ -15823,6 +16193,7 @@
       },
       {
         "id": "cr-ap-m-5",
+        "code": "CR-M-5",
         "name": "CR-M-5 White, Sandblasted Bead-blasted No Markers",
         "nameZh": "CR-M-5 白色喷砂圈 无刻度",
         "series": "ap",
@@ -15840,6 +16211,7 @@
     "crown": [
       {
         "id": "wc-e-1",
+        "code": "WC-E-1",
         "name": "WC-E-1 Polished Silver, Straight Knurl",
         "nameZh": "WC-E-1 亮银 直纹",
         "series": "skx38",
@@ -15853,6 +16225,7 @@
       },
       {
         "id": "wc-e-2",
+        "code": "WC-E-2",
         "name": "WC-E-2 Polished Black, Straight Knurl",
         "nameZh": "WC-E-2 亮黑 直纹",
         "series": "skx38",
@@ -15866,6 +16239,7 @@
       },
       {
         "id": "wc-o-3",
+        "code": "WC-O-3",
         "name": "WC-O-3 Polished Gold, Straight Knurl",
         "nameZh": "WC-O-3 亮金 直纹",
         "series": "skx38",
@@ -15879,6 +16253,7 @@
       },
       {
         "id": "wc-o-4",
+        "code": "WC-O-4",
         "name": "WC-O-4 Polished Rose Gold, Straight Knurl",
         "nameZh": "WC-O-4 亮玫金 直纹",
         "series": "skx38",
@@ -15892,6 +16267,7 @@
       },
       {
         "id": "wc-j-2",
+        "code": "WC-J-2",
         "name": "WC-J-2 Brushed Silver, Straight Knurl",
         "nameZh": "WC-J-2 砂银 直纹",
         "series": "skx38",
@@ -15905,6 +16281,7 @@
       },
       {
         "id": "wc-j-1",
+        "code": "WC-J-1",
         "name": "WC-J-1 Brushed Black, Straight Knurl",
         "nameZh": "WC-J-1 砂黑 直纹",
         "series": "skx38",
@@ -15918,6 +16295,7 @@
       },
       {
         "id": "wc-j-3",
+        "code": "WC-J-3",
         "name": "WC-J-3 Brushed Gold, Straight Knurl",
         "nameZh": "WC-J-3 砂金 直纹",
         "series": "skx38",
@@ -15931,6 +16309,7 @@
       },
       {
         "id": "wc-j-4",
+        "code": "WC-J-4",
         "name": "WC-J-4 Brushed Rose Gold, Straight Knurl",
         "nameZh": "WC-J-4 砂玫金 直纹",
         "series": "skx38",
@@ -15944,6 +16323,7 @@
       },
       {
         "id": "wc-b-1",
+        "code": "WC-B-1",
         "name": "WC-B-1 Polished Silver, Toothed Knurl",
         "nameZh": "WC-B-1 亮银 齿纹",
         "series": "skx38",
@@ -15957,6 +16337,7 @@
       },
       {
         "id": "wc-c-2",
+        "code": "WC-C-2",
         "name": "WC-C-2 Polished Black, Toothed Knurl",
         "nameZh": "WC-C-2 亮黑 齿纹",
         "series": "skx38",
@@ -15970,6 +16351,7 @@
       },
       {
         "id": "wc-c-3",
+        "code": "WC-C-3",
         "name": "WC-C-3 Polished Gold, Toothed Knurl",
         "nameZh": "WC-C-3 亮金 齿纹",
         "series": "skx38",
@@ -15983,6 +16365,7 @@
       },
       {
         "id": "wc-c-4",
+        "code": "WC-C-4",
         "name": "WC-C-4 Polished Rose Gold, Toothed Knurl",
         "nameZh": "WC-C-4 亮玫金 齿纹",
         "series": "skx38",
@@ -15996,6 +16379,7 @@
       },
       {
         "id": "wc-a-1",
+        "code": "WC-A-1",
         "name": "WC-A-1 Polished Silver, Diamond Knurl",
         "nameZh": "WC-A-1 亮银 钻石纹",
         "series": "skx38",
@@ -16009,6 +16393,7 @@
       },
       {
         "id": "wc-m-2",
+        "code": "WC-M-2",
         "name": "WC-M-2 Polished Black, Diamond Knurl",
         "nameZh": "WC-M-2 亮黑 钻石纹",
         "series": "skx38",
@@ -16022,6 +16407,7 @@
       },
       {
         "id": "wc-a-3",
+        "code": "WC-A-3",
         "name": "WC-A-3 Polished Gold, Diamond Knurl",
         "nameZh": "WC-A-3 亮金 钻石纹",
         "series": "skx38",
@@ -16035,6 +16421,7 @@
       },
       {
         "id": "wc-m-4",
+        "code": "WC-M-4",
         "name": "WC-M-4 Polished Rose Gold, Diamond Knurl",
         "nameZh": "WC-M-4 亮玫金 钻石纹",
         "series": "skx38",
@@ -16048,6 +16435,7 @@
       },
       {
         "id": "wc3-j-2",
+        "code": "WC3-J-2",
         "name": "WC-J-2 Matte Silver, Straight Knurl",
         "nameZh": "WC-J-2 砂银 直纹",
         "series": "all-3.0",
@@ -16061,6 +16449,7 @@
       },
       {
         "id": "wc3-j-1",
+        "code": "WC3-J-1",
         "name": "WC-J-1 Matte Black, Straight Knurl",
         "nameZh": "WC-J-1 砂黑 直纹",
         "series": "all-3.0",
@@ -16074,6 +16463,7 @@
       },
       {
         "id": "wc3-j-3",
+        "code": "WC3-J-3",
         "name": "WC-J-3 Matte Gold, Straight Knurl",
         "nameZh": "WC-J-3 砂金 直纹",
         "series": "all-3.0",
@@ -16087,6 +16477,7 @@
       },
       {
         "id": "wc3-j-4",
+        "code": "WC3-J-4",
         "name": "WC-J-4 Matte Rose Gold, Straight Knurl",
         "nameZh": "WC-J-4 砂 玫瑰金 直纹",
         "series": "all-3.0",
@@ -16100,6 +16491,7 @@
       },
       {
         "id": "wc3-j-5",
+        "code": "WC3-J-5",
         "name": "WC-J-5 Matte Blue, Straight Knurl",
         "nameZh": "WC-J-5 砂 蓝 直纹",
         "series": "all-3.0",
@@ -16113,6 +16505,7 @@
       },
       {
         "id": "wc3-e-1",
+        "code": "WC3-E-1",
         "name": "WC-E-1 Polished Silver, Straight Knurl",
         "nameZh": "WC-E-1 亮银 直纹",
         "series": "all-3.0",
@@ -16126,6 +16519,7 @@
       },
       {
         "id": "wc3-e-2",
+        "code": "WC3-E-2",
         "name": "WC-E-2 Polished Black, Straight Knurl",
         "nameZh": "WC-E-2 亮黑 直纹",
         "series": "all-3.0",
@@ -16139,6 +16533,7 @@
       },
       {
         "id": "wc3-e-3",
+        "code": "WC3-E-3",
         "name": "WC-E-3 Polished Gold, Straight Knurl",
         "nameZh": "WC-E-3 亮金 直纹",
         "series": "all-3.0",
@@ -16152,6 +16547,7 @@
       },
       {
         "id": "wc3-o-4",
+        "code": "WC3-O-4",
         "name": "WC-O-4 Polished Rose Gold, Straight Knurl",
         "nameZh": "WC-O-4 玫金 亮直纹",
         "series": "all-3.0",
@@ -16165,6 +16561,7 @@
       },
       {
         "id": "wc3-b-1",
+        "code": "WC3-B-1",
         "name": "WC-B-1 Polished Silver, Coin Edge",
         "nameZh": "WC-B-1 亮银 齿纹",
         "series": "all-3.0",
@@ -16178,6 +16575,7 @@
       },
       {
         "id": "wc3-b-2",
+        "code": "WC3-B-2",
         "name": "WC-B-2 Polished Black, Coin Edge",
         "nameZh": "WC-B-2 亮黑 齿纹",
         "series": "all-3.0",
@@ -16191,6 +16589,7 @@
       },
       {
         "id": "wc3-c-3",
+        "code": "WC3-C-3",
         "name": "WC-C-3 Polished Gold, Coin Edge",
         "nameZh": "WC-C-3 亮金 齿纹",
         "series": "all-3.0",
@@ -16204,6 +16603,7 @@
       },
       {
         "id": "wc3-c-4",
+        "code": "WC3-C-4",
         "name": "WC-C-4 Polished Rose Gold, Coin Edge",
         "nameZh": "WC-C-4 亮玫金 齿纹",
         "series": "all-3.0",
@@ -16217,6 +16617,7 @@
       },
       {
         "id": "wc3-a-1",
+        "code": "WC3-A-1",
         "name": "WC-A-1 Silver, Diamond Knurl",
         "nameZh": "WC-A-1 银 钻石纹",
         "series": "all-3.0",
@@ -16230,6 +16631,7 @@
       },
       {
         "id": "wc3-a-2",
+        "code": "WC3-A-2",
         "name": "WC-A-2 Black, Diamond Knurl",
         "nameZh": "WC-A-2 黑 钻石纹",
         "series": "all-3.0",
@@ -16243,6 +16645,7 @@
       },
       {
         "id": "wc3-a-3",
+        "code": "WC3-A-3",
         "name": "WC-A-3 Gold, Diamond Knurl",
         "nameZh": "WC-A-3 金 钻石纹",
         "series": "all-3.0",
@@ -16256,6 +16659,7 @@
       },
       {
         "id": "wc3-k-4",
+        "code": "WC3-K-4",
         "name": "WC-K-4 Rose Gold, Diamond Knurl",
         "nameZh": "WC-K-4 玫金 钻石纹",
         "series": "all-3.0",
@@ -16269,6 +16673,7 @@
       },
       {
         "id": "wc3-q-2",
+        "code": "WC3-Q-2",
         "name": "WC-Q-2 Matte Black, Short",
         "nameZh": "WC-Q-2 砂黑",
         "series": "all-3.0",
@@ -16282,6 +16687,7 @@
       },
       {
         "id": "wc3-t-1",
+        "code": "WC3-T-1",
         "name": "WC-T-1 Polished Silver, Short",
         "nameZh": "WC-T-1 亮银",
         "series": "all-3.0",
@@ -16295,6 +16701,7 @@
       },
       {
         "id": "wc3-t-2",
+        "code": "WC3-T-2",
         "name": "WC-T-2 Polished Black, Short",
         "nameZh": "WC-T-2 亮黑",
         "series": "all-3.0",
@@ -16308,6 +16715,7 @@
       },
       {
         "id": "wc3-t-3",
+        "code": "WC3-T-3",
         "name": "WC-T-3 Polished Gold, Short",
         "nameZh": "WC-T-3 亮金",
         "series": "all-3.0",
@@ -16321,6 +16729,7 @@
       },
       {
         "id": "wc3-t-4",
+        "code": "WC3-T-4",
         "name": "WC-T-4 Polished Rose Gold, Short",
         "nameZh": "WC-T-4 亮玫瑰金",
         "series": "all-3.0",
@@ -16334,6 +16743,7 @@
       },
       {
         "id": "wc3-cl-1",
+        "code": "WC3-CL-1",
         "name": "WC-CL-1 Polished Silver, Pumpkin",
         "nameZh": "WC-CL-1 亮银 南瓜头",
         "series": "clretro",
@@ -16348,6 +16758,7 @@
       },
       {
         "id": "wc3-cl-3",
+        "code": "WC3-CL-3",
         "name": "WC-CL-3 Polished Gold, Pumpkin",
         "nameZh": "WC-CL-3 亮金 南瓜头",
         "series": "clretro",
@@ -16362,6 +16773,7 @@
       },
       {
         "id": "wc3-cl-4",
+        "code": "WC3-CL-4",
         "name": "WC-CL-4 Polished Rose Gold, Pumpkin",
         "nameZh": "WC-CL-4 亮玫瑰金 南瓜头",
         "series": "clretro",
@@ -16376,6 +16788,7 @@
       },
       {
         "id": "wc3-ap-1",
+        "code": "WC3-AP-1",
         "name": "C-AP-1 Brushed Silver Crown",
         "nameZh": "C-AP-1 银 拉丝 表把",
         "series": "ap",
@@ -16390,6 +16803,7 @@
       },
       {
         "id": "wc3-ap-2",
+        "code": "WC3-AP-2",
         "name": "C-AP-2 Black Crown",
         "nameZh": "C-AP-2 黑 表把",
         "series": "ap",
@@ -16404,6 +16818,7 @@
       },
       {
         "id": "wc3-ap-3",
+        "code": "WC3-AP-3",
         "name": "C-AP-3 Brushed Gold Crown",
         "nameZh": "C-AP-3 金 拉丝 表把",
         "series": "ap",
@@ -16418,6 +16833,7 @@
       },
       {
         "id": "wc3-ap-4",
+        "code": "WC3-AP-4",
         "name": "C-AP-4 Brushed Rose Gold Crown",
         "nameZh": "C-AP-4 玫金 拉丝 表把",
         "series": "ap",
@@ -16434,6 +16850,7 @@
     "caseback": [
       {
         "id": "cb-skx-plain",
+        "code": "",
         "name": "Plain Caseback",
         "nameZh": "光面后盖",
         "series": "skx38",
@@ -16447,6 +16864,7 @@
       },
       {
         "id": "cb-skx-exhibition",
+        "code": "",
         "name": "Exhibition Caseback",
         "nameZh": "透底后盖",
         "series": "skx38",
@@ -16460,6 +16878,7 @@
       },
       {
         "id": "cb-sub-plain",
+        "code": "",
         "name": "SUB Plain Caseback",
         "nameZh": "SUB 光面后盖",
         "series": "skxsub",
@@ -16473,6 +16892,7 @@
       },
       {
         "id": "cb-sub-exhibition",
+        "code": "",
         "name": "SUB Exhibition Caseback",
         "nameZh": "SUB 透底后盖",
         "series": "skxsub",
@@ -16486,6 +16906,7 @@
       },
       {
         "id": "cb-b-1",
+        "code": "CB-B-1",
         "name": "CB-B-1 Brushed Silver Caseback",
         "nameZh": "CB-B-1 银拉丝后盖",
         "series": "universal",
@@ -16498,6 +16919,7 @@
       },
       {
         "id": "cb-c-2",
+        "code": "CB-C-2",
         "name": "CB-C-2 Black Caseback",
         "nameZh": "CB-C-2 黑色后盖",
         "series": "universal",
@@ -16510,6 +16932,7 @@
       },
       {
         "id": "cb-d-1",
+        "code": "CB-D-1",
         "name": "CB-D-1 Silver Caseback",
         "nameZh": "CB-D-1 银色后盖",
         "series": "universal",
@@ -16522,6 +16945,7 @@
       },
       {
         "id": "cb-d-3",
+        "code": "CB-D-3",
         "name": "CB-D-3 Gold Caseback",
         "nameZh": "CB-D-3 金色后盖",
         "series": "universal",
@@ -16534,6 +16958,7 @@
       },
       {
         "id": "cb-d-4",
+        "code": "CB-D-4",
         "name": "CB-D-4 Rose Gold Caseback",
         "nameZh": "CB-D-4 玫瑰金后盖",
         "series": "universal",
@@ -16546,6 +16971,7 @@
       },
       {
         "id": "cb-g-1",
+        "code": "CB-G-1",
         "name": "CB-G-1 Sand Silver Caseback",
         "nameZh": "CB-G-1 砂银后盖",
         "series": "universal",
@@ -16558,6 +16984,7 @@
       },
       {
         "id": "cb-g-2",
+        "code": "CB-G-2",
         "name": "CB-G-2 Matte Black Caseback",
         "nameZh": "CB-G-2 黑磨砂后盖",
         "series": "universal",
@@ -16572,6 +16999,7 @@
     "strap": [
       {
         "id": "st-jubilee",
+        "code": "",
         "name": "Jubilee Bracelet",
         "nameZh": "纪念型表带",
         "series": "skx38",
@@ -16585,6 +17013,7 @@
       },
       {
         "id": "st-oyster",
+        "code": "",
         "name": "Oyster Bracelet",
         "nameZh": "蚝式表带",
         "series": "skx38",
@@ -16598,6 +17027,7 @@
       },
       {
         "id": "st-rubber-black",
+        "code": "",
         "name": "Black Rubber Strap",
         "nameZh": "黑色橡胶带",
         "series": "skx38",
@@ -16611,6 +17041,7 @@
       },
       {
         "id": "st-nato-olive",
+        "code": "",
         "name": "Olive NATO Strap",
         "nameZh": "橄榄绿 NATO 带",
         "series": "skx38",
@@ -16624,6 +17055,7 @@
       },
       {
         "id": "st-nato-black",
+        "code": "",
         "name": "Black NATO Strap",
         "nameZh": "黑色 NATO 带",
         "series": "skx30",
@@ -16637,6 +17069,7 @@
       },
       {
         "id": "st-nato-green",
+        "code": "",
         "name": "Green NATO Strap",
         "nameZh": "军绿 NATO 带",
         "series": "skxsub",
