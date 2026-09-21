@@ -1588,11 +1588,15 @@ function buildCaseRep(cs, count) {
   const rep = document.createElement('div');
   rep.className = 'case-series-rep';
   const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
-  const repSrc = cs.views && cs.views.front;
+  // Cards show the light thumbnail; the master PNG is only fetched when the
+  // desktop hover-zoom asks for it (see initCaseZoom). Loading 55 master PNGs
+  // up front was 18 MB before the preview even appeared.
+  const repFull = (cs.views && cs.views.front) || '';
+  const repSrc = cs.swatch || repFull;
   // Never let the placeholder cover a photo that is simply still downloading —
   // reveal it only when the image actually fails to load.
   const caseImg = repSrc
-    ? `<img src="${repSrc}" alt="" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
+    ? `<img src="${repSrc}" alt="" data-full="${repFull}" loading="lazy" decoding="async" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
     : '';
   const emptyBox = `<div class="icon-empty"${repSrc ? ' style="display:none"' : ''}>${emptyTxt}</div>`;
   const hintDefault = LANG === 'zh'
@@ -1622,11 +1626,12 @@ function buildCaseCard(cs) {
   card.className = 'case-card';
   card.dataset.id = cs.id;
   const emptyTxt = LANG === 'zh' ? '敬请期待' : 'Coming Soon';
-  const cardSrc = cs.views && cs.views.front;
+  const cardFull = (cs.views && cs.views.front) || '';
+  const cardSrc = cs.swatch || cardFull;
   // Never let the placeholder cover a photo that is simply still downloading —
   // reveal it only when the image actually fails to load.
   const caseImg = cardSrc
-    ? `<img src="${cardSrc}" alt="" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
+    ? `<img src="${cardSrc}" alt="" data-full="${cardFull}" loading="lazy" decoding="async" onerror="var _p=this.parentElement; this.remove(); var _f=_p&&_p.querySelector('.icon-empty'); if(_f){_f.style.display='flex';}">`
     : '';
   const emptyBox = `<div class="icon-empty"${cardSrc ? ' style="display:none"' : ''}>${emptyTxt}</div>`;
   card.innerHTML = `
@@ -1735,7 +1740,7 @@ function renderParts() {
       item.dataset.id = part.id;
       item.dataset.type = type;
       item.innerHTML = `
-        <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.swatch || part.image}" alt="" onerror="this.remove()">` : ''}</div>
+        <div class="part-swatch" style="background:${part.color}">${part.image ? `<img src="${part.swatch || part.image}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</div>
         <div class="part-info">
           <h5>${partName(part)}</h5>
           <div class="mat">${part.material}</div>
@@ -2351,8 +2356,8 @@ renderImgStack();
     const empty = document.getElementById('caseZoomEmpty');
     const title = card.querySelector('h4');
     if (img && img.src) {
-      // real photo available -> show enlarged detail
-      zoomImg.src = img.src;
+      // real photo available -> show enlarged detail (full-size master if we have one)
+      zoomImg.src = img.dataset.full || img.src;
       zoomImg.style.display = '';
       if (empty) empty.style.display = 'none';
     } else {
