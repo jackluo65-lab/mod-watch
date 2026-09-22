@@ -2038,14 +2038,34 @@ function categoryMatches(part, caseObj) {
   return pc.split(',').map(s => s.trim()).includes(caseObj.category);
 }
 
+// 跨零件约束：表镜用 requiresInsert 声明它只配哪一类插入，插入零件用 insertType 标注自己
+// （'sloped' 斜面 / 'flat' 平面）。SJG06 是平面插入专用 —— 选了它，插入那一步就只剩平面陶瓷圈。
+// 表镜在向导里排在插入前面，所以这条约束总是能先于插入列表求值。
+function fitsSelections(type, part) {
+  if (type === 'insert') {
+    const cry = selections.crystal;
+    if (cry && cry.requiresInsert && part.insertType !== cry.requiresInsert) return false;
+  }
+  return true;
+}
+
 // Render compatible parts
 function renderParts() {
+  let dropped = false;
   partTypes.forEach(type => {
     const listEl = document.getElementById('list-' + type);
     const descEl = document.getElementById('desc-' + type);
     const compatible = selectedCase.compatibleParts[type] || [];
-    const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id) && categoryMatches(p, selectedCase));
+    const parts = (DATA.parts[type] || []).filter(p =>
+      compatible.includes(p.id) && categoryMatches(p, selectedCase) && fitsSelections(type, p));
     availablePartsCount[type] = parts.length;
+
+    // 回头改前面的步骤，可能把后面已选的零件挤出列表（换成 SJG06 就排除掉全部斜面插入）。
+    // 这里直接清掉，免得预览、清单和订单里留下一个配不上的组合。
+    if (selections[type] && !parts.includes(selections[type])) {
+      selections[type] = null;
+      dropped = true;
+    }
 
     listEl.innerHTML = '';
     parts.forEach(part => {
@@ -2110,6 +2130,7 @@ function renderParts() {
       descEl.textContent = t('descPh');
     }
   });
+  if (dropped) { updatePreview(); updateSummary(); }
 }
 
 // Select a part
@@ -2135,6 +2156,10 @@ function selectPart(type, part) {
     btnNext.style.opacity = '1';
     btnNext.style.cursor = 'pointer';
   }
+
+  // 表镜会约束后面的插入（SJG06 只配平面插入），当场重建列表，
+  // 免得客户带着一份过期的插入清单走到下一步。
+  if (type === 'crystal') renderParts();
 
   // Update preview
   updatePreview();
