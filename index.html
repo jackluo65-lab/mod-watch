@@ -14,11 +14,11 @@
     --bg: #ffffff;
     --surface: #ffffff;
     --surface2: #ffffff;
-    --border: #e0e0e0;
-    --text: #1a1a1a;
-    --text2: #888888;
-    --accent: #b8923e;
-    --accent-dim: #a8842f;
+    --border: #e3e3e3;
+    --text: #111111;
+    --text2: #666666;
+    --accent: #1f63d6;
+    --accent-dim: #1749a0;
     --radius: 10px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -255,11 +255,11 @@
     justify-content: space-between;
     gap: 8px;
     padding: 5px 8px;
-    border: 1px solid #f0d9a8;
+    border: 1px solid #dcdcdc;
     border-radius: 6px;
-    background: #fffaef;
+    background: #f7f7f7;
     font-size: 12px;
-    color: #8a6d3b;
+    color: #444444;
     z-index: 20;
   }
   #loadHint .lh-text {
@@ -268,16 +268,16 @@
     white-space: nowrap;
   }
   #loadHint .lh-btn {
-    border: 1px solid #d8c08a;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     background: #fff;
-    color: #8a6d3b;
+    color: #444444;
     font-size: 12px;
     padding: 2px 8px;
     cursor: pointer;
     font-family: inherit;
   }
-  #loadHint .lh-btn:hover { background: #fdf3dd; }
+  #loadHint .lh-btn:hover { background: #ededed; }
   /* Empty-state hero: white background, black text, shown until a case is chosen */
   #emptyHint {
     position: absolute;
@@ -332,7 +332,7 @@
   }
   .view-btn.active {
     background: var(--accent);
-    color: #000;
+    color: #fff;
     border-color: var(--accent);
   }
   .view-btn:hover:not(.active) {
@@ -349,8 +349,8 @@
     gap: 6px;
     padding: 7px 14px;
     border-radius: 20px;
-    border: 1px solid #1c1a17;
-    background: #1c1a17;
+    border: 1px solid var(--accent-dim);
+    background: var(--accent-dim);
     color: #fff;
     font-family: inherit;
     font-size: 12px;
@@ -364,14 +364,14 @@
   .my-build-btn:hover {
     background: var(--accent);
     border-color: var(--accent);
-    color: #000;
+    color: #fff;
   }
   .my-build-btn .mb-count {
     min-width: 17px; height: 17px; padding: 0 5px;
-    border-radius: 9px; background: var(--accent); color: #000;
+    border-radius: 9px; background: #fff; color: var(--accent);
     font-size: 10.5px; font-weight: 700; line-height: 17px; text-align: center;
   }
-  .my-build-btn:hover .mb-count { background: #1c1a17; color: #fff; }
+  .my-build-btn:hover .mb-count { background: #fff; color: var(--accent-dim); }
 
   .preview-info {
     text-align: center;
@@ -650,7 +650,7 @@
     letter-spacing: .5px;
   }
   .case-card h4 {
-    font-size: 14px;
+    font-size: 15.5px;
     margin-bottom: 4px;
   }
   .case-card .size {
@@ -777,7 +777,7 @@
   }
   .case-series-rep.selected-rep {
     box-shadow: inset 0 0 0 2px var(--accent);
-    background: #fffdf7;
+    background: #f4f8ff;
   }
   .case-series-rep .rep-info {
     flex: 1;
@@ -786,11 +786,11 @@
     padding: 4px 14px 14px;
   }
   .case-series-rep .rep-info h4 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
   .case-series-rep .rep-meta {
-    font-size: 11.5px;
+    font-size: 12.5px;
     color: var(--text2);
     line-height: 1.5;
   }
@@ -859,7 +859,7 @@
     margin-bottom: 12px;
   }
   .part-group-header h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
   }
   .part-group-header .part-en {
@@ -910,12 +910,12 @@
     object-fit: cover;
   }
   .part-info h5 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     margin-bottom: 2px;
   }
   .part-info .mat {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text2);
   }
 
@@ -978,7 +978,7 @@
   }
   .btn-primary {
     background: var(--accent);
-    color: #000;
+    color: #fff;
   }
   .btn-primary:hover { background: var(--accent-dim); }
   .btn-outline {
@@ -992,7 +992,7 @@
   .part-item.part-upload {
     border-style: dashed;
     border-color: var(--accent-dim, var(--accent));
-    background: #fcfaf6;
+    background: #fafafa;
   }
   .part-item.part-upload .part-swatch {
     background: #f1ece2;
@@ -1034,7 +1034,7 @@
   .de-x:hover { color: var(--accent); }
   .de-drop {
     border: 2px dashed var(--border); border-radius: var(--radius);
-    padding: 22px 14px; text-align: center; background: #fcfaf6;
+    padding: 22px 14px; text-align: center; background: #fafafa;
     transition: border-color .2s, background .2s;
   }
   .de-drop.over { border-color: var(--accent); background: #faf5ea; }
@@ -1044,7 +1044,7 @@
   .de-stage { text-align: center; }
   #deCanvas {
     width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;
-    background: #f6f3ee; border-radius: 8px; border: 1px solid var(--border);
+    background: #f5f5f5; border-radius: 8px; border: 1px solid var(--border);
     touch-action: none; cursor: grab;
   }
   #deCanvas.grabbing { cursor: grabbing; }
@@ -1093,10 +1093,10 @@
   .bp-x { border: 0; background: transparent; cursor: pointer; font-size: 26px; line-height: 1; color: var(--text-dim, #999); padding: 0 4px; }
   .bp-x:hover { color: var(--accent); }
   .bp-sub { font-size: 12.5px; color: var(--text-dim, #999); margin: 4px 0 10px; }
-  .bp-list { border-top: 1px solid #f0ece4; }
-  .bp-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0ece4; }
+  .bp-list { border-top: 1px solid #eeeeee; }
+  .bp-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #eeeeee; }
   .bp-thumb {
-    width: 38px; height: 38px; flex: 0 0 38px; border-radius: 8px; background: #f6f3ee;
+    width: 38px; height: 38px; flex: 0 0 38px; border-radius: 8px; background: #f5f5f5;
     display: flex; align-items: center; justify-content: center; overflow: hidden;
   }
   .bp-thumb img { width: 100%; height: 100%; object-fit: contain; }
@@ -1289,8 +1289,8 @@
     .part-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .part-item { min-width: 0; padding: 9px 10px; gap: 8px; }
     .part-swatch { width: 30px; height: 30px; }
-    .part-info h5 { font-size: 12px; }
-    .part-info .mat { font-size: 10.5px; }
+    .part-info h5 { font-size: 13.5px; }
+    .part-info .mat { font-size: 11.5px; }
     .part-desc { font-size: 11.5px; padding: 8px 10px; }
 
     /* Action bar pinned to the bottom — always reachable */
@@ -1440,7 +1440,7 @@
           <g id="layerHands">
             <line x1="190" y1="240" x2="190" y2="160" stroke="#ccc" stroke-width="4" stroke-linecap="round" id="hourHand"/>
             <line x1="190" y1="240" x2="190" y2="140" stroke="#ccc" stroke-width="3" stroke-linecap="round" id="minuteHand"/>
-            <line x1="190" y1="252" x2="190" y2="150" stroke="#d4a853" stroke-width="1.5" id="secondHand"/>
+            <line x1="190" y1="252" x2="190" y2="150" stroke="#555555" stroke-width="1.5" id="secondHand"/>
             <circle cx="190" cy="240" r="5" fill="#ccc"/>
           </g>
           <!-- Crystal glass reflection -->
@@ -2038,34 +2038,14 @@ function categoryMatches(part, caseObj) {
   return pc.split(',').map(s => s.trim()).includes(caseObj.category);
 }
 
-// 跨零件约束：表镜用 requiresInsert 声明它只配哪一类插入，插入零件用 insertType 标注自己
-// （'sloped' 斜面 / 'flat' 平面）。SJG06 是平面插入专用 —— 选了它，插入那一步就只剩平面陶瓷圈。
-// 表镜在向导里排在插入前面，所以这条约束总是能先于插入列表求值。
-function fitsSelections(type, part) {
-  if (type === 'insert') {
-    const cry = selections.crystal;
-    if (cry && cry.requiresInsert && part.insertType !== cry.requiresInsert) return false;
-  }
-  return true;
-}
-
 // Render compatible parts
 function renderParts() {
-  let dropped = false;
   partTypes.forEach(type => {
     const listEl = document.getElementById('list-' + type);
     const descEl = document.getElementById('desc-' + type);
     const compatible = selectedCase.compatibleParts[type] || [];
-    const parts = (DATA.parts[type] || []).filter(p =>
-      compatible.includes(p.id) && categoryMatches(p, selectedCase) && fitsSelections(type, p));
+    const parts = (DATA.parts[type] || []).filter(p => compatible.includes(p.id) && categoryMatches(p, selectedCase));
     availablePartsCount[type] = parts.length;
-
-    // 回头改前面的步骤，可能把后面已选的零件挤出列表（换成 SJG06 就排除掉全部斜面插入）。
-    // 这里直接清掉，免得预览、清单和订单里留下一个配不上的组合。
-    if (selections[type] && !parts.includes(selections[type])) {
-      selections[type] = null;
-      dropped = true;
-    }
 
     listEl.innerHTML = '';
     parts.forEach(part => {
@@ -2130,7 +2110,7 @@ function renderParts() {
       descEl.textContent = t('descPh');
     }
   });
-  if (dropped) { updatePreview(); updateSummary(); }
+  updateBuildBadge();     // switching a case changes how many steps are still open
 }
 
 // Select a part
@@ -2157,10 +2137,6 @@ function selectPart(type, part) {
     btnNext.style.cursor = 'pointer';
   }
 
-  // 表镜会约束后面的插入（SJG06 只配平面插入），当场重建列表，
-  // 免得客户带着一份过期的插入清单走到下一步。
-  if (type === 'crystal') renderParts();
-
   // Update preview
   updatePreview();
   updateSummary();
@@ -2174,7 +2150,7 @@ function selectPart(type, part) {
 // which part of it will survive the ring.
 const DIAL_CV_W = 800, DIAL_CV_H = 1000, DIAL_CX = 400, DIAL_CY = 500;
 const CUSTOM_DIAL_ID = 'dl-custom';
-const UPLOAD_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:#b08a3e"><path d="M12 15V5m0 0L8 9m4-4 4 4"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>`;
+const UPLOAD_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M12 15V5m0 0L8 9m4-4 4 4"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>`;
 
 let customDialSrc = null;    // { bitmap, zoom, dxr, dyr, angle }  offsets are ratios of the disc radius
 let customDialPart = null;   // the entry currently living in selections.dial

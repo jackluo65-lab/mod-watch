@@ -26,7 +26,8 @@ const TAG = process.env.TAG || 'local';
       inToggle: !!btn.closest('.view-toggle'),
       rightOfBack: r.left >= back.right - 1,
       visibleWithoutCase: r.width > 0 && st.display !== 'none',
-      dark: st.backgroundColor === 'rgb(28, 26, 23)',
+      // a solid fill (blue theme: navy). Just assert it is opaque and not white.
+      dark: /^rgb\(\d+, \d+, \d+\)$/.test(st.backgroundColor) && st.backgroundColor !== 'rgb(255, 255, 255)',
       headerGone: !document.querySelector('.header-right .hdr-btn'),
       label: document.getElementById('buildBtnLabel').textContent,
     };

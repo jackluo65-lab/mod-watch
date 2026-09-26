@@ -1,7 +1,8 @@
 const { chromium } = require('playwright');
 const URL = process.env.URL || 'http://127.0.0.1:8791/index.html';
 const TAG = process.env.TAG || 'local';
-const IMG = process.env.IMG || '/tmp/dial_test_square.png';
+// fixtures live in the repo so the test survives /tmp being cleaned
+const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
 
 // Custom dial upload: pick a picture, it must be auto-fitted to the family's disc,
 // stay adjustable (drag / zoom / rotate) and end up in the preview stack as a
