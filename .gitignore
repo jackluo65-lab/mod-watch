@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+
+# Local data.json snapshots taken before a risky edit — keep them off the deploy
+# source of truth, they are ~500 KB each and are not part of the site.
+tools/*.bak-*
