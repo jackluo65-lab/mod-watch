@@ -40,7 +40,9 @@ const TAG = process.env.TAG || 'local';
   const empty = await p.evaluate(() => ({
     shown: document.getElementById('buildPanel').classList.contains('show'),
     rows: document.querySelectorAll('#bpList .bp-row').length,
-    empties: document.querySelectorAll('#bpList .bp-row.empty').length,
+    // the badge only counts steps that still need an answer — optional ones do not
+    empties: document.querySelectorAll('#bpList .bp-row.empty:not(.optional)').length,
+    optionalRows: document.querySelectorAll('#bpList .bp-row.optional').length,
     first: (document.querySelector('#bpList .bp-row') || {}).textContent.replace(/\s+/g, ' ').trim(),
     copyBtn: !!document.getElementById('bpCopy'),
   }));
@@ -115,7 +117,11 @@ const TAG = process.env.TAG || 'local';
   const badge = await p.evaluate(() => ({
     text: document.getElementById('buildCount').textContent,
     shown: getComputedStyle(document.getElementById('buildCount')).display !== 'none',
-    empties: document.querySelectorAll('#bpList .bp-row.empty').length,
+    // the badge only counts steps that still need an answer — optional ones do not
+    empties: document.querySelectorAll('#bpList .bp-row.empty:not(.optional)').length,
+    optionalRows: document.querySelectorAll('#bpList .bp-row.optional').length,
+    optionalEmptyNames: [...document.querySelectorAll('#bpList .bp-row.optional')]
+      .map(el => el.textContent.replace(/\s+/g, ' ').trim()),
   }));
   await p.evaluate(() => closeBuildPanel());
   await p.waitForTimeout(200);
@@ -146,9 +152,13 @@ const TAG = process.env.TAG || 'local';
     ['没选表壳时入口依然可见可点', entry.visibleWithoutCase],
     ['顶部那个不显眼的入口已移除', entry.headerGone],
     ['入口点一下就能打开面板', empty.shown && empty.copyBtn],
-    ['按钮上的徽标数字 = 面板里还没选的步骤数', badge.text === String(badge.empties)],
+    ['按钮上的徽标数字 = 面板里必填且还没选的步骤数', badge.text === String(badge.empties)],
+    ['四个选填步骤都带「选填」标记', badge.optionalRows === 4],
+    ['选填步骤写明「未选择（可跳过）」或显示已选款式',
+      badge.optionalEmptyNames.filter(x => /未选择（可跳过）/.test(x)).length >= 1],
+    ['未选的选填步骤不算进「还差几步」徽标', badge.empties + badge.optionalEmptyNames.length === 10 || badge.empties < 10],
     ['未选任何零件时也列出全部 10 个步骤', empty.rows === 10],
-    ['未选的步骤标为「未选择」', empty.empties === 10],
+    ['未选的步骤标为「未选择」', empty.empties + empty.optionalRows === 10],
     ['表壳行提示还没选表壳', /还没选表壳/.test(empty.first)],
     ['输入表壳编号 → 切换表壳', !!byCase.caseName && byCase.caseName.startsWith('SKX-B-1')],
     ['面板里的表壳行显示编号', byCase.codes[0] === 'SKX-B-1'],

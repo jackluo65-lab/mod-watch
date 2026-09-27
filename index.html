@@ -17,6 +17,8 @@
     --border: #e3e3e3;
     --text: #111111;
     --text2: #666666;
+    /* 10 处规则引用它做三级文字色，之前没定义 → 各自在用不同的兜底色（其中一个是暖灰 #a09a90） */
+    --text-dim: #777777;
     --accent: #1f63d6;
     --accent-dim: #1749a0;
     --radius: 10px;
@@ -1107,7 +1109,13 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 12.5px; font-weight: 700; color: var(--accent); white-space: nowrap; letter-spacing: .02em;
   }
-  .bp-row.empty .bp-name, .bp-row.empty .bp-code { color: #c2bcb2; font-weight: 400; }
+  .bp-row.empty .bp-name, .bp-row.empty .bp-code { color: #bdbdbd; font-weight: 400; }
+  /* 选填步骤：标签带一个「选填」小标，未选时文字比必填的灰淡一点但不至于像出错 */
+  .bp-tag {
+    display: inline-block; margin-left: 6px; padding: 1px 5px; border-radius: 4px;
+    background: #f0f0f0; color: #777777; font-size: 9px; letter-spacing: .06em;
+  }
+  .bp-row.optional.empty .bp-name { color: #9a9a9a; }
   .bp-actions { margin-top: 12px; }
   .bp-find { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 14px; }
   .bp-find h4 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
@@ -1724,6 +1732,11 @@ const I18N = {
   stepOf:       { zh: '第 ', en: 'Step ' },
   stepPick:     { zh: ' 步 · 选择', en: ' · Choose ' },
   required:     { zh: '（必选）', en: ' (required)' },
+  optional:     { zh: '（可跳过）', en: ' (optional — skip it if you like)' },
+  optionalHint: { zh: '这一步可以跳过 —— 不选也行，直接点「跳过这一步」继续', en: 'This step can be skipped — press “Skip this step” to move on without choosing' },
+  skip:         { zh: '跳过这一步 →', en: 'Skip this step →' },
+  bpSkipped:    { zh: '未选择（可跳过）', en: 'Not chosen (optional)' },
+  bpOptional:   { zh: '选填', en: 'OPTIONAL' },
   pickedPre:    { zh: '已选「', en: 'Selected \u201C' },
   pickedPost:   { zh: '」— 好眼光。确认后继续下一步', en: '\u201D — great taste. Continue when ready' },
   next:         { zh: '下一步 →', en: 'Next →' },
@@ -1999,6 +2012,8 @@ function selectCase(id) {
     if ((selectedCase.compatibleParts[type] || []).includes(sel.id) && categoryMatches(sel, selectedCase)) keep[type] = sel;
   });
   selections = keep;
+  // 换表壳等于重新配一遍，之前"跳过"过哪几步不再算数
+  skippedSteps.clear();
   rebuildCustomDial();
 
   // Update UI: highlight variant card + representative, collapse all series
@@ -2029,6 +2044,16 @@ function refreshPreviewInfo() {
 const partTypes = ['bezel', 'chapterRing', 'insert', 'crystal', 'dial', 'hands', 'crown', 'caseback', 'strap'];
 const partLabels = { bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜', dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' };
 const availablePartsCount = {};
+
+// 选填步骤：客户可以整步跳过（B2B 客户常常只买一部分，或自带字面/表针）。
+// 「下一步」在这些步骤上永不置灰，没选任何款式时按钮改文案为「跳过这一步 →」。
+// 表壳、表圈、内影圈、表镜、表冠、后盖仍是必选。
+const OPTIONAL_STEPS = ['insert', 'dial', 'hands', 'strap'];
+const isOptionalStep = (type) => OPTIONAL_STEPS.includes(type);
+// 已被跳过（而不是"还没走到"）的步骤，回头再前进时不再停一次
+const skippedSteps = new Set();
+// 没选字面时的占位：一块无标记的空白表盘板，避免开孔处露出白底像"破图"
+const BLANK_DIAL_IMG = 'img/placeholder/dial-blank.png';
 
 // 零件分类匹配：universal/无分类零件不受限，其余必须与当前表壳同分类
 function categoryMatches(part, caseObj) {
@@ -2138,6 +2163,7 @@ function renderParts() {
 // Select a part
 function selectPart(type, part) {
   selections[type] = part;
+  skippedSteps.delete(type);      // 选上了就不再算"跳过"
 
   // Update UI
   document.querySelectorAll(`.part-item[data-type="${type}"]`).forEach(el => {
@@ -2472,23 +2498,26 @@ function buildRows() {
   stepOrder.forEach(step => {
     if (step.type === 'case' || !partTypes.includes(step.type)) return;
     const sel = selections[step.type];
+    const optional = isOptionalStep(step.type);
     rows.push(sel ? {
       type: step.type, label: typeLabel(step.type), name: partName(sel),
-      code: sel.code || '', thumb: sel.swatch || sel.image || '', empty: false
+      code: sel.code || '', thumb: sel.swatch || sel.image || '', empty: false, optional
     } : {
-      type: step.type, label: typeLabel(step.type), name: t('bpNotChosen'),
-      code: '', thumb: '', empty: true
+      type: step.type, label: typeLabel(step.type),
+      name: optional ? t('bpSkipped') : t('bpNotChosen'),
+      code: '', thumb: '', empty: true, optional
     });
   });
   return rows;
 }
 
-// The button carries a small badge with how many steps are still empty
+// The button carries a small badge with how many steps are still empty.
+// Optional steps that were passed over are not "missing" — they do not count.
 function updateBuildBadge() {
   const el = document.getElementById('buildCount');
   if (!el || !DATA || typeof buildRows !== 'function') return;
   let left = 0;
-  try { left = buildRows().filter(r => r.empty).length; } catch (e) { return; }
+  try { left = buildRows().filter(r => r.empty && !r.optional).length; } catch (e) { return; }
   el.textContent = left ? String(left) : '';
   el.style.display = left ? '' : 'none';
 }
@@ -2498,10 +2527,10 @@ function renderBuildPanel() {
   if (!list) return;
   updateBuildBadge();
   list.innerHTML = buildRows().map(r => `
-    <div class="bp-row${r.empty ? ' empty' : ''}">
+    <div class="bp-row${r.empty ? ' empty' : ''}${r.optional ? ' optional' : ''}">
       <div class="bp-thumb">${r.thumb ? `<img src="${escHtml(r.thumb)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</div>
       <div class="bp-info">
-        <div class="bp-type">${escHtml(r.label)}</div>
+        <div class="bp-type">${escHtml(r.label)}${r.optional ? `<span class="bp-tag">${t('bpOptional')}</span>` : ''}</div>
         <div class="bp-name">${escHtml(r.name)}</div>
       </div>
       <div class="bp-code">${r.code ? escHtml(r.code) : '\u2014'}</div>
@@ -2510,12 +2539,14 @@ function renderBuildPanel() {
 }
 
 function buildPlainText() {
+  // 「选填未选」在纯文本清单里写出来，工厂才知道客户是故意不选，而不是漏填
   return [t('bpCopyHead')].concat(
-    buildRows().map(r => `${r.label} ${r.code || '\u2014'}${r.empty ? '' : ' ' + r.name}`)
+    buildRows().map(r => `${r.label} ${r.code || '\u2014'}${r.empty ? (r.optional ? ' ' + t('bpSkipped') : '') : ' ' + r.name}`)
   ).join('\n');
 }
 
-function setBpMsg(text, cls, buttons) {  const el = document.getElementById('bpMsg');
+function setBpMsg(text, cls, buttons) {
+  const el = document.getElementById('bpMsg');
   if (!el) return;
   el.className = 'bp-msg' + (cls ? ' ' + cls : '');
   el.innerHTML = escHtml(text) + (buttons || []).map((b, i) => `<button type="button" data-i="${i}">${escHtml(b.label)}</button>`).join('');
@@ -2848,6 +2879,9 @@ function renderImgStack(bust) {
         if (selectedCase.views && selectedCase.views.front) layers.push({ url: selectedCase.views.front, type: 'case' });
       } else if (selections[k] && selections[k].image) {
         layers.push({ url: selections[k].image, type: k });
+      } else if (k === 'dial') {
+        // 字面是可跳过的：没有字面时垫一块空白盘，否则开孔里直接透出白底
+        layers.push({ url: BLANK_DIAL_IMG, type: 'dial' });
       }
     });
   } else if (currentView === 'side') {
@@ -3041,10 +3075,16 @@ function goToStep(i) {
     guideEl.style.display = '';
     titleEl.textContent = t('stepOf') + (i + 1) + t('stepPick') + typeLabel(step.type);
     const picked = selections[step.type];
+    const optional = isOptionalStep(step.type);
     if (picked) {
       guideEl.textContent = t('pickedPre') + partName(picked) + t('pickedPost');
     } else if (availablePartsCount[step.type] === 0) {
       guideEl.textContent = t('noOptions');
+    } else if (optional) {
+      // 选填步骤：明确写出来，客户才敢直接跳过。回头再走到"已经跳过"的那一步时给更直白的说明。
+      guideEl.textContent = skippedSteps.has(step.type)
+        ? t('optionalHint')
+        : I18N.guides[step.type][LANG] + t('optional');
     } else {
       guideEl.textContent = I18N.guides[step.type][LANG] + t('required');
     }
@@ -3068,11 +3108,16 @@ function goToStep(i) {
   btnNext.style.display = isFinish ? 'none' : '';
   // Finish screen has its own action bar — keep the step nav from stacking on top of it on phones
   document.querySelector('.step-nav').style.display = isFinish ? 'none' : '';
-  btnNext.textContent = i === stepOrder.length - 1 ? t('nextFinish') : t('next');
-  // Disable next until current step has a selection (or no options are available)
+  // 选填步骤且还没选 -> 按钮直接说"跳过"，客户一眼知道可以走
+  const willSkip = !isFinish && step && isOptionalStep(step.type)
+    && !selections[step.type] && availablePartsCount[step.type] > 0;
+  btnNext.textContent = isFinish ? t('nextFinish')
+    : willSkip ? t('skip')
+    : i === stepOrder.length - 1 ? t('nextFinish') : t('next');
+  // Disable next until current step has a selection (or no options are available, or the step is optional)
   const stepReady = i === 0
     ? !!selectedCase
-    : !!(step && (selections[step.type] || availablePartsCount[step.type] === 0));
+    : !!(step && (selections[step.type] || availablePartsCount[step.type] === 0 || isOptionalStep(step.type)));
   btnNext.disabled = !stepReady;
   btnNext.style.opacity = stepReady ? '1' : '.45';
   btnNext.style.cursor = stepReady ? 'pointer' : 'not-allowed';
@@ -3107,15 +3152,22 @@ function nextStep() {
     alert(t('alertCase'));
     return;
   }
-  if (currentStep >= 1 && !selections[step.type] && availablePartsCount[step.type] > 0) {
-    alert(t('alertPartPre') + typeLabel(step.type) + t('alertPartPost'));
-    return;
+  const hasOptions = availablePartsCount[step.type] > 0;
+  if (currentStep >= 1 && !selections[step.type] && hasOptions) {
+    // 选填步骤：不选就是"跳过"，记住它，回头再往前走时不再停在这一步
+    if (isOptionalStep(step.type)) {
+      skippedSteps.add(step.type);
+    } else {
+      alert(t('alertPartPre') + typeLabel(step.type) + t('alertPartPost'));
+      return;
+    }
   }
   // Jump to the next step that still needs a choice (or has no options),
   // so returning to fix an earlier step doesn't mean re-walking everything.
   let i = currentStep + 1;
   while (i < stepOrder.length && i >= 1 &&
-         (selections[stepOrder[i].type] || availablePartsCount[stepOrder[i].type] === 0)) i++;
+         (selections[stepOrder[i].type] || availablePartsCount[stepOrder[i].type] === 0 ||
+          (isOptionalStep(stepOrder[i].type) && skippedSteps.has(stepOrder[i].type)))) i++;
   goToStep(i);
 }
 function prevStep() {
@@ -3126,6 +3178,7 @@ function prevStep() {
 function resetAll() {
   selectedCase = null;
   selections = {};
+  skippedSteps.clear();
   document.querySelectorAll('.case-card').forEach(c => c.classList.remove('selected'));
   document.querySelectorAll('.part-item').forEach(el => el.classList.remove('selected'));
   document.getElementById('previewName').textContent = t('previewSelect');
