@@ -997,7 +997,7 @@
     background: #fafafa;
   }
   .part-item.part-upload .part-swatch {
-    background: #f1ece2;
+    background: #f2f2f2;
     display: flex; align-items: center; justify-content: center;
   }
   .part-item.part-upload .part-swatch svg { width: 62%; height: 62%; }
@@ -1011,6 +1011,16 @@
   }
   .part-item .pi-edit:hover { border-color: var(--accent); color: var(--accent); }
   .part-item { position: relative; }
+  /* 再点一次就取消选择 —— 选中卡右下角给一个 ✕，不然这个操作没人能猜到
+     （右上角留给自定义字面的编辑铅笔，所以放右下） */
+  .part-item.selected::after {
+    content: '\00d7';
+    position: absolute; right: 6px; bottom: 6px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: 13px; line-height: 16px; text-align: center; font-weight: 700;
+    pointer-events: none;
+  }
 
   #dialEditor {
     position: fixed; inset: 0; z-index: 10050;
@@ -2160,29 +2170,32 @@ function renderParts() {
   if (dropped) { updatePreview(); updateSummary(); }
 }
 
-// Select a part
-function selectPart(type, part) {
-  selections[type] = part;
-  skippedSteps.delete(type);      // 选上了就不再算"跳过"
+// Select a part — clicking the one that is already selected clears it again
+// (B2B customers change their mind constantly, and a build that only accepts
+//  overwrites forces them to walk back a step to clear a part).
+// `forceSelect` skips the toggle: re-applying an edited custom dial must keep it selected.
+function selectPart(type, part, forceSelect) {
+  const already = !forceSelect && selections[type] && selections[type].id === part.id;
+  if (already) {
+    delete selections[type];
+  } else {
+    selections[type] = part;
+    skippedSteps.delete(type);    // 选上了就不再算"跳过"（取消时不改：等于"没选"）
+  }
 
   // Update UI
   document.querySelectorAll(`.part-item[data-type="${type}"]`).forEach(el => {
-    el.classList.toggle('selected', el.dataset.id === part.id);
+    el.classList.toggle('selected', !already && el.dataset.id === part.id);
   });
 
   // Update description
-  document.getElementById('desc-' + type).textContent = partDesc(part);
+  document.getElementById('desc-' + type).textContent = already ? t('descPh') : partDesc(part);
 
-  // Refresh wizard guide + next button for current step
+  // Refresh wizard guide + next button for current step (also puts the button back
+  // to 「跳过这一步 →」/disabled when the part was just cleared)
   const step = stepOrder[currentStep];
   if (currentStep >= 1 && currentStep < stepOrder.length && step && step.type === type) {
-    const guideEl = document.getElementById('stepGuide');
-    guideEl.textContent = t('pickedPre') + partName(part) + t('pickedPost');
-    guideEl.classList.add('guide-ok');
-    const btnNext = document.getElementById('btnNext');
-    btnNext.disabled = false;
-    btnNext.style.opacity = '1';
-    btnNext.style.cursor = 'pointer';
+    refreshStepChrome();
   }
 
   // 表镜会约束后面的插入（SJG06 只配平面插入），当场重建列表，
@@ -2286,7 +2299,7 @@ function buildCustomDialPart() {
     descriptionEn: 'Your uploaded image, cut to this case\u2019s dial size.',
     material: zh ? '自定义图片' : 'Your own image',
     matZh: '自定义图片', matEn: 'Your own image',
-    color: '#8a8377', category: 'universal',
+    color: '#9a9a9a', category: 'universal',
     image: out.toDataURL('image/png'),
     swatch: thumb.toDataURL('image/png'),
     radius: R, custom: true
@@ -2407,7 +2420,7 @@ function applyCustomDial() {
   if (!customDialSrc) { note.textContent = t('deNoImage'); return; }
   customDialPart = buildCustomDialPart();
   renderParts();                              // the edit card only exists after the list is rebuilt
-  selectPart('dial', customDialPart);         // selection, guide, preview, summary
+  selectPart('dial', customDialPart, true);   // force: re-applying an edited dial must not toggle it off
   closeDialEditor();
 }
 
@@ -3052,6 +3065,54 @@ function renderProgressBar() {
   }
 }
 
+// Current step's guide line + the state of the 「下一步」 button. Pulled out of goToStep()
+// because picking or clearing a part has to recompute both (clearing a part on a required
+// step must grey the button out again, and on an optional one must restore「跳过这一步」).
+function refreshStepChrome() {
+  const i = currentStep;
+  const step = stepOrder[i];
+  const guideEl = document.getElementById('stepGuide');
+  const btnNext = document.getElementById('btnNext');
+  if (!step || !guideEl || !btnNext) return;
+
+  if (i === 0) {
+    // 表壳那一步的文案由 goToStep 写，这里只管按钮
+    const ready = !!selectedCase;
+    btnNext.textContent = t('next');
+    btnNext.disabled = !ready;
+    btnNext.style.opacity = ready ? '1' : '.45';
+    btnNext.style.cursor = ready ? 'pointer' : 'not-allowed';
+    return;
+  }
+
+  const picked = selections[step.type];
+  const optional = isOptionalStep(step.type);
+  const hasOptions = availablePartsCount[step.type] > 0;
+  if (picked) {
+    guideEl.textContent = t('pickedPre') + partName(picked) + t('pickedPost');
+  } else if (!hasOptions) {
+    guideEl.textContent = t('noOptions');
+  } else if (optional) {
+    // 选填步骤：明确写出来，客户才敢直接跳过。回头再走到"已经跳过"的那一步时给更直白的说明。
+    guideEl.textContent = skippedSteps.has(step.type)
+      ? t('optionalHint')
+      : I18N.guides[step.type][LANG] + t('optional');
+  } else {
+    guideEl.textContent = I18N.guides[step.type][LANG] + t('required');
+  }
+  guideEl.classList.toggle('guide-ok', !!picked);
+
+  // 选填步骤且还没选 -> 按钮直接说"跳过"，客户一眼知道可以走
+  const willSkip = optional && !picked && hasOptions;
+  btnNext.textContent = willSkip ? t('skip')
+    : i === stepOrder.length - 1 ? t('nextFinish') : t('next');
+  // Disable next until current step has a selection (or no options are available, or the step is optional)
+  const ready = !!(picked || !hasOptions || optional);
+  btnNext.disabled = !ready;
+  btnNext.style.opacity = ready ? '1' : '.45';
+  btnNext.style.cursor = ready ? 'pointer' : 'not-allowed';
+}
+
 function goToStep(i) {
   const isFinish = i === stepOrder.length;
   const step = stepOrder[i];
@@ -3063,8 +3124,12 @@ function goToStep(i) {
   const titleEl = document.getElementById('stepTitle');
   const guideEl = document.getElementById('stepGuide');
   if (i === 0) {
+    // 完成页把标题藏起来了，回到第 1 步要显回来（"重新配置"之后否则看不到这一步的标题）
+    titleEl.style.display = '';
+    guideEl.style.display = '';
     titleEl.textContent = t('stepCase');
     guideEl.textContent = t('guideCase');
+    guideEl.classList.remove('guide-ok');
     // Collapse any expanded series when coming back to the case step
     document.querySelectorAll('.case-series.expanded').forEach(s => s.classList.remove('expanded'));
   } else if (isFinish) {
@@ -3074,21 +3139,6 @@ function goToStep(i) {
     titleEl.style.display = '';
     guideEl.style.display = '';
     titleEl.textContent = t('stepOf') + (i + 1) + t('stepPick') + typeLabel(step.type);
-    const picked = selections[step.type];
-    const optional = isOptionalStep(step.type);
-    if (picked) {
-      guideEl.textContent = t('pickedPre') + partName(picked) + t('pickedPost');
-    } else if (availablePartsCount[step.type] === 0) {
-      guideEl.textContent = t('noOptions');
-    } else if (optional) {
-      // 选填步骤：明确写出来，客户才敢直接跳过。回头再走到"已经跳过"的那一步时给更直白的说明。
-      guideEl.textContent = skippedSteps.has(step.type)
-        ? t('optionalHint')
-        : I18N.guides[step.type][LANG] + t('optional');
-    } else {
-      guideEl.textContent = I18N.guides[step.type][LANG] + t('required');
-    }
-    guideEl.classList.toggle('guide-ok', !!picked);
   }
 
   // Visibility
@@ -3108,19 +3158,13 @@ function goToStep(i) {
   btnNext.style.display = isFinish ? 'none' : '';
   // Finish screen has its own action bar — keep the step nav from stacking on top of it on phones
   document.querySelector('.step-nav').style.display = isFinish ? 'none' : '';
-  // 选填步骤且还没选 -> 按钮直接说"跳过"，客户一眼知道可以走
-  const willSkip = !isFinish && step && isOptionalStep(step.type)
-    && !selections[step.type] && availablePartsCount[step.type] > 0;
-  btnNext.textContent = isFinish ? t('nextFinish')
-    : willSkip ? t('skip')
-    : i === stepOrder.length - 1 ? t('nextFinish') : t('next');
-  // Disable next until current step has a selection (or no options are available, or the step is optional)
-  const stepReady = i === 0
-    ? !!selectedCase
-    : !!(step && (selections[step.type] || availablePartsCount[step.type] === 0 || isOptionalStep(step.type)));
-  btnNext.disabled = !stepReady;
-  btnNext.style.opacity = stepReady ? '1' : '.45';
-  btnNext.style.cursor = stepReady ? 'pointer' : 'not-allowed';
+  if (isFinish) {
+    btnNext.textContent = t('nextFinish');
+    btnNext.disabled = false;
+    btnNext.style.opacity = '1';
+  } else {
+    refreshStepChrome();     // 标题/提示/「跳过这一步」/置灰，统一由它算
+  }
 
   if (isFinish) {
     updateSummary();

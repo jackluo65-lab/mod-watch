@@ -133,7 +133,8 @@ const TAG = process.env.TAG || 'local';
   for (let i = 0; i < 20; i++) {
     const t = await p.evaluate(() => document.getElementById('stepTitle').textContent);
     if (/完成|大功告成|配置/.test(t)) break;
-    await p.evaluate(() => { const c = document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
+    await p.evaluate(() => { const g = document.querySelector('.part-group.active'); if (!g || g.querySelector('.part-item.selected')) return;   /* already chosen: clicking again would clear it */
+        const c = g.querySelector('.part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
     await p.waitForTimeout(150);
     await p.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });
     await p.waitForTimeout(300);

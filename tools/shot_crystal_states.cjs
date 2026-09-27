@@ -27,7 +27,7 @@ const walkToCrystal = async (page) => {
     if (/表镜/.test(t) || n >= 4) break;
     const opts = await page.evaluate(() => document.querySelectorAll('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').length);
     if (opts) {
-      await page.evaluate(() => document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').click());
+      await page.evaluate(() => { const g = document.querySelector('.part-group.active'); if (!g || g.querySelector('.part-item.selected')) return; const c = g.querySelector('.part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
       await page.waitForTimeout(200);
     }
     await page.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });

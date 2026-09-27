@@ -158,7 +158,7 @@ const EXPECT = {
       if (/表镜/.test(title)) sawCrystal = true;
       const opts = await page.evaluate(() => document.querySelectorAll('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').length);
       if (opts) {
-        await page.evaluate(() => document.querySelector('.part-group.active .part-item[data-id]:not([data-id="__upload__"])').click());
+        await page.evaluate(() => { const g = document.querySelector('.part-group.active'); if (!g || g.querySelector('.part-item.selected')) return; const c = g.querySelector('.part-item[data-id]:not([data-id="__upload__"])'); if (c) c.click(); });
         await page.waitForTimeout(160);
       }
       const advanced = await page.evaluate(() => {
