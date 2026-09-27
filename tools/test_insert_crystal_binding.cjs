@@ -17,6 +17,7 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
       insertCount: ins.length,
       ids: ins.map(el => el.dataset.id),
       allFlat: ins.every(el => /^(dl|zl|dn|zn|sn)-/.test(el.dataset.id)),
+      hasFlat: ins.some(el => /^(dl|zl|dn|zn|sn)-/.test(el.dataset.id)),
       pickedInsert: selections.insert ? selections.insert.code : null,
       pickedCrystal: selections.crystal ? selections.crystal.code : null,
       previewInsert: (() => {
@@ -56,10 +57,11 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   s = await snap();
   check('选 SJG06C -> 只剩 18 个平面插入', [s.insertCount, s.allFlat], [18, true]);
 
-  // 3. 选 SJG02C：约束解除，125 个回来
+  // 3. 选 SJG02C：斜面专用 -> 只剩 107 个斜面，18 个平面被挡
   await pick('crystal', 'SJG02C');
   s = await snap();
-  check('改选 SJG02C -> 恢复 125 个', [s.insertCount, s.allFlat], [125, false]);
+  check('改选 SJG02C -> 只剩 107 个斜面插入', [s.insertCount, s.allFlat], [107, false]);
+  check('SJG02 下不出现任何平面插入', [s.hasFlat], [false]);
 
   // 4. SJG02 下选一个斜面插入，再回头换成 SJG06 -> 那个斜面插入必须被清掉
   await pick('insert', 'D-GMT-11');
@@ -77,7 +79,7 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   // 6. 平面插入不会被"表镜无约束"误删
   await pick('crystal', 'SJG02C');
   s = await snap();
-  check('改回 SJG02C -> 平面插入保留、列表恢复 125', [s.pickedInsert, s.insertCount], ['DL-3', 125]);
+  check('改回 SJG02C -> 平面插入被清空、列表只剩 107 个斜面', [s.pickedInsert, s.insertCount], [null, 107]);
 
   // 7. 别系列不受影响：Vintage 没有平面插入，表镜步骤本身也是空的
   await page.evaluate(() => {

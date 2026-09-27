@@ -14296,7 +14296,8 @@
         "descriptionEn": "Crystal SJG02C — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
         "image": "img/crystal/SJG02C.png",
         "swatch": "img/crystal/thumb/SJG02C.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case",
+        "requiresInsert": "sloped"
       },
       {
         "id": "cr-sjg02r",
@@ -14310,7 +14311,8 @@
         "descriptionEn": "Crystal SJG02R — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
         "image": "img/crystal/SJG02R.png",
         "swatch": "img/crystal/thumb/SJG02R.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case",
+        "requiresInsert": "sloped"
       },
       {
         "id": "cr-sjg02b",
@@ -14324,7 +14326,8 @@
         "descriptionEn": "Crystal SJG02B — fits a beveled insert; made for the SKX 3.8 / 3.8 MORE / 3.0 / Samurai / SUB cases.",
         "image": "img/crystal/SJG02B.png",
         "swatch": "img/crystal/thumb/SJG02B.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX Samurai Case,SKX SUB Case",
+        "requiresInsert": "sloped"
       },
       {
         "id": "cr-sjg06c",
