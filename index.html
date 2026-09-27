@@ -2062,7 +2062,8 @@ function renderParts() {
 
     // 回头改前面的步骤，可能把后面已选的零件挤出列表（换成 SJG06 就排除掉全部斜面插入）。
     // 这里直接清掉，免得预览、清单和订单里留下一个配不上的组合。
-    if (selections[type] && !parts.includes(selections[type])) {
+    // 客户上传的自定义字面不在目录里（custom: true），它永远留着。
+    if (selections[type] && !selections[type].custom && !parts.includes(selections[type])) {
       selections[type] = null;
       dropped = true;
     }
