@@ -2076,8 +2076,6 @@ const OPTIONAL_STEPS = ['insert', 'dial', 'hands', 'strap'];
 const isOptionalStep = (type) => OPTIONAL_STEPS.includes(type);
 // 已被跳过（而不是"还没走到"）的步骤，回头再前进时不再停一次
 const skippedSteps = new Set();
-// 没选字面时的占位：一块无标记的空白表盘板，避免开孔处露出白底像"破图"
-const BLANK_DIAL_IMG = 'img/placeholder/dial-blank.png';
 
 // 零件分类匹配：universal/无分类零件不受限，其余必须与当前表壳同分类
 function categoryMatches(part, caseObj) {
@@ -2909,10 +2907,9 @@ function renderImgStack(bust) {
         if (selectedCase.views && selectedCase.views.front) layers.push({ url: selectedCase.views.front, type: 'case' });
       } else if (selections[k] && selections[k].image) {
         layers.push({ url: selections[k].image, type: k });
-      } else if (k === 'dial') {
-        // 字面是可跳过的：没有字面时垫一块空白盘，否则开孔里直接透出白底
-        layers.push({ url: BLANK_DIAL_IMG, type: 'dial' });
       }
+      // 没选字面时**不垫任何东西**：表壳画稿的中央开孔本来就是透明的，客户看到的是"装字面之前
+      // 的壳"。曾经垫过一块空白盘（怕看起来像破图），但用户明确说那是"中间一块白布" —— 恢复透明。
     });
   } else if (currentView === 'side') {
     if (selectedCase.views && selectedCase.views.side) layers.push({ url: selectedCase.views.side, type: 'case' });

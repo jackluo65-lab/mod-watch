@@ -95,19 +95,14 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   check('纯文本清单也写明可跳过（工厂能分清"没填"和"不用填"）',
     (panelRows.copy.match(/未选择（可跳过）/g) || []).length, 4);
 
-  // ---- 3. no dial -> a blank plate, never a hole in the case ----
-  console.log('\n== 不选字面时的预览 ==');
-  const noDial = await page.evaluate(() => ({
-    dial: selections.dial ? 'picked' : 'none',
-    blank: [...document.querySelectorAll('#imgStack img')].some(i => (i.getAttribute('src') || '').includes('dial-blank')),
-    z: (() => {
-      const im = [...document.querySelectorAll('#imgStack img')].find(i => (i.getAttribute('src') || '').includes('dial-blank'));
-      const ring = [...document.querySelectorAll('#imgStack img')].find(i => (i.getAttribute('src') || '').includes('/chapterRing/'));
-      return im && ring ? { dial: +getComputedStyle(im).zIndex, ring: +getComputedStyle(ring).zIndex } : null;
-    })(),
-  }));
-  check('没选字面时预览垫的是空白字面底板', [noDial.dial, noDial.blank], ['none', true]);
-  check('空白底板在内影圈之下（和真字面同一槽位）', noDial.z && noDial.z.dial < noDial.z.ring, true);
+  // ---- 3. no dial -> nothing is drawn in the dial slot: the case's bore is transparent art,
+  //         and the customer sees the case as it is before a dial goes in. (A blank grey plate
+  //         lived here for two days; the user read it as "a white cloth over the case".)
+  console.log('\n== 不选字面时的预览：开孔保持透明 ==');
+  const hasDialLayer = () => page.evaluate(() => [...document.querySelectorAll('#imgStack img')]
+    .some(i => { const s = i.getAttribute('src') || ''; return s.includes('/dial/') || s.startsWith('data:image'); }));
+  const noDial = await page.evaluate(() => ({ dial: selections.dial ? 'picked' : 'none' }));
+  check('没选字面时预览里没有字面图层（开孔透明）', [noDial.dial, await hasDialLayer()], ['none', false]);
 
   // ---- 4. required steps are still required ----
   console.log('\n== 必选步骤仍然拦人 ==');

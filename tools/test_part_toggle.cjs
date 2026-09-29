@@ -42,6 +42,10 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
       nextLabel: btn.textContent.trim(),
       nextDisabled: btn.disabled,
       layers: [...document.querySelectorAll('#imgStack img')].map(i => (i.getAttribute('src') || '').split('/').pop()),
+      // full srcs, because the dial files are named WD-D####.png — the path is the only hint
+      hasDialLayer: [...document.querySelectorAll('#imgStack img')].some(i => {
+        const s = i.getAttribute('src') || ''; return s.includes('/dial/') || s.startsWith('data:image');
+      }),
     };
   }, type);
 
@@ -84,8 +88,8 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
   check('取消后提示回到必选、下一步重新置灰',
     [/必选/.test(bzOff.guide), bzOff.nextLabel, bzOff.nextDisabled], [true, '下一步 →', true]);
   check('取消后描述回到占位文案', bzOff.desc === bzBefore.desc, true);
-  check('取消后预览里没有表圈图层（也没有白色空洞）',
-    [bzOff.layers.some(f => /bezel/i.test(f)), bzOff.layers.some(f => /dial-blank/.test(f))], [false, true]);
+  check('取消后预览里没有表圈图层，字面槽位也空着（开孔透明，不垫白盘）',
+    [bzOff.layers.some(f => /bezel/i.test(f)), bzOff.hasDialLayer], [false, false]);
 
   // ---- 2. picking a sibling replaces, it does not toggle the old one ----
   console.log('\n== 同一组里换一个：直接换掉，不是叠加 ==');
@@ -173,7 +177,9 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
   const own2 = await page.evaluate(() => ({
     picked: selections.dial ? selections.dial.id : null,
     marked: document.querySelectorAll('.part-item[data-type="dial"].selected').length,
-    blank: [...document.querySelectorAll('#imgStack img')].some(i => (i.getAttribute('src') || '').includes('dial-blank')),
+    blank: [...document.querySelectorAll('#imgStack img')].some(i => {
+      const s = i.getAttribute('src') || ''; return s.includes('/dial/') || s.startsWith('data:image');
+    }),
   }));
   await page.evaluate(() => { document.querySelector('.part-item .pi-edit').click(); });
   await page.waitForTimeout(500);
@@ -184,7 +190,7 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
     marked: document.querySelectorAll('.part-item[data-type="dial"].selected').length,
   }));
   check('上传后自己的字面被选中', [own1.picked, own1.marked, own1.hasEdit], ['dl-custom', 1, true]);
-  check('再点一下卡片 → 取消，预览回到空白盘', [own2.picked, own2.marked, own2.blank], [null, 0, true]);
+  check('再点一下卡片 → 取消，预览里也不再有字面图层', [own2.picked, own2.marked, own2.blank], [null, 0, false]);
   check('从 ✎ 重新应用同一张图 → 仍是选中（不会被当成取消）',
     [own3.picked === null, own3.marked], [false, 1]);
 
