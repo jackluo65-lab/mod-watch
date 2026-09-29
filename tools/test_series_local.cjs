@@ -23,9 +23,19 @@ async function walk(page, cat, variantIdx) {
       hint: getComputedStyle(document.getElementById('loadHint')).display
     }));
     log.push(s);
-    if (s.cards.length) { await page.click('.part-group.active .part-item'); await page.waitForTimeout(500); }
+    // 别点「上传自己的字面」那张卡（会弹编辑器挡住下一步），也别在已选中的步骤上重复点
+    // （再点一次 = 取消选择）
+    if (s.cards.length) {
+      await page.evaluate(() => {
+        const g = document.querySelector('.part-group.active');
+        if (!g || g.querySelector('.part-item.selected')) return;
+        const c = g.querySelector('.part-item[data-id]:not([data-id="__upload__"])');
+        if (c) c.click();
+      });
+      await page.waitForTimeout(500);
+    }
     const before = s.title;
-    await page.click('#btnNext');
+    await page.evaluate(() => { const n = document.getElementById('btnNext'); if (n && !n.disabled) n.click(); });
     await page.waitForTimeout(450);
     if ((await page.evaluate(() => document.getElementById('stepTitle').textContent)) === before) break;
   }

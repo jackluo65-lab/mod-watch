@@ -15,6 +15,14 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
   await page.goto(URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(2200);
 
+  // Removing the case asks for confirmation when the build is not empty; a native dialog
+  // would block the run, so answer it programmatically.
+  await page.evaluate(() => {
+    window.__confirms = [];
+    window.__confirmAnswer = true;
+    window.confirm = (m) => { window.__confirms.push(String(m)); return window.__confirmAnswer; };
+  });
+
   const results = [];
   const check = (label, got, want) => {
     const ok = JSON.stringify(got) === JSON.stringify(want);
@@ -179,6 +187,87 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
   check('再点一下卡片 → 取消，预览回到空白盘', [own2.picked, own2.marked, own2.blank], [null, 0, true]);
   check('从 ✎ 重新应用同一张图 → 仍是选中（不会被当成取消）',
     [own3.picked === null, own3.marked], [false, 1]);
+
+  // ---- 7. the case card toggles too, and removing it clears the build ----
+  console.log('\n== 表壳：再点一次取消（连带清空零件） ==');
+  await page.evaluate(() => { selections = {}; skippedSteps.clear(); resetAll(); });
+  await page.waitForTimeout(500);
+  const caseId = await page.evaluate(() => {
+    const s = [...document.querySelectorAll('.case-series')].find(x => x.dataset.category === 'SKX 3.8 Case');
+    (s.querySelector('.case-series-rep') || s.querySelector('.case-series-header')).click();
+    const c = s.querySelector('.case-series-variants .case-card');
+    const id = c.dataset.id;
+    c.click();
+    return id;
+  });
+  await page.waitForTimeout(800);
+  await page.evaluate(() => { const bz = document.querySelector('#list-bezel .part-item[data-id]'); if (bz) bz.click(); });
+  await page.waitForTimeout(400);
+  await page.evaluate(() => goToStep(0));
+  await page.waitForTimeout(600);
+
+  const backOnStep0 = await page.evaluate((caseId) => {
+    const card = document.querySelector('.case-card[data-id="' + caseId + '"]');
+    const series = card.closest('.case-series');
+    return {
+      marked: document.querySelectorAll('.case-card.selected').length,
+      hasX: getComputedStyle(card, '::after').content !== 'none',
+      seriesExpanded: series.classList.contains('expanded'),
+      hint: (series.querySelector('.rep-hint') || {}).textContent,
+    };
+  }, caseId);
+  check('选中表壳的卡带 ✕，且回到第 1 步时它所在的系列自动展开（✕ 一步就能点到）',
+    [backOnStep0.marked, backOnStep0.hasX, backOnStep0.seriesExpanded], [1, true, true]);
+  check('系列代表卡写着「已选」', /已选/.test(backOnStep0.hint || ''), true);
+
+  await page.evaluate(() => { window.__confirmAnswer = false; window.__confirms = []; });
+  await page.evaluate((caseId) => document.querySelector('.case-card[data-id="' + caseId + '"]').click(), caseId);
+  await page.waitForTimeout(600);
+  const kept = await page.evaluate(() => ({
+    caseCode: selectedCase && selectedCase.code,
+    bezel: selections.bezel ? selections.bezel.code : null,
+    asked: window.__confirms.length,
+    text: window.__confirms[0] || '',
+  }));
+  check('已经选了零件时会先问一句（这次答「否」）', [kept.asked, /清空/.test(kept.text)], [1, true]);
+  check('答「否」时表壳和零件都还在', [kept.caseCode, !!kept.bezel], ['SKX-B-1', true]);
+
+  await page.evaluate(() => { window.__confirmAnswer = true; window.__confirms = []; });
+  await page.evaluate((caseId) => document.querySelector('.case-card[data-id="' + caseId + '"]').click(), caseId);
+  await page.waitForTimeout(800);
+  const cleared = await page.evaluate(() => ({
+    caseCode: selectedCase ? selectedCase.code : null,
+    picks: Object.keys(selections).filter(k => selections[k]).length,
+    markedCards: document.querySelectorAll('.case-card.selected').length,
+    markedParts: document.querySelectorAll('.part-item.selected').length,
+    repHint: (document.querySelector('.case-series-rep .rep-hint') || {}).textContent,
+    hero: getComputedStyle(document.getElementById('emptyHint')).display !== 'none',
+    step: document.getElementById('stepTitle').textContent.trim(),
+    row: (() => { openBuildPanel(); const r = document.querySelector('#bpList .bp-row'); return r ? r.textContent.replace(/\s+/g, ' ').trim() : null; })(),
+  }));
+  await page.evaluate(() => closeBuildPanel());
+  check('答「是」后表壳被清空、零件一并清掉',
+    [cleared.caseCode, cleared.picks, cleared.markedCards, cleared.markedParts], [null, 0, 0, 0]);
+  check('回到第 1 步并显示"选择表壳"的画面', [/第 1 步/.test(cleared.step), cleared.hero], [true, true]);
+  check('系列代表卡的「已选」提示也复原了', /已选/.test(cleared.repHint || ''), false);
+  check('「我的配置」里表壳行回到"还没选表壳"', /还没选表壳/.test(cleared.row || ''), true);
+
+  await page.evaluate(() => { window.__confirms = []; });
+  await page.evaluate(() => {
+    const s = [...document.querySelectorAll('.case-series')].find(x => x.dataset.category === 'SKX 3.8 Case');
+    (s.querySelector('.case-series-rep') || s.querySelector('.case-series-header')).click();
+    s.querySelector('.case-series-variants .case-card').click();
+  });
+  await page.waitForTimeout(800);
+  await page.evaluate(() => goToStep(0));
+  await page.waitForTimeout(500);
+  await page.evaluate(() => { document.querySelector('.case-card.selected').click(); });
+  await page.waitForTimeout(700);
+  const silent = await page.evaluate(() => ({
+    asked: window.__confirms.length,
+    caseCode: selectedCase ? selectedCase.code : null,
+  }));
+  check('没选任何零件时直接取消，不弹确认框', [silent.asked, silent.caseCode], [0, null]);
 
   console.log('');
   console.log(results.every(Boolean) ? '全部通过 (' + results.length + ')' : '有失败项: ' + results.filter(x => !x).length);
