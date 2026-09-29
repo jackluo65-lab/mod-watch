@@ -1149,6 +1149,42 @@
   }
   .bp-msg button:hover { border-color: var(--accent); color: var(--accent); }
 
+  /* 只查图：输入编号 -> 显示这个编号长什么样（不动配置） */
+  .bp-look { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 14px; }
+  .bp-look h4 { font-size: 14px; font-weight: 600; margin: 0 0 3px; }
+  .bp-look .bp-hint { font-size: 12px; color: var(--text-dim, #999); margin: 0 0 9px; }
+  .bp-look-result { display: flex; flex-direction: column; gap: 10px; }
+  .bp-look-result:not(:empty) { margin-top: 12px; }
+  .lk-card {
+    display: flex; gap: 12px; align-items: flex-start;
+    border: 1px solid var(--border); border-radius: 10px; padding: 10px;
+  }
+  .lk-img {
+    width: 104px; flex: 0 0 104px; aspect-ratio: 4 / 5; background: #f5f5f5;
+    border-radius: 8px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lk-img img { width: 100%; height: 100%; object-fit: contain; }
+  .lk-noimg { font-size: 11px; color: var(--text-dim, #999); text-align: center; padding: 0 6px; line-height: 1.4; }
+  .lk-info { flex: 1; min-width: 0; }
+  .lk-type { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim, #999); }
+  .lk-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 15px; font-weight: 700; color: var(--accent); letter-spacing: .02em; margin-top: 1px;
+  }
+  .lk-name { font-size: 13px; margin-top: 3px; }
+  .lk-scope { font-size: 12px; color: var(--text2); margin-top: 3px; }
+  .lk-note { font-size: 12px; color: #a9700a; margin-top: 6px; }
+  .lk-use {
+    margin-top: 9px; padding: 6px 12px; font-size: 12.5px; font-family: inherit;
+    border: 1px solid var(--border); border-radius: 999px; background: #fff; cursor: pointer;
+  }
+  .lk-use:hover { border-color: var(--accent); color: var(--accent); }
+  .lk-err {
+    border: 1px solid #f2cccc; background: #fdf4f4; color: #c0392b;
+    border-radius: 8px; padding: 10px 12px; font-size: 12.5px; line-height: 1.55;
+  }
+
   /* Responsive */
   @media (max-width: 960px) {
     .main { flex-direction: column; padding: 20px; }
@@ -1704,6 +1740,16 @@
       </div>
       <div class="bp-msg" id="bpMsg"></div>
     </div>
+    <!-- 只查图的入口：输入编号 -> 显示这个编号的零件图片，不改动上面的配置 -->
+    <div class="bp-look">
+      <h4 id="bpLookTitle">想看某个编号长什么样？</h4>
+      <p class="bp-hint" id="bpLookHint">输入编号，这里显示它对应的零件图片（不会改动上面的配置）</p>
+      <div class="bp-find-row">
+        <input id="bpLookCode" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="例如 B-JD-1、CR-G-3、D1067">
+        <button class="de-btn ghost" id="bpLookBtn" type="button" style="flex:0 0 auto">看图</button>
+      </div>
+      <div class="bp-look-result" id="bpLookResult"></div>
+    </div>
   </div>
 </div>
 
@@ -1751,6 +1797,20 @@ const I18N = {
   bpOptional:   { zh: '选填', en: 'OPTIONAL' },
   caseClearConfirm: { zh: '取消选择表壳会一并清空已选的零件，确定吗？', en: 'Removing the case clears the parts you have chosen. Continue?' },
   caseClearTip: { zh: '再点一次可取消选择表壳', en: 'Tap again to remove the case' },
+  bpLookTitle:  { zh: '想看某个编号长什么样？', en: 'What does a part number look like?' },
+  bpLookHint:   { zh: '输入编号，这里显示它对应的零件图片（不会改动上面的配置）', en: 'Type a number to see its part picture. Your build is left alone.' },
+  bpLookPh:     { zh: '例如 B-JD-1、CR-G-3、D1067', en: 'e.g. B-JD-1, CR-G-3, D1067' },
+  bpLookBtn:    { zh: '看图', en: 'Show' },
+  bpLookEmpty:  { zh: '请先输入零件编号', en: 'Type a part number first' },
+  bpNoSuchCodePre:  { zh: '没有这个零件编号：', en: 'No such part number: ' },
+  bpNoSuchCodePost: { zh: '。请核对编号，或直接联系我们确认。', en: '. Please check the number, or contact us to confirm it.' },
+  lkUniversal:  { zh: '通用 · 所有系列', en: 'Universal — every family' },
+  lkNoCase:     { zh: '暂无可用表壳', en: 'No case takes this one' },
+  lkFamilies:   { zh: '适配 {n} 个系列', en: 'Fits {n} families' },
+  lkUseCase:    { zh: '换成这个表壳', en: 'Use this case' },
+  lkUsePart:    { zh: '用到这套配置', en: 'Add to my build' },
+  lkNotForCase: { zh: '当前表壳装不上这个编号', en: 'Does not fit the case you picked' },
+  lkNoImage:    { zh: '暂无图片', en: 'No picture yet' },
   pickedPre:    { zh: '已选「', en: 'Selected \u201C' },
   pickedPost:   { zh: '」— 好眼光。确认后继续下一步', en: '\u201D — great taste. Continue when ready' },
   next:         { zh: '下一步 →', en: 'Next →' },
@@ -2656,6 +2716,68 @@ function applyCodeLookup() {
   renderBuildPanel();
 }
 
+// ===== 按编号"看图"（只读，不改配置）=====
+// 客户手里可能有一串零件编号，想先看看是什么样子。输入编号 -> 下面显示对应的零件图片；
+// 库里找不到这个编号时明确提示（客户的编号有可能不是我们的型号，别默默什么都不做）。
+// 「适配范围」一句话。按**实际挂载**算，不按 category —— 字面/内影圈这类零件 category 写的是
+// universal，但只有部分系列真的挂了它们（d216 那档只挂 Vintage）。用 category 会出现
+// 「通用 · 所有系列」和「当前表壳装不上这个编号」自相矛盾的画面。
+function lkScopeLabel(part, type) {
+  if (type === 'case') return '';
+  const owners = DATA.caseSeries.filter(c =>
+    (c.compatibleParts[type] || []).includes(part.id) && categoryMatches(part, c));
+  if (!owners.length) return t('lkNoCase');
+  const fams = [...new Set(owners.map(c => c.category))];
+  return fams.length === 1 ? fams[0] : t('lkFamilies').replace('{n}', String(fams.length));
+}
+
+function lookCard(type, part) {
+  const isCase = type === 'case';
+  const src = isCase ? ((part.views || {}).front || '') : (part.image || '');
+  const noImg = !src || src.includes('/placeholder/');
+  const canUse = isCase ? true : !!(selectedCase &&
+    (selectedCase.compatibleParts[type] || []).includes(part.id) && categoryMatches(part, selectedCase));
+  const action = canUse
+    ? `<button class="lk-use" type="button" data-lk-use="${type}|${escHtml(part.id)}">${escHtml(t(isCase ? 'lkUseCase' : 'lkUsePart'))}</button>`
+    : (isCase ? '' : `<div class="lk-note">${escHtml(t('lkNotForCase'))}</div>`);
+  return `
+    <div class="lk-card">
+      <div class="lk-img">${noImg
+        ? `<div class="lk-noimg">${escHtml(t('lkNoImage'))}</div>`
+        : `<img src="${escHtml(src)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`}</div>
+      <div class="lk-info">
+        <div class="lk-type">${escHtml(typeLabel(type))}</div>
+        <div class="lk-code">${escHtml(part.code || '—')}</div>
+        <div class="lk-name">${escHtml(partName(part))}</div>
+        ${lkScopeLabel(part, type) ? `<div class="lk-scope">${escHtml(lkScopeLabel(part, type))}</div>` : ''}
+        ${action}
+      </div>
+    </div>`;
+}
+
+function lookUpCode() {
+  const input = document.getElementById('bpLookCode');
+  const box = document.getElementById('bpLookResult');
+  if (!input || !box) return;
+  const raw = (input.value || '').trim();
+  if (!raw) { box.innerHTML = `<div class="lk-err">${escHtml(t('bpLookEmpty'))}</div>`; return; }
+  const hits = findCodeHits(raw);
+  if (!hits || (!hits.cases.length && !hits.parts.length)) {
+    // 零件库里没有这个编号 —— 明确告诉客户
+    box.innerHTML = `<div class="lk-err">${escHtml(t('bpNoSuchCodePre') + raw.toUpperCase() + t('bpNoSuchCodePost'))}</div>`;
+    return;
+  }
+  box.innerHTML = hits.cases.map(c => lookCard('case', c))
+    .concat(hits.parts.map(h => lookCard(h.type, h.part))).join('');
+  box.querySelectorAll('[data-lk-use]').forEach(btn => btn.addEventListener('click', () => {
+    const [type, id] = btn.dataset.lkUse.split('|');
+    if (type === 'case') { selectCase(id); renderBuildPanel(); return; }
+    const part = (DATA.parts[type] || []).find(x => x.id === id);
+    if (part) selectPart(type, part);
+    renderBuildPanel();
+  }));
+}
+
 function applyBuildPanelTexts() {
   const zh = LANG === 'zh';
   const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
@@ -2666,8 +2788,13 @@ function applyBuildPanelTexts() {
   set('bpFindTitle', zh ? '有指定的零件编号？直接输入' : 'Have a part number? Enter it here');
   set('bpFindHint', zh ? '输入后自动切换成对应的零件，预览会同步更新' : 'We switch the build to that part and the preview updates');
   set('bpApply', zh ? '查找' : 'Find');
+  set('bpLookTitle', zh ? '想看某个编号长什么样？' : 'What does a part number look like?');
+  set('bpLookHint', zh ? '输入编号，这里显示它对应的零件图片（不会改动上面的配置）' : 'Type a number to see its part picture. Your build is left alone.');
+  set('bpLookBtn', zh ? '看图' : 'Show');
   const inp = document.getElementById('bpCode');
   if (inp) inp.placeholder = zh ? '例如 B-JD-1、C-JTF-1、D1067' : 'e.g. B-JD-1, C-JTF-1, D1067';
+  const linp = document.getElementById('bpLookCode');
+  if (linp) linp.placeholder = t('bpLookPh');
 }
 
 function openBuildPanel() {
@@ -2676,6 +2803,9 @@ function openBuildPanel() {
   applyBuildPanelTexts();
   renderBuildPanel();
   setBpMsg('', '');
+  // 上次查过的编号保留着 —— 重开面板时重新渲染一次，让"能不能装在这个表壳上"是最新的
+  const lookInput = document.getElementById('bpLookCode');
+  if (lookInput && lookInput.value.trim()) lookUpCode();
   p.classList.add('show');
   p.setAttribute('aria-hidden', 'false');
   const inp = document.getElementById('bpCode');
@@ -2696,6 +2826,10 @@ function closeBuildPanel() {
   document.getElementById('bpApply').addEventListener('click', applyCodeLookup);
   document.getElementById('bpCode').addEventListener('keydown', e => {
     if (e.key === 'Enter') { e.preventDefault(); applyCodeLookup(); }
+  });
+  document.getElementById('bpLookBtn').addEventListener('click', lookUpCode);
+  document.getElementById('bpLookCode').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); lookUpCode(); }
   });
   p.addEventListener('click', e => { if (e.target === p) closeBuildPanel(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && p.classList.contains('show')) closeBuildPanel(); });
