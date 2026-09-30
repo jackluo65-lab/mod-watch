@@ -109,6 +109,21 @@ const TAG = process.env.TAG || 'local';
     return { clip, msg: document.getElementById('bpMsg').textContent.trim() };
   });
   console.log('copy:', JSON.stringify(copied).slice(0, 260));
+  // 8a) 清单不该自我重复：类别和编号现在各有自己的列，规格里就不该再出现一次
+  const plain = await p.evaluate(() => {
+    const rows = buildRows();
+    return {
+      text: buildPlainText(),
+      rows: rows.map(r => ({ label: r.label, code: r.code || '', name: r.name || '', empty: r.empty })),
+    };
+  });
+  const lines = plain.text.split('\n').slice(1);
+  const codesDup = lines.filter(l => { const m = l.match(/[A-Z]{1,4}(?:-[A-Z0-9]{1,4}){1,4}/g) || []; return new Set(m).size !== m.length; });
+  const labelInSpec = plain.rows.filter(r => !r.empty && r.name && r.label && r.name.includes(r.label));
+  const codeInSpec = plain.rows.filter(r => !r.empty && r.name && r.code && new RegExp(r.code.replace(/-/g, '[-\\s]?'), 'i').test(r.name));
+  // 名称就是编号的那些零件（插入、部分表圈）：清单里就该只出现一次编号
+  const bareRows = plain.rows.filter(r => !r.empty && !r.name && r.code);
+  console.log('plain text:\n' + plain.text + '\n');
 
   // 8b) the badge counts the steps still empty — read it with the panel open so both
   //     numbers come from the same render
@@ -173,6 +188,15 @@ const TAG = process.env.TAG || 'local';
     ['不存在的编号给出错误提示', nope.cls.includes('err')],
     ['复制清单可用', (copied.clip.includes('MOD WATCH') || copied.msg.length > 0) && copied.clip.length > 40],
     ['完成页清单同样带编号', finish.withCode.length >= 3 && /[A-Z]/.test(finish.sample)],
+    ['清单里每一行的编号都不重复（左侧编号列已足够）', codesDup.length === 0],
+    ['规格里不再重复类别词（「表圈 B-C-1」不会再写一遍「表圈」）', labelInSpec.length === 0],
+    ['规格里不再重复编号', codeInSpec.length === 0],
+    ['清单是「类别 + 编号 + 规格」三列，10 个步骤一行不少', lines.length === 10 && /^表壳\s{2,}[A-Z]/.test(lines[0])],
+    ['名称就是编号的那种零件（插入/部分表圈）在清单里只出现一次编号',
+      bareRows.length >= 1 && bareRows.every(r => {
+        const line = lines.find(l => l.startsWith(r.label + ' '));
+        return !!line && line.split(r.code).length === 2;
+      })],
   ];
   let pass = 0, fail = 0;
   for (const [n, ok] of checks) { console.log(`   ${ok ? '✓' : '✗'} ${n}`); ok ? pass++ : fail++; }

@@ -1875,6 +1875,51 @@ const I18N = {
 };
 function t(key) { return I18N[key][LANG]; }
 function partName(p) { return LANG === 'zh' ? (p.nameZh || p.name) : p.name; }
+// 清单里的「规格」= 名称去掉编号与类别词之后剩下的部分。
+// 数据里的名称常常自带这两样（「表镜 SJG06B 蓝色涂层」「SKX 3.8 表壳 SKX-B-1 哑光 银色壳」），
+// 而清单本身已经有类别列和编号列，照抄名称就成了「表镜 SJG06B 表镜 SJG06B 蓝色涂层」。
+// 这里只做减法，不重排、不改写，剩下的就是客户要看的规格。
+const PART_LABELS = {
+  zh: { case: '表壳', bezel: '表圈', chapterRing: '内影圈', insert: '插入', crystal: '表镜',
+        dial: '字面', hands: '表针', crown: '表冠', caseback: '后盖', strap: '表带' },
+  en: { case: 'Case', bezel: 'Bezel', chapterRing: 'Chapter Ring', insert: 'Insert', crystal: 'Crystal',
+        dial: 'Dial', hands: 'Hands', crown: 'Crown', caseback: 'Caseback', strap: 'Strap' }
+};
+const BRACKET_END = { '（': '）', '(': ')', '【': '】', '[': ']' };
+function escRe(str) { return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function partSpec(type, part) {
+  if (!part) return '';
+  // 客户自己上传的字面不在零件库里，名字就叫「我的字面」—— 别去动它
+  if (part.custom) return partName(part);
+  let s = partName(part) || '';
+  const code = part.code || '';
+  // 编号本身（连字符可以省掉或写成空格：B-JD-1 / BJD1 / B JD 1 都认）
+  if (code) s = s.replace(new RegExp(escRe(code).replace(/-/g, '[-\\s]?'), 'ig'), ' ');
+  // 类别词：中文直接删，英文按整词删
+  const label = (PART_LABELS[LANG] || PART_LABELS.zh)[type];
+  if (label) {
+    const pat = LANG === 'zh' ? escRe(label) : '\\b' + escRe(label) + '\\b';
+    s = s.replace(new RegExp(pat, 'gi'), ' ');
+  }
+  s = s.replace(/\s+/g, ' ').trim();
+  // 删词后可能留下「罗马数字 （日历）」这种括号前的空格 —— 只收拾全角标点；
+  // 英文名称里的「Roman Numeral (Date)」「Polished Black, Straight Knurl」是原生写法，别动。
+  s = s.replace(/\s+([（【　])/g, '$1').replace(/([）】])\s+/g, '$1');
+  // 整体被一对括号包住时脱掉：「（哑光 LX 银色）」→「哑光 LX 银色」
+  if (s.length > 2 && BRACKET_END[s[0]] && s[s.length - 1] === BRACKET_END[s[0]]) s = s.slice(1, -1).trim();
+  return s.replace(/^[·、,，\-–— ]+|[·、,，\-–— ]+$/g, '').trim();
+}
+
+// 纯文本清单按「显示宽度」对齐：中文按 2 列算，这样粘到微信/文档里三列是对齐的
+function textWidth(str) {
+  let n = 0;
+  for (const ch of String(str)) {
+    n += /[\u2014\u2E80-\uA4CF\uAC00-\uD7A3\uF900-\uFAFF\uFE30-\uFE4F\uFF00-\uFF60\uFFE0-\uFFE6]/.test(ch) ? 2 : 1;
+  }
+  return n;
+}
+function padCol(str, w) { return String(str) + ' '.repeat(Math.max(0, w - textWidth(str))); }
 function partDesc(p) { return LANG === 'zh' ? p.description : (p.descriptionEn || p.description); }
 // Uploaded parts carry both languages; catalogue parts just have one material string
 function partMaterial(p) { return LANG === 'zh' ? (p.matZh || p.material) : (p.matEn || p.material); }
@@ -2578,7 +2623,7 @@ function escHtml(s) {
 function buildRows() {
   const rows = [{
     type: 'case', label: typeLabel('case'),
-    name: selectedCase ? partName(selectedCase) : t('bpNoCase'),
+    name: selectedCase ? partSpec('case', selectedCase) : t('bpNoCase'),
     code: selectedCase ? (selectedCase.code || '') : '',
     thumb: selectedCase ? (selectedCase.swatch || (selectedCase.views && selectedCase.views.front) || '') : '',
     empty: !selectedCase
@@ -2588,7 +2633,7 @@ function buildRows() {
     const sel = selections[step.type];
     const optional = isOptionalStep(step.type);
     rows.push(sel ? {
-      type: step.type, label: typeLabel(step.type), name: partName(sel),
+      type: step.type, label: typeLabel(step.type), name: partSpec(step.type, sel),
       code: sel.code || '', thumb: sel.swatch || sel.image || '', empty: false, optional
     } : {
       type: step.type, label: typeLabel(step.type),
@@ -2619,7 +2664,7 @@ function renderBuildPanel() {
       <div class="bp-thumb">${r.thumb ? `<img src="${escHtml(r.thumb)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : ''}</div>
       <div class="bp-info">
         <div class="bp-type">${escHtml(r.label)}${r.optional ? `<span class="bp-tag">${t('bpOptional')}</span>` : ''}</div>
-        <div class="bp-name">${escHtml(r.name)}</div>
+        ${r.name ? `<div class="bp-name">${escHtml(r.name)}</div>` : ''}
       </div>
       <div class="bp-code">${r.code ? escHtml(r.code) : '\u2014'}</div>
     </div>
@@ -2627,10 +2672,19 @@ function renderBuildPanel() {
 }
 
 function buildPlainText() {
-  // 「选填未选」在纯文本清单里写出来，工厂才知道客户是故意不选，而不是漏填
-  return [t('bpCopyHead')].concat(
-    buildRows().map(r => `${r.label} ${r.code || '\u2014'}${r.empty ? (r.optional ? ' ' + t('bpSkipped') : '') : ' ' + r.name}`)
-  ).join('\n');
+  // 三列：类别 / 编号 / 规格。规格已经是去掉编号与类别词之后的部分，不再重复。
+  // 「选填未选」写出来，工厂才知道客户是故意不选，而不是漏填。
+  const rows = buildRows();
+  const codeOf = r => r.code || '\u2014';
+  const labelW = Math.max(...rows.map(r => textWidth(r.label)));
+  const codeW = Math.max(...rows.map(r => textWidth(codeOf(r))));
+  const lines = rows.map(r => {
+    let line = padCol(r.label, labelW) + '  ' + padCol(codeOf(r), codeW);
+    // 必选步骤还没选：只留一个占位符，不写「未选择」（那是向导里的说法，不是给工厂看的）
+    if (r.name && (!r.empty || r.optional)) line += '  ' + r.name;
+    return line.replace(/\s+$/, '');
+  });
+  return [t('bpCopyHead')].concat(lines).join('\n');
 }
 
 function setBpMsg(text, cls, buttons) {
@@ -2733,6 +2787,7 @@ function lkScopeLabel(part, type) {
 
 function lookCard(type, part) {
   const isCase = type === 'case';
+  const spec = partSpec(type, part);
   const src = isCase ? ((part.views || {}).front || '') : (part.image || '');
   const noImg = !src || src.includes('/placeholder/');
   const canUse = isCase ? true : !!(selectedCase &&
@@ -2748,7 +2803,7 @@ function lookCard(type, part) {
       <div class="lk-info">
         <div class="lk-type">${escHtml(typeLabel(type))}</div>
         <div class="lk-code">${escHtml(part.code || '—')}</div>
-        <div class="lk-name">${escHtml(partName(part))}</div>
+        ${spec ? `<div class="lk-name">${escHtml(spec)}</div>` : ''}
         ${lkScopeLabel(part, type) ? `<div class="lk-scope">${escHtml(lkScopeLabel(part, type))}</div>` : ''}
         ${action}
       </div>
@@ -3429,6 +3484,11 @@ function setLang(l) {
     renderParts();
     updatePreview();
     updateSummary();
+  }
+  // 面板若开着，里面的类别/编号/规格也要换成新语言
+  if (document.getElementById('buildPanel').classList.contains('show')) {
+    applyBuildPanelTexts();
+    renderBuildPanel();
   }
   goToStep(currentStep);
 }

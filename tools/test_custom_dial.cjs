@@ -125,6 +125,8 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
       guide: document.getElementById('stepGuide').textContent,
       nextDisabled: document.getElementById('btnNext').disabled,
       stack,
+      // 客户自己的字面在清单里怎么写 —— 名字就叫「我的字面」，不该被当成类别词剥成「我的」
+      specRow: (buildRows().find(r => r.type === 'dial') || {}).name,
     };
   });
   console.log('after apply:', JSON.stringify(applied));
@@ -172,6 +174,7 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
 
   const checks = [
     ['字面步骤出现「上传自己的字面」卡片', ctx.hasUploadCard],
+    ['清单里客户自己的字面写「我的字面」（不被当类别词剥掉）', /我的字面/.test(applied.specRow || '')],
     ['上传卡不计入预设零件数（步骤不被跳过）', ctx.presets >= 28],
     ['点击后编辑器弹出', opened.shown && opened.stage === 'none' && opened.applyDisabled],
     ['选图后自动进入编辑态、按钮可用', fitted.stage === 'block' && !fitted.applyDisabled && !fitted.note],

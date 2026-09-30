@@ -66,6 +66,10 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
     [r.cards.length, r.cards[0].code, r.cards[0].type, /橙圈/.test(r.cards[0].name)], [2, 'CR-G-3', '内影圈', true]);
   check('同编号里只有一个能装在这枚表壳上（只有它带按钮）',
     r.cards.filter(c => c.hasUse).length, 1);
+  check('看图卡片的名称不重复编号（类别与编号已各占一行）',
+    r.cards.every(c => !c.name || !RegExp(c.code.replace(/-/g, '[-\\s]?'), 'i').test(c.name)), true);
+  check('看图卡片的名称不重复类别词',
+    r.cards.every(c => !c.name || !c.name.includes(c.type)), true);
   check('卡片里的就是该编号的图片', /cr-g-3\.png$/.test(r.cards[0].img || ''), true);
   check('图片真的能显示出来', await page.evaluate(() => {
     const im = document.querySelector('#bpLookResult .lk-img img');
