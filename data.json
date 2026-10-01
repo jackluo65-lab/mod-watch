@@ -5302,8 +5302,13 @@
       },
       "compatibleParts": {
         "bezel": [
-          "bz-sub-ceramic",
-          "bz-sub-alu"
+          "bz-sub-1",
+          "bz-sub-2",
+          "bz-sub-3",
+          "bz-sub-4",
+          "bz-sub-5",
+          "bz-sub-6",
+          "bz-sub-8"
         ],
         "insert": [
           "d-gmt-11",
@@ -14472,7 +14477,8 @@
         "descriptionEn": "Classic series bezel B-JD-1, silver coin-edge design, perfect match for Classic Case.",
         "image": "img/bezel/B-JD-1.png",
         "category": "Classic Case",
-        "innerR": 218.8
+        "innerR": 218.8,
+        "swatch": "img/bezel/thumb/B-JD-1.webp"
       },
       {
         "id": "bz-jd-3",
@@ -14486,7 +14492,8 @@
         "descriptionEn": "Classic series bezel B-JD-3, designed for Classic Case.",
         "image": "img/bezel/B-JD-3.png",
         "category": "Classic Case",
-        "innerR": 220.6
+        "innerR": 220.6,
+        "swatch": "img/bezel/thumb/B-JD-3.webp"
       },
       {
         "id": "bz-jd-4",
@@ -14500,7 +14507,8 @@
         "descriptionEn": "Classic series bezel B-JD-4, designed for Classic Case.",
         "image": "img/bezel/B-JD-4.png",
         "category": "Classic Case",
-        "innerR": 220.4
+        "innerR": 220.4,
+        "swatch": "img/bezel/thumb/B-JD-4.webp"
       },
       {
         "id": "bz-jd-6",
@@ -14514,7 +14522,8 @@
         "descriptionEn": "Classic series bezel B-JD-6, designed for Classic Case.",
         "image": "img/bezel/B-JD-6.png",
         "category": "Classic Case",
-        "innerR": 218.6
+        "innerR": 218.6,
+        "swatch": "img/bezel/thumb/B-JD-6.webp"
       },
       {
         "id": "bz-jd-7",
@@ -14528,7 +14537,8 @@
         "descriptionEn": "Classic series bezel B-JD-7, designed for Classic Case.",
         "image": "img/bezel/B-JD-7.png",
         "category": "Classic Case",
-        "innerR": 219.1
+        "innerR": 219.1,
+        "swatch": "img/bezel/thumb/B-JD-7.webp"
       },
       {
         "id": "bz-tx-1",
@@ -14542,7 +14552,8 @@
         "descriptionEn": "Explorer series bezel B-TX-1, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-1.png",
         "category": "Explorer",
-        "innerR": 221.2
+        "innerR": 221.2,
+        "swatch": "img/bezel/thumb/B-TX-1.webp"
       },
       {
         "id": "bz-tx-3",
@@ -14556,7 +14567,8 @@
         "descriptionEn": "Explorer series bezel B-TX-3, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-3.png",
         "category": "Explorer",
-        "innerR": 220.5
+        "innerR": 220.5,
+        "swatch": "img/bezel/thumb/B-TX-3.webp"
       },
       {
         "id": "bz-tx-4",
@@ -14570,7 +14582,8 @@
         "descriptionEn": "Explorer series bezel B-TX-4, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-4.png",
         "category": "Explorer",
-        "innerR": 213.7
+        "innerR": 213.7,
+        "swatch": "img/bezel/thumb/B-TX-4.webp"
       },
       {
         "id": "bz-tx-6",
@@ -14584,7 +14597,8 @@
         "descriptionEn": "Explorer series bezel B-TX-6, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-6.png",
         "category": "Explorer",
-        "innerR": 219.5
+        "innerR": 219.5,
+        "swatch": "img/bezel/thumb/B-TX-6.webp"
       },
       {
         "id": "bz-tx-7",
@@ -14598,7 +14612,8 @@
         "descriptionEn": "Explorer series bezel B-TX-7, designed exclusively for Explorer Case.",
         "image": "img/bezel/B-TX-7.png",
         "category": "Explorer",
-        "innerR": 218.7
+        "innerR": 218.7,
+        "swatch": "img/bezel/thumb/B-TX-7.webp"
       },
       {
         "id": "bz-fx-1",
@@ -14612,7 +14627,8 @@
         "descriptionEn": "Pilot series bezel B-FX-1, silver stainless-steel clean bezel, designed for Pilot Case.",
         "image": "img/bezel/B-FX-1.png",
         "category": "Pilot Case",
-        "innerR": 215.9
+        "innerR": 215.9,
+        "swatch": "img/bezel/thumb/B-FX-1.webp"
       },
       {
         "id": "bz-fx-3",
@@ -14626,7 +14642,8 @@
         "descriptionEn": "Pilot series bezel B-FX-3, gold stainless-steel bezel, adding vintage flair to Pilot Case.",
         "image": "img/bezel/B-FX-3.png",
         "category": "Pilot Case",
-        "innerR": 215.9
+        "innerR": 215.9,
+        "swatch": "img/bezel/thumb/B-FX-3.webp"
       },
       {
         "id": "bz-fx-4",
@@ -14640,7 +14657,8 @@
         "descriptionEn": "Pilot series bezel B-FX-4, rose gold stainless-steel bezel, elegantly matching Pilot Case.",
         "image": "img/bezel/B-FX-4.png",
         "category": "Pilot Case",
-        "innerR": 215.9
+        "innerR": 215.9,
+        "swatch": "img/bezel/thumb/B-FX-4.webp"
       },
       {
         "id": "bz-fx-6",
@@ -14654,7 +14672,8 @@
         "descriptionEn": "Pilot series bezel B-FX-6, high-polish silver bezel highlighting the modern lines of Pilot Case.",
         "image": "img/bezel/B-FX-6.png",
         "category": "Pilot Case",
-        "innerR": 218.3
+        "innerR": 218.3,
+        "swatch": "img/bezel/thumb/B-FX-6.webp"
       },
       {
         "id": "bz-fx-7",
@@ -14668,7 +14687,8 @@
         "descriptionEn": "Pilot series bezel B-FX-7, black PVD bezel, bringing a sporty feel to Pilot Case.",
         "image": "img/bezel/B-FX-7.png",
         "category": "Pilot Case",
-        "innerR": 218.3
+        "innerR": 218.3,
+        "swatch": "img/bezel/thumb/B-FX-7.webp"
       },
       {
         "id": "bz-fg-1",
@@ -14682,7 +14702,8 @@
         "descriptionEn": "Vintage series bezel B-FG-1, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-1.png",
         "category": "Vintage Case",
-        "innerR": 227.2
+        "innerR": 227.2,
+        "swatch": "img/bezel/thumb/B-FG-1.webp"
       },
       {
         "id": "bz-fg-2",
@@ -14696,7 +14717,8 @@
         "descriptionEn": "Vintage series bezel B-FG-2, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-2.png",
         "category": "Vintage Case",
-        "innerR": 230.0
+        "innerR": 230.0,
+        "swatch": "img/bezel/thumb/B-FG-2.webp"
       },
       {
         "id": "bz-fg-3",
@@ -14710,7 +14732,8 @@
         "descriptionEn": "Vintage series bezel B-FG-3, gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-3.png",
         "category": "Vintage Case",
-        "innerR": 227.2
+        "innerR": 227.2,
+        "swatch": "img/bezel/thumb/B-FG-3.webp"
       },
       {
         "id": "bz-fg-4",
@@ -14724,7 +14747,8 @@
         "descriptionEn": "Vintage series bezel B-FG-4, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-4.png",
         "category": "Vintage Case",
-        "innerR": 227.2
+        "innerR": 227.2,
+        "swatch": "img/bezel/thumb/B-FG-4.webp"
       },
       {
         "id": "bz-fg-6",
@@ -14738,7 +14762,8 @@
         "descriptionEn": "Vintage series bezel B-FG-6, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-6.png",
         "category": "Vintage Case",
-        "innerR": 230.9
+        "innerR": 230.9,
+        "swatch": "img/bezel/thumb/B-FG-6.webp"
       },
       {
         "id": "bz-fg-7",
@@ -14752,7 +14777,8 @@
         "descriptionEn": "Vintage series bezel B-FG-7, gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-7.png",
         "category": "Vintage Case",
-        "innerR": 230.9
+        "innerR": 230.9,
+        "swatch": "img/bezel/thumb/B-FG-7.webp"
       },
       {
         "id": "bz-fg-11",
@@ -14766,7 +14792,8 @@
         "descriptionEn": "Vintage series bezel B-FG-11, dark grey stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-11.png",
         "category": "Vintage Case",
-        "innerR": 226.6
+        "innerR": 226.6,
+        "swatch": "img/bezel/thumb/B-FG-11.webp"
       },
       {
         "id": "bz-fg-12",
@@ -14780,7 +14807,8 @@
         "descriptionEn": "Vintage series bezel B-FG-12, light grey stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-12.png",
         "category": "Vintage Case",
-        "innerR": 226.6
+        "innerR": 226.6,
+        "swatch": "img/bezel/thumb/B-FG-12.webp"
       },
       {
         "id": "bz-fg-13",
@@ -14794,7 +14822,8 @@
         "descriptionEn": "Vintage series bezel B-FG-13, silver stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-13.png",
         "category": "Vintage Case",
-        "innerR": 226.6
+        "innerR": 226.6,
+        "swatch": "img/bezel/thumb/B-FG-13.webp"
       },
       {
         "id": "bz-fg-14",
@@ -14808,7 +14837,8 @@
         "descriptionEn": "Vintage series bezel B-FG-14, black PVD coated bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-14.png",
         "category": "Vintage Case",
-        "innerR": 226.6
+        "innerR": 226.6,
+        "swatch": "img/bezel/thumb/B-FG-14.webp"
       },
       {
         "id": "bz-fg-16",
@@ -14822,7 +14852,8 @@
         "descriptionEn": "Vintage series bezel B-FG-16, vintage gold stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-16.png",
         "category": "Vintage Case",
-        "innerR": 228.5
+        "innerR": 228.5,
+        "swatch": "img/bezel/thumb/B-FG-16.webp"
       },
       {
         "id": "bz-fg-17",
@@ -14836,7 +14867,8 @@
         "descriptionEn": "Vintage series bezel B-FG-17, gunmetal stainless-steel bezel, designed for Vintage Case.",
         "image": "img/bezel/B-FG-17.png",
         "category": "Vintage Case",
-        "innerR": 227.5
+        "innerR": 227.5,
+        "swatch": "img/bezel/thumb/B-FG-17.webp"
       },
       {
         "id": "bz-bc-1",
@@ -14850,7 +14882,8 @@
         "descriptionEn": "Bezel B-C-1 for SKX 3.8 case, Matte LX finish, Silver.",
         "image": "img/bezel/B-C-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 219.1
+        "innerR": 219.1,
+        "swatch": "img/bezel/thumb/B-C-1.webp"
       },
       {
         "id": "bz-bc-2",
@@ -14864,7 +14897,8 @@
         "descriptionEn": "Bezel B-C-2 for SKX 3.8 case, Matte LX finish, Black.",
         "image": "img/bezel/B-C-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 218.9
+        "innerR": 218.9,
+        "swatch": "img/bezel/thumb/B-C-2.webp"
       },
       {
         "id": "bz-bc-3",
@@ -14878,7 +14912,8 @@
         "descriptionEn": "Bezel B-C-3 for SKX 3.8 case, Matte LX finish, Gold.",
         "image": "img/bezel/B-C-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 216.8
+        "innerR": 216.8,
+        "swatch": "img/bezel/thumb/B-C-3.webp"
       },
       {
         "id": "bz-bf-4",
@@ -14892,7 +14927,8 @@
         "descriptionEn": "Bezel B-F-4 for SKX 3.8 case, Matte LX finish, Rose Gold.",
         "image": "img/bezel/B-F-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 219.1
+        "innerR": 219.1,
+        "swatch": "img/bezel/thumb/B-F-4.webp"
       },
       {
         "id": "bz-be-1",
@@ -14906,7 +14942,8 @@
         "descriptionEn": "Bezel B-E-1 for SKX 3.8 case, Polished LX finish, Silver.",
         "image": "img/bezel/B-E-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 219.7
+        "innerR": 219.7,
+        "swatch": "img/bezel/thumb/B-E-1.webp"
       },
       {
         "id": "bz-ba-2",
@@ -14920,7 +14957,8 @@
         "descriptionEn": "Bezel B-A-2 for SKX 3.8 case, Polished LX finish, Black.",
         "image": "img/bezel/B-A-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 219.8
+        "innerR": 219.8,
+        "swatch": "img/bezel/thumb/B-A-2.webp"
       },
       {
         "id": "bz-ba-3",
@@ -14934,7 +14972,8 @@
         "descriptionEn": "Bezel B-A-3 for SKX 3.8 case, Polished LX finish, Gold.",
         "image": "img/bezel/B-A-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 220.1
+        "innerR": 220.1,
+        "swatch": "img/bezel/thumb/B-A-3.webp"
       },
       {
         "id": "bz-be-4",
@@ -14948,7 +14987,8 @@
         "descriptionEn": "Bezel B-E-4 for SKX 3.8 case, Polished LX finish, Rose Gold.",
         "image": "img/bezel/B-E-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE",
-        "innerR": 224.6
+        "innerR": 224.6,
+        "swatch": "img/bezel/thumb/B-E-4.webp"
       },
       {
         "id": "bz-b-n-21",
@@ -14962,7 +15002,8 @@
         "descriptionEn": "Bezel B-N-21 for SKX 3.8 MORE case, MM300 style, polished, Silver.",
         "image": "img/bezel/B-N-21.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 219.8
+        "innerR": 219.8,
+        "swatch": "img/bezel/thumb/B-N-21.webp"
       },
       {
         "id": "bz-b-n-27",
@@ -14976,7 +15017,8 @@
         "descriptionEn": "Bezel B-N-27 for SKX 3.8 MORE case, MM300 style, Black.",
         "image": "img/bezel/B-N-27.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 219.4
+        "innerR": 219.4,
+        "swatch": "img/bezel/thumb/B-N-27.webp"
       },
       {
         "id": "bz-b-n-31",
@@ -14990,7 +15032,8 @@
         "descriptionEn": "Bezel B-N-31 for SKX 3.8 MORE case, Knurled style, polished, Silver.",
         "image": "img/bezel/B-N-31.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 220.4
+        "innerR": 220.4,
+        "swatch": "img/bezel/thumb/B-N-31.webp"
       },
       {
         "id": "bz-b-n-37",
@@ -15004,7 +15047,8 @@
         "descriptionEn": "Bezel B-N-37 for SKX 3.8 MORE case, Knurled style, matte, Black.",
         "image": "img/bezel/B-N-37.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 221.1
+        "innerR": 221.1,
+        "swatch": "img/bezel/thumb/B-N-37.webp"
       },
       {
         "id": "bz-b-n-41",
@@ -15018,7 +15062,8 @@
         "descriptionEn": "Bezel B-N-41 for SKX 3.8 MORE case, Seamaster style, polished, Silver.",
         "image": "img/bezel/B-N-41.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 223.3
+        "innerR": 223.3,
+        "swatch": "img/bezel/thumb/B-N-41.webp"
       },
       {
         "id": "bz-b-n-47",
@@ -15032,7 +15077,8 @@
         "descriptionEn": "Bezel B-N-47 for SKX 3.8 MORE case, Seamaster style, matte, Black.",
         "image": "img/bezel/B-N-47.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 222.1
+        "innerR": 222.1,
+        "swatch": "img/bezel/thumb/B-N-47.webp"
       },
       {
         "id": "bz-b-n-51",
@@ -15046,7 +15092,8 @@
         "descriptionEn": "Bezel B-N-51 for SKX 3.8 MORE case, Turbine style, polished, Silver.",
         "image": "img/bezel/B-N-51.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 219.5
+        "innerR": 219.5,
+        "swatch": "img/bezel/thumb/B-N-51.webp"
       },
       {
         "id": "bz-b-n-57",
@@ -15060,7 +15107,8 @@
         "descriptionEn": "Bezel B-N-57 for SKX 3.8 MORE case, Turbine style, matte, Black.",
         "image": "img/bezel/B-N-57.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 219.7
+        "innerR": 219.7,
+        "swatch": "img/bezel/thumb/B-N-57.webp"
       },
       {
         "id": "bz-b-n-61",
@@ -15074,7 +15122,8 @@
         "descriptionEn": "Bezel B-N-61 for SKX 3.8 MORE case, Pilot style, polished, Silver.",
         "image": "img/bezel/B-N-61.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 229.4
+        "innerR": 229.4,
+        "swatch": "img/bezel/thumb/B-N-61.webp"
       },
       {
         "id": "bz-b-n-67",
@@ -15088,7 +15137,8 @@
         "descriptionEn": "Bezel B-N-67 for SKX 3.8 MORE case, Pilot style, matte, Black.",
         "image": "img/bezel/B-N-67.png",
         "category": "SKX 3.8 MORE CASE",
-        "innerR": 227.6
+        "innerR": 227.6,
+        "swatch": "img/bezel/thumb/B-N-67.webp"
       },
       {
         "id": "bz-sk3-j-1",
@@ -15102,7 +15152,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-1. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-1.png",
         "category": "SKX 3.0 Case",
-        "innerR": 217.2
+        "innerR": 217.2,
+        "swatch": "img/bezel/thumb/B-J-1.webp"
       },
       {
         "id": "bz-sk3-j-2",
@@ -15116,7 +15167,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-2. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-2.png",
         "category": "SKX 3.0 Case",
-        "innerR": 220.2
+        "innerR": 220.2,
+        "swatch": "img/bezel/thumb/B-J-2.webp"
       },
       {
         "id": "bz-sk3-a-3",
@@ -15130,7 +15182,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-A-3. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-SK3-A-3.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.5
+        "innerR": 218.5,
+        "swatch": "img/bezel/thumb/B-SK3-A-3.webp"
       },
       {
         "id": "bz-sk3-b-3",
@@ -15144,7 +15197,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-B-3. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-B-3.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.2
+        "innerR": 218.2,
+        "swatch": "img/bezel/thumb/B-B-3.webp"
       },
       {
         "id": "bz-sk3-j-4",
@@ -15158,7 +15212,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-4. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-4.png",
         "category": "SKX 3.0 Case",
-        "innerR": 219.0
+        "innerR": 219.0,
+        "swatch": "img/bezel/thumb/B-J-4.webp"
       },
       {
         "id": "bz-sk3-g-4",
@@ -15172,7 +15227,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-G-4. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-G-4.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.0
+        "innerR": 218.0,
+        "swatch": "img/bezel/thumb/B-G-4.webp"
       },
       {
         "id": "bz-sk3-j-6",
@@ -15186,7 +15242,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-6. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-6.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.0
+        "innerR": 218.0,
+        "swatch": "img/bezel/thumb/B-J-6.webp"
       },
       {
         "id": "bz-sk3-j-7",
@@ -15200,7 +15257,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-7. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-7.png",
         "category": "SKX 3.0 Case",
-        "innerR": 217.8
+        "innerR": 217.8,
+        "swatch": "img/bezel/thumb/B-J-7.webp"
       },
       {
         "id": "bz-sk3-d-2",
@@ -15214,7 +15272,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-D-2. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-D-2.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.5
+        "innerR": 218.5,
+        "swatch": "img/bezel/thumb/B-D-2.webp"
       },
       {
         "id": "bz-sk3-c-3",
@@ -15228,7 +15287,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-C-3. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-SK3-C-3.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.5
+        "innerR": 218.5,
+        "swatch": "img/bezel/thumb/B-SK3-C-3.webp"
       },
       {
         "id": "bz-sk3-d-3",
@@ -15242,7 +15302,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-D-3. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-D-3.png",
         "category": "SKX 3.0 Case",
-        "innerR": 217.8
+        "innerR": 217.8,
+        "swatch": "img/bezel/thumb/B-D-3.webp"
       },
       {
         "id": "bz-sk3-j-9",
@@ -15256,7 +15317,8 @@
         "descriptionEn": "SKX 3.0 bezel, model B-J-9. Made for the SKX 3.0 case.",
         "image": "img/bezel/B-J-9.png",
         "category": "SKX 3.0 Case",
-        "innerR": 217.8
+        "innerR": 217.8,
+        "swatch": "img/bezel/thumb/B-J-9.webp"
       },
       {
         "id": "bz-sk3-blue-coin",
@@ -15270,7 +15332,8 @@
         "descriptionEn": "SKX 3.0 bezel, blue matte coin edge. Made for the SKX 3.0 case.",
         "image": "img/bezel/Blue-Coin.png",
         "category": "SKX 3.0 Case",
-        "innerR": 218.2
+        "innerR": 218.2,
+        "swatch": "img/bezel/thumb/Blue-Coin.webp"
       },
       {
         "id": "bz-smr-ws-11",
@@ -15284,7 +15347,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-11, Matte Silver. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-11.png",
         "category": "SKX Samurai Case",
-        "innerR": 218.0
+        "innerR": 218.0,
+        "swatch": "img/bezel/thumb/B-WS-11.webp"
       },
       {
         "id": "bz-smr-ws-12",
@@ -15298,7 +15362,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-12, Matte Black. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-12.png",
         "category": "SKX Samurai Case",
-        "innerR": 216.8
+        "innerR": 216.8,
+        "swatch": "img/bezel/thumb/B-WS-12.webp"
       },
       {
         "id": "bz-smr-ws-16",
@@ -15312,7 +15377,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-16, Polished Silver. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-16.png",
         "category": "SKX Samurai Case",
-        "innerR": 217.2
+        "innerR": 217.2,
+        "swatch": "img/bezel/thumb/B-WS-16.webp"
       },
       {
         "id": "bz-smr-ws-17",
@@ -15326,7 +15392,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-17, Polished Black. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-17.png",
         "category": "SKX Samurai Case",
-        "innerR": 217.0
+        "innerR": 217.0,
+        "swatch": "img/bezel/thumb/B-WS-17.webp"
       },
       {
         "id": "bz-smr-ws-18",
@@ -15340,7 +15407,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-18, Gold. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-18.png",
         "category": "SKX Samurai Case",
-        "innerR": 217.8
+        "innerR": 217.8,
+        "swatch": "img/bezel/thumb/B-WS-18.webp"
       },
       {
         "id": "bz-smr-ws-19",
@@ -15354,7 +15422,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-19, Rose Gold. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-19.png",
         "category": "SKX Samurai Case",
-        "innerR": 218.8
+        "innerR": 218.8,
+        "swatch": "img/bezel/thumb/B-WS-19.webp"
       },
       {
         "id": "bz-smr-ws-20",
@@ -15368,7 +15437,8 @@
         "descriptionEn": "SKX Samurai bezel, model B-WS-20, Blue. Made for the SKX Samurai case.",
         "image": "img/bezel/B-WS-20.png",
         "category": "SKX Samurai Case",
-        "innerR": 217.0
+        "innerR": 217.0,
+        "swatch": "img/bezel/thumb/B-WS-20.webp"
       },
       {
         "id": "bz-cl-1",
@@ -15382,7 +15452,8 @@
         "descriptionEn": "Classic Retro series bezel B-CL-1, matching the Classic Retro case. No insert seat.",
         "image": "img/bezel/B-CL-1.png",
         "category": "Classic Retro Case",
-        "innerR": 198.0
+        "innerR": 198.0,
+        "swatch": "img/bezel/thumb/B-CL-1.webp"
       },
       {
         "id": "bz-cl-3",
@@ -15396,7 +15467,8 @@
         "descriptionEn": "Classic Retro series bezel B-CL-3, matching the Classic Retro case. No insert seat.",
         "image": "img/bezel/B-CL-3.png",
         "category": "Classic Retro Case",
-        "innerR": 198.0
+        "innerR": 198.0,
+        "swatch": "img/bezel/thumb/B-CL-3.webp"
       },
       {
         "id": "bz-cl-4",
@@ -15410,7 +15482,8 @@
         "descriptionEn": "Classic Retro series bezel B-CL-4, matching the Classic Retro case. No insert seat.",
         "image": "img/bezel/B-CL-4.png",
         "category": "Classic Retro Case",
-        "innerR": 197.4
+        "innerR": 197.4,
+        "swatch": "img/bezel/thumb/B-CL-4.webp"
       },
       {
         "id": "bz-ap-1",
@@ -15424,7 +15497,8 @@
         "descriptionEn": "AP series bezel B-AP-1 with eight exposed screws, matching the AP case. No insert seat.",
         "image": "img/bezel/B-AP-1.png",
         "category": "AP Case",
-        "innerR": 191.0
+        "innerR": 191.0,
+        "swatch": "img/bezel/thumb/B-AP-1.webp"
       },
       {
         "id": "bz-ap-2",
@@ -15438,7 +15512,8 @@
         "descriptionEn": "AP series bezel B-AP-2 with eight exposed screws, matching the AP case. No insert seat.",
         "image": "img/bezel/B-AP-2.png",
         "category": "AP Case",
-        "innerR": 192.5
+        "innerR": 192.5,
+        "swatch": "img/bezel/thumb/B-AP-2.webp"
       },
       {
         "id": "bz-ap-3",
@@ -15452,7 +15527,8 @@
         "descriptionEn": "AP series bezel B-AP-3 with eight exposed screws, matching the AP case. No insert seat.",
         "image": "img/bezel/B-AP-3.png",
         "category": "AP Case",
-        "innerR": 192.1
+        "innerR": 192.1,
+        "swatch": "img/bezel/thumb/B-AP-3.webp"
       },
       {
         "id": "bz-ap-4",
@@ -15466,7 +15542,113 @@
         "descriptionEn": "AP series bezel B-AP-4 with eight exposed screws, matching the AP case. No insert seat.",
         "image": "img/bezel/B-AP-4.png",
         "category": "AP Case",
-        "innerR": 192.1
+        "innerR": 192.1,
+        "swatch": "img/bezel/thumb/B-AP-4.webp"
+      },
+      {
+        "id": "bz-sub-1",
+        "code": "B-SUB-1",
+        "name": "Bezel B-SUB-1 (Silver)",
+        "nameZh": "表圈 B-SUB-1（银色）",
+        "series": "skxsub",
+        "color": "#a0a0a0",
+        "material": "Steel",
+        "description": "SUB 系列表圈 B-SUB-1（银色），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-1 (silver) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-1.png",
+        "swatch": "img/bezel/thumb/B-SUB-1.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.5
+      },
+      {
+        "id": "bz-sub-2",
+        "code": "B-SUB-2",
+        "name": "Bezel B-SUB-2 (Black)",
+        "nameZh": "表圈 B-SUB-2（黑色）",
+        "series": "skxsub",
+        "color": "#262626",
+        "material": "Steel / PVD",
+        "description": "SUB 系列表圈 B-SUB-2（黑色），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-2 (black) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-2.png",
+        "swatch": "img/bezel/thumb/B-SUB-2.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.5
+      },
+      {
+        "id": "bz-sub-3",
+        "code": "B-SUB-3",
+        "name": "Bezel B-SUB-3 (Gold)",
+        "nameZh": "表圈 B-SUB-3（金色）",
+        "series": "skxsub",
+        "color": "#c6a974",
+        "material": "Steel",
+        "description": "SUB 系列表圈 B-SUB-3（金色），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-3 (gold) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-3.png",
+        "swatch": "img/bezel/thumb/B-SUB-3.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.5
+      },
+      {
+        "id": "bz-sub-4",
+        "code": "B-SUB-4",
+        "name": "Bezel B-SUB-4 (Rose Gold)",
+        "nameZh": "表圈 B-SUB-4（玫瑰金）",
+        "series": "skxsub",
+        "color": "#c1987c",
+        "material": "Steel",
+        "description": "SUB 系列表圈 B-SUB-4（玫瑰金），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-4 (rose gold) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-4.png",
+        "swatch": "img/bezel/thumb/B-SUB-4.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.5
+      },
+      {
+        "id": "bz-sub-5",
+        "code": "B-SUB-5",
+        "name": "Bezel B-SUB-5 (Silver)",
+        "nameZh": "表圈 B-SUB-5（银色）",
+        "series": "skxsub",
+        "color": "#b4b4b6",
+        "material": "Steel",
+        "description": "SUB 系列表圈 B-SUB-5（银色），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-5 (silver) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-5.png",
+        "swatch": "img/bezel/thumb/B-SUB-5.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.0
+      },
+      {
+        "id": "bz-sub-6",
+        "code": "B-SUB-6",
+        "name": "Bezel B-SUB-6 (Black)",
+        "nameZh": "表圈 B-SUB-6（黑色）",
+        "series": "skxsub",
+        "color": "#232325",
+        "material": "Steel / PVD",
+        "description": "SUB 系列表圈 B-SUB-6（黑色），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-6 (black) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-6.png",
+        "swatch": "img/bezel/thumb/B-SUB-6.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.0
+      },
+      {
+        "id": "bz-sub-8",
+        "code": "B-SUB-8",
+        "name": "Bezel B-SUB-8 (Rose Gold)",
+        "nameZh": "表圈 B-SUB-8（玫瑰金）",
+        "series": "skxsub",
+        "color": "#d1af93",
+        "material": "Steel",
+        "description": "SUB 系列表圈 B-SUB-8（玫瑰金），配 SKX 潜航者表壳；圈口刻度由插入件（SUB-* 斜圈）补足。",
+        "descriptionEn": "SUB series bezel B-SUB-8 (rose gold) for the SKX SUB case; the insert (SUB-* sloped ring) supplies the bezel markings.",
+        "image": "img/bezel/B-SUB-8.png",
+        "swatch": "img/bezel/thumb/B-SUB-8.webp",
+        "category": "SKX SUB Case",
+        "innerR": 238.0
       }
     ],
     "hands": [
