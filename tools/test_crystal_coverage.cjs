@@ -66,7 +66,13 @@ const EXPECT = {
 
   const insertStep = () => page.evaluate(() => {
     const items = [...document.querySelectorAll('#list-insert .part-item[data-id]')];
-    return { count: items.length, flat: items.filter(el => /^(dl|zl|dn|zn|sn)-/.test(el.dataset.id)).length };
+    return {
+      count: items.length,
+      flat: items.filter(el => {
+        const it = (DATA.parts.insert || []).find(x => x.id === el.dataset.id);
+        return !!it && it.insertType === 'flat';
+      }).length,
+    };
   });
 
   const previewHas = (frag) => page.evaluate((frag) => {
@@ -131,10 +137,10 @@ const EXPECT = {
   await enterFamily('SKX 3.8 Case');
   await pickCrystal('SJG02C');
   ins = await insertStep();
-  check('SKX 3.8 + SJG02C -> 仍是 107 斜面 / 0 平面', [ins.count, ins.flat], [107, 0]);
+  check('SKX 3.8 + SJG02C -> 仍是 225 斜面 / 0 平面', [ins.count, ins.flat], [225, 0]);
   await pickCrystal('SJG06C');
   ins = await insertStep();
-  check('SKX 3.8 + SJG06C -> 仍是 18 平面 / 0 斜面', [ins.count, ins.flat], [18, 18]);
+  check('SKX 3.8 + SJG06C -> 仍是 64 平面 / 0 斜面', [ins.count, ins.flat], [64, 64]);
 
   // ---- 6. the crystal step is no longer auto-skipped: walk the whole wizard for real ----
   // A family whose crystal step used to be empty skipped it; now the customer has to pick,

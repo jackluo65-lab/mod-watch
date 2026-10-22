@@ -79,7 +79,10 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
       count: items.length,
       names: items.map(e => e.querySelector('h5').textContent.trim()),
       desc: document.getElementById('desc-insert').textContent.trim(),
-      nonFlat: items.map(e => e.dataset.id).filter(id => !/^(dl|zl|dn|zn|sn)-/.test(id))
+      nonFlat: items.map(e => e.dataset.id).filter(id => {
+        const it = (DATA.parts.insert || []).find(x => x.id === id);
+        return !it || it.insertType !== 'flat';
+      })
     };
   });
   console.log('');
@@ -93,9 +96,9 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   await page.waitForTimeout(3000);
   await page.screenshot({ path: '/tmp/pcn/sjg06-insert-only-flat.png' });
 
-  const pass = ins.count === 18 && ins.nonFlat.length === 0;
+  const pass = ins.count === 64 && ins.nonFlat.length === 0;
   console.log('');
-  console.log(pass ? '✓ 端到端通过：SJG06 下插入只剩 18 个平面陶瓷圈' : '✗ 端到端失败');
+  console.log(pass ? '✓ 端到端通过：SJG06 下插入只剩 64 个平面陶瓷圈' : '✗ 端到端失败');
   await browser.close();
   process.exit(pass ? 0 : 1);
 })();

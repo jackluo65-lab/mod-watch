@@ -16,8 +16,9 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
     return {
       insertCount: ins.length,
       ids: ins.map(el => el.dataset.id),
-      allFlat: ins.every(el => /^(dl|zl|dn|zn|sn)-/.test(el.dataset.id)),
-      hasFlat: ins.some(el => /^(dl|zl|dn|zn|sn)-/.test(el.dataset.id)),
+      // 平面/斜面看数据里的 insertType，别用编号前缀猜（新增的 KF-/TZ-/PG-/FS-TZ- 也是平面）
+      allFlat: ins.every(el => { const it = (DATA.parts.insert || []).find(x => x.id === el.dataset.id); return !!it && it.insertType === 'flat'; }),
+      hasFlat: ins.some(el => { const it = (DATA.parts.insert || []).find(x => x.id === el.dataset.id); return !!it && it.insertType === 'flat'; }),
       pickedInsert: selections.insert ? selections.insert.code : null,
       pickedCrystal: selections.crystal ? selections.crystal.code : null,
       previewInsert: (() => {
@@ -50,17 +51,17 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   // 1. 没选表镜：全部 125 个插入都在
   await reset();
   let s = await snap();
-  check('未选表镜 -> 插入 125 个', [s.insertCount, s.allFlat], [125, false]);
+  check('未选表镜 -> 插入 289 个', [s.insertCount, s.allFlat], [289, false]);
 
   // 2. 选 SJG06C：只剩平面陶瓷圈
   await pick('crystal', 'SJG06C');
   s = await snap();
-  check('选 SJG06C -> 只剩 18 个平面插入', [s.insertCount, s.allFlat], [18, true]);
+  check('选 SJG06C -> 只剩 64 个平面插入', [s.insertCount, s.allFlat], [64, true]);
 
-  // 3. 选 SJG02C：斜面专用 -> 只剩 107 个斜面，18 个平面被挡
+  // 3. 选 SJG02C：斜面专用 -> 只剩 225 个斜面，64 个平面被挡
   await pick('crystal', 'SJG02C');
   s = await snap();
-  check('改选 SJG02C -> 只剩 107 个斜面插入', [s.insertCount, s.allFlat], [107, false]);
+  check('改选 SJG02C -> 只剩 225 个斜面插入', [s.insertCount, s.allFlat], [225, false]);
   check('SJG02 下不出现任何平面插入', [s.hasFlat], [false]);
 
   // 4. SJG02 下选一个斜面插入，再回头换成 SJG06 -> 那个斜面插入必须被清掉
@@ -69,7 +70,7 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   check('SJG02 + 斜面插入可正常选上', [s.pickedInsert, s.previewInsert], ['D-GMT-11', 'D-GMT-11.png']);
   await pick('crystal', 'SJG06C');
   s = await snap();
-  check('换成 SJG06C -> 斜面插入被清空', [s.pickedInsert, s.previewInsert, s.insertCount], [null, null, 18]);
+  check('换成 SJG06C -> 斜面插入被清空', [s.pickedInsert, s.previewInsert, s.insertCount], [null, null, 64]);
 
   // 5. 换成平面插入后一切正常
   await pick('insert', 'DL-3');
@@ -79,7 +80,7 @@ const URL = process.env.URL || 'http://127.0.0.1:8794/index.html';
   // 6. 平面插入不会被"表镜无约束"误删
   await pick('crystal', 'SJG02C');
   s = await snap();
-  check('改回 SJG02C -> 平面插入被清空、列表只剩 107 个斜面', [s.pickedInsert, s.insertCount], [null, 107]);
+  check('改回 SJG02C -> 平面插入被清空、列表只剩 225 个斜面', [s.pickedInsert, s.insertCount], [null, 225]);
 
   // 7. 别系列不受影响：Vintage 没有平面插入，表镜步骤本身也是空的
   await page.evaluate(() => {

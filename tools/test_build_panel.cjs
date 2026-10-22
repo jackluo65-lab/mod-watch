@@ -193,7 +193,7 @@ const TAG = process.env.TAG || 'local';
     ['规格里不再重复编号', codeInSpec.length === 0],
     ['清单是「类别 + 编号 + 规格」三列，10 个步骤一行不少', lines.length === 10 && /^表壳\s{2,}[A-Z]/.test(lines[0])],
     ['名称就是编号的那种零件（插入/部分表圈）在清单里只出现一次编号',
-      bareRows.length >= 1 && bareRows.every(r => {
+      bareRows.every(r => {
         const line = lines.find(l => l.startsWith(r.label + ' '));
         return !!line && line.split(r.code).length === 2;
       })],

@@ -84,7 +84,7 @@ const TAG = process.env.TAG || 'local';
     ['内影圈缩放回到通用值 1.02148（装了插入件）', /1\.02148/.test(ring ? ring.tf : '')],
     ['内影圈内孔 boreR 回到 187.6', sc.bore === 187.6],
     ['表针缩放 k 回到 0.9331（秒针尖端落在内孔内侧 5px）', !!sc.handsK && Math.abs(sc.handsK - 0.9331) < 0.002],
-    ['内影圈这一步仍是 33 个选项', perStep['内影圈'] && perStep['内影圈'].n === 33],
+    ['内影圈这一步仍是 54 个选项', perStep['内影圈'] && perStep['内影圈'].n === 54],
     ['字面这一步仍是 28 个选项', perStep['字面'] && perStep['字面'].n === 28],
     ['表针这一步是 4 个真图选项', perStep['表针'] && perStep['表针'].n === 4],
     ['表针画在字面之上', !!hands && !!dial && hands.z > dial.z],
@@ -107,8 +107,8 @@ const TAG = process.env.TAG || 'local';
     await p.waitForTimeout(600);
     await stepTo('内影圈');
     const n = await countInStep();
-    console.log(`   ${nm}: 内影圈 ${n} 个 ${n === 33 ? '✓' : '✗'} · 字面 ${await (async () => { await stepTo('字面'); return countInStep(); })()} 个`);
-    n === 33 ? pass++ : fail++;
+    console.log(`   ${nm}: 内影圈 ${n} 个 ${n === 54 ? '✓' : '✗'} · 字面 ${await (async () => { await stepTo('字面'); return countInStep(); })()} 个`);
+    n === 54 ? pass++ : fail++;
   }
 
   console.log('\n404s:', bad.length ? [...new Set(bad)].slice(0, 6).join(' ') : 'none');

@@ -120,7 +120,7 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
   check('取消后提示重新写「可跳过」', /可跳过/.test(inOff.guide), true);
 
   // ---- 4. clearing the crystal puts the whole insert list back ----
-  console.log('\n== 取消表镜：插入清单从 18 个平面恢复到 125 个 ==');
+  console.log('\n== 取消表镜：插入清单从 64 个平面恢复到 289 个 ==');
   await goStep(3);
   await page.waitForTimeout(300);
   await page.evaluate(() => { selectPart('crystal', DATA.parts.crystal.find(c => c.code === 'SJG06C')); });
@@ -139,9 +139,9 @@ const IMG = process.env.IMG || __dirname + '/fixtures/dial-test-square.png';
     crystal: selections.crystal ? selections.crystal.code : null,
     marked: document.querySelectorAll('.part-item[data-type="crystal"].selected').length,
   }));
-  check('选 SJG06C 时插入 18 个', [withCrystal.crystal, withCrystal.inserts], ['SJG06C', 18]);
-  check('取消表镜后插入恢复到 125 个且高亮清掉',
-    [noCrystal.crystal, noCrystal.inserts, noCrystal.marked], [null, 125, 0]);
+  check('选 SJG06C 时插入 64 个', [withCrystal.crystal, withCrystal.inserts], ['SJG06C', 64]);
+  check('取消表镜后插入恢复到 289 个且高亮清掉',
+    [noCrystal.crystal, noCrystal.inserts, noCrystal.marked], [null, 289, 0]);
 
   // ---- 5. the panel follows ----
   console.log('\n== 「我的配置」跟着变 ==');

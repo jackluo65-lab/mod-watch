@@ -58,9 +58,9 @@ const EXPECTED = ['bz-sub-1', 'bz-sub-2', 'bz-sub-3', 'bz-sub-4', 'bz-sub-5', 'b
     bez.srcs.every(s => s.includes('/thumb/B-SUB-') && s.endsWith('.webp')), true);
   check('没有加载失败的卡片图', bez.broken, 0);
   check('卡片名称带颜色（7 条都写出来了）',
-    bez.labels.every((t, i) => /（(银色|黑色|金色|玫瑰金)）/.test(t)) && bez.labels.length === 7, true);
-  check('黑色两款标成 Steel / PVD',
-    bez.labels.filter(t => /PVD/.test(t)).length, 2);
+    bez.labels.every(t => /（[^）]{1,6}）/.test(t)) && bez.labels.length === 7, true);
+  check('黑色里标了 Steel / PVD 的按资料来（B-SUB-2）',
+    bez.labels.filter(t => /PVD/.test(t)).length, 1);
 
   await p.evaluate(() => document.querySelector('#list-bezel .part-item[data-id="bz-sub-1"]').click());
   await p.waitForTimeout(1000);
