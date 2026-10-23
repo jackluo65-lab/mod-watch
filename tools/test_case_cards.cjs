@@ -37,7 +37,10 @@ const TAG = process.env.TAG || 'local';
   const pngLeft = pngCards.length;
   // skxsub has no artwork at all (front.png 404s), so it is the one card allowed
   // to fall back to the master path — and it shows "Coming Soon" anyway.
-  const pngOnlySkxsub = pngCards.every(c => c.id === 'skxsub');
+  // The new families (PRX / Nautilus / SKX Square / Turtle) are placeholder-only
+  // until the factory sends artwork, so their thumb is the placeholder PNG.
+  const pngOnlySkxsub = pngCards.every(c => c.id === 'skxsub' ||
+    (c.src || '').endsWith('img/placeholder/working-on-it-thumb.png'));
   const noFull = cards.filter(c => c.src && (!c.full || !c.full.endsWith('.png'))).length;
   const broken = loaded.filter(x => x.complete && x.w === 0);
 
@@ -59,12 +62,13 @@ const TAG = process.env.TAG || 'local';
   }));
 
   const checks = [
-    ['55 个表壳卡片都渲染了', cards.length === 55],
+    ['80 个表壳卡片都渲染了', cards.length === 80],
     ['卡片图走 .webp 缩略图', webp >= 54],
-    ['唯一用 PNG 的是没有素材的 skxsub 卡片', pngLeft === 0 || pngOnlySkxsub],
+    ['用 PNG 的只有 skxsub 和占位图卡片', pngLeft === 0 || pngOnlySkxsub],
     ['每张卡片都留了 data-full 大图路径', noFull === 0],
-    ['展开后缩略图真的解码成功（无 0 宽）', broken.length === 0 && loaded.length >= 54],
-    ['系列代表图也用 .webp + data-full', reps.filter(r => r.src && !r.src.endsWith('.webp')).length === 0],
+    ['展开后缩略图真的解码成功（无 0 宽）', broken.length === 0 && loaded.length >= 79],
+    ['系列代表图也用 .webp + data-full（或占位图）',
+      reps.filter(r => r.src && !r.src.endsWith('.webp') && !r.src.endsWith('working-on-it-thumb.png')).length === 0],
     ['点击表壳卡片仍在工作', after.selected === 'vintage-jtf1'],
     ['预览层用主图（大 PNG）并加载成功', after.stackImgs.some(s => s.includes('.png') && !s.endsWith('w0'))],
   ];
