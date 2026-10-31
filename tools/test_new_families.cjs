@@ -9,11 +9,12 @@ const { chromium } = require('playwright');
 const URL = process.env.URL || 'http://127.0.0.1:8791/index.html';
 const BASE = URL.replace(/\/index\.html.*$/, '/');
 
+// family -> 期望款数；art = 这一族是否已经有画稿（没有的仍走占位图）
 const FAMILIES = [
-  { cat: 'PRX Case', cases: 3, bezels: 4, first: 'C-PRX-1' },
-  { cat: 'Nautilus Case', cases: 8, bezels: 8, first: 'YW-1' },
-  { cat: 'SKX Square Case', cases: 8, bezels: 8, first: 'C-AF-1' },
-  { cat: 'Turtle Case', cases: 6, bezels: 6, first: 'C-AT-A1' },
+  { cat: 'PRX Case', cases: 4, bezels: 4, bezelsWithArt: 4, first: 'C-PRX-1', art: true },
+  { cat: 'Nautilus Case', cases: 8, bezels: 8, bezelsWithArt: 8, first: 'YW-1', art: true },
+  { cat: 'SKX Square Case', cases: 8, bezels: 8, bezelsWithArt: 5, first: 'C-AF-1', art: true },
+  { cat: 'Turtle Case', cases: 6, bezels: 6, bezelsWithArt: 0, first: 'C-AT-A1', art: false },
 ];
 
 (async () => {
@@ -59,9 +60,12 @@ const FAMILIES = [
     });
     return out;
   });
-  check('新系列卡片总数 25', cards.length, 25);
-  check('全部用占位缩略图',
-    cards.every(c => c.src.endsWith('img/placeholder/working-on-it-thumb.png')), true);
+  check('新系列卡片总数 26', cards.length, 26);
+  // 有画稿的三族走自己的 webp 缩略图，Turtle 还没有画稿，继续用占位图
+  const placeholderCards = cards.filter(c => c.src.endsWith('img/placeholder/working-on-it-thumb.png'));
+  check('还用占位图的 9 款（Turtle 6 + 方形磨砂缺图 3）', placeholderCards.length, 9);
+  check('其余 17 款都用自己的缩略图',
+    cards.filter(c => c.src.endsWith('.webp')).length, 17);
   const probe = await p.request.get(BASE + 'img/placeholder/working-on-it-thumb.png');
   check('占位缩略图可访问', probe.status(), 200);
   const probeFull = await p.request.get(BASE + 'img/placeholder/working-on-it.png');
@@ -94,8 +98,10 @@ const FAMILIES = [
     }));
     check(`${f.cat} 点一次卡片就选中 ${f.first}`, [state.code, /表圈/.test(state.step)], [f.first, true]);
     check(`${f.cat} 表圈给 ${f.bezels} 个`, state.bezelCount, f.bezels);
-    check(`${f.cat} 表圈卡全用占位图`,
-      state.bezelSrcs.length > 0 && state.bezelSrcs.every(s => s && s.endsWith('img/placeholder/working-on-it-thumb.png')), true);
+    const real = state.bezelSrcs.filter(s => s && s.endsWith('.webp')).length;
+    const ph = state.bezelSrcs.filter(s => s && s.endsWith('img/placeholder/working-on-it-thumb.png')).length;
+    check(`${f.cat} 表圈卡：${f.bezelsWithArt} 张真图 + ${f.bezels - f.bezelsWithArt} 张占位`,
+      [real, ph], [f.bezelsWithArt, f.bezels - f.bezelsWithArt]);
     check(`${f.cat} 预览层有图且无破图`, [state.stackCount > 0, state.stackBroken], [true, 0]);
   }
 

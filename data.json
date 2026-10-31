@@ -14674,7 +14674,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-11，砂银面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-11, Matte Silver finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-11.png"
+        "front": "img/cases/smr/SMR-WS-11.png",
+        "side": "img/cases/smr/SMR-WS-11_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-11.webp",
       "compatibleParts": {
@@ -15164,7 +15165,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-12，哑光黑面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-12, Matte Black finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-12.png"
+        "front": "img/cases/smr/SMR-WS-12.png",
+        "side": "img/cases/smr/SMR-WS-12_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-12.webp",
       "compatibleParts": {
@@ -15654,7 +15656,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-16，亮银面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-16, Polished Silver finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-16.png"
+        "front": "img/cases/smr/SMR-WS-16.png",
+        "side": "img/cases/smr/SMR-WS-16_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-16.webp",
       "compatibleParts": {
@@ -16144,7 +16147,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-17，抛光黑面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-17, Polished Black finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-17.png"
+        "front": "img/cases/smr/SMR-WS-17.png",
+        "side": "img/cases/smr/SMR-WS-17_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-17.webp",
       "compatibleParts": {
@@ -16634,7 +16638,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-18，金面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-18, Gold finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-18.png"
+        "front": "img/cases/smr/SMR-WS-18.png",
+        "side": "img/cases/smr/SMR-WS-18_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-18.webp",
       "compatibleParts": {
@@ -17124,7 +17129,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-19，玫金面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-19, Rose Gold finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-19.png"
+        "front": "img/cases/smr/SMR-WS-19.png",
+        "side": "img/cases/smr/SMR-WS-19_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-19.webp",
       "compatibleParts": {
@@ -17614,7 +17620,8 @@
       "description": "SKX Samurai 表壳，型号 SMR-WS-20，蓝面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
       "descriptionEn": "SKX Samurai case, model SMR-WS-20, Blue finish. 42mm Samurai-style case with matching bezel series.",
       "views": {
-        "front": "img/cases/smr/SMR-WS-20.png"
+        "front": "img/cases/smr/SMR-WS-20.png",
+        "side": "img/cases/smr/SMR-WS-20_1.png"
       },
       "swatch": "img/cases/smr/thumb/SMR-WS-20.webp",
       "compatibleParts": {
@@ -19128,9 +19135,10 @@
       "description": "PRX超级玩家3点位壳身，光亮+拉丝，银色",
       "descriptionEn": "C-PRX-1 — 39mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/prx/C-PRX-1.png",
+        "side": "img/cases/prx/C-PRX-1_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/prx/thumb/C-PRX-1.webp",
       "compatibleParts": {
         "bezel": [
           "bz-prx-1",
@@ -19165,9 +19173,9 @@
       "description": "PRX超级玩家3点位壳身，光亮+拉丝，黑色",
       "descriptionEn": "C-PRX-2 — 39mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/prx/C-PRX-2.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/prx/thumb/C-PRX-2.webp",
       "compatibleParts": {
         "bezel": [
           "bz-prx-1",
@@ -19202,9 +19210,10 @@
       "description": "PRX超级玩家3点位壳身，光亮+拉丝，金色",
       "descriptionEn": "C-PRX-3 — 39mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/prx/C-PRX-3.png",
+        "side": "img/cases/prx/C-PRX-3_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/prx/thumb/C-PRX-3.webp",
       "compatibleParts": {
         "bezel": [
           "bz-prx-1",
@@ -19239,9 +19248,10 @@
       "description": "鹦鹉螺3点位壳身，光亮+拉丝，银色",
       "descriptionEn": "YW-1 — 41mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-1.png",
+        "side": "img/cases/nautilus/YW-1_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-1.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19280,9 +19290,10 @@
       "description": "鹦鹉螺3点位壳身，光亮+拉丝，黑色",
       "descriptionEn": "YW-2 — 41mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-2.png",
+        "side": "img/cases/nautilus/YW-2_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-2.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19321,9 +19332,10 @@
       "description": "鹦鹉螺3点位壳身，光亮+拉丝，金色",
       "descriptionEn": "YW-3 — 41mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-3.png",
+        "side": "img/cases/nautilus/YW-3_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-3.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19362,9 +19374,10 @@
       "description": "鹦鹉螺3点位壳身，光亮+拉丝，玫瑰金色",
       "descriptionEn": "YW-4 — 41mm case, polished and brushed finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-4.png",
+        "side": "img/cases/nautilus/YW-4_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-4.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19403,9 +19416,10 @@
       "description": "鹦鹉螺3点位壳身，磨砂哑光，银色",
       "descriptionEn": "YW-5 — 41mm case, matte finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-5.png",
+        "side": "img/cases/nautilus/YW-5_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-5.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19444,9 +19458,10 @@
       "description": "鹦鹉螺3点位壳身，磨砂哑光，黑色",
       "descriptionEn": "YW-6 — 41mm case, matte finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-6.png",
+        "side": "img/cases/nautilus/YW-6_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-6.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19485,9 +19500,10 @@
       "description": "鹦鹉螺3点位壳身，磨砂哑光，金色",
       "descriptionEn": "YW-7 — 41mm case, matte finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-7.png",
+        "side": "img/cases/nautilus/YW-7_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-7.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19526,9 +19542,10 @@
       "description": "鹦鹉螺3点位壳身，磨砂哑光，玫瑰金色",
       "descriptionEn": "YW-8 — 41mm case, matte finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/nautilus/YW-8.png",
+        "side": "img/cases/nautilus/YW-8_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/nautilus/thumb/YW-8.webp",
       "compatibleParts": {
         "bezel": [
           "bz-i-1",
@@ -19567,9 +19584,10 @@
       "description": "SKX方形3点位壳身，光亮+拉丝，银色",
       "descriptionEn": "C-AF-1 — 41mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/square/C-AF-1.png",
+        "side": "img/cases/square/C-AF-1_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/square/thumb/C-AF-1.webp",
       "compatibleParts": {
         "bezel": [
           "bz-sq-af-1",
@@ -19608,9 +19626,10 @@
       "description": "SKX方形3点位壳身，光亮+拉丝，黑色",
       "descriptionEn": "C-AF-2 — 41mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/square/C-AF-2.png",
+        "side": "img/cases/square/C-AF-2_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/square/thumb/C-AF-2.webp",
       "compatibleParts": {
         "bezel": [
           "bz-sq-af-1",
@@ -19649,9 +19668,10 @@
       "description": "SKX方形3点位壳身，光亮+拉丝，金色",
       "descriptionEn": "C-AF-3 — 41mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/square/C-AF-3.png",
+        "side": "img/cases/square/C-AF-3_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/square/thumb/C-AF-3.webp",
       "compatibleParts": {
         "bezel": [
           "bz-sq-af-1",
@@ -19690,9 +19710,10 @@
       "description": "SKX方形3点位壳身，光亮+拉丝，玫瑰金色",
       "descriptionEn": "C-AF-4 — 41mm case, polished and brushed finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/square/C-AF-4.png",
+        "side": "img/cases/square/C-AF-4_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/square/thumb/C-AF-4.webp",
       "compatibleParts": {
         "bezel": [
           "bz-sq-af-1",
@@ -19772,9 +19793,10 @@
       "description": "SKX方形3点位壳身，磨砂，黑色",
       "descriptionEn": "C-BF-2 — 41mm case, matte finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
       "views": {
-        "front": "img/placeholder/working-on-it.png"
+        "front": "img/cases/square/C-BF-2.png",
+        "side": "img/cases/square/C-BF-2_1.png"
       },
-      "swatch": "img/placeholder/working-on-it-thumb.png",
+      "swatch": "img/cases/square/thumb/C-BF-2.webp",
       "compatibleParts": {
         "bezel": [
           "bz-sq-af-1",
@@ -20101,6 +20123,43 @@
           "bz-at-a4",
           "bz-bt-b1",
           "bz-bt-b2"
+        ],
+        "insert": [],
+        "crystal": [],
+        "chapterRing": [],
+        "crown": [],
+        "caseback": [],
+        "dial": [],
+        "hands": [],
+        "strap": []
+      },
+      "material": "Steel"
+    },
+    {
+      "id": "prx-4",
+      "code": "C-PRX-4",
+      "name": "Case C-PRX-4 (Rose Gold)",
+      "nameZh": "壳身 C-PRX-4（玫瑰金色）",
+      "category": "PRX Case",
+      "size": "39mm",
+      "lugWidth": "12mm",
+      "lugToLug": "45mm",
+      "thickness": "10mm",
+      "waterResistance": "—",
+      "crystal": "Sapphire",
+      "movement": "NH35/36 4R36",
+      "description": "PRX超级玩家3点位壳身，光亮+拉丝，玫瑰金色",
+      "descriptionEn": "C-PRX-4 — 39mm case, polished and brushed finish, rose gold, crown at 3 o'clock.",
+      "views": {
+        "front": "img/cases/prx/C-PRX-4.png"
+      },
+      "swatch": "img/cases/prx/thumb/C-PRX-4.webp",
+      "compatibleParts": {
+        "bezel": [
+          "bz-prx-1",
+          "bz-prx-2",
+          "bz-prx-3",
+          "bz-prx-4"
         ],
         "insert": [],
         "crystal": [],
@@ -26436,9 +26495,10 @@
         "material": "Steel",
         "description": "超级玩家（PRX）系列表圈 B-PRX-1（银色），亮银圈，抛光为光亮+拉丝；配3点位超级玩家表壳。",
         "descriptionEn": "B-PRX-1 — silver bezel for the PRX Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "PRX Case"
+        "image": "img/bezel/B-PRX-1.png",
+        "swatch": "img/bezel/thumb/B-PRX-1.webp",
+        "category": "PRX Case",
+        "innerR": 188.0
       },
       {
         "id": "bz-prx-2",
@@ -26450,9 +26510,10 @@
         "material": "Steel",
         "description": "超级玩家（PRX）系列表圈 B-PRX-2（黑色），亮黑圈，抛光为光亮+拉丝；配3点位超级玩家表壳。",
         "descriptionEn": "B-PRX-2 — black bezel for the PRX Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "PRX Case"
+        "image": "img/bezel/B-PRX-2.png",
+        "swatch": "img/bezel/thumb/B-PRX-2.webp",
+        "category": "PRX Case",
+        "innerR": 188.0
       },
       {
         "id": "bz-prx-3",
@@ -26464,9 +26525,10 @@
         "material": "Steel",
         "description": "超级玩家（PRX）系列表圈 B-PRX-3（金色），亮金圈，抛光为光亮+拉丝；配3点位超级玩家表壳。",
         "descriptionEn": "B-PRX-3 — gold bezel for the PRX Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "PRX Case"
+        "image": "img/bezel/B-PRX-3.png",
+        "swatch": "img/bezel/thumb/B-PRX-3.webp",
+        "category": "PRX Case",
+        "innerR": 188.0
       },
       {
         "id": "bz-prx-4",
@@ -26478,9 +26540,10 @@
         "material": "Steel",
         "description": "超级玩家（PRX）系列表圈 B-PRX-4（玫瑰金色），亮玫瑰金圈，抛光为光亮+拉丝；配3点位超级玩家表壳。",
         "descriptionEn": "B-PRX-4 — rose gold bezel for the PRX Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "PRX Case"
+        "image": "img/bezel/B-PRX-4.png",
+        "swatch": "img/bezel/thumb/B-PRX-4.webp",
+        "category": "PRX Case",
+        "innerR": 188.0
       },
       {
         "id": "bz-i-1",
@@ -26492,9 +26555,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-1（银色），亮银8角圈+竖丝，压圈对位，抛光为光亮+拉丝；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-1 — silver bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-1.png",
+        "swatch": "img/bezel/thumb/B-I-1.webp",
+        "category": "Nautilus Case",
+        "innerR": 205.0
       },
       {
         "id": "bz-i-2",
@@ -26506,9 +26570,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-2（黑色），亮黑8角圈+竖丝，压圈对位，抛光为光亮+拉丝；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-2 — black bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-2.png",
+        "swatch": "img/bezel/thumb/B-I-2.webp",
+        "category": "Nautilus Case",
+        "innerR": 205.0
       },
       {
         "id": "bz-i-3",
@@ -26520,9 +26585,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-3（金色），亮金8角圈+竖丝，压圈对位，抛光为光亮+拉丝；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-3 — gold bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-3.png",
+        "swatch": "img/bezel/thumb/B-I-3.webp",
+        "category": "Nautilus Case",
+        "innerR": 205.0
       },
       {
         "id": "bz-i-4",
@@ -26534,9 +26600,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-4（玫瑰金色），亮玫8角圈+竖丝，压圈对位，抛光为光亮+拉丝；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-4 — rose gold bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-4.png",
+        "swatch": "img/bezel/thumb/B-I-4.webp",
+        "category": "Nautilus Case",
+        "innerR": 205.0
       },
       {
         "id": "bz-i-5",
@@ -26548,9 +26615,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-5（银色），磨砂（哑光）精钢表圈，抛光为磨砂（哑光）；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-5 — silver bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-5.png",
+        "swatch": "img/bezel/thumb/B-I-5.webp",
+        "category": "Nautilus Case",
+        "innerR": 191.0
       },
       {
         "id": "bz-i-6",
@@ -26562,9 +26630,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-6（黑色），磨砂（哑光）精钢表圈，抛光为磨砂（哑光）；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-6 — black bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-6.png",
+        "swatch": "img/bezel/thumb/B-I-6.webp",
+        "category": "Nautilus Case",
+        "innerR": 191.0
       },
       {
         "id": "bz-i-7",
@@ -26576,9 +26645,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-7（金色），磨砂（哑光）精钢表圈，抛光为磨砂（哑光）；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-7 — gold bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-7.png",
+        "swatch": "img/bezel/thumb/B-I-7.webp",
+        "category": "Nautilus Case",
+        "innerR": 191.0
       },
       {
         "id": "bz-i-8",
@@ -26590,9 +26660,10 @@
         "material": "Steel",
         "description": "鹦鹉螺系列表圈 B-I-8（玫瑰金色），磨砂（哑光）精钢表圈，抛光为磨砂（哑光）；配鹦鹉螺（Nautilus）表壳。",
         "descriptionEn": "B-I-8 — rose gold bezel for the Nautilus Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "Nautilus Case"
+        "image": "img/bezel/B-I-8.png",
+        "swatch": "img/bezel/thumb/B-I-8.webp",
+        "category": "Nautilus Case",
+        "innerR": 191.0
       },
       {
         "id": "bz-at-a1",
@@ -26688,9 +26759,10 @@
         "material": "Steel",
         "description": "SKX 方形系列表圈 B-AF-1（银色），亮银直纹圈；配3点位方形表壳。",
         "descriptionEn": "B-AF-1 — silver bezel for the SKX Square Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX Square Case"
+        "image": "img/bezel/B-AF-1.png",
+        "swatch": "img/bezel/thumb/B-AF-1.webp",
+        "category": "SKX Square Case",
+        "innerR": 188.0
       },
       {
         "id": "bz-sq-af-2",
@@ -26702,9 +26774,10 @@
         "material": "Steel",
         "description": "SKX 方形系列表圈 B-AF-2（黑色），亮黑直纹圈；配3点位方形表壳。",
         "descriptionEn": "B-AF-2 — black bezel for the SKX Square Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX Square Case"
+        "image": "img/bezel/B-AF-2.png",
+        "swatch": "img/bezel/thumb/B-AF-2.webp",
+        "category": "SKX Square Case",
+        "innerR": 185.0
       },
       {
         "id": "bz-sq-af-3",
@@ -26716,9 +26789,10 @@
         "material": "Steel",
         "description": "SKX 方形系列表圈 B-AF-3（金色），亮金直纹圈；配3点位方形表壳。",
         "descriptionEn": "B-AF-3 — gold bezel for the SKX Square Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX Square Case"
+        "image": "img/bezel/B-AF-3.png",
+        "swatch": "img/bezel/thumb/B-AF-3.webp",
+        "category": "SKX Square Case",
+        "innerR": 186.0
       },
       {
         "id": "bz-sq-af-4",
@@ -26730,9 +26804,10 @@
         "material": "Steel",
         "description": "SKX 方形系列表圈 B-AF-4（玫瑰金色），亮玫直纹圈；配3点位方形表壳。",
         "descriptionEn": "B-AF-4 — rose gold bezel for the SKX Square Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX Square Case"
+        "image": "img/bezel/B-AF-4.png",
+        "swatch": "img/bezel/thumb/B-AF-4.webp",
+        "category": "SKX Square Case",
+        "innerR": 186.0
       },
       {
         "id": "bz-sq-bf-1",
@@ -26758,9 +26833,10 @@
         "material": "Steel",
         "description": "SKX 方形系列表圈 B-BF-2（黑色），砂黑直纹圈；配3点位方形表壳。",
         "descriptionEn": "B-BF-2 — black bezel for the SKX Square Case. Factory photos for this model are on the way.",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX Square Case"
+        "image": "img/bezel/B-BF-2.png",
+        "swatch": "img/bezel/thumb/B-BF-2.webp",
+        "category": "SKX Square Case",
+        "innerR": 186.0
       },
       {
         "id": "bz-sq-bf-3",

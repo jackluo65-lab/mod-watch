@@ -62,11 +62,11 @@ const TAG = process.env.TAG || 'local';
   }));
 
   const checks = [
-    ['80 个表壳卡片都渲染了', cards.length === 80],
+    ['81 个表壳卡片都渲染了', cards.length === 81],
     ['卡片图走 .webp 缩略图', webp >= 54],
     ['用 PNG 的只有 skxsub 和占位图卡片', pngLeft === 0 || pngOnlySkxsub],
     ['每张卡片都留了 data-full 大图路径', noFull === 0],
-    ['展开后缩略图真的解码成功（无 0 宽）', broken.length === 0 && loaded.length >= 79],
+    ['展开后缩略图真的解码成功（无 0 宽）', broken.length === 0 && loaded.length >= 80],
     ['系列代表图也用 .webp + data-full（或占位图）',
       reps.filter(r => r.src && !r.src.endsWith('.webp') && !r.src.endsWith('working-on-it-thumb.png')).length === 0],
     ['点击表壳卡片仍在工作', after.selected === 'vintage-jtf1'],
