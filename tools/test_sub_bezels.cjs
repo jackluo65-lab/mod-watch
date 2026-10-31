@@ -33,7 +33,7 @@ const EXPECTED = ['bz-sub-1', 'bz-sub-2', 'bz-sub-3', 'bz-sub-4', 'bz-sub-5', 'b
     const s = [...document.querySelectorAll('.case-series')].find(x => x.dataset.category === 'SKX SUB Case');
     return [...s.querySelectorAll('.case-series-variants .case-card')].map(c => c.dataset.id);
   });
-  check('系列里有 SKX 潜航者表壳', cases.includes('skxsub'), true);
+  check('系列里是 SG-1..SG-8 七款，不再是占位', cases, ['sub-sg1','sub-sg2','sub-sg3','sub-sg4','sub-sg5','sub-sg6','sub-sg8']);
 
   await p.evaluate(() => {
     const s = [...document.querySelectorAll('.case-series')].find(x => x.dataset.category === 'SKX SUB Case');
@@ -41,7 +41,7 @@ const EXPECTED = ['bz-sub-1', 'bz-sub-2', 'bz-sub-3', 'bz-sub-4', 'bz-sub-5', 'b
   });
   await p.waitForTimeout(1200);
   const after = await p.evaluate(() => ({ step: document.getElementById('stepTitle').textContent.trim(), id: selectedCase && selectedCase.id }));
-  check('选中后进入第 2 步（选择表圈）', [after.id, /表圈/.test(after.step)], ['skxsub', true]);
+  check('选中后进入第 2 步（选择表圈）', [after.id, /表圈/.test(after.step)], ['sub-sg1', true]);
 
   await p.waitForTimeout(1400);
   const bez = await p.evaluate(() => {
