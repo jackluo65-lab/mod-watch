@@ -3073,12 +3073,20 @@ function renderImgStack(bust) {
   document.querySelector('.preview-panel')
     .classList.toggle('is-empty', !selectedCase && currentView === 'front');
 
-  // Side / back view images are not available yet — always show Coming Soon placeholder
+  // Side / back views only exist for part of the catalogue: 35 cases ship a side profile
+  // (Vintage, Samurai, Nautilus, Square, PRX, SUB) and 16 casebacks have artwork. Show the
+  // real thing where we have it, keep Coming Soon where we don't.
   if (currentView === 'side' || currentView === 'back') {
-    comingSoon.style.display = 'flex';
-    stack.style.display = 'none';
-    svg.style.display = 'none';
-    return;
+    const hasSide = currentView === 'side' && selectedCase &&
+      selectedCase.views && selectedCase.views.side;
+    const hasBack = currentView === 'back' && selectedCase &&
+      ((selections.caseback && selections.caseback.image) || selectedCase.views.back);
+    if (!hasSide && !hasBack) {
+      comingSoon.style.display = 'flex';
+      stack.style.display = 'none';
+      svg.style.display = 'none';
+      return;
+    }
   }
   comingSoon.style.display = 'none';
   // No case chosen yet — show the hero prompt (white bg, black text) instead of a placeholder watch
