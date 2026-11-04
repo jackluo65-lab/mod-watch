@@ -57,7 +57,7 @@ const { chromium } = require('playwright');
   console.log('3.8 MORE case -> crown cards:', moreCards);
 
   // --- 3. non-3.8 case must see none (step auto-skips)
-  for (const id of ['classic-jtf1', 'skx30', 'sub-sg1']) {
+  for (const id of ['classic-jtf1', 'skx30-b1', 'sub-sg1']) {
     await page.evaluate(cid => selectCase(cid), id);
     await page.waitForTimeout(800);
     const n = await page.locator('#list-crown .part-item').count();
