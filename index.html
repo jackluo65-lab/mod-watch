@@ -3132,14 +3132,21 @@ function renderImgStack(bust) {
     if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
     // Hands follow the same aperture, so the second-hand tip always stops just inside the ring
     if (layer.type === 'hands' && handsScale() !== 1) el.style.transform = `scale(${handsScale().toFixed(4)})`;
-    // The crown art is shared by every family, but a shell can have its crown tube a few
-    // source-pixels higher or lower than the others. Such a case carries crownOffsetY in
-    // canvas px (see SKX Samurai, -6) and the shift is applied here, so a family that needs
-    // a different crown position no longer needs its own copy of all 22 crown images.
-    // A percentage is used rather than px because the layer box is stretched to the preview
-    // (object-fit: contain); the box keeps the canvas' 4:5 ratio, so px / 10 is the percent.
-    if (layer.type === 'crown' && selectedCase.crownOffsetY) {
-      el.style.transform = `translateY(${(selectedCase.crownOffsetY / 10).toFixed(3)}%)`;
+    // Crown placement. The catalogue has two drawing positions — 4 o'clock (WC-*, the SKX 3.8
+    // tube) and 3 o'clock (WC3-*, the short stems) — and any crown may end up on either kind of
+    // case, so the art is moved to the case's own position instead of being filtered out.
+    // A case can also nudge it further with crownOffsetY (see SKX Samurai, -6).
+    // Percentages, not px: the layer box is object-fit onto the 4:5 canvas, so px / 10 is the
+    // percent and the shift survives any preview size.
+    if (layer.type === 'crown') {
+      const CROWN_AT = { 3: [655, 505], 4: [635, 610] };   // stem-tip anchors, canvas px
+      const caseAt = CROWN_AT[selectedCase.crownPos || 3];
+      const artAt = CROWN_AT[(selections.crown && selections.crown.crownPos) || 3];
+      const dx = caseAt[0] - artAt[0];
+      const dy = caseAt[1] - artAt[1] + (selectedCase.crownOffsetY || 0);
+      if (dx || dy) {
+        el.style.transform = `translate(${(dx / 10).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)`;
+      }
     }
     // A single dropped request used to delete the layer for good, which looks exactly
     // like "the part was never stacked". Retry a couple of times before giving up, and
