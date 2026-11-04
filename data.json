@@ -32715,9 +32715,9 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用后盖，拉丝，银色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal brushed silver caseback, fits all case series.",
+        "descriptionEn": "Solid caseback, brushed silver. Fits every case family.",
         "image": "img/caseback/CB-B-1.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-B-1.webp"
       },
       {
@@ -32729,9 +32729,9 @@
         "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，磨砂哑光，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal black caseback, fits all case series.",
+        "descriptionEn": "Sapphire display caseback, matte black. Fits every case family.",
         "image": "img/caseback/CB-C-2.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-C-2.webp"
       },
       {
@@ -32743,9 +32743,9 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，光亮，银色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal silver caseback, fits all case series.",
+        "descriptionEn": "Sapphire display caseback, polished silver. Fits every case family.",
         "image": "img/caseback/CB-D-1.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-D-1.webp"
       },
       {
@@ -32754,12 +32754,12 @@
         "name": "Caseback CB-D-3 (Golden)",
         "nameZh": "后盖 CB-D-3（金色）",
         "series": "universal",
-        "color": "#d4af37",
+        "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，光亮，金色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal gold caseback, fits all case series.",
+        "descriptionEn": "Sapphire display caseback, polished gold. Fits every case family.",
         "image": "img/caseback/CB-D-3.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-D-3.webp"
       },
       {
@@ -32768,12 +32768,12 @@
         "name": "Caseback CB-D-4 (Rose Gold)",
         "nameZh": "后盖 CB-D-4（玫瑰金色）",
         "series": "universal",
-        "color": "#b76e79",
+        "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，光亮，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal rose gold caseback, fits all case series.",
+        "descriptionEn": "Sapphire display caseback, polished rose gold. Fits every case family.",
         "image": "img/caseback/CB-D-4.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-D-4.webp"
       },
       {
@@ -32782,12 +32782,12 @@
         "name": "Caseback CB-G-1 (Silver)",
         "nameZh": "后盖 CB-G-1（银色）",
         "series": "universal",
-        "color": "#b8b8b8",
+        "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用后盖，磨砂哑光，银色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal sandblasted silver caseback, fits all case series.",
+        "descriptionEn": "Solid caseback, matte silver. Fits every case family.",
         "image": "img/caseback/CB-G-1.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-G-1.webp"
       },
       {
@@ -32796,12 +32796,12 @@
         "name": "Caseback CB-G-2 (Black)",
         "nameZh": "后盖 CB-G-2（黑色）",
         "series": "universal",
-        "color": "#2a2a2a",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用后盖，磨砂哑光，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "Universal matte black caseback, fits all case series.",
+        "descriptionEn": "Solid caseback, matte black. Fits every case family.",
         "image": "img/caseback/CB-G-2.png",
-        "category": "universal",
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case",
         "swatch": "img/caseback/thumb/CB-G-2.webp"
       },
       {
@@ -32813,10 +32813,10 @@
         "color": "#c0c0c0",
         "material": "Steel",
         "description": "通用后盖，光亮，银色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished silver. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-a-2",
@@ -32824,13 +32824,13 @@
         "name": "Caseback CB-A-2 (Black)",
         "nameZh": "后盖 CB-A-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished black. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-a-3",
@@ -32841,10 +32841,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-2",
@@ -32852,13 +32852,13 @@
         "name": "Caseback CB-B-2 (Black)",
         "nameZh": "后盖 CB-B-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用后盖，拉丝，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, brushed black. Fits every case family.",
         "image": "img/caseback/CB-B-2.png",
         "swatch": "img/caseback/thumb/CB-B-2.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-3",
@@ -32869,10 +32869,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用后盖，拉丝，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, brushed gold. Fits every case family.",
         "image": "img/caseback/CB-B-3.png",
         "swatch": "img/caseback/thumb/CB-B-3.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-4",
@@ -32883,10 +32883,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用后盖，拉丝，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, brushed rose gold. Fits every case family.",
         "image": "img/caseback/CB-B-4.png",
         "swatch": "img/caseback/thumb/CB-B-4.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-1a",
@@ -32897,10 +32897,10 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮+拉丝，银色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished and brushed silver. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-2a",
@@ -32908,13 +32908,13 @@
         "name": "Caseback CB-B-2a (Black)",
         "nameZh": "后盖 CB-B-2a（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮+拉丝，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished and brushed black. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-3a",
@@ -32925,10 +32925,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮+拉丝，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished and brushed gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-b-4a",
@@ -32939,10 +32939,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用后盖，光亮+拉丝，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, polished and brushed rose gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-c-1",
@@ -32953,10 +32953,10 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，磨砂哑光，银色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback, matte silver. Fits every case family.",
         "image": "img/caseback/CB-C-1.png",
         "swatch": "img/caseback/thumb/CB-C-1.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-c-3",
@@ -32967,10 +32967,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，磨砂哑光，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback, matte gold. Fits every case family.",
         "image": "img/caseback/CB-C-3.png",
         "swatch": "img/caseback/thumb/CB-C-3.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-c-4",
@@ -32981,10 +32981,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，磨砂哑光，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback, matte rose gold. Fits every case family.",
         "image": "img/caseback/CB-C-4.png",
         "swatch": "img/caseback/thumb/CB-C-4.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-c-5",
@@ -32995,10 +32995,10 @@
         "color": "#2c4d8a",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，磨砂哑光，蓝色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback, matte blue. Fits every case family.",
         "image": "img/caseback/CB-C-5.png",
         "swatch": "img/caseback/thumb/CB-C-5.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-d-2",
@@ -33006,13 +33006,13 @@
         "name": "Caseback CB-D-2 (Black)",
         "nameZh": "后盖 CB-D-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，光亮，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback, polished black. Fits every case family.",
         "image": "img/caseback/CB-D-2.png",
         "swatch": "img/caseback/thumb/CB-D-2.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-e-1",
@@ -33023,10 +33023,10 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，磨砂哑光，银色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, matte silver. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-e-2",
@@ -33034,13 +33034,13 @@
         "name": "Caseback CB-E-2 (Black)",
         "nameZh": "后盖 CB-E-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，磨砂哑光，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, matte black. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-e-3",
@@ -33051,10 +33051,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，磨砂哑光，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, matte gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-e-4",
@@ -33065,10 +33065,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，磨砂哑光，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, matte rose gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-e-5",
@@ -33079,10 +33079,10 @@
         "color": "#2c4d8a",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，磨砂哑光，蓝色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, matte blue. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-f-1",
@@ -33093,10 +33093,10 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，光亮，银色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, polished silver. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-f-2",
@@ -33104,13 +33104,13 @@
         "name": "Caseback CB-F-2 (Black)",
         "nameZh": "后盖 CB-F-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，光亮，黑色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, polished black. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-f-3",
@@ -33121,10 +33121,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，光亮，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, polished gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-f-4",
@@ -33135,10 +33135,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用矿物透明后盖，光亮，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Mineral display caseback, polished rose gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-g-3",
@@ -33149,10 +33149,10 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用后盖，磨砂哑光，金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, matte gold. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-g-4",
@@ -33163,10 +33163,10 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用后盖，磨砂哑光，玫瑰金色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, matte rose gold. Fits every case family.",
         "image": "img/caseback/CB-G-4.png",
         "swatch": "img/caseback/thumb/CB-G-4.webp",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-g-5",
@@ -33177,10 +33177,10 @@
         "color": "#2c4d8a",
         "material": "Stainless Steel",
         "description": "通用后盖，磨砂哑光，蓝色表面，适配全部表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Solid caseback, matte blue. Fits every case family.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,AP Case"
+        "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case"
       },
       {
         "id": "cb-cb-ap-1",
@@ -33191,7 +33191,7 @@
         "color": "#c0c0c0",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，拉丝，银色，适配AP表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback for AP cases, brushed silver.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
         "category": "AP Case"
@@ -33202,10 +33202,10 @@
         "name": "Caseback CB-AP-2 (Black)",
         "nameZh": "后盖 CB-AP-2（黑色）",
         "series": "universal",
-        "color": "#262626",
+        "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，拉丝，黑色，适配AP表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback for AP cases, brushed black.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
         "category": "AP Case"
@@ -33219,7 +33219,7 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，拉丝，金色，适配AP表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback for AP cases, brushed gold.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
         "category": "AP Case"
@@ -33233,7 +33233,7 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "通用蓝宝石透明后盖，拉丝，玫瑰金色，适配AP表壳系列。",
-        "descriptionEn": "",
+        "descriptionEn": "Sapphire display caseback for AP cases, brushed rose gold.",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
         "category": "AP Case"
