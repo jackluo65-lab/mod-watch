@@ -1,16 +1,21 @@
-// 表把点位换算：4 点位的画稿（WC-*）放到 3 点位的壳上要自动挪到 3 点位置，
-// 3 点位的画稿放到 4 点位的壳上同理；同点位不能有位移。
+// 表把落位：位置按表壳点位平移，方向按「表壳倾角 − 画稿倾角」旋转。
+// 4 点位画稿画在 25°，3 点位画稿是水平的；有 5 款拍摄画稿摆在 4 点位槽里却是水平画的，
+// 靠 crownAngle=0 补 25°。占位图不参与预览。
 //   URL=http://127.0.0.1:8796/index.html node tools/test_crown_position.cjs
 const { chromium } = require('playwright');
 const URL = process.env.URL || 'http://127.0.0.1:8796/index.html';
 
 const CASES = [
-  { case: 'SKX-B-1', crown: 'wc-a-1', label: '4点壳 + 4点画稿', moved: false, rot: 0 },
-  { case: 'SK3-B1', crown: 'wc-a-1', label: '3点壳 + 4点画稿', moved: true, rot: -25 },
-  { case: 'SKX-B-1', crown: 'wc3-j-1', label: '4点壳 + 3点画稿', moved: true, rot: 25 },
-  { case: 'SK3-B1', crown: 'wc3-j-1', label: '3点壳 + 3点画稿', moved: false, rot: 0 },
+  { case: 'SKX-B-1', crown: 'wc-a-1', label: '4点壳 + 4点斜画稿', moved: false, rot: 0 },
+  { case: 'SK3-B1', crown: 'wc-a-1', label: '3点壳 + 4点斜画稿', moved: true, rot: -25 },
+  { case: 'SKX-B-1', crown: 'wc3-j-1', label: '4点壳 + 3点平画稿', moved: true, rot: 25 },
+  { case: 'SK3-B1', crown: 'wc3-j-1', label: '3点壳 + 3点平画稿', moved: false, rot: 0 },
+  // 拍摄画稿摆在 4 点位槽里但画的是水平 → 4 点壳上必须补 25°
+  { case: 'SKX-B-1', crown: 'wc-a-2', label: '4点壳 + 水平画稿(wc-a-2)', moved: false, rot: 25 },
   { case: 'SMR-WS-11', crown: 'wc3-j-1', label: '武士(3点, 有 -6 微调) + 3点画稿', moved: true, rot: 0 },
   { case: 'YW-1', crown: 'wc-q-2', label: '鹦鹉螺 + 短款(3点)', moved: false, rot: 0 },
+  // 占位图（努力更新中）不该进预览
+  { case: 'SKX-B-1', crown: 'wc-c-1', label: '4点壳 + 占位图表把', moved: false, rot: 0, hidden: true },
 ];
 
 (async () => {
@@ -48,23 +53,34 @@ const CASES = [
     await p.waitForTimeout(800);
 
     const st = await p.evaluate(() => {
-      const im = [...document.querySelectorAll('#imgStack img')]
-        .find(i => (i.getAttribute('src') || '').includes('/crown/'));
+      const all = [...document.querySelectorAll('#imgStack img')];
+      const im = all.find(i => (i.getAttribute('src') || '').includes('/crown/'));
+      const ph = all.find(i => (i.getAttribute('src') || '').includes('/placeholder/'));
       return {
         tf: im ? (im.style.transform || '') : null,
         origin: im ? (im.style.transformOrigin || '') : null,
+        placeholder: !!ph,
         broken: im ? (im.complete && im.naturalWidth === 0) : true,
       };
     });
-    check(`${t.label}：表把进了预览`, st.tf === null, false);
-    check(`${t.label}：${t.moved ? '有' : '没有'}位移`, !!st.tf, t.moved);
-    check(`${t.label}：${t.rot ? `旋转 ${t.rot}°` : '不旋转'}`,
-      st.tf ? (/rotate\((-?\d+(?:\.\d+)?)deg\)/.exec(st.tf) || [0, 0])[1] * 1 : 0, t.rot);
-    if (t.rot) check(`${t.label}：绕杆尾旋转`, st.origin !== '' && st.origin !== '50% 50%', true);
+    if (t.hidden) {
+      check(`${t.label}：不进预览`, st.tf === null, true);
+      check(`${t.label}：占位图没被当成图层`, st.placeholder, false);
+    } else {
+      check(`${t.label}：表把进了预览`, st.tf === null, false);
+      check(`${t.label}：占位图没混进来`, st.placeholder, false);
+      check(`${t.label}：${t.moved ? '有' : '没有'}位移`, !!st.tf && /translate/.test(st.tf), t.moved);
+      check(`${t.label}：${t.rot ? `旋转 ${t.rot}°` : '不旋转'}`,
+        st.tf ? (/rotate\((-?\d+(?:\.\d+)?)deg\)/.exec(st.tf) || [0, 0])[1] * 1 : 0, t.rot);
+      if (t.rot) check(`${t.label}：绕画稿中心旋转`, st.origin !== '' && st.origin !== '50% 50%', true);
+    }
     if (t.case === 'SMR-WS-11') check('武士保留 -6px 垂直微调', /-0\.6%/.test(st.tf || ''), true);
     if (t.case === 'SK3-B1' && t.crown === 'wc-a-1') {
-      check('跨点位位移是 x+20 / y-105', st.tf, 'translate(2%, -10.5%) rotate(-25deg)');
-      check('旋转轴心 = 4点位杆尾 (635,610)', st.origin, '79.375% 61%');
+      check('跨点位位移是 x+20 / y-105', st.tf, 'translate(2.5%, -10.5%) rotate(-25deg)');
+      check('旋转轴心 = 4点位锚点 (635,610)', st.origin, '79.375% 61%');
+    }
+    if (t.case === 'SKX-B-1' && t.crown === 'wc-a-2') {
+      check('水平画稿在 4 点壳上只旋转、不挪位', st.tf, 'rotate(25deg)');
     }
   }
 

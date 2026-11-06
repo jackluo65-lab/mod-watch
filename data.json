@@ -22996,11 +22996,7 @@
           "wc3-ap-1",
           "wc3-ap-2",
           "wc3-ap-3",
-          "wc3-ap-4",
-          "wc-wc-ap-1",
-          "wc-wc-ap-2",
-          "wc-wc-ap-3",
-          "wc-wc-ap-4"
+          "wc3-ap-4"
         ],
         "hands": [
           "hd-h-4-gold",
@@ -23185,11 +23181,7 @@
           "wc3-ap-1",
           "wc3-ap-2",
           "wc3-ap-3",
-          "wc3-ap-4",
-          "wc-wc-ap-1",
-          "wc-wc-ap-2",
-          "wc-wc-ap-3",
-          "wc-wc-ap-4"
+          "wc3-ap-4"
         ],
         "hands": [
           "hd-h-4-gold",
@@ -23374,11 +23366,7 @@
           "wc3-ap-1",
           "wc3-ap-2",
           "wc3-ap-3",
-          "wc3-ap-4",
-          "wc-wc-ap-1",
-          "wc-wc-ap-2",
-          "wc-wc-ap-3",
-          "wc-wc-ap-4"
+          "wc3-ap-4"
         ],
         "hands": [
           "hd-h-4-gold",
@@ -23563,11 +23551,7 @@
           "wc3-ap-1",
           "wc3-ap-2",
           "wc3-ap-3",
-          "wc3-ap-4",
-          "wc-wc-ap-1",
-          "wc-wc-ap-2",
-          "wc-wc-ap-3",
-          "wc-wc-ap-4"
+          "wc3-ap-4"
         ],
         "hands": [
           "hd-h-4-gold",
@@ -33608,11 +33592,14 @@
         "color": "#c9c7c3",
         "material": "Stainless Steel",
         "description": "直纹光亮，S标没填油",
-        "descriptionEn": "Straight knurl, polished, S logo, unfilled.",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "image": "img/crown/WC-E-1.png",
         "swatch": "img/crown/thumb/WC-E-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc-e-2",
@@ -33623,11 +33610,14 @@
         "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "直纹光亮，S标没填油",
-        "descriptionEn": "Straight knurl, polished, S logo, unfilled.",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "image": "img/crown/WC-E-2.png",
         "swatch": "img/crown/thumb/WC-E-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc-o-3",
@@ -33638,11 +33628,14 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "直纹光亮，没有S标",
-        "descriptionEn": "Straight knurl, polished, no S logo.",
+        "descriptionEn": "straight knurl, polished, no S logo",
         "image": "img/crown/WC-O-3.png",
         "swatch": "img/crown/thumb/WC-O-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹光亮，没有S标",
+        "finishEn": "straight knurl, polished, no S logo"
       },
       {
         "id": "wc-o-4",
@@ -33653,11 +33646,14 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "直纹光亮，没有S标",
-        "descriptionEn": "Straight knurl, polished, no S logo.",
+        "descriptionEn": "straight knurl, polished, no S logo",
         "image": "img/crown/WC-O-4.png",
         "swatch": "img/crown/thumb/WC-O-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹光亮，没有S标",
+        "finishEn": "straight knurl, polished, no S logo"
       },
       {
         "id": "wc-j-2",
@@ -33668,11 +33664,14 @@
         "color": "#c9c7c3",
         "material": "Stainless Steel",
         "description": "直纹PVD哑光，S标不填油",
-        "descriptionEn": "Straight knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC-J-2.png",
         "swatch": "img/crown/thumb/WC-J-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-j-1",
@@ -33683,11 +33682,14 @@
         "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "直纹PVD哑光，S标不填油",
-        "descriptionEn": "Straight knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC-J-1.png",
         "swatch": "img/crown/thumb/WC-J-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-j-3",
@@ -33698,11 +33700,14 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "直纹PVD哑光，S标不填油",
-        "descriptionEn": "Straight knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC-J-3.png",
         "swatch": "img/crown/thumb/WC-J-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-j-4",
@@ -33713,11 +33718,14 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "直纹PVD哑光，S标不填油",
-        "descriptionEn": "Straight knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC-J-4.png",
         "swatch": "img/crown/thumb/WC-J-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-b-1",
@@ -33728,11 +33736,14 @@
         "color": "#c9c7c3",
         "material": "Stainless Steel",
         "description": "齿纹光亮，红S标填油",
-        "descriptionEn": "Toothed knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "fluted, polished, red S logo filled",
         "image": "img/crown/WC-B-1.png",
         "swatch": "img/crown/thumb/WC-B-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "齿纹光亮，红S标填油",
+        "finishEn": "fluted, polished, red S logo filled"
       },
       {
         "id": "wc-c-2",
@@ -33743,11 +33754,14 @@
         "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "齿纹光亮，S标没填油",
-        "descriptionEn": "Toothed knurl, polished, S logo, unfilled.",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "image": "img/crown/WC-C-2.png",
         "swatch": "img/crown/thumb/WC-C-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc-c-3",
@@ -33758,11 +33772,14 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "齿纹光亮，S标没填油",
-        "descriptionEn": "Toothed knurl, polished, S logo, unfilled.",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "image": "img/crown/WC-C-3.png",
         "swatch": "img/crown/thumb/WC-C-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc-c-4",
@@ -33773,11 +33790,14 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "齿纹光亮，S标没填油",
-        "descriptionEn": "Toothed knurl, polished, S logo, unfilled.",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "image": "img/crown/WC-C-4.png",
         "swatch": "img/crown/thumb/WC-C-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc-a-1",
@@ -33788,11 +33808,14 @@
         "color": "#c9c7c3",
         "material": "Stainless Steel",
         "description": "钻石纹光亮，红S标填油",
-        "descriptionEn": "Diamond knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "image": "img/crown/WC-A-1.png",
         "swatch": "img/crown/thumb/WC-A-1.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc-m-2",
@@ -33803,11 +33826,14 @@
         "color": "#1a1a1a",
         "material": "Stainless Steel",
         "description": "钻石纹光亮，没有S标",
-        "descriptionEn": "Diamond knurl, polished, no S logo.",
+        "descriptionEn": "diamond knurl, polished, no S logo",
         "image": "img/crown/WC-M-2.png",
         "swatch": "img/crown/thumb/WC-M-2.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "钻石纹光亮，没有S标",
+        "finishEn": "diamond knurl, polished, no S logo"
       },
       {
         "id": "wc-a-3",
@@ -33818,11 +33844,14 @@
         "color": "#c6a974",
         "material": "Stainless Steel",
         "description": "钻石纹光亮，红S标填油",
-        "descriptionEn": "Diamond knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "image": "img/crown/WC-A-3.png",
         "swatch": "img/crown/thumb/WC-A-3.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc-m-4",
@@ -33833,11 +33862,14 @@
         "color": "#c1987c",
         "material": "Stainless Steel",
         "description": "钻石纹光亮，没有S标",
-        "descriptionEn": "Diamond knurl, polished, no S logo.",
+        "descriptionEn": "diamond knurl, polished, no S logo",
         "image": "img/crown/WC-M-4.png",
         "swatch": "img/crown/thumb/WC-M-4.png",
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 25,
+        "finishZh": "钻石纹光亮，没有S标",
+        "finishEn": "diamond knurl, polished, no S logo"
       },
       {
         "id": "wc3-j-2",
@@ -33847,11 +33879,14 @@
         "series": "all-3.0",
         "color": "#8b8b8b",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-J-2 砂银 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹PVD哑光，S标不填油",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC3-J-2.png",
         "swatch": "img/crown/thumb/WC3-J-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc3-j-1",
@@ -33861,11 +33896,14 @@
         "series": "all-3.0",
         "color": "#313131",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-J-1 砂黑 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹PVD哑光，S标不填油",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC3-J-1.png",
         "swatch": "img/crown/thumb/WC3-J-1.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc3-j-3",
@@ -33875,11 +33913,14 @@
         "series": "all-3.0",
         "color": "#b9a36a",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-J-3 砂金 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹PVD哑光，S标不填油",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC3-J-3.png",
         "swatch": "img/crown/thumb/WC3-J-3.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc3-j-4",
@@ -33889,11 +33930,14 @@
         "series": "all-3.0",
         "color": "#ab8a76",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-J-4 砂 玫瑰金 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹PVD哑光，S标不填油",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC3-J-4.png",
         "swatch": "img/crown/thumb/WC3-J-4.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc3-j-5",
@@ -33903,11 +33947,14 @@
         "series": "all-3.0",
         "color": "#29315a",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-J-5 砂 蓝 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹PVD哑光，S标不填油",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "image": "img/crown/WC3-J-5.png",
         "swatch": "img/crown/thumb/WC3-J-5.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc3-e-1",
@@ -33917,11 +33964,14 @@
         "series": "all-3.0",
         "color": "#b7b5b0",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-E-1 亮银 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹光亮，S标没填油",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "image": "img/crown/WC3-E-1.png",
         "swatch": "img/crown/thumb/WC3-E-1.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc3-e-2",
@@ -33931,11 +33981,14 @@
         "series": "all-3.0",
         "color": "#252626",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-E-2 亮黑 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹光亮，S标没填油",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "image": "img/crown/WC3-E-2.png",
         "swatch": "img/crown/thumb/WC3-E-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc3-e-3",
@@ -33945,11 +33998,14 @@
         "series": "all-3.0",
         "color": "#b59256",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-E-3 亮金 直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹光亮，S标没填油",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "image": "img/crown/WC3-E-3.png",
         "swatch": "img/crown/thumb/WC3-E-3.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc3-o-4",
@@ -33959,11 +34015,14 @@
         "series": "all-3.0",
         "color": "#c49481",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-O-4 玫金 亮直纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Straight Knurl — fits every case except SKX 3.8.",
+        "description": "直纹光亮，没有S标",
+        "descriptionEn": "straight knurl, polished, no S logo",
         "image": "img/crown/WC3-O-4.png",
         "swatch": "img/crown/thumb/WC3-O-4.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，没有S标",
+        "finishEn": "straight knurl, polished, no S logo"
       },
       {
         "id": "wc3-b-1",
@@ -33973,11 +34032,14 @@
         "series": "all-3.0",
         "color": "#b7b5af",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-B-1 亮银 齿纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Coin Edge — fits every case except SKX 3.8.",
+        "description": "齿纹光亮，红S标填油",
+        "descriptionEn": "fluted, polished, red S logo filled",
         "image": "img/crown/WC3-B-1.png",
         "swatch": "img/crown/thumb/WC3-B-1.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，红S标填油",
+        "finishEn": "fluted, polished, red S logo filled"
       },
       {
         "id": "wc3-b-2",
@@ -33987,11 +34049,14 @@
         "series": "all-3.0",
         "color": "#403e3e",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-B-2 亮黑 齿纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Coin Edge — fits every case except SKX 3.8.",
+        "description": "齿纹光亮，红S标填油",
+        "descriptionEn": "fluted, polished, red S logo filled",
         "image": "img/crown/WC3-B-2.png",
         "swatch": "img/crown/thumb/WC3-B-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，红S标填油",
+        "finishEn": "fluted, polished, red S logo filled"
       },
       {
         "id": "wc3-c-3",
@@ -34001,11 +34066,14 @@
         "series": "all-3.0",
         "color": "#c6aa65",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-C-3 亮金 齿纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Coin Edge — fits every case except SKX 3.8.",
+        "description": "齿纹光亮，S标没填油",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "image": "img/crown/WC3-C-3.png",
         "swatch": "img/crown/thumb/WC3-C-3.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc3-c-4",
@@ -34015,11 +34083,14 @@
         "series": "all-3.0",
         "color": "#bb9281",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-C-4 亮玫金 齿纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Coin Edge — fits every case except SKX 3.8.",
+        "description": "齿纹光亮，S标没填油",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "image": "img/crown/WC3-C-4.png",
         "swatch": "img/crown/thumb/WC3-C-4.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc3-a-1",
@@ -34029,11 +34100,14 @@
         "series": "all-3.0",
         "color": "#a3a3a3",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-A-1 银 钻石纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Diamond Knurl — fits every case except SKX 3.8.",
+        "description": "钻石纹光亮，红S标填油",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "image": "img/crown/WC3-A-1.png",
         "swatch": "img/crown/thumb/WC3-A-1.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc3-a-2",
@@ -34043,11 +34117,14 @@
         "series": "all-3.0",
         "color": "#272727",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-A-2 黑 钻石纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Diamond Knurl — fits every case except SKX 3.8.",
+        "description": "钻石纹光亮，红S标填油",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "image": "img/crown/WC3-A-2.png",
         "swatch": "img/crown/thumb/WC3-A-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc3-a-3",
@@ -34057,11 +34134,14 @@
         "series": "all-3.0",
         "color": "#b39763",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-A-3 金 钻石纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Diamond Knurl — fits every case except SKX 3.8.",
+        "description": "钻石纹光亮，红S标填油",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "image": "img/crown/WC3-A-3.png",
         "swatch": "img/crown/thumb/WC3-A-3.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc3-k-4",
@@ -34071,11 +34151,14 @@
         "series": "all-3.0",
         "color": "#caa379",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-K-4 玫金 钻石纹，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Diamond Knurl — fits every case except SKX 3.8.",
+        "description": "钻石纹光亮，S标没填油",
+        "descriptionEn": "diamond knurl, polished, S logo not filled",
         "image": "img/crown/WC3-K-4.png",
         "swatch": "img/crown/thumb/WC3-K-4.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，S标没填油",
+        "finishEn": "diamond knurl, polished, S logo not filled"
       },
       {
         "id": "wc3-q-2",
@@ -34085,11 +34168,14 @@
         "series": "all-3.0",
         "color": "#3d3e3e",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-Q-2 砂黑，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Short — fits every case except SKX 3.8.",
+        "description": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm",
         "image": "img/crown/WC3-Q-2.png",
         "swatch": "img/crown/thumb/WC3-Q-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc3-t-1",
@@ -34099,11 +34185,14 @@
         "series": "all-3.0",
         "color": "#8d8984",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-T-1 亮银，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Short — fits every case except SKX 3.8.",
+        "description": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "descriptionEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm",
         "image": "img/crown/WC3-T-1.png",
         "swatch": "img/crown/thumb/WC3-T-1.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "finishEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm"
       },
       {
         "id": "wc3-t-2",
@@ -34113,11 +34202,14 @@
         "series": "all-3.0",
         "color": "#292929",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-T-2 亮黑，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Short — fits every case except SKX 3.8.",
+        "description": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "descriptionEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm",
         "image": "img/crown/WC3-T-2.png",
         "swatch": "img/crown/thumb/WC3-T-2.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "finishEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm"
       },
       {
         "id": "wc3-t-3",
@@ -34127,11 +34219,14 @@
         "series": "all-3.0",
         "color": "#bd9a5f",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-T-3 亮金，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Short — fits every case except SKX 3.8.",
+        "description": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "descriptionEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm",
         "image": "img/crown/WC3-T-3.png",
         "swatch": "img/crown/thumb/WC3-T-3.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "finishEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm"
       },
       {
         "id": "wc3-t-4",
@@ -34141,11 +34236,14 @@
         "series": "all-3.0",
         "color": "#af896d",
         "material": "Stainless Steel",
-        "description": "3.0 位表把 WC-T-4 亮玫瑰金，适配除 SKX 3.8 外的所有表壳。",
-        "descriptionEn": "3.0 o'clock crown, Short — fits every case except SKX 3.8.",
+        "description": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "descriptionEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm",
         "image": "img/crown/WC3-T-4.png",
         "swatch": "img/crown/thumb/WC3-T-4.png",
-        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE"
+        "category": "SKX 3.0 Case,SKX SUB Case,Classic Case,Explorer,Pilot Case,Vintage Case,SKX Samurai Case,SKX 3.8 Case,SKX 3.8 MORE CASE",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹光亮，S标没填油；宽7×长7.5mm",
+        "finishEn": "short stem, straight knurl, polished, S logo not filled, W7×L7.5 mm"
       },
       {
         "id": "wc3-cl-1",
@@ -34155,12 +34253,15 @@
         "series": "clretro",
         "color": "#a19f9a",
         "material": "Stainless Steel",
-        "description": "Classic Retro 专属表把 WC-CL-1 亮银 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
-        "descriptionEn": "Dedicated Classic Retro crown WC-CL-1, Polished Silver, Pumpkin — fits the Classic Retro case only.",
+        "description": "Classic Retro 专属表把 WC-CL-1 光亮银 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "descriptionEn": "Polished silver pumpkin crown (WC-CL-1), Classic Retro case only.",
         "image": "img/crown/WC3-CL-1.png",
         "swatch": "img/crown/thumb/WC3-CL-1.png",
         "category": "Classic Retro Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "Classic Retro 专属表把 WC-CL-1 光亮银 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "finishEn": "Polished silver pumpkin crown (WC-CL-1), Classic Retro case only."
       },
       {
         "id": "wc3-cl-3",
@@ -34170,12 +34271,15 @@
         "series": "clretro",
         "color": "#b8a454",
         "material": "Stainless Steel",
-        "description": "Classic Retro 专属表把 WC-CL-3 亮金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
-        "descriptionEn": "Dedicated Classic Retro crown WC-CL-3, Polished Gold, Pumpkin — fits the Classic Retro case only.",
+        "description": "Classic Retro 专属表把 WC-CL-3 光亮金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "descriptionEn": "Polished gold pumpkin crown (WC-CL-3), Classic Retro case only.",
         "image": "img/crown/WC3-CL-3.png",
         "swatch": "img/crown/thumb/WC3-CL-3.png",
         "category": "Classic Retro Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "Classic Retro 专属表把 WC-CL-3 光亮金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "finishEn": "Polished gold pumpkin crown (WC-CL-3), Classic Retro case only."
       },
       {
         "id": "wc3-cl-4",
@@ -34186,11 +34290,14 @@
         "color": "#bd9a7f",
         "material": "Stainless Steel",
         "description": "Classic Retro 专属表把 WC-CL-4 亮玫瑰金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
-        "descriptionEn": "Dedicated Classic Retro crown WC-CL-4, Polished Rose Gold, Pumpkin — fits the Classic Retro case only.",
+        "descriptionEn": "Polished rose gold pumpkin crown (WC-CL-4), Classic Retro case only.",
         "image": "img/crown/WC3-CL-4.png",
         "swatch": "img/crown/thumb/WC3-CL-4.png",
         "category": "Classic Retro Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "Classic Retro 专属表把 WC-CL-4 亮玫瑰金 南瓜头，南瓜头造型，仅适配 Classic Retro 表壳。",
+        "finishEn": "Polished rose gold pumpkin crown (WC-CL-4), Classic Retro case only."
       },
       {
         "id": "wc3-ap-1",
@@ -34200,12 +34307,15 @@
         "series": "ap",
         "color": "#b0b0ac",
         "material": "Stainless Steel",
-        "description": "AP 专属表把 C-AP-1 银 拉丝，仅适配 AP 表壳。",
-        "descriptionEn": "Dedicated AP crown C-AP-1, Brushed Silver — fits the AP case only.",
+        "description": "银色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "descriptionEn": "Silver, brushed and sandblasted, AP case only.",
         "image": "img/crown/WC3-AP-1.png",
         "swatch": "img/crown/thumb/WC3-AP-1.png",
         "category": "AP Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "银色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "finishEn": "Silver, brushed and sandblasted, AP case only."
       },
       {
         "id": "wc3-ap-2",
@@ -34215,12 +34325,15 @@
         "series": "ap",
         "color": "#333330",
         "material": "Stainless Steel",
-        "description": "AP 专属表把 C-AP-2 黑，仅适配 AP 表壳。",
-        "descriptionEn": "Dedicated AP crown C-AP-2, Black — fits the AP case only.",
+        "description": "黑色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "descriptionEn": "Black, brushed and sandblasted, AP case only.",
         "image": "img/crown/WC3-AP-2.png",
         "swatch": "img/crown/thumb/WC3-AP-2.png",
         "category": "AP Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "黑色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "finishEn": "Black, brushed and sandblasted, AP case only."
       },
       {
         "id": "wc3-ap-3",
@@ -34230,12 +34343,15 @@
         "series": "ap",
         "color": "#c3a267",
         "material": "Stainless Steel",
-        "description": "AP 专属表把 C-AP-3 金 拉丝，仅适配 AP 表壳。",
-        "descriptionEn": "Dedicated AP crown C-AP-3, Brushed Gold — fits the AP case only.",
+        "description": "金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "descriptionEn": "Gold, brushed and sandblasted, AP case only.",
         "image": "img/crown/WC3-AP-3.png",
         "swatch": "img/crown/thumb/WC3-AP-3.png",
         "category": "AP Case",
-        "above": "case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "finishEn": "Gold, brushed and sandblasted, AP case only."
       },
       {
         "id": "wc3-ap-4",
@@ -34245,74 +34361,21 @@
         "series": "ap",
         "color": "#cea682",
         "material": "Stainless Steel",
-        "description": "AP 专属表把 C-AP-4 玫金 拉丝，仅适配 AP 表壳。",
-        "descriptionEn": "Dedicated AP crown C-AP-4, Brushed Rose Gold — fits the AP case only.",
+        "description": "玫瑰金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "descriptionEn": "Rose gold, brushed and sandblasted, AP case only.",
         "image": "img/crown/WC3-AP-4.png",
         "swatch": "img/crown/thumb/WC3-AP-4.png",
         "category": "AP Case",
-        "above": "case"
-      },
-      {
-        "id": "wc-wc-ap-1",
-        "code": "WC-AP-1",
-        "name": "Crown WC-AP-1 (Silver)",
-        "nameZh": "表把 WC-AP-1（银色）",
-        "series": "universal",
-        "color": "#c0c0c0",
-        "material": "Stainless Steel",
-        "description": "银色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
-        "descriptionEn": "",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "AP Case"
-      },
-      {
-        "id": "wc-wc-ap-2",
-        "code": "WC-AP-2",
-        "name": "Crown WC-AP-2 (Black)",
-        "nameZh": "表把 WC-AP-2（黑色）",
-        "series": "universal",
-        "color": "#262626",
-        "material": "Stainless Steel",
-        "description": "黑色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
-        "descriptionEn": "",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "AP Case"
-      },
-      {
-        "id": "wc-wc-ap-3",
-        "code": "WC-AP-3",
-        "name": "Crown WC-AP-3 (Gold)",
-        "nameZh": "表把 WC-AP-3（金色）",
-        "series": "universal",
-        "color": "#c6a974",
-        "material": "Stainless Steel",
-        "description": "金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
-        "descriptionEn": "",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "AP Case"
-      },
-      {
-        "id": "wc-wc-ap-4",
-        "code": "WC-AP-4",
-        "name": "Crown WC-AP-4 (Rose Gold)",
-        "nameZh": "表把 WC-AP-4（玫瑰金色）",
-        "series": "universal",
-        "color": "#c1987c",
-        "material": "Stainless Steel",
-        "description": "玫瑰金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
-        "descriptionEn": "",
-        "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png",
-        "category": "AP Case"
+        "above": "case",
+        "crownAngle": 0,
+        "finishZh": "玫瑰金色，AP 专属表把拉丝+喷砂，适配 AP 表壳。",
+        "finishEn": "Rose gold, brushed and sandblasted, AP case only."
       },
       {
         "id": "wc-a-2",
         "code": "WC-A-2",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "diamond knurl, polished, red S logo filled",
         "name": "Crown WC-A-2 (Black)",
         "nameZh": "表把 WC-A-2（黑色）",
         "color": "#1a1a1a",
@@ -34321,13 +34384,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/crown/WC-A-2.png",
         "swatch": "img/crown/thumb/WC-A-2.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，红S标填油",
+        "finishEn": "diamond knurl, polished, red S logo filled"
       },
       {
         "id": "wc-b-2",
         "code": "WC-B-2",
         "series": "skx38",
-        "descriptionEn": "Toothed knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "fluted, polished, red S logo filled",
         "name": "Crown WC-B-2 (Black)",
         "nameZh": "表把 WC-B-2（黑色）",
         "color": "#1a1a1a",
@@ -34336,13 +34402,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/crown/WC-B-2.png",
         "swatch": "img/crown/thumb/WC-B-2.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，红S标填油",
+        "finishEn": "fluted, polished, red S logo filled"
       },
       {
         "id": "wc-c-1",
         "code": "WC-C-1",
         "series": "skx38",
-        "descriptionEn": "Toothed knurl, polished, S logo, unfilled.",
+        "descriptionEn": "fluted, polished, S logo not filled",
         "name": "Crown WC-C-1 (Silver)",
         "nameZh": "表把 WC-C-1（银色）",
         "color": "#c9c7c3",
@@ -34351,13 +34420,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，S标没填油",
+        "finishEn": "fluted, polished, S logo not filled"
       },
       {
         "id": "wc-d-1",
         "code": "WC-D-1",
         "series": "skx38",
-        "descriptionEn": "Toothed knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "fluted, S logo not filled",
         "name": "Crown WC-D-1 (Black)",
         "nameZh": "表把 WC-D-1（黑色）",
         "color": "#1a1a1a",
@@ -34366,13 +34438,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "齿纹PVD哑光，S标没填油",
+        "finishEn": "fluted, S logo not filled"
       },
       {
         "id": "wc-e-3",
         "code": "WC-E-3",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, S logo, unfilled.",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "name": "Crown WC-E-3 (Gold)",
         "nameZh": "表把 WC-E-3（金色）",
         "color": "#c6a974",
@@ -34381,13 +34456,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/crown/WC-E-3.png",
         "swatch": "img/crown/thumb/WC-E-3.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc-e-4",
         "code": "WC-E-4",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, S logo, unfilled.",
+        "descriptionEn": "straight knurl, polished, S logo not filled",
         "name": "Crown WC-E-4 (Rose Gold)",
         "nameZh": "表把 WC-E-4（玫瑰金色）",
         "color": "#c1987c",
@@ -34396,13 +34474,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，S标没填油",
+        "finishEn": "straight knurl, polished, S logo not filled"
       },
       {
         "id": "wc-f-1",
         "code": "WC-F-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "straight knurl, polished, red S logo filled",
         "name": "Crown WC-F-1 (Silver)",
         "nameZh": "表把 WC-F-1（银色）",
         "color": "#c9c7c3",
@@ -34411,13 +34492,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，红S标填油",
+        "finishEn": "straight knurl, polished, red S logo filled"
       },
       {
         "id": "wc-f-2",
         "code": "WC-F-2",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, red S logo, paint-filled.",
+        "descriptionEn": "straight knurl, polished, red S logo filled",
         "name": "Crown WC-F-2 (Black)",
         "nameZh": "表把 WC-F-2（黑色）",
         "color": "#1a1a1a",
@@ -34426,13 +34510,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，红S标填油",
+        "finishEn": "straight knurl, polished, red S logo filled"
       },
       {
         "id": "wc-g-1",
         "code": "WC-G-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, black S logo, paint-filled.",
+        "descriptionEn": "straight knurl, polished, black S logo filled",
         "name": "Crown WC-G-1 (Silver)",
         "nameZh": "表把 WC-G-1（银色）",
         "color": "#c9c7c3",
@@ -34441,13 +34528,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，黑S标填油",
+        "finishEn": "straight knurl, polished, black S logo filled"
       },
       {
         "id": "wc-h-1",
         "code": "WC-H-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, blasted matt, red S logo, paint-filled.",
+        "descriptionEn": "straight knurl, sandblasted matte, red S logo filled",
         "name": "Crown WC-H-1 (Silver)",
         "nameZh": "表把 WC-H-1（银色）",
         "color": "#c9c7c3",
@@ -34456,13 +34546,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹喷砂哑光，红S标填油",
+        "finishEn": "straight knurl, sandblasted matte, red S logo filled"
       },
       {
         "id": "wc-h-1a",
         "code": "WC-H-1a",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, blasted matt, S logo in bright red paint.",
+        "descriptionEn": "straight knurl, sandblasted matte, deep red S logo",
         "name": "Crown WC-H-1a (Silver)",
         "nameZh": "表把 WC-H-1a（银色）",
         "color": "#c9c7c3",
@@ -34471,13 +34564,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹喷砂哑光，深亮红油S标",
+        "finishEn": "straight knurl, sandblasted matte, deep red S logo"
       },
       {
         "id": "wc-h-5",
         "code": "WC-H-5",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, blasted matt, red S logo, paint-filled.",
+        "descriptionEn": "straight knurl, sandblasted matte, red S logo filled",
         "name": "Crown WC-H-5 (Blue)",
         "nameZh": "表把 WC-H-5（蓝色）",
         "color": "#2c4d8a",
@@ -34486,13 +34582,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹喷砂哑光，红S标填油",
+        "finishEn": "straight knurl, sandblasted matte, red S logo filled"
       },
       {
         "id": "wc-i-1",
         "code": "WC-I-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo filled red.",
+        "descriptionEn": "straight knurl, PVD matte, S logo in red",
         "name": "Crown WC-I-1 (Black)",
         "nameZh": "表把 WC-I-1（黑色）",
         "color": "#1a1a1a",
@@ -34501,13 +34600,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标填红油(红色)",
+        "finishEn": "straight knurl, PVD matte, S logo in red"
       },
       {
         "id": "wc-i-2",
         "code": "WC-I-2",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo filled orange.",
+        "descriptionEn": "straight knurl, PVD matte, S logo in orange",
         "name": "Crown WC-I-2 (Black)",
         "nameZh": "表把 WC-I-2（黑色）",
         "color": "#1a1a1a",
@@ -34516,13 +34618,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标填橙油(橙色)",
+        "finishEn": "straight knurl, PVD matte, S logo in orange"
       },
       {
         "id": "wc-i-3",
         "code": "WC-I-3",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo filled blue.",
+        "descriptionEn": "straight knurl, PVD matte, S logo in blue",
         "name": "Crown WC-I-3 (Black)",
         "nameZh": "表把 WC-I-3（黑色）",
         "color": "#1a1a1a",
@@ -34531,13 +34636,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标填蓝油(蓝色)",
+        "finishEn": "straight knurl, PVD matte, S logo in blue"
       },
       {
         "id": "wc-i-4",
         "code": "WC-I-4",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo filled yellow.",
+        "descriptionEn": "straight knurl, PVD matte, S logo in yellow",
         "name": "Crown WC-I-4 (Black)",
         "nameZh": "表把 WC-I-4（黑色）",
         "color": "#1a1a1a",
@@ -34546,13 +34654,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标填黄油(黄色)",
+        "finishEn": "straight knurl, PVD matte, S logo in yellow"
       },
       {
         "id": "wc-i-5",
         "code": "WC-I-5",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo filled dark blue.",
+        "descriptionEn": "straight knurl, PVD matte, S logo in dark blue",
         "name": "Crown WC-I-5 (Black)",
         "nameZh": "表把 WC-I-5（黑色）",
         "color": "#1a1a1a",
@@ -34561,13 +34672,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标填深蓝油(深蓝)",
+        "finishEn": "straight knurl, PVD matte, S logo in dark blue"
       },
       {
         "id": "wc-j-5",
         "code": "WC-J-5",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "straight knurl, PVD matte, S logo not filled",
         "name": "Crown WC-J-5 (Blue)",
         "nameZh": "表把 WC-J-5（蓝色）",
         "color": "#2c4d8a",
@@ -34576,13 +34690,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/crown/WC-J-5.png",
         "swatch": "img/crown/thumb/WC-J-5.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光，S标不填油",
+        "finishEn": "straight knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-k-1",
         "code": "WC-K-1",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, S logo, unfilled.",
+        "descriptionEn": "diamond knurl, polished, S logo not filled",
         "name": "Crown WC-K-1 (Silver)",
         "nameZh": "表把 WC-K-1（银色）",
         "color": "#c9c7c3",
@@ -34591,13 +34708,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，S标没填油",
+        "finishEn": "diamond knurl, polished, S logo not filled"
       },
       {
         "id": "wc-k-2",
         "code": "WC-K-2",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, S logo, unfilled.",
+        "descriptionEn": "diamond knurl, polished, S logo not filled",
         "name": "Crown WC-K-2 (Black)",
         "nameZh": "表把 WC-K-2（黑色）",
         "color": "#1a1a1a",
@@ -34606,13 +34726,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，S标没填油",
+        "finishEn": "diamond knurl, polished, S logo not filled"
       },
       {
         "id": "wc-k-3",
         "code": "WC-K-3",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, S logo, unfilled.",
+        "descriptionEn": "diamond knurl, polished, S logo not filled",
         "name": "Crown WC-K-3 (Gold)",
         "nameZh": "表把 WC-K-3（金色）",
         "color": "#c6a974",
@@ -34621,13 +34744,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，S标没填油",
+        "finishEn": "diamond knurl, polished, S logo not filled"
       },
       {
         "id": "wc-k-4",
         "code": "WC-K-4",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, S logo, unfilled.",
+        "descriptionEn": "diamond knurl, polished, S logo not filled",
         "name": "Crown WC-K-4 (Rose Gold)",
         "nameZh": "表把 WC-K-4（玫瑰金色）",
         "color": "#c1987c",
@@ -34636,13 +34762,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/crown/WC-K-4.png",
         "swatch": "img/crown/thumb/WC-K-4.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，S标没填油",
+        "finishEn": "diamond knurl, polished, S logo not filled"
       },
       {
         "id": "wc-l-1",
         "code": "WC-L-1",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, PVD matt, S logo, unfilled.",
+        "descriptionEn": "diamond knurl, PVD matte, S logo not filled",
         "name": "Crown WC-L-1 (Black)",
         "nameZh": "表把 WC-L-1（黑色）",
         "color": "#1a1a1a",
@@ -34651,13 +34780,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹PVD哑光，S标不填油",
+        "finishEn": "diamond knurl, PVD matte, S logo not filled"
       },
       {
         "id": "wc-m-1",
         "code": "WC-M-1",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, no S logo.",
+        "descriptionEn": "diamond knurl, polished, no S logo",
         "name": "Crown WC-M-1 (Silver)",
         "nameZh": "表把 WC-M-1（银色）",
         "color": "#c9c7c3",
@@ -34666,13 +34798,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，没有S标",
+        "finishEn": "diamond knurl, polished, no S logo"
       },
       {
         "id": "wc-m-3",
         "code": "WC-M-3",
         "series": "skx38",
-        "descriptionEn": "Diamond knurl, polished, no S logo.",
+        "descriptionEn": "diamond knurl, polished, no S logo",
         "name": "Crown WC-M-3 (Gold)",
         "nameZh": "表把 WC-M-3（金色）",
         "color": "#c6a974",
@@ -34681,13 +34816,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "钻石纹光亮，没有S标",
+        "finishEn": "diamond knurl, polished, no S logo"
       },
       {
         "id": "wc-n-1",
         "code": "WC-N-1",
         "series": "skx38",
-        "descriptionEn": "Toothed knurl, polished, no S logo.",
+        "descriptionEn": "fluted, polished, no S logo",
         "name": "Crown WC-N-1 (Silver)",
         "nameZh": "表把 WC-N-1（银色）",
         "color": "#c9c7c3",
@@ -34696,13 +34834,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "齿纹光亮，没有S标",
+        "finishEn": "fluted, polished, no S logo"
       },
       {
         "id": "wc-o-1",
         "code": "WC-O-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, no S logo.",
+        "descriptionEn": "straight knurl, polished, no S logo",
         "name": "Crown WC-O-1 (Silver)",
         "nameZh": "表把 WC-O-1（银色）",
         "color": "#c9c7c3",
@@ -34711,13 +34852,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，没有S标",
+        "finishEn": "straight knurl, polished, no S logo"
       },
       {
         "id": "wc-o-2",
         "code": "WC-O-2",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, polished, no S logo.",
+        "descriptionEn": "straight knurl, polished, no S logo",
         "name": "Crown WC-O-2 (Black)",
         "nameZh": "表把 WC-O-2（黑色）",
         "color": "#1a1a1a",
@@ -34726,13 +34870,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹光亮，没有S标",
+        "finishEn": "straight knurl, polished, no S logo"
       },
       {
         "id": "wc-p-1",
         "code": "WC-P-1",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, no S logo.",
+        "descriptionEn": "straight knurl, PVD matte (sandblasted), no S logo",
         "name": "Crown WC-P-1 (Silver)",
         "nameZh": "表把 WC-P-1（银色）",
         "color": "#c9c7c3",
@@ -34741,13 +34888,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光(喷砂)，没有S标",
+        "finishEn": "straight knurl, PVD matte (sandblasted), no S logo"
       },
       {
         "id": "wc-p-2",
         "code": "WC-P-2",
         "series": "skx38",
-        "descriptionEn": "Straight knurl, PVD matt, no S logo.",
+        "descriptionEn": "straight knurl, PVD matte (sandblasted), no S logo",
         "name": "Crown WC-P-2 (Black)",
         "nameZh": "表把 WC-P-2（黑色）",
         "color": "#1a1a1a",
@@ -34756,13 +34906,16 @@
         "category": "SKX 3.8 Case,SKX 3.8 MORE CASE,SKX 3.0 Case,SKX SUB Case,SKX Samurai Case",
         "image": "img/placeholder/working-on-it.png",
         "swatch": "img/placeholder/working-on-it-thumb.png",
-        "crownPos": 4
+        "crownPos": 4,
+        "crownAngle": 0,
+        "finishZh": "直纹PVD哑光(喷砂)，没有S标",
+        "finishEn": "straight knurl, PVD matte (sandblasted), no S logo"
       },
       {
         "id": "wc-q-1",
         "code": "WC-Q-1",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, no S logo. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm",
         "name": "Crown WC-Q-1 (Silver)",
         "nameZh": "表把 WC-Q-1（银色）",
         "color": "#c9c7c3",
@@ -34770,13 +34923,16 @@
         "description": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png"
+        "swatch": "img/placeholder/working-on-it-thumb.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc-q-2",
         "code": "WC-Q-2",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, no S logo. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm",
         "name": "Crown WC-Q-2 (Black)",
         "nameZh": "表把 WC-Q-2（黑色）",
         "color": "#1a1a1a",
@@ -34784,13 +34940,16 @@
         "description": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/crown/WC-Q-2.png",
-        "swatch": "img/crown/thumb/WC-Q-2.png"
+        "swatch": "img/crown/thumb/WC-Q-2.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，没有S标；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), no S logo, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc-r-1",
         "code": "WC-R-1",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, S logo, unfilled. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm",
         "name": "Crown WC-R-1 (Silver)",
         "nameZh": "表把 WC-R-1（银色）",
         "color": "#c9c7c3",
@@ -34798,13 +34957,16 @@
         "description": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png"
+        "swatch": "img/placeholder/working-on-it-thumb.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc-r-2",
         "code": "WC-R-2",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, S logo, unfilled. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm",
         "name": "Crown WC-R-2 (Black)",
         "nameZh": "表把 WC-R-2（黑色）",
         "color": "#1a1a1a",
@@ -34812,13 +34974,16 @@
         "description": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png"
+        "swatch": "img/placeholder/working-on-it-thumb.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc-r-3",
         "code": "WC-R-3",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, S logo, unfilled. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm",
         "name": "Crown WC-R-3 (Gold)",
         "nameZh": "表把 WC-R-3（金色）",
         "color": "#c6a974",
@@ -34826,13 +34991,16 @@
         "description": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png"
+        "swatch": "img/placeholder/working-on-it-thumb.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm"
       },
       {
         "id": "wc-r-4",
         "code": "WC-R-4",
         "series": "nautilus",
-        "descriptionEn": "Short stem, straight knurl, PVD matt, S logo, unfilled. 7 × 7.5 × 3.3 mm.",
+        "descriptionEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm",
         "name": "Crown WC-R-4 (Rose Gold)",
         "nameZh": "表把 WC-R-4（玫瑰金色）",
         "color": "#c1987c",
@@ -34840,7 +35008,10 @@
         "description": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
         "category": "Nautilus Case",
         "image": "img/placeholder/working-on-it.png",
-        "swatch": "img/placeholder/working-on-it-thumb.png"
+        "swatch": "img/placeholder/working-on-it-thumb.png",
+        "crownAngle": 0,
+        "finishZh": "短款，直纹PVD哑光(喷砂)，S标无填油；宽7×长7.5×厚3.3mm",
+        "finishEn": "short stem, straight knurl, PVD matte (sandblasted), S logo not filled, W7×L7.5×T3.3 mm"
       }
     ],
     "caseback": [

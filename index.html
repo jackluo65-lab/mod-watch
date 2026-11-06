@@ -920,6 +920,13 @@
     font-size: 12px;
     color: var(--text2);
   }
+  /* 「钻石纹光亮 · 红S标填油」这类表面/丝印说明，比材质次要一档 */
+  .part-info .finish {
+    font-size: 12px;
+    color: var(--text2);
+    margin-top: 1px;
+    line-height: 1.35;
+  }
 
   .part-desc {
     font-size: 12px;
@@ -2231,6 +2238,11 @@ function renderParts() {
         <div class="part-info">
           <h5>${partName(part)}</h5>
           <div class="mat">${partMaterial(part)}</div>
+          ${(() => {
+            // 表面处理 / 丝印：光亮还是哑光、有没有 S 标 —— 客户挑表把时最先问的两件事
+            const fin = LANG === 'zh' ? part.finishZh : (part.finishEn || part.finishZh);
+            return fin ? `<div class="finish">${escHtml(fin)}</div>` : '';
+          })()}
         </div>
       `;
       item.addEventListener('click', () => selectPart(type, part));
@@ -3103,6 +3115,9 @@ function renderImgStack(bust) {
       if (k === 'case') {
         if (selectedCase.views && selectedCase.views.front) layers.push({ url: selectedCase.views.front, type: 'case' });
       } else if (selections[k] && selections[k].image) {
+        // 「努力更新中」占位图在表把上是画布正中的一块字，压在表盘上既不像表把也不是零件；
+        // 表把宁可空着（卡片仍显示占位缩略图），别把字糊到表面中间。
+        if (k === 'crown' && selections[k].image.includes('/placeholder/')) return;
         layers.push({ url: selections[k].image, type: k });
       }
       // 没选字面时**不垫任何东西**：表壳画稿的中央开孔本来就是透明的，客户看到的是"装字面之前
@@ -3132,28 +3147,31 @@ function renderImgStack(bust) {
     if (layer.type === 'chapterRing' && crScale !== 1) el.style.transform = `scale(${crScale})`;
     // Hands follow the same aperture, so the second-hand tip always stops just inside the ring
     if (layer.type === 'hands' && handsScale() !== 1) el.style.transform = `scale(${handsScale().toFixed(4)})`;
-    // Crown placement. The catalogue has two drawing positions — 4 o'clock (WC-*, the SKX 3.8
-    // tube) and 3 o'clock (WC3-*, the short stems) — and any crown may end up on either kind of
-    // case, so the art is moved to the case's own position instead of being filtered out.
+    // Crown placement. Two drawing positions exist — 4 o'clock (WC-*, the SKX 3.8 tube) and
+    // 3 o'clock (WC3-*, the short stems) — and any crown may end up on either kind of case, so
+    // the art is moved to the case's own position instead of being filtered out.
     // A case can also nudge it further with crownOffsetY (see SKX Samurai, -6).
-    // Percentages, not px: the layer box is object-fit onto the 4:5 canvas, so px / 10 is the
-    // percent and the shift survives any preview size.
+    // Percentages, not px: the layer box is exactly the 4:5 canvas, so 1% is 8px across and
+    // 10px down — the shift survives any preview size.
     if (layer.type === 'crown') {
-      const CROWN_AT = { 3: [655, 505], 4: [635, 610] };   // stem-tip anchors, canvas px
+      const CROWN_AT = { 3: [655, 505], 4: [635, 610] };     // art-centre anchors, canvas px
+      const CROWN_TILT = { 3: 0, 4: 25 };                    // crown axis, degrees clockwise
       const casePos = selectedCase.crownPos || 3;
-      const artPos = (selections.crown && selections.crown.crownPos) || 3;
+      // crownAngle is the angle the artwork itself was drawn at (measured per file), which is
+      // not the same as its position: five of the photographed crowns sit in the 4 o'clock
+      // spot but were drawn level, so they need +25° to line up with their stem.
+      const artAngle = (selections.crown && selections.crown.crownAngle) || 0;
       const caseAt = CROWN_AT[casePos];
-      const artAt = CROWN_AT[artPos];
+      const artAt = CROWN_AT[(selections.crown && selections.crown.crownPos) || 3];
       const dx = caseAt[0] - artAt[0];
       const dy = caseAt[1] - artAt[1] + (selectedCase.crownOffsetY || 0);
-      if (dx || dy) {
-        // Crossing positions is a swing, not a slide: pivot the art around its own stem
-        // tip so the crown head follows the radial direction of the target position
-        // (4 o'clock art on a 3 o'clock case rotates -25°, the reverse +25°).
-        const rot = (casePos - artPos) * 25;
+      const rot = CROWN_TILT[casePos] - artAngle;
+      if (dx || dy || rot) {
+        // Crossing positions is a swing, not a slide: pivot around the art's own centre so
+        // the crown head follows the radial direction of the target position.
         if (rot) el.style.transformOrigin = `${(artAt[0] / 8).toFixed(3)}% ${(artAt[1] / 10).toFixed(3)}%`;
         el.style.transform =
-          `translate(${(dx / 10).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)` +
+          (dx || dy ? `translate(${(dx / 8).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)` : '') +
           (rot ? ` rotate(${rot}deg)` : '');
       }
     }
