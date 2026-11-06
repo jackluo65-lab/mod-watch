@@ -5,11 +5,12 @@ const { chromium } = require('playwright');
 const URL = process.env.URL || 'http://127.0.0.1:8796/index.html';
 
 const CASES = [
-  { case: 'SKX-B-1', crown: 'wc-a-1', label: '4点壳 + 4点画稿', moved: false },
-  { case: 'SK3-B1', crown: 'wc-a-1', label: '3点壳 + 4点画稿', moved: true },
-  { case: 'SK3-B1', crown: 'wc3-j-1', label: '3点壳 + 3点画稿', moved: false },
-  { case: 'SMR-WS-11', crown: 'wc3-j-1', label: '武士(3点, 有 -6 微调) + 3点画稿', moved: true },
-  { case: 'YW-1', crown: 'wc-q-2', label: '鹦鹉螺 + 短款(3点)', moved: false },
+  { case: 'SKX-B-1', crown: 'wc-a-1', label: '4点壳 + 4点画稿', moved: false, rot: 0 },
+  { case: 'SK3-B1', crown: 'wc-a-1', label: '3点壳 + 4点画稿', moved: true, rot: -25 },
+  { case: 'SKX-B-1', crown: 'wc3-j-1', label: '4点壳 + 3点画稿', moved: true, rot: 25 },
+  { case: 'SK3-B1', crown: 'wc3-j-1', label: '3点壳 + 3点画稿', moved: false, rot: 0 },
+  { case: 'SMR-WS-11', crown: 'wc3-j-1', label: '武士(3点, 有 -6 微调) + 3点画稿', moved: true, rot: 0 },
+  { case: 'YW-1', crown: 'wc-q-2', label: '鹦鹉螺 + 短款(3点)', moved: false, rot: 0 },
 ];
 
 (async () => {
@@ -49,12 +50,22 @@ const CASES = [
     const st = await p.evaluate(() => {
       const im = [...document.querySelectorAll('#imgStack img')]
         .find(i => (i.getAttribute('src') || '').includes('/crown/'));
-      return { tf: im ? (im.style.transform || '') : null, broken: im ? (im.complete && im.naturalWidth === 0) : true };
+      return {
+        tf: im ? (im.style.transform || '') : null,
+        origin: im ? (im.style.transformOrigin || '') : null,
+        broken: im ? (im.complete && im.naturalWidth === 0) : true,
+      };
     });
     check(`${t.label}：表把进了预览`, st.tf === null, false);
     check(`${t.label}：${t.moved ? '有' : '没有'}位移`, !!st.tf, t.moved);
+    check(`${t.label}：${t.rot ? `旋转 ${t.rot}°` : '不旋转'}`,
+      st.tf ? (/rotate\((-?\d+(?:\.\d+)?)deg\)/.exec(st.tf) || [0, 0])[1] * 1 : 0, t.rot);
+    if (t.rot) check(`${t.label}：绕杆尾旋转`, st.origin !== '' && st.origin !== '50% 50%', true);
     if (t.case === 'SMR-WS-11') check('武士保留 -6px 垂直微调', /-0\.6%/.test(st.tf || ''), true);
-    if (t.case === 'SK3-B1' && t.crown === 'wc-a-1') check('跨点位位移是 x+20 / y-105', st.tf, 'translate(2%, -10.5%)');
+    if (t.case === 'SK3-B1' && t.crown === 'wc-a-1') {
+      check('跨点位位移是 x+20 / y-105', st.tf, 'translate(2%, -10.5%) rotate(-25deg)');
+      check('旋转轴心 = 4点位杆尾 (635,610)', st.origin, '79.375% 61%');
+    }
   }
 
   check('无 JS 报错', errs, []);

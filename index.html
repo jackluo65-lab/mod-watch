@@ -3140,12 +3140,21 @@ function renderImgStack(bust) {
     // percent and the shift survives any preview size.
     if (layer.type === 'crown') {
       const CROWN_AT = { 3: [655, 505], 4: [635, 610] };   // stem-tip anchors, canvas px
-      const caseAt = CROWN_AT[selectedCase.crownPos || 3];
-      const artAt = CROWN_AT[(selections.crown && selections.crown.crownPos) || 3];
+      const casePos = selectedCase.crownPos || 3;
+      const artPos = (selections.crown && selections.crown.crownPos) || 3;
+      const caseAt = CROWN_AT[casePos];
+      const artAt = CROWN_AT[artPos];
       const dx = caseAt[0] - artAt[0];
       const dy = caseAt[1] - artAt[1] + (selectedCase.crownOffsetY || 0);
       if (dx || dy) {
-        el.style.transform = `translate(${(dx / 10).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)`;
+        // Crossing positions is a swing, not a slide: pivot the art around its own stem
+        // tip so the crown head follows the radial direction of the target position
+        // (4 o'clock art on a 3 o'clock case rotates -25°, the reverse +25°).
+        const rot = (casePos - artPos) * 25;
+        if (rot) el.style.transformOrigin = `${(artAt[0] / 8).toFixed(3)}% ${(artAt[1] / 10).toFixed(3)}%`;
+        el.style.transform =
+          `translate(${(dx / 10).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)` +
+          (rot ? ` rotate(${rot}deg)` : '');
       }
     }
     // A single dropped request used to delete the layer for good, which looks exactly
