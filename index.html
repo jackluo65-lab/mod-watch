@@ -1819,7 +1819,8 @@ const I18N = {
   lkNotForCase: { zh: '当前表壳装不上这个编号', en: 'Does not fit the case you picked' },
   lkNoImage:    { zh: '暂无图片', en: 'No picture yet' },
   pickedPre:    { zh: '已选「', en: 'Selected \u201C' },
-  pickedPost:   { zh: '」— 好眼光。确认后继续下一步', en: '\u201D — great taste. Continue when ready' },
+  pickedSep:    { zh: '」，', en: '\u201D, ' },
+  pickedEnd:    { zh: '」', en: '\u201D' },
   next:         { zh: '下一步 →', en: 'Next →' },
   prev:         { zh: '← 上一步', en: '← Back' },
   nextFinish:   { zh: '查看配置清单 →', en: 'Review Build →' },
@@ -3334,7 +3335,9 @@ function refreshStepChrome() {
   const optional = isOptionalStep(step.type);
   const hasOptions = availablePartsCount[step.type] > 0;
   if (picked) {
-    guideEl.textContent = t('pickedPre') + partName(picked) + t('pickedPost');
+    // 已选「表把 WC-J-1（黑色）」，直纹PVD哑光，S标不填油 —— 表面处理直接跟在后面。
+    const fin = LANG === 'en' ? picked.finishEn : picked.finishZh;
+    guideEl.textContent = t('pickedPre') + partName(picked) + (fin ? t('pickedSep') + fin : t('pickedEnd'));
   } else if (!hasOptions) {
     guideEl.textContent = t('noOptions');
   } else if (optional) {
