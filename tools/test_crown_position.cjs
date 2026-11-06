@@ -11,7 +11,8 @@ const CASES = [
   { case: 'SKX-B-1', crown: 'wc3-j-1', label: '4点壳 + 3点平画稿', moved: true, rot: 25 },
   { case: 'SK3-B1', crown: 'wc3-j-1', label: '3点壳 + 3点平画稿', moved: false, rot: 0 },
   // 拍摄画稿摆在 4 点位槽里但画的是水平 → 4 点壳上必须补 25°
-  { case: 'SKX-B-1', crown: 'wc-a-2', label: '4点壳 + 水平画稿(wc-a-2)', moved: false, rot: 25 },
+  // 拍摄画稿还比 WC-E-1 低 24px，靠数据里的 crownShift 抬回来（moved=true 只关平移）
+  { case: 'SKX-B-1', crown: 'wc-a-2', label: '4点壳 + 水平画稿(wc-a-2)', moved: true, rot: 25 },
   { case: 'SMR-WS-11', crown: 'wc3-j-1', label: '武士(3点, 有 -6 微调) + 3点画稿', moved: true, rot: 0 },
   { case: 'YW-1', crown: 'wc-q-2', label: '鹦鹉螺 + 短款(3点)', moved: false, rot: 0 },
   // 占位图（努力更新中）不该进预览
@@ -80,7 +81,7 @@ const CASES = [
       check('旋转轴心 = 4点位锚点 (635,610)', st.origin, '79.375% 61%');
     }
     if (t.case === 'SKX-B-1' && t.crown === 'wc-a-2') {
-      check('水平画稿在 4 点壳上只旋转、不挪位', st.tf, 'rotate(25deg)');
+      check('水平画稿在 4 点壳上：旋转 25° + 按 crownShift 抬 24px', st.tf, 'rotate(25deg) translate(0%, -2.4%)');
     }
   }
 

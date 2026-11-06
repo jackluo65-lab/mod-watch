@@ -3162,18 +3162,24 @@ function renderImgStack(bust) {
       // not the same as its position: five of the photographed crowns sit in the 4 o'clock
       // spot but were drawn level, so they need +25° to line up with their stem.
       const artAngle = (selections.crown && selections.crown.crownAngle) || 0;
+      // Per-crown nudges, canvas px: the five photographed crowns were shot sitting 22–39px
+      // too low on the canvas (measured against WC-E-1, see tools/measure_crown_tips.py).
+      const shift = (selections.crown && selections.crown.crownShift) || [0, 0];
       const caseAt = CROWN_AT[casePos];
       const artAt = CROWN_AT[(selections.crown && selections.crown.crownPos) || 3];
       const dx = caseAt[0] - artAt[0];
       const dy = caseAt[1] - artAt[1] + (selectedCase.crownOffsetY || 0);
       const rot = CROWN_TILT[casePos] - artAngle;
-      if (dx || dy || rot) {
+      if (dx || dy || rot || shift[0] || shift[1]) {
         // Crossing positions is a swing, not a slide: pivot around the art's own centre so
         // the crown head follows the radial direction of the target position.
         if (rot) el.style.transformOrigin = `${(artAt[0] / 8).toFixed(3)}% ${(artAt[1] / 10).toFixed(3)}%`;
         el.style.transform =
           (dx || dy ? `translate(${(dx / 8).toFixed(3)}%, ${(dy / 10).toFixed(3)}%)` : '') +
-          (rot ? ` rotate(${rot}deg)` : '');
+          (rot ? ` rotate(${rot}deg)` : '') +
+          // The nudge is a flaw in the artwork itself, so it has to ride along with the
+          // rotation — applying it after rotate would drag the crown sideways off the case.
+          (shift[0] || shift[1] ? ` translate(${(shift[0] / 8).toFixed(3)}%, ${(shift[1] / 10).toFixed(3)}%)` : '');
       }
     }
     // A single dropped request used to delete the layer for good, which looks exactly

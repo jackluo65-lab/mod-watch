@@ -34387,7 +34387,11 @@
         "crownPos": 4,
         "crownAngle": 0,
         "finishZh": "钻石纹光亮，红S标填油",
-        "finishEn": "diamond knurl, polished, red S logo filled"
+        "finishEn": "diamond knurl, polished, red S logo filled",
+        "crownShift": [
+          0,
+          -24
+        ]
       },
       {
         "id": "wc-b-2",
@@ -34405,7 +34409,11 @@
         "crownPos": 4,
         "crownAngle": 0,
         "finishZh": "齿纹光亮，红S标填油",
-        "finishEn": "fluted, polished, red S logo filled"
+        "finishEn": "fluted, polished, red S logo filled",
+        "crownShift": [
+          -2,
+          -23
+        ]
       },
       {
         "id": "wc-c-1",
@@ -34459,7 +34467,11 @@
         "crownPos": 4,
         "crownAngle": 0,
         "finishZh": "直纹光亮，S标没填油",
-        "finishEn": "straight knurl, polished, S logo not filled"
+        "finishEn": "straight knurl, polished, S logo not filled",
+        "crownShift": [
+          -1,
+          -22
+        ]
       },
       {
         "id": "wc-e-4",
@@ -34693,7 +34705,11 @@
         "crownPos": 4,
         "crownAngle": 0,
         "finishZh": "直纹PVD哑光，S标不填油",
-        "finishEn": "straight knurl, PVD matte, S logo not filled"
+        "finishEn": "straight knurl, PVD matte, S logo not filled",
+        "crownShift": [
+          -2,
+          -24
+        ]
       },
       {
         "id": "wc-k-1",
@@ -34765,7 +34781,11 @@
         "crownPos": 4,
         "crownAngle": 0,
         "finishZh": "钻石纹光亮，S标没填油",
-        "finishEn": "diamond knurl, polished, S logo not filled"
+        "finishEn": "diamond knurl, polished, S logo not filled",
+        "crownShift": [
+          -1,
+          -39
+        ]
       },
       {
         "id": "wc-l-1",
