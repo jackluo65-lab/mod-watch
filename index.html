@@ -9,6 +9,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="MOD WATCH — build your own custom watch. Pick a case, bezel, dial and more, and see it come together.">
+<!-- The sample build is the first thing a visitor looks at: start it before the parser reaches the panel -->
+<link rel="preload" as="image" href="img/hero/example.webp" fetchpriority="high">
 <style>
   :root {
     --bg: #ffffff;
@@ -1583,7 +1585,7 @@
         <div id="emptyHint" style="display:flex">
           <div class="eh-badge" id="ehBadge">示例成品 · Sample Build</div>
           <div class="eh-hero">
-            <img src="img/hero/example.webp" width="570" height="562"
+            <img src="img/hero/example.webp" width="570" height="562" fetchpriority="high"
                  alt="示例配置：SKX 3.8 哑光银壳 + 黑蓝 GMT 表圈 + 探险家白字面"
                  decoding="async">
           </div>
@@ -2082,8 +2084,12 @@ function typeLabel(type) {
   return LANG === 'zh' ? zh[type] : en[type];
 }
 
-// Load data (timestamp keeps CDNs/browsers from serving a stale catalogue)
-fetch('data.json?t=' + Date.now())
+// Load data. The version is a constant, not Date.now(): a fresh timestamp meant every
+// visitor re-downloaded the 1 MB catalogue on every load. With a stable URL the browser
+// keeps the copy and only revalidates it (ETag → 304). Bump DATA_VERSION whenever
+// data.json changes, otherwise returning visitors keep the old catalogue.
+const DATA_VERSION = 'v=20261122';
+fetch('data.json?' + DATA_VERSION)
   .then(r => r.json())
   .then(d => { DATA = d; renderCaseGrid(); })
   .catch(() => {
