@@ -280,7 +280,9 @@
     font-family: inherit;
   }
   #loadHint .lh-btn:hover { background: #ededed; }
-  /* Empty-state hero: white background, black text, shown until a case is chosen */
+  /* Empty-state hero: a real sample build (assembled from the site's own layer art)
+     shown until the customer picks a case — an empty panel was the first thing a
+     visitor saw, and it said nothing about what the tool actually produces. */
   #emptyHint {
     position: absolute;
     inset: 0;
@@ -289,32 +291,84 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 14px;
+    gap: 0;
     background: #ffffff;
-    padding: 20px;
+    padding: 16px 20px 18px;
   }
-  #emptyHint::before {
-    content: '';
-    width: 46px;
-    height: 46px;
-    border: 2px solid #1a1a1a;
-    border-radius: 50%;
-    box-shadow: inset 0 -10px 0 -8px #1a1a1a, inset 0 10px 0 -8px #1a1a1a;
-    opacity: .85;
-    margin-bottom: 4px;
+  #emptyHint .eh-badge {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999999;
+    margin-bottom: 8px;
+    white-space: nowrap;
+  }
+  #emptyHint .eh-hero {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #emptyHint .eh-hero img {
+    max-width: 94%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  #emptyHint .eh-copy {
+    margin-top: 10px;
   }
   #emptyHint .eh-zh {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: #1a1a1a;
-    letter-spacing: 2px;
-    line-height: 1.6;
+    letter-spacing: 1.5px;
+    line-height: 1.45;
   }
   #emptyHint .eh-en {
-    font-size: 13px;
-    color: #999;
-    letter-spacing: 1px;
+    font-size: 10.5px;
+    color: #a5a5a5;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-top: 5px;
   }
+  #emptyHint .eh-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    font-size: 11.5px;
+    color: #777777;
+    white-space: nowrap;
+  }
+  #emptyHint .eh-stats span b {
+    color: #1a1a1a;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 3px;
+  }
+  #emptyHint .eh-stats i {
+    display: inline-block;
+    width: 1px;
+    height: 9px;
+    background: #e4e4e4;
+    margin: 0 9px;
+    font-style: normal;
+  }
+  #emptyHint .eh-cta {
+    margin-top: 10px;
+    font-size: 11.5px;
+    color: var(--accent);
+    letter-spacing: .5px;
+  }
+  /* While the hero is up, the "请选择表壳" name line underneath only repeats it,
+     and the front/side/back switcher has nothing to switch yet */
+  .preview-panel.is-empty .preview-info { display: none; }
+  .preview-panel.is-empty .view-toggle .view-btn { display: none; }
+  .preview-panel.is-empty .view-toggle { justify-content: flex-end; }
 
   /* View toggle */
   .view-toggle {
@@ -580,9 +634,9 @@
     background: #ffffff;
   }
   .case-card .case-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 10px;
+    width: 100%;
+    height: 112px;
+    margin: 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -670,7 +724,11 @@
   .case-card .desc {
     font-size: 11px;
     color: var(--text2);
-    line-height: 1.4;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .case-category {
     grid-column: 1 / -1;
@@ -688,15 +746,15 @@
   /* Case series — vertical product cards in a grid (namoki style) */
   .case-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
     margin-bottom: 32px;
     align-items: start;
   }
   .case-series {
     background: var(--surface);
     border: 2px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: 12px;
     overflow: hidden;
     transition: border-color .2s, transform .2s, box-shadow .2s;
   }
@@ -716,20 +774,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 9px 14px;
-    font-size: 12px;
+    padding: 10px 15px;
+    font-size: 11.5px;
     font-weight: 600;
     color: var(--text2);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     background: var(--surface2);
     border-bottom: 1px solid var(--border);
     cursor: pointer;
   }
   .case-series-header .count {
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0;
-    color: var(--text2);
+    color: var(--accent);
+    background: #eef4ff;
+    border-radius: 10px;
+    padding: 1px 8px;
+    font-size: 11px;
   }
   .case-series.expanded .case-series-header {
     grid-column: 1 / -1;
@@ -747,7 +809,7 @@
   }
   .case-series-rep .case-icon {
     width: 100%;
-    height: 170px;
+    height: 210px;
     position: relative;
     display: flex;
     align-items: center;
@@ -788,18 +850,33 @@
     padding: 4px 14px 14px;
   }
   .case-series-rep .rep-info h4 {
-    font-size: 16px;
-    margin-bottom: 4px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    margin-bottom: 5px;
   }
   .case-series-rep .rep-meta {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: var(--text2);
-    line-height: 1.5;
+    line-height: 1.55;
+    letter-spacing: .2px;
   }
   .case-series-rep .rep-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-size: 11px;
     color: var(--accent);
-    margin-top: 5px;
+    margin-top: 9px;
+    padding: 4px 12px;
+    border: 1px solid #cfe0fb;
+    border-radius: 14px;
+    background: #f4f8ff;
+    transition: background .2s, border-color .2s;
+  }
+  .case-series-rep:hover .rep-hint {
+    background: #e8f1ff;
+    border-color: #b7d1f7;
   }
   .case-series-rep .rep-arrow {
     color: var(--text2);
@@ -823,6 +900,48 @@
   .case-series.expanded .case-series-variants {
     display: grid;
     animation: fadeUp .35s ease;
+  }
+
+  /* First-load skeleton: the catalogue is ~1 MB, so the grid used to be a blank
+     white area until data.json arrived. */
+  .case-skeleton {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .case-skeleton .sk-card {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .case-skeleton .sk-head {
+    height: 33px;
+    background: #fafafa;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-skeleton .sk-img {
+    height: 196px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  .case-skeleton .sk-line {
+    height: 10px;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  .case-skeleton .sk-line.w60 { width: 60%; }
+  .case-skeleton .sk-line.w85 { width: 85%; margin-top: 8px; margin-bottom: 14px; }
+  .case-skeleton .sk-img,
+  .case-skeleton .sk-line {
+    background: linear-gradient(90deg, #f4f4f4 25%, #ececec 37%, #f4f4f4 63%);
+    background-size: 400% 100%;
+    animation: skShimmer 1.5s ease infinite;
+  }
+  @keyframes skShimmer {
+    0%   { background-position: 100% 0; }
+    100% { background-position: 0 0; }
   }
 
   /* Parts section */
@@ -1304,7 +1423,8 @@
        customer holding a part number wants — keep it, right-aligned. */
     .preview-panel.is-empty .view-toggle .view-btn { display: none; }
     .preview-panel.is-empty .view-toggle { justify-content: flex-end; }
-    .preview-panel.is-empty .preview-canvas { height: 148px; }
+    /* No case yet: the hero needs room for the sample watch, not 148px of nothing */
+    .preview-panel.is-empty .preview-canvas { height: 300px; }
     .my-build-btn { padding: 6px 11px; font-size: 11.5px; min-height: 34px; }
     .my-build-btn svg { width: 13px; height: 13px; flex: 0 0 13px; }
     .my-build-btn .mb-count { min-width: 16px; height: 16px; line-height: 16px; }
@@ -1319,10 +1439,16 @@
       overflow: hidden;
     }
     .preview-zoom-hint { padding: 3px 9px; font-size: 10.5px; right: 6px; bottom: 6px; }
-    #emptyHint { gap: 8px; padding: 10px; }
-    #emptyHint::before { width: 30px; height: 30px; margin-bottom: 0; }
-    #emptyHint .eh-zh { font-size: 15px; letter-spacing: 1px; line-height: 1.5; }
-    #emptyHint .eh-en { font-size: 11px; }
+    #emptyHint { padding: 8px 12px 10px; }
+    #emptyHint .eh-badge { margin-bottom: 5px; font-size: 9px; }
+    #emptyHint .eh-hero img { max-width: 76%; }
+    #emptyHint .eh-copy { margin-top: 6px; }
+    #emptyHint .eh-zh { font-size: 15px; letter-spacing: 1px; line-height: 1.4; }
+    #emptyHint .eh-en { font-size: 9.5px; letter-spacing: 1px; margin-top: 3px; }
+    #emptyHint .eh-stats { margin-top: 8px; font-size: 10.5px; }
+    #emptyHint .eh-stats span b { font-size: 11.5px; }
+    #emptyHint .eh-stats i { margin: 0 7px; }
+    #emptyHint .eh-cta { margin-top: 7px; font-size: 10.5px; }
     #viewComingSoon { gap: 6px; }
     #viewComingSoon .cs-icon { width: 40px; height: 40px; font-size: 10px; }
     #viewComingSoon .cs-title { font-size: 16px; letter-spacing: 3px; }
@@ -1403,7 +1529,8 @@
   /* Short phones (iPhone SE class): give the option list more of the screen */
   @media (max-width: 640px) and (max-height: 760px) {
     .preview-canvas { height: 118px; }
-    .preview-panel.is-empty .preview-canvas { height: 106px; }
+    /* Short phones: the hero keeps a usable sample watch, just tighter */
+    .preview-panel.is-empty .preview-canvas { height: 232px; }
     .preview-info .specs {
       display: -webkit-box;
       -webkit-line-clamp: 1;
@@ -1454,8 +1581,20 @@
       <div class="preview-canvas" id="previewCanvas">
         <div id="imgStack"></div>
         <div id="emptyHint" style="display:flex">
-          <div class="eh-zh">选择一款表壳，创建你的手表</div>
-          <div class="eh-en">Choose a Case, Create Your Watch</div>
+          <div class="eh-badge" id="ehBadge">示例成品 · Sample Build</div>
+          <div class="eh-hero">
+            <img src="img/hero/example.webp" width="570" height="562"
+                 alt="示例配置：SKX 3.8 哑光银壳 + 黑蓝 GMT 表圈 + 太阳纹黑字面"
+                 decoding="async">
+          </div>
+          <div class="eh-copy">
+            <div class="eh-zh">选择一款表壳，创建你的手表</div>
+            <div class="eh-en">Choose a Case, Create Your Watch</div>
+          </div>
+          <div class="eh-stats" id="ehStats">
+            <span><b>87</b>款表壳</span><i></i><span><b>684</b>个部件</span><i></i><span><b>11</b>步完成</span>
+          </div>
+          <div class="eh-cta" id="ehCta">从任意一个系列开始 →</div>
         </div>
         <div id="viewComingSoon">
           <div class="cs-icon">TBD</div>
@@ -1548,6 +1687,12 @@
     <div class="step-guide" id="stepGuide">先选择一个表壳系列，后续所有配件会自动匹配兼容款式</div>
 
     <div class="case-grid" id="caseGrid"></div>
+    <div class="case-skeleton" id="caseSkeleton" aria-hidden="true">
+      <div class="sk-card"><div class="sk-head"></div><div class="sk-img"></div><div class="sk-line w60"></div><div class="sk-line w85"></div></div>
+      <div class="sk-card"><div class="sk-head"></div><div class="sk-img"></div><div class="sk-line w60"></div><div class="sk-line w85"></div></div>
+      <div class="sk-card"><div class="sk-head"></div><div class="sk-img"></div><div class="sk-line w60"></div><div class="sk-line w85"></div></div>
+      <div class="sk-card"><div class="sk-head"></div><div class="sk-img"></div><div class="sk-line w60"></div><div class="sk-line w85"></div></div>
+    </div>
 
     <div id="partsSection" class="parts-section">
 
@@ -2009,6 +2154,24 @@ function renderCaseGrid() {
   caseGridOrder = groups.map(g => g[0]);   // remember the natural order
   if (selectedCase) highlightSelectedCase();
   applySeriesOrder();
+  const skel = document.getElementById('caseSkeleton');
+  if (skel) skel.style.display = 'none';
+  updateHeroStats();
+}
+
+// The hero numbers are read off the live catalogue, so the empty state can never
+// claim a count the site is unable to back up.
+function updateHeroStats() {
+  const el = document.getElementById('ehStats');
+  if (!el) return;
+  const cases = (DATA && DATA.caseSeries && DATA.caseSeries.length) || 0;
+  const parts = DATA && DATA.parts
+    ? Object.keys(DATA.parts).reduce((n, k) => n + (DATA.parts[k] || []).length, 0)
+    : 0;
+  const steps = (typeof stepOrder !== 'undefined' && stepOrder.length ? stepOrder.length + 1 : 0);
+  el.innerHTML = LANG === 'zh'
+    ? `<span><b>${cases}</b>款表壳</span><i></i><span><b>${parts}</b>个部件</span><i></i><span><b>${steps}</b>步完成</span>`
+    : `<span><b>${cases}</b> cases</span><i></i><span><b>${parts}</b> parts</span><i></i><span><b>${steps}</b> steps</span>`;
 }
 
 // Original (natural) order of the series, and the "selected series first" behaviour
@@ -3283,6 +3446,8 @@ const stepOrder = [
   { type: 'strap',       label: '表带', labelEn: 'Strap' }
 ];
 let currentStep = 0;
+// Set once the first render is done, so the load-time goToStep(0) doesn't scroll the page
+let bootDone = false;
 
 function renderProgressBar() {
   const bar = document.getElementById('progressBar');
@@ -3431,7 +3596,9 @@ function goToStep(i) {
     void box.offsetWidth; // restart animation
     box.classList.add('celebrate');
   }
-  document.querySelector('.config-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Only scroll once the customer is actually navigating — the very first goToStep(0)
+  // runs at load time and used to shave the logo bar off the top of the first screen.
+  if (bootDone) document.querySelector('.config-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Unique config code from selections, e.g. MW-8K2F4D
@@ -3514,6 +3681,11 @@ function applyStaticTexts() {
   const ehEn = document.querySelector('#emptyHint .eh-en');
   ehZh.textContent = heroMain;
   ehEn.textContent = heroSub;
+  const ehBadge = document.getElementById('ehBadge');
+  if (ehBadge) ehBadge.textContent = LANG === 'zh' ? '示例成品 · Sample Build' : 'Sample Build · 示例成品';
+  const ehCta = document.getElementById('ehCta');
+  if (ehCta) ehCta.textContent = LANG === 'zh' ? '从任意一个系列开始 →' : 'Start with any series →';
+  updateHeroStats();
   document.getElementById('finishTitle').textContent = t('finishTitle');
   document.getElementById('finishSub').innerHTML = t('finishSub');
   document.getElementById('summaryTitle').textContent = t('summaryTitle');
@@ -3556,6 +3728,7 @@ function quoteAlert() {
 goToStep(0);
 applyStaticTexts();
 renderImgStack();
+bootDone = true;
 
 // ===== Hover zoom: show enlarged case photo next to the cursor =====
 (function initCaseZoom() {
