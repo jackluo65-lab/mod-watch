@@ -11,9 +11,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，磨砂，银色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-B-1, Matte Silver. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-B-1: matte silver finish.",
       "views": {
         "front": "img/cases/skx38/SKX-B-1.png"
       },
@@ -550,9 +550,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，磨砂，黑色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-B-2, Matte Black. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-B-2: matte black finish.",
       "views": {
         "front": "img/cases/skx38/SKX-B-2.png"
       },
@@ -1089,9 +1089,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，磨砂，金色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-B-3, Matte Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，金色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-B-3: matte gold finish.",
       "views": {
         "front": "img/cases/skx38/SKX-B-3.png"
       },
@@ -1628,9 +1628,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，磨砂，玫瑰金色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-F-4, Matte Rose Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，玫瑰金表壳",
+      "descriptionEn": "SKX 3.8 case SKX-F-4: matte rose gold finish.",
       "views": {
         "front": "img/cases/skx38/SKX-F-4.png"
       },
@@ -2167,9 +2167,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，光亮，银色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-C-1, Polished Silver. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-C-1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/skx38/SKX-C-1.png"
       },
@@ -2706,9 +2706,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，光亮，黑色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-C-2, Polished Black. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-C-2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/skx38/SKX-C-2.png"
       },
@@ -3245,9 +3245,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，光亮，金色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-C-3, Polished Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-C-3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skx38/SKX-C-3.png"
       },
@@ -3784,9 +3784,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3.8位壳身，光亮，玫瑰金色",
-      "descriptionEn": "SKX 3.8 dive case, model SKX-E-4, Polished Rose Gold. Classic SKX-style case with crown at 3.8, solid build, compatible with NH movements.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "SKX 3.8 case SKX-E-4: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skx38/SKX-E-4.png"
       },
@@ -4323,9 +4323,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX-N多风格3.8位表壳身（适配SE TU KN MM PL多种表圈），光亮拉丝，银色",
-      "descriptionEn": "SKX 3.8 MORE case series, model SKX-N-1, Polished Silver.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX-N多风格3.8位表壳身（适配SE TU KN MM PL多种表圈），侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "SKX-N multi-style 3.8 case SKX-N-1, fits the SE, TU, KN, MM and PL bezels; polished sides with a brushed top, silver.",
       "views": {
         "front": "img/cases/skx38-more/SKX-N-1.png"
       },
@@ -4864,9 +4864,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire ",
-      "movement": "NH35 / NH36",
-      "description": "SKX-N多风格3.8位表壳身（适配E TU KN MM PL多种表圈），磨砂哑光，黑色",
-      "descriptionEn": "SKX 3.8 MORE case series, model SKX-N-7, Matte Black.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX-N多风格3.8位表壳身（适配E TU KN MM PL多种表圈），哑光，黑色表壳",
+      "descriptionEn": "SKX-N multi-style 3.8 case SKX-N-7, fits the SE, TU, KN, MM and PL bezels; matte finish, black.",
       "views": {
         "front": "img/cases/skx38-more/SKX-N-7.png"
       },
@@ -5405,9 +5405,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，磨砂，银色",
-      "descriptionEn": "SKX 3.0 case, model SK3-B1, matte silver finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-B1: matte silver finish.",
       "views": {
         "front": "img/cases/skx30/SK3-B1.png"
       },
@@ -5947,9 +5947,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，磨砂，黑色",
-      "descriptionEn": "SKX 3.0 case, model SK3-B2, matte black finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-B2: matte black finish.",
       "views": {
         "front": "img/cases/skx30/SK3-B2.png"
       },
@@ -6489,9 +6489,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，磨砂，金色",
-      "descriptionEn": "SKX 3.0 case, model SK3-B3, matte gold finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，金色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-B3: matte gold finish.",
       "views": {
         "front": "img/cases/skx30/SK3-B3.png"
       },
@@ -7031,9 +7031,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，磨砂，玫瑰金色",
-      "descriptionEn": "SKX 3.0 case, model SK3-B4, matte rose gold finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，玫瑰金表壳",
+      "descriptionEn": "SKX 3.0 case SK3-B4: matte rose gold finish.",
       "views": {
         "front": "img/cases/skx30/SK3-B4.png"
       },
@@ -7573,9 +7573,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，磨砂，蓝色",
-      "descriptionEn": "SKX 3.0 case, model SK3-B5, matte blue finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，蓝色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-B5: matte blue finish.",
       "views": {
         "front": "img/cases/skx30/SK3-B5.png"
       },
@@ -8115,9 +8115,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，光亮，银色",
-      "descriptionEn": "SKX 3.0 case, model SK3-C1, polished silver finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-C1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/skx30/SK3-C1.png"
       },
@@ -8657,9 +8657,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，光亮，黑色",
-      "descriptionEn": "SKX 3.0 case, model SK3-A2, polished black finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-A2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/skx30/SK3-A2.png"
       },
@@ -9199,9 +9199,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，光亮，金色",
-      "descriptionEn": "SKX 3.0 case, model SK3-A3, polished gold finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-A3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skx30/SK3-A3.png"
       },
@@ -9741,9 +9741,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位壳身，光亮，玫瑰金色",
-      "descriptionEn": "SKX 3.0 case, model SK3-A4, polished rose gold finish. Larger SKX-style case with the crown at 3.0.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "SKX 3.0 case SK3-A4: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skx30/SK3-A4.png"
       },
@@ -10284,9 +10284,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位壳身，光亮+拉丝，银色",
-      "descriptionEn": "SG-1 — 42mm SUB case, crown at 3, polished and brushed finish, silver.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "SKX Sub case SG-1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/skxsub/SG-1.png",
         "side": "img/cases/skxsub/SG-1_1.png"
@@ -10822,9 +10822,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，光亮+拉丝，黑色",
-      "descriptionEn": "SG-2 — 42mm SUB case, crown at 3, polished and brushed finish, black.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "SKX Sub case SG-2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/skxsub/SG-2.png",
         "side": "img/cases/skxsub/SG-2_1.png"
@@ -11360,9 +11360,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，光亮+拉丝，金色",
-      "descriptionEn": "SG-3 — 42mm SUB case, crown at 3, polished and brushed finish, gold.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "SKX Sub case SG-3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skxsub/SG-3.png",
         "side": "img/cases/skxsub/SG-3_1.png"
@@ -11898,9 +11898,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，光亮+拉丝，玫瑰金色",
-      "descriptionEn": "SG-4 — 42mm SUB case, crown at 3, polished and brushed finish, rose gold.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "SKX Sub case SG-4: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/skxsub/SG-4.png",
         "side": "img/cases/skxsub/SG-4_1.png"
@@ -12436,9 +12436,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，磨砂，银色",
-      "descriptionEn": "SG-5 — 42mm SUB case, crown at 3, matte finish, silver.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "SKX Sub case SG-5: matte silver finish.",
       "views": {
         "front": "img/cases/skxsub/SG-5.png",
         "side": "img/cases/skxsub/SG-5_1.png"
@@ -12974,9 +12974,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，磨砂，黑色",
-      "descriptionEn": "SG-6 — 42mm SUB case, crown at 3, matte finish, black.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "SKX Sub case SG-6: matte black finish.",
       "views": {
         "front": "img/cases/skxsub/SG-6.png",
         "side": "img/cases/skxsub/SG-6_1.png"
@@ -13512,9 +13512,9 @@
       "thickness": "11mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "新水鬼3点位表壳，磨砂，玫瑰金色",
-      "descriptionEn": "SG-8 — 42mm SUB case, crown at 3, matte finish, rose gold.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，玫瑰金色表壳",
+      "descriptionEn": "SKX Sub case SG-8: matte gold finish.",
       "views": {
         "front": "img/cases/skxsub/SG-8.png",
         "side": "img/cases/skxsub/SG-8_1.png"
@@ -14050,9 +14050,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），光亮+拉丝，银色",
-      "descriptionEn": "Classic Case series C-JTF-1, Polished Silver. Elegant vintage design for business and daily wear.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "classic multi-style case C-JTF-1 with the crown at 3, shared by the JD, TX, FX and FG styles; polished sides with a brushed top finish.",
       "views": {
         "front": "img/cases/classic/C-JTF-1.png"
       },
@@ -14246,9 +14246,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），光亮+拉丝，金色",
-      "descriptionEn": "Classic Case series C-JTF-3, Polished Gold. Elegant vintage design for business and daily wear.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "classic multi-style case C-JTF-3 with the crown at 3, shared by the JD, TX, FX and FG styles; polished sides with a brushed top finish.",
       "views": {
         "front": "img/cases/classic/C-JTF-3.png"
       },
@@ -14442,9 +14442,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），光亮+拉丝，玫瑰金色",
-      "descriptionEn": "Classic Case series C-JTF-4, Polished Rose Gold. Elegant vintage design for business and daily wear.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "classic multi-style case C-JTF-4 with the crown at 3, shared by the JD, TX, FX and FG styles; polished sides with a brushed top finish.",
       "views": {
         "front": "img/cases/classic/C-JTF-4.png"
       },
@@ -14638,9 +14638,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），磨砂银色",
-      "descriptionEn": "Classic Case series C-JTF-6, Matte Silver. Elegant vintage design for business and daily wear.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），哑光 银色表壳",
+      "descriptionEn": "classic multi-style case C-JTF-6 with the crown at 3, shared by the JD, TX, FX and FG styles; matte silver finish.",
       "views": {
         "front": "img/cases/classic/C-JTF-6.png"
       },
@@ -14834,9 +14834,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），磨砂黑色",
-      "descriptionEn": "Classic Case series C-JTF-7, Matte Black. Elegant vintage design for business and daily wear.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），哑光 黑色表壳",
+      "descriptionEn": "classic multi-style case C-JTF-7 with the crown at 3, shared by the JD, TX, FX and FG styles; matte black finish.",
       "views": {
         "front": "img/cases/classic/C-JTF-7.png"
       },
@@ -17315,9 +17315,9 @@
       "thickness": "11.0mm",
       "waterResistance": "100m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "Vintage Case 系列 V-JTF-2，复古风格表壳。",
-      "descriptionEn": "Vintage Case series V-JTF-2, classic vintage-styled watch case.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "SKX 3点位多风格壳身（JD TX FX FG共用），侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "case VINTAGE-C-JTF-2 with the crown at 3, shared by the JD, TX, FX and FG styles; polished sides with a brushed top finish.",
       "views": {
         "front": "img/cases/vintage/Vintage-C-JTF-2.png",
         "side": "img/cases/vintage/Vintage-C-JTF-2_1.png"
@@ -18889,9 +18889,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-11，砂银面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-11, Matte Silver finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "Samurai case SMR-WS-11: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-11.png",
         "side": "img/cases/smr/SMR-WS-11_1.png"
@@ -19426,9 +19426,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-12，哑光黑面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-12, Matte Black finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "Samurai case SMR-WS-12: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-12.png",
         "side": "img/cases/smr/SMR-WS-12_1.png"
@@ -19963,9 +19963,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-16，亮银面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-16, Polished Silver finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "Samurai case SMR-WS-16: matte silver finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-16.png",
         "side": "img/cases/smr/SMR-WS-16_1.png"
@@ -20500,9 +20500,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-17，抛光黑面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-17, Polished Black finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "Samurai case SMR-WS-17: matte black finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-17.png",
         "side": "img/cases/smr/SMR-WS-17_1.png"
@@ -21037,9 +21037,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-18，金面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-18, Gold finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，金色表壳",
+      "descriptionEn": "Samurai case SMR-WS-18: matte gold finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-18.png",
         "side": "img/cases/smr/SMR-WS-18_1.png"
@@ -21574,9 +21574,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-19，玫金面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-19, Rose Gold finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，玫瑰金色表壳",
+      "descriptionEn": "Samurai case SMR-WS-19: matte gold finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-19.png",
         "side": "img/cases/smr/SMR-WS-19_1.png"
@@ -22111,9 +22111,9 @@
       "thickness": "12 mm",
       "waterResistance": "200m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "SKX Samurai 表壳，型号 SMR-WS-20，蓝面。42mm 武士造型，适配 SKX Samurai 系列表圈。",
-      "descriptionEn": "SKX Samurai case, model SMR-WS-20, Blue finish. 42mm Samurai-style case with matching bezel series.",
+      "movement": "NH36 / 4R36",
+      "description": "哑光，蓝色表壳",
+      "descriptionEn": "Samurai case SMR-WS-20: matte blue finish.",
       "views": {
         "front": "img/cases/smr/SMR-WS-20.png",
         "side": "img/cases/smr/SMR-WS-20_1.png"
@@ -22649,9 +22649,9 @@
       "thickness": "11.0mm",
       "waterResistance": "50m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "经典复古系列壳身 C-CL-1，亮银，与经典复古表壳配套。无章环设置。",
-      "descriptionEn": "Classic Retro case series C-CL-1, Polished Silver. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "movement": "NH35 / 4R35",
+      "description": "CL经典复古3点位壳身，全光亮 银表壳",
+      "descriptionEn": "Classic Retro case C-CL-1 with the crown at 3, fully polished .",
       "views": {
         "front": "img/cases/clretro/C-CL-1.png"
       },
@@ -22738,9 +22738,9 @@
       "thickness": "11.0mm",
       "waterResistance": "50m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "CL经典复古3点位壳身，亮金，无章环设置。",
-      "descriptionEn": "Classic Retro case series C-CL-3, Polished Gold. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "movement": "NH35 / 4R35",
+      "description": "CL经典复古3点位壳身，全光亮 金表壳",
+      "descriptionEn": "Classic Retro case C-CL-3 with the crown at 3, fully polished .",
       "views": {
         "front": "img/cases/clretro/C-CL-3.png"
       },
@@ -22827,9 +22827,9 @@
       "thickness": "11.0mm",
       "waterResistance": "50m",
       "crystal": "Sapphire",
-      "movement": "NH35 / NH36",
-      "description": "CL经典复古3点位壳身，亮玫金，无章环设置。",
-      "descriptionEn": "Classic Retro case series C-CL-4, Polished Rose Gold. 38mm round vintage-style case with the crown at 3.0, matches the B-CL bezel series.",
+      "movement": "NH35 / 4R35",
+      "description": "CL经典复古3点位壳身，全光亮 玫瑰金表壳",
+      "descriptionEn": "Classic Retro case C-CL-4 with the crown at 3, fully polished rose gold.",
       "views": {
         "front": "img/cases/clretro/C-CL-4.png"
       },
@@ -22917,8 +22917,8 @@
       "waterResistance": "50m",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "爱彼AP 3点位壳身，光亮+拉丝抛光，银色",
-      "descriptionEn": "New AP case C-AP-1, Brushed Silver. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "description": "全拉丝，银色表壳",
+      "descriptionEn": "AP-style case C-AP-1: fully brushed silver.",
       "views": {
         "front": "img/cases/ap/C-AP-1.png"
       },
@@ -23102,8 +23102,8 @@
       "waterResistance": "50m",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "爱彼AP 3点位壳身，光亮+拉丝抛光，黑色",
-      "descriptionEn": "New AP case C-AP-2, Black. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "description": "全拉丝，黑色表壳",
+      "descriptionEn": "AP-style case C-AP-2: fully brushed black.",
       "views": {
         "front": "img/cases/ap/C-AP-2.png"
       },
@@ -23287,8 +23287,8 @@
       "waterResistance": "50m",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "爱彼AP 3点位壳身，光亮+拉丝抛光，金色",
-      "descriptionEn": "New AP case C-AP-3, Brushed Gold. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "description": "全拉丝，金色表壳",
+      "descriptionEn": "AP-style case C-AP-3: fully brushed gold.",
       "views": {
         "front": "img/cases/ap/C-AP-3.png"
       },
@@ -23472,8 +23472,8 @@
       "waterResistance": "50m",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "爱彼AP 3点位壳身，光亮+拉丝抛光，玫瑰金色",
-      "descriptionEn": "New AP case C-AP-4, Brushed Rose Gold. 42 mm integrated-lug case with the crown at 3.0, matches the B-AP bezel series with the AP crown and SJG42 crystal.",
+      "description": "全拉丝，玫瑰金表壳",
+      "descriptionEn": "AP-style case C-AP-4: fully brushed rose gold.",
       "views": {
         "front": "img/cases/ap/C-AP-4.png"
       },
@@ -23656,9 +23656,9 @@
       "thickness": "10mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "PRX超级玩家3点位壳身，光亮+拉丝，银色",
-      "descriptionEn": "C-PRX-1 — 39mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "PRX-style case C-PRX-1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/prx/C-PRX-1.png",
         "side": "img/cases/prx/C-PRX-1_1.png"
@@ -23694,9 +23694,9 @@
       "thickness": "10mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "PRX超级玩家3点位壳身，光亮+拉丝，黑色",
-      "descriptionEn": "C-PRX-2 — 39mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "PRX-style case C-PRX-2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/prx/C-PRX-2.png"
       },
@@ -23731,9 +23731,9 @@
       "thickness": "10mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "PRX超级玩家3点位壳身，光亮+拉丝，金色",
-      "descriptionEn": "C-PRX-3 — 39mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "PRX-style case C-PRX-3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/prx/C-PRX-3.png",
         "side": "img/cases/prx/C-PRX-3_1.png"
@@ -23769,9 +23769,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，光亮+拉丝，银色",
-      "descriptionEn": "YW-1 — 41mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "Nautilus-style case YW-1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/nautilus/YW-1.png",
         "side": "img/cases/nautilus/YW-1_1.png"
@@ -23818,9 +23818,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，光亮+拉丝，黑色",
-      "descriptionEn": "YW-2 — 41mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "Nautilus-style case YW-2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/nautilus/YW-2.png",
         "side": "img/cases/nautilus/YW-2_1.png"
@@ -23867,9 +23867,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，光亮+拉丝，金色",
-      "descriptionEn": "YW-3 — 41mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "Nautilus-style case YW-3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/nautilus/YW-3.png",
         "side": "img/cases/nautilus/YW-3_1.png"
@@ -23916,9 +23916,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，光亮+拉丝，玫瑰金色",
-      "descriptionEn": "YW-4 — 41mm case, polished and brushed finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "Nautilus-style case YW-4: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/nautilus/YW-4.png",
         "side": "img/cases/nautilus/YW-4_1.png"
@@ -23965,9 +23965,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，磨砂哑光，银色",
-      "descriptionEn": "YW-5 — 41mm case, matte finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "Nautilus-style case YW-5: matte silver finish.",
       "views": {
         "front": "img/cases/nautilus/YW-5.png",
         "side": "img/cases/nautilus/YW-5_1.png"
@@ -24014,9 +24014,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，磨砂哑光，黑色",
-      "descriptionEn": "YW-6 — 41mm case, matte finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "Nautilus-style case YW-6: matte black finish.",
       "views": {
         "front": "img/cases/nautilus/YW-6.png",
         "side": "img/cases/nautilus/YW-6_1.png"
@@ -24063,9 +24063,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，磨砂哑光，金色",
-      "descriptionEn": "YW-7 — 41mm case, matte finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "哑光，金色表壳",
+      "descriptionEn": "Nautilus-style case YW-7: matte gold finish.",
       "views": {
         "front": "img/cases/nautilus/YW-7.png",
         "side": "img/cases/nautilus/YW-7_1.png"
@@ -24112,9 +24112,9 @@
       "thickness": "9mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35 / 4r35",
-      "description": "鹦鹉螺3点位壳身，磨砂哑光，玫瑰金色",
-      "descriptionEn": "YW-8 — 41mm case, matte finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / 4R35",
+      "description": "哑光，玫瑰金表壳",
+      "descriptionEn": "Nautilus-style case YW-8: matte rose gold finish.",
       "views": {
         "front": "img/cases/nautilus/YW-8.png",
         "side": "img/cases/nautilus/YW-8_1.png"
@@ -24161,9 +24161,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，光亮+拉丝，银色",
-      "descriptionEn": "C-AF-1 — 41mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "SKX square case C-AF-1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/cases/square/C-AF-1.png",
         "side": "img/cases/square/C-AF-1_1.png"
@@ -24203,9 +24203,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，光亮+拉丝，黑色",
-      "descriptionEn": "C-AF-2 — 41mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "SKX square case C-AF-2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/cases/square/C-AF-2.png",
         "side": "img/cases/square/C-AF-2_1.png"
@@ -24245,9 +24245,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，光亮+拉丝，金色",
-      "descriptionEn": "C-AF-3 — 41mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "SKX square case C-AF-3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/square/C-AF-3.png",
         "side": "img/cases/square/C-AF-3_1.png"
@@ -24287,9 +24287,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，光亮+拉丝，玫瑰金色",
-      "descriptionEn": "C-AF-4 — 41mm case, polished and brushed finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "侧面光亮 正面拉丝，玫瑰金色表壳",
+      "descriptionEn": "SKX square case C-AF-4: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/cases/square/C-AF-4.png",
         "side": "img/cases/square/C-AF-4_1.png"
@@ -24329,9 +24329,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，磨砂，银色",
-      "descriptionEn": "C-BF-1 — 41mm case, matte finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "SKX square case C-BF-1: matte silver finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24370,9 +24370,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，磨砂，黑色",
-      "descriptionEn": "C-BF-2 — 41mm case, matte finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "SKX square case C-BF-2: matte black finish.",
       "views": {
         "front": "img/cases/square/C-BF-2.png",
         "side": "img/cases/square/C-BF-2_1.png"
@@ -24412,9 +24412,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，磨砂，金色",
-      "descriptionEn": "C-BF-3 — 41mm case, matte finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，金色表壳",
+      "descriptionEn": "SKX square case C-BF-3: matte gold finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24453,9 +24453,9 @@
       "thickness": "11mm",
       "waterResistance": "—",
       "crystal": "Sapphire",
-      "movement": "NH35/36 4R36",
-      "description": "SKX方形3点位壳身，磨砂，玫瑰金色",
-      "descriptionEn": "C-BF-4 — 41mm case, matte finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "movement": "NH35 / NH36 / 4R36",
+      "description": "哑光，玫瑰金表壳",
+      "descriptionEn": "SKX square case C-BF-4: matte rose gold finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24495,8 +24495,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，光亮+拉丝抛光，银色",
-      "descriptionEn": "C-AT-A1 — 43mm case, polished and brushed finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "侧面光亮 正面拉丝，银色表壳",
+      "descriptionEn": "Turtle case C-AT-A1: polished sides, brushed top, silver finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24534,8 +24534,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，光亮+拉丝抛光，黑色",
-      "descriptionEn": "C-AT-A2 — 43mm case, polished and brushed finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "侧面光亮 正面拉丝，黑色表壳",
+      "descriptionEn": "Turtle case C-AT-A2: polished sides, brushed top, black finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24573,8 +24573,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，光亮+拉丝抛光，金色",
-      "descriptionEn": "C-AT-A3 — 43mm case, polished and brushed finish, gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "侧面光亮 正面拉丝，金色表壳",
+      "descriptionEn": "Turtle case C-AT-A3: polished sides, brushed top, gold finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24612,8 +24612,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，光亮+拉丝抛光，玫瑰金色",
-      "descriptionEn": "C-AT-A4 — 43mm case, polished and brushed finish, rose gold, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "侧面光亮 正面拉丝，玫瑰金表壳",
+      "descriptionEn": "Turtle case C-AT-A4: polished sides, brushed top, rose gold finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24651,8 +24651,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，磨砂哑光，银色",
-      "descriptionEn": "C-BT-B1 — 43mm case, matte finish, silver, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "哑光，银色表壳",
+      "descriptionEn": "Turtle case C-BT-B1: matte silver finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
@@ -24690,8 +24690,8 @@
       "waterResistance": "—",
       "crystal": "Sapphire",
       "movement": "NH35 / NH36",
-      "description": "鲍鱼3.8位壳身，磨砂哑光，黑色",
-      "descriptionEn": "C-BT-B2 — 43mm case, matte finish, black, crown at 3 o'clock. Factory photos for this model are on the way.",
+      "description": "哑光，黑色表壳",
+      "descriptionEn": "Turtle case C-BT-B2: matte black finish.",
       "views": {
         "front": "img/placeholder/working-on-it.png"
       },
