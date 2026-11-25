@@ -40,6 +40,14 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--border);
+    /* The catalogue is long: keep the wordmark and the language switch in reach.
+       Phones opt out (see the ≤960 block) — a sticky bar there would eat the preview. */
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: saturate(1.4) blur(10px);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px);
   }
   .logo {
     font-size: 24px;
@@ -85,7 +93,7 @@
     width: 480px;
     flex-shrink: 0;
     position: sticky;
-    top: 30px;
+    top: 96px;   /* header (65px) + the 30px breathing room it used to have */
     align-self: flex-start;
   }
   .preview-box {
@@ -1318,7 +1326,19 @@
     .main { flex-direction: column; padding: 20px; }
     .preview-panel { width: 100%; position: static; }
     .preview-canvas { width: 300px; height: 380px; }
-    .header { padding: 16px 20px; }
+    .header {
+      padding: 16px 20px;
+      /* Narrow screens: the preview panel below is sticky — a sticky bar would fight it */
+      position: static;
+      background: #ffffff;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    /* Dot labels are already hidden here, so the dots only repeat the counter:
+       "第 1 步 / 共 11 步" above the title says the same thing, once. */
+    .progress-bar { display: none; }
+    .step-counter { margin-bottom: 10px; }
+    .step-title .st-num { display: none; }
     .progress-step .step-label { display: none; }
     .progress-step { padding-top: 2px; }
     .case-series.expanded { grid-template-columns: 1fr; }
@@ -1363,7 +1383,7 @@
     .view-btn { padding: 6px 12px; font-size: 11.5px; }
     .preview-info h3 { font-size: 14px; }
     .preview-info .specs { font-size: 11px; line-height: 1.5; }
-    .config-panel { min-width: 0; scroll-margin-top: 16px; }
+    .config-panel { min-width: 0; scroll-margin-top: 84px; }
     .progress-bar { margin-bottom: 12px; }
     .case-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
     .part-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -1928,6 +1948,7 @@ const I18N = {
   comingSoon:   { zh: '敬请期待', en: 'Coming Soon' },
   comingSoonSub:{ zh: '该视角图片即将上线', en: 'Images for this view are coming soon' },
   stepCase:     { zh: '第 1 步 · 选择表壳系列', en: 'Step 1 · Choose Your Case' },
+  stepCaseName: { zh: '选择表壳系列', en: 'Choose Your Case' },
   guideCase:    { zh: '每一枚好表，都从一枚好壳开始。选择您的表壳系列', en: 'Every great watch begins with a great case. Pick your case series' },
   guides: {
     case:        { zh: '每一枚好表，都从一枚好壳开始。选择您的表壳系列', en: 'Every great watch begins with a great case. Pick your case series' },
@@ -2269,11 +2290,34 @@ function buildCaseCard(cs) {
   return card;
 }
 
+// What the pill under a series photo should say right now. It used to keep saying
+// "点击查看该系列全部 8 款" even with the eight cases already open below it.
+function repHintText(series) {
+  const rep = series.querySelector('.case-series-rep');
+  const isSel = !!(selectedCase && series.dataset.category === selectedCase.category);
+  if (isSel) return LANG === 'zh' ? '已选 · 点击更换' : 'Selected · tap to change';
+  if (series.classList.contains('expanded')) {
+    return LANG === 'zh' ? '已展开 · 点击收起' : 'Open · tap to collapse';
+  }
+  return (rep && rep.dataset.hintDefault) || '';
+}
+
+function syncRepHint(series) {
+  const rep = series.querySelector('.case-series-rep');
+  const hint = rep && rep.querySelector('.rep-hint');
+  if (hint) hint.textContent = repHintText(series);
+}
+
+function syncAllRepHints() {
+  document.querySelectorAll('.case-series').forEach(syncRepHint);
+}
+
 // Expand one series, collapse the others (accordion behaviour)
 function toggleSeries(series) {
   const wasOpen = series.classList.contains('expanded');
   document.querySelectorAll('.case-series.expanded').forEach(s => s.classList.remove('expanded'));
   if (!wasOpen) series.classList.add('expanded');
+  syncAllRepHints();
 }
 
 // Reflect the currently selected case on representative + variant cards
@@ -2283,10 +2327,7 @@ function highlightSelectedCase() {
     const isSel = series.dataset.category === selectedCase.category;
     const rep = series.querySelector('.case-series-rep');
     rep.classList.toggle('selected-rep', isSel);
-    const hint = rep.querySelector('.rep-hint');
-    if (hint) hint.textContent = isSel
-      ? (LANG === 'zh' ? '已选 · 点击更换' : 'Selected · tap to change')
-      : rep.dataset.hintDefault;
+    syncRepHint(series);
     series.querySelectorAll('.case-card').forEach(c => {
       const on = c.dataset.id === selectedCase.id;
       c.classList.toggle('selected', on);
@@ -3538,6 +3579,13 @@ function refreshStepChrome() {
   btnNext.style.cursor = ready ? 'pointer' : 'not-allowed';
 }
 
+// "第 3 步 · 选择表圈" is split so a phone can drop the number: the counter above
+// already says 第 3 步 / 共 11 步, the title only has to name the step.
+function stepTitleHtml(i, name) {
+  const prefix = LANG === 'zh' ? `第 ${i + 1} 步 · ` : `Step ${i + 1} · `;
+  return `<span class="st-num">${prefix}</span>${name}`;
+}
+
 function goToStep(i) {
   const isFinish = i === stepOrder.length;
   const step = stepOrder[i];
@@ -3552,7 +3600,7 @@ function goToStep(i) {
     // 完成页把标题藏起来了，回到第 1 步要显回来（"重新配置"之后否则看不到这一步的标题）
     titleEl.style.display = '';
     guideEl.style.display = '';
-    titleEl.textContent = t('stepCase');
+    titleEl.innerHTML = stepTitleHtml(0, t('stepCaseName'));
     guideEl.textContent = t('guideCase');
     guideEl.classList.remove('guide-ok');
     // Collapse the expanded series when coming back to the case step — except the one
@@ -3566,7 +3614,8 @@ function goToStep(i) {
   } else {
     titleEl.style.display = '';
     guideEl.style.display = '';
-    titleEl.textContent = t('stepOf') + (i + 1) + t('stepPick') + typeLabel(step.type);
+    const pick = LANG === 'zh' ? '选择' : 'Choose ';
+    titleEl.innerHTML = stepTitleHtml(i, pick + typeLabel(step.type));
   }
 
   // Visibility
@@ -3655,11 +3704,8 @@ function resetAll() {
   skippedSteps.clear();
   document.querySelectorAll('.case-card').forEach(c => c.classList.remove('selected'));
   // 系列代表卡的高亮/提示也要一起清 —— 否则"重新配置"或取消表壳之后它还写着「已选」
-  document.querySelectorAll('.case-series-rep').forEach(rep => {
-    rep.classList.remove('selected-rep');
-    const hint = rep.querySelector('.rep-hint');
-    if (hint && rep.dataset.hintDefault) hint.textContent = rep.dataset.hintDefault;
-  });
+  document.querySelectorAll('.case-series-rep').forEach(rep => rep.classList.remove('selected-rep'));
+  syncAllRepHints();
   document.querySelectorAll('.part-item').forEach(el => el.classList.remove('selected'));
   // 清单/徽标跟着回到空态（不然取消表壳后「我的配置」还留着上一轮的名字）
   updateSummary();
