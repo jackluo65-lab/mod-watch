@@ -458,6 +458,8 @@
   .config-panel {
     flex: 1;
     min-width: 0;
+    /* clear the sticky header when a step jump scrolls this panel to the top */
+    scroll-margin-top: 88px;
   }
   .section-title {
     font-size: 13px;
@@ -3579,6 +3581,31 @@ function refreshStepChrome() {
   btnNext.style.cursor = ready ? 'pointer' : 'not-allowed';
 }
 
+// Once a case is picked, step 1's own header stops asking and starts reporting:
+// the series it belongs to on the title line, its numbers and finish underneath.
+function caseSeriesLabel(cat) {
+  const c = (cat || '').trim();
+  if (LANG !== 'zh') return c;
+  // "SKX 3.8 Case" / "SKX 3.8 MORE CASE" -> "SKX 3.8 表壳" / "SKX 3.8 MORE 表壳"
+  return c.replace(/\s*CASE$/i, '').replace(/\s*Case$/, '') + ' 表壳';
+}
+
+// Numbers first, then the finish the sheet describes ("哑光，银色表壳" -> "哑光，银色")
+function caseSpecLine(cs) {
+  const bits = [
+    `${t('diameter')} ${cs.size}`,
+    `${t('lugToLug')} ${cs.lugToLug}`,
+    `${t('thick')} ${cs.thickness}`,
+    `${t('lug')} ${cs.lugWidth}`,
+  ];
+  if (cs.waterResistance) bits.push(`${t('wr')} ${cs.waterResistance}`);
+  const finish = LANG === 'zh'
+    ? (cs.description || '').replace(/表壳/g, '').replace(/，/g, '、').trim()
+    : (cs.descriptionEn || '').split(':').slice(1).join(':').replace(/[.。]\s*$/,'').trim();
+  if (finish) bits.push(finish);
+  return bits.join(' · ');
+}
+
 // "第 3 步 · 选择表圈" is split so a phone can drop the number: the counter above
 // already says 第 3 步 / 共 11 步, the title only has to name the step.
 function stepTitleHtml(i, name) {
@@ -3600,8 +3627,13 @@ function goToStep(i) {
     // 完成页把标题藏起来了，回到第 1 步要显回来（"重新配置"之后否则看不到这一步的标题）
     titleEl.style.display = '';
     guideEl.style.display = '';
-    titleEl.innerHTML = stepTitleHtml(0, t('stepCaseName'));
-    guideEl.textContent = t('guideCase');
+    if (selectedCase) {
+      titleEl.innerHTML = stepTitleHtml(0, caseSeriesLabel(selectedCase.category));
+      guideEl.textContent = caseSpecLine(selectedCase);
+    } else {
+      titleEl.innerHTML = stepTitleHtml(0, t('stepCaseName'));
+      guideEl.textContent = t('guideCase');
+    }
     guideEl.classList.remove('guide-ok');
     // Collapse the expanded series when coming back to the case step — except the one
     // holding the current case, so its 「✕ 再点一次取消」 is one tap away instead of two
