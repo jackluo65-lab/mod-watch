@@ -2109,7 +2109,7 @@ function typeLabel(type) {
 // visitor re-downloaded the 1 MB catalogue on every load. With a stable URL the browser
 // keeps the copy and only revalidates it (ETag → 304). Bump DATA_VERSION whenever
 // data.json changes, otherwise returning visitors keep the old catalogue.
-const DATA_VERSION = 'v=20261125';
+const DATA_VERSION = 'v=20261126';
 fetch('data.json?' + DATA_VERSION)
   .then(r => r.json())
   .then(d => { DATA = d; renderCaseGrid(); })
