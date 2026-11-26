@@ -1585,13 +1585,20 @@
   /* ===== Part finder ===== */
   body.finder-open { overflow: hidden; }
   .find-btn {
-    display: flex; align-items: center; gap: 6px;
-    padding: 6px 12px; border-radius: 16px;
-    border: 1px solid var(--border); background: transparent; color: var(--text2);
-    font-size: 12px; font-weight: 600; letter-spacing: .5px; cursor: pointer;
-    transition: all .2s;
+    display: flex; align-items: center; gap: 7px;
+    padding: 8px 12px; border-radius: 9px;
+    border: 1px solid var(--border); background: #fff;
+    color: var(--text2); font-size: 13px; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(15,23,42,.05);
+    transition: border-color .2s, box-shadow .2s, color .2s;
   }
-  .find-btn:hover { border-color: var(--accent-dim); color: var(--accent); background: rgba(26,86,219,.06); }
+  .find-btn:hover {
+    border-color: var(--accent-dim); color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(26,86,219,.08);
+  }
+  .find-btn-t { font-weight: 600; color: var(--text); letter-spacing: .3px; }
+  .find-btn-h { color: var(--text3); }
+  .find-btn:hover .find-btn-t, .find-btn:hover .find-btn-h { color: var(--accent); }
   .find-btn svg { flex-shrink: 0; }
 
   #finder {
@@ -1690,8 +1697,12 @@
     .fd-detail-grid { flex-direction: column; gap: 12px; }
     .fd-figure { flex: none; width: 100%; }
     .fd-figure img { max-height: 42vh; }
-    .find-btn-t { display: none; }
-    .find-btn { padding: 8px 10px; }
+    .find-btn-h { display: none; }
+    .find-btn {
+      padding: 8px 12px; gap: 5px; font-size: 12px;
+      background: rgba(26,86,219,.07); border-color: var(--accent-dim);
+    }
+    .find-btn .find-btn-t { color: var(--accent); }
   }
 </style>
 </head>
@@ -1702,8 +1713,9 @@
   <div class="header-right">
     <span id="tagline">Craft Your Time — 慢慢来，打造只属于你的那一枚</span>
     <button class="find-btn" id="findBtn" onclick="openFinder()" title="查找零件 / Find a part">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M16.2 16.2L22 22"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M16.2 16.2L22 22"/></svg>
       <span class="find-btn-t">查找零件</span>
+      <span class="find-btn-h">输入编号</span>
     </button>
     <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
   </div>
@@ -3914,7 +3926,9 @@ function applyStaticTexts() {
   document.getElementById('tagline').textContent = t('tagline');
   document.getElementById('langBtn').textContent = LANG === 'zh' ? 'EN' : '中文';
   const findT = document.querySelector('.find-btn-t');
+  const findH = document.querySelector('.find-btn-h');
   if (findT) findT.textContent = LANG === 'zh' ? '查找零件' : 'Find a part';
+  if (findH) findH.textContent = LANG === 'zh' ? '输入编号' : 'by code';
   document.querySelector('.view-btn[data-view="front"]').textContent = t('viewFront');
   document.querySelector('.view-btn[data-view="side"]').textContent = t('viewSide');
   document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
@@ -4079,8 +4093,8 @@ function renderFinder() {
     detail.innerHTML = `
       <button class="fd-back" onclick="fdBack()">${T.back}</button>
       <div class="fd-detail-grid">
-        <div class="fd-figure" id="fdFigure">
-          <img src="${r.img}" alt="${r.code}" onclick="fdZoom()">
+        <div class="fd-figure" id="fdFigure" onclick="fdZoom()">
+          <img src="${r.img}" alt="${r.code}">
           <span class="fd-figure-hint">${T.zoom}</span>
         </div>
         <div class="fd-info">
@@ -4193,12 +4207,21 @@ function onFinderKey(e) {
 (function initFinder() {
   const box = document.getElementById('finder');
   if (!box) return;
+  // Backdrop click closes. (Toggling zoom here too would undo the zoom the very click
+  // on the figure had just turned on, once the class lands before the event bubbles up.)
   box.addEventListener('click', e => {
-    if (e.target === box) { closeFinder(); return; }
-    if (e.target.closest('.fd-figure.zoom')) fdZoom();
+    if (e.target === box) closeFinder();
   });
   document.addEventListener('keydown', e => {
-    if (!box.classList.contains('show')) return;
+    if (!box.classList.contains('show')) {
+      // "/" opens the finder from anywhere, like a real catalogue's quick search
+      if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+        const el = document.activeElement;
+        const typing = el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
+        if (!typing) { e.preventDefault(); openFinder(); }
+      }
+      return;
+    }
     if (e.key !== 'Escape') return;
     const fig = document.getElementById('fdFigure');
     if (fig && fig.classList.contains('zoom')) { fig.classList.remove('zoom'); return; }
