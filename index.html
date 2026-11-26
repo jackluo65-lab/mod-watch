@@ -1581,6 +1581,118 @@
   #secondHand {
     transition: transform .18s cubic-bezier(.4, 2.08, .55, .44);
   }
+
+  /* ===== Part finder ===== */
+  body.finder-open { overflow: hidden; }
+  .find-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 12px; border-radius: 16px;
+    border: 1px solid var(--border); background: transparent; color: var(--text2);
+    font-size: 12px; font-weight: 600; letter-spacing: .5px; cursor: pointer;
+    transition: all .2s;
+  }
+  .find-btn:hover { border-color: var(--accent-dim); color: var(--accent); background: rgba(26,86,219,.06); }
+  .find-btn svg { flex-shrink: 0; }
+
+  #finder {
+    position: fixed; inset: 0; z-index: 400; display: none;
+    align-items: flex-start; justify-content: center;
+    padding: 7vh 20px 20px;
+    background: rgba(15,23,42,.34);
+    -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+  }
+  #finder.show { display: flex; }
+  .fd-box {
+    width: min(720px, 100%); max-height: 84vh;
+    background: #fff; border-radius: 14px;
+    box-shadow: 0 24px 80px rgba(15,23,42,.25);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .fd-head {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    padding: 18px 20px 12px;
+  }
+  .fd-head h3 { margin: 0; font-size: 16px; letter-spacing: 1px; color: var(--text); }
+  .fd-sub { margin: 5px 0 0; font-size: 12px; color: var(--text2); }
+  .fd-x { border: 0; background: transparent; color: var(--text2); font-size: 20px; line-height: 1; cursor: pointer; padding: 2px 6px; }
+  .fd-x:hover { color: var(--accent); }
+  .fd-search { position: relative; padding: 0 20px 14px; }
+  .fd-search-ico { position: absolute; left: 34px; top: 14px; color: var(--text2); pointer-events: none; }
+  .fd-input {
+    width: 100%; box-sizing: border-box;
+    padding: 11px 14px 11px 38px;
+    border: 1px solid var(--border); border-radius: 9px;
+    font-size: 14px; color: var(--text); background: #fff; outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .fd-input::placeholder { color: var(--text3); }
+  .fd-input:focus { border-color: var(--accent-dim); box-shadow: 0 0 0 3px rgba(26,86,219,.10); }
+  .fd-body { flex: 1; overflow-y: auto; padding: 0 20px 16px; }
+  .fd-foot { margin: 0; padding: 10px 20px 14px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text3); }
+
+  .fd-idle { padding: 6px 0 10px; }
+  .fd-idle-t { margin: 0 0 10px; font-size: 12px; color: var(--text2); }
+  .fd-idle-s { margin: 6px 0 0; font-size: 12px; color: var(--text3); }
+  .fd-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .fd-chip-btn {
+    border: 1px solid var(--border); background: #fff; border-radius: 8px;
+    padding: 6px 10px; font-size: 12px; font-weight: 600; letter-spacing: .5px;
+    color: var(--accent); cursor: pointer;
+  }
+  .fd-chip-btn:hover { background: rgba(26,86,219,.07); border-color: var(--accent-dim); }
+  .fd-count { margin: 0 0 8px; font-size: 12px; color: var(--text3); }
+
+  .fd-row {
+    display: flex; align-items: center; gap: 12px; width: 100%;
+    padding: 7px 8px; border: 1px solid transparent; border-radius: 10px;
+    background: transparent; text-align: left; cursor: pointer;
+  }
+  .fd-row:hover { background: #f6f8fc; border-color: var(--border); }
+  .fd-thumb {
+    width: 46px; height: 46px; flex-shrink: 0;
+    border: 1px solid var(--border); border-radius: 8px; background: #fff;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .fd-thumb img { width: 100%; height: 100%; object-fit: contain; }
+  .fd-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .fd-row-code { font-size: 13px; font-weight: 700; letter-spacing: .8px; color: var(--text); }
+  .fd-row-name { font-size: 12px; color: var(--text2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .fd-row-type { flex-shrink: 0; font-size: 11px; color: var(--accent); background: rgba(26,86,219,.08); border-radius: 6px; padding: 3px 8px; }
+
+  .fd-back {
+    margin: 2px 0 12px; padding: 5px 10px; border: 1px solid var(--border); border-radius: 8px;
+    background: #fff; color: var(--text2); font-size: 12px; cursor: pointer;
+  }
+  .fd-back:hover { color: var(--accent); border-color: var(--accent-dim); }
+  .fd-detail-grid { display: flex; gap: 20px; align-items: flex-start; }
+  .fd-figure { position: relative; flex: 0 0 260px; }
+  .fd-figure img {
+    width: 100%; max-height: 300px; object-fit: contain; cursor: zoom-in;
+    border: 1px solid var(--border); border-radius: 12px; background: #fbfbfd; padding: 8px; box-sizing: border-box;
+  }
+  .fd-figure-hint { display: block; margin-top: 6px; font-size: 11px; color: var(--text3); text-align: center; }
+  .fd-figure.zoom {
+    position: fixed; inset: 0; z-index: 420; flex: none;
+    background: rgba(255,255,255,.97); display: flex; align-items: center; justify-content: center; padding: 3vh 3vw;
+  }
+  .fd-figure.zoom img { max-height: 92vh; max-width: 92vw; border: 0; background: transparent; cursor: zoom-out; }
+  .fd-figure.zoom .fd-figure-hint { display: none; }
+  .fd-info { flex: 1; min-width: 0; }
+  .fd-chip { display: inline-block; font-size: 11px; color: var(--accent); background: rgba(26,86,219,.08); border-radius: 6px; padding: 3px 8px; }
+  .fd-code { margin: 8px 0 2px; font-size: 20px; letter-spacing: 1.5px; color: var(--text); }
+  .fd-name { margin: 0; font-size: 14px; font-weight: 600; color: var(--text); }
+  .fd-name2 { margin: 2px 0 0; font-size: 12px; color: var(--text3); }
+  .fd-spec { margin: 12px 0 0; font-size: 12.5px; line-height: 1.7; color: var(--text2); }
+
+  @media (max-width: 640px) {
+    #finder { padding: 10px; align-items: flex-start; }
+    .fd-box { max-height: calc(100vh - 20px); width: 100%; }
+    .fd-detail-grid { flex-direction: column; gap: 12px; }
+    .fd-figure { flex: none; width: 100%; }
+    .fd-figure img { max-height: 42vh; }
+    .find-btn-t { display: none; }
+    .find-btn { padding: 8px 10px; }
+  }
 </style>
 </head>
 <body>
@@ -1589,6 +1701,10 @@
   <div class="logo">MOD WATCH</div>
   <div class="header-right">
     <span id="tagline">Craft Your Time — 慢慢来，打造只属于你的那一枚</span>
+    <button class="find-btn" id="findBtn" onclick="openFinder()" title="查找零件 / Find a part">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M16.2 16.2L22 22"/></svg>
+      <span class="find-btn-t">查找零件</span>
+    </button>
     <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
   </div>
 </div>
@@ -1833,6 +1949,30 @@
         <button class="btn btn-outline" id="btnReset" onclick="resetAll()">重新配置</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Part finder: type a part number, get the part -->
+<div id="finder" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="fd-box">
+    <div class="fd-head">
+      <div>
+        <h3 id="fdTitle">查找零件</h3>
+        <p class="fd-sub" id="fdSub">输入零件编号，直接看到它的实拍图</p>
+      </div>
+      <button class="fd-x" id="fdClose" aria-label="关闭" onclick="closeFinder()">&times;</button>
+    </div>
+    <div class="fd-search">
+      <svg class="fd-search-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="M16.2 16.2L22 22"/></svg>
+      <input class="fd-input" id="fdInput" type="search" autocomplete="off" spellcheck="false"
+             placeholder="例如 SKX-B-1、D-GMT-1、S-DDJ-1"
+             oninput="fdInputChanged()" onkeydown="onFinderKey(event)">
+    </div>
+    <div class="fd-body">
+      <div class="fd-list" id="fdList"></div>
+      <div class="fd-detail" id="fdDetail"></div>
+    </div>
+    <p class="fd-foot" id="fdFoot">找不到？编号可以只输前半段，例如 SKX / GMT / DDJ</p>
   </div>
 </div>
 
@@ -3773,6 +3913,8 @@ function resetAll() {
 function applyStaticTexts() {
   document.getElementById('tagline').textContent = t('tagline');
   document.getElementById('langBtn').textContent = LANG === 'zh' ? 'EN' : '中文';
+  const findT = document.querySelector('.find-btn-t');
+  if (findT) findT.textContent = LANG === 'zh' ? '查找零件' : 'Find a part';
   document.querySelector('.view-btn[data-view="front"]').textContent = t('viewFront');
   document.querySelector('.view-btn[data-view="side"]').textContent = t('viewSide');
   document.querySelector('.view-btn[data-view="back"]').textContent = t('viewBack');
@@ -3820,6 +3962,7 @@ function setLang(l) {
     renderBuildPanel();
   }
   goToStep(currentStep);
+  if (document.getElementById('finder').classList.contains('show')) renderFinder();
 }
 
 function toggleLang() {
@@ -3829,6 +3972,239 @@ function toggleLang() {
 function quoteAlert() {
   alert(LANG === 'zh' ? '功能开发中：将跳转到询盘/下单页面' : 'Coming soon — this will open the quote / order page');
 }
+
+// ===== Part finder =====
+// The one thing customers already have in hand is a part number, so the catalogue gets a
+// lookup by code: type SKX-B-1 / D-GMT-1 and the part itself comes up, photo included.
+const FINDER_TEXT = {
+  zh: {
+    title: '查找零件',
+    sub: '输入零件编号，直接看到它的实拍图',
+    ph: '例如 SKX-B-1、D-GMT-1、S-DDJ-1',
+    hot: '试试这些编号',
+    count: n => `收录 ${n} 个编号，表壳与全部零件都在里面`,
+    hits: n => `${n} 个匹配`,
+    empty: '没有匹配的编号',
+    emptySub: '编号可以只输前半段，例如 “SKX” 或 “GMT”',
+    back: '← 返回结果',
+    zoom: '点击放大查看',
+    none: '找不到？把编号公众号发我们，可以帮您查。',
+  },
+  en: {
+    title: 'Find a part',
+    sub: 'Type a part number and the part comes up, photo included',
+    ph: 'e.g. SKX-B-1, D-GMT-1, S-DDJ-1',
+    hot: 'Try these codes',
+    count: n => `${n} codes indexed — cases and every part`,
+    hits: n => `${n} matches`,
+    empty: 'No code matches that',
+    emptySub: 'Try just the first half, e.g. “SKX” or “GMT”',
+    back: '← Back to results',
+    zoom: 'Click to enlarge',
+    none: 'Not finding it? Send us the code and we will look it up.',
+  },
+};
+
+let finderIndex = null;
+let finderHits = [];
+let finderRow = null;
+
+function fdT() { return FINDER_TEXT[LANG] || FINDER_TEXT.zh; }
+function fdNorm(x) { return String(x || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+
+function buildFinderIndex() {
+  if (finderIndex) return finderIndex;
+  if (typeof DATA === 'undefined' || !DATA) return null;
+  const rows = [];
+  (DATA.caseSeries || []).forEach(c => rows.push({
+    type: 'case', code: c.code, id: c.id, img: (c.views && c.views.front) || c.swatch,
+    nameZh: c.nameZh, nameEn: c.name,
+    txt: (c.code + ' ' + c.id + ' ' + c.name + ' ' + c.nameZh).toLowerCase(),
+    specZh: `${t('diameter')} ${c.size} · ${t('lugToLug')} ${c.lugToLug} · ${t('thick')} ${c.thickness} · ${t('lug')} ${c.lugWidth} · ${t('wr')} ${c.waterResistance} · ${t('move')} ${c.movement}`,
+    specEn: `Diameter ${c.size} · Lug-to-lug ${c.lugToLug} · Thick ${c.thickness} · Lug width ${c.lugWidth} · WR ${c.waterResistance} · ${c.movement}`,
+  }));
+  partTypes.forEach(tp => (DATA.parts[tp] || []).forEach(p => rows.push({
+    type: tp, code: p.code, id: p.id, img: p.image,
+    nameZh: p.nameZh, nameEn: p.name,
+    txt: (p.code + ' ' + p.id + ' ' + p.name + ' ' + (p.nameZh || '')).toLowerCase(),
+    specZh: p.description || '', specEn: p.descriptionEn || '',
+  })));
+  rows.forEach(r => { r.key = fdNorm(r.code); });
+  finderIndex = rows;
+  return rows;
+}
+
+function fdHotCodes() {
+  const rows = buildFinderIndex() || [];
+  const out = [];
+  const seed = rows.find(r => r.code === 'SKX-B-1') || rows.find(r => r.type === 'case' && r.code);
+  if (seed) out.push(seed.code);
+  // a few codes from different families, so the examples show the range of the catalogue
+  ['insert', 'bezel', 'dial', 'crown'].forEach(tp => {
+    const r = rows.find(x => x.type === tp && x.code);
+    if (r) out.push(r.code);
+  });
+  return out;
+}
+
+function fdMatch(q) {
+  const rows = buildFinderIndex() || [];
+  const raw = q.trim().toLowerCase();
+  if (!raw) return [];
+  const nq = fdNorm(q);
+  const hits = rows.filter(r =>
+    (nq && r.key.indexOf(nq) >= 0) || r.txt.indexOf(raw) >= 0
+  );
+  // exact code first, then codes that start with it, then everything else
+  hits.sort((a, b) => {
+    const rank = r => (nq && r.key === nq) ? 0 : (nq && r.key.indexOf(nq) === 0) ? 1 : 2;
+    return rank(a) - rank(b) || a.key.length - b.key.length || a.code.localeCompare(b.code);
+  });
+  return hits;
+}
+
+function renderFinder() {
+  const T = fdT();
+  document.getElementById('fdTitle').textContent = T.title;
+  document.getElementById('fdSub').textContent = T.sub;
+  document.getElementById('fdInput').placeholder = T.ph;
+  document.getElementById('fdFoot').textContent = T.none;
+  const list = document.getElementById('fdList');
+  const detail = document.getElementById('fdDetail');
+
+  if (finderRow) {
+    list.style.display = 'none';
+    detail.style.display = '';
+    const r = finderRow;
+    detail.innerHTML = `
+      <button class="fd-back" onclick="fdBack()">${T.back}</button>
+      <div class="fd-detail-grid">
+        <div class="fd-figure" id="fdFigure">
+          <img src="${r.img}" alt="${r.code}" onclick="fdZoom()">
+          <span class="fd-figure-hint">${T.zoom}</span>
+        </div>
+        <div class="fd-info">
+          <span class="fd-chip">${typeLabel(r.type)}</span>
+          <h4 class="fd-code">${r.code || (LANG === 'zh' ? r.nameZh : r.nameEn)}</h4>
+          <p class="fd-name">${LANG === 'zh' ? r.nameZh : r.nameEn}</p>
+          <p class="fd-name2">${LANG === 'zh' ? r.nameEn : (r.nameZh || '')}</p>
+          <p class="fd-spec">${(LANG === 'zh' ? r.specZh : r.specEn) || ''}</p>
+        </div>
+      </div>`;
+    return;
+  }
+
+  list.style.display = '';
+  detail.style.display = 'none';
+  detail.innerHTML = '';
+  const q = document.getElementById('fdInput').value.trim();
+
+  if (!q) {
+    const total = (buildFinderIndex() || []).length;
+    list.innerHTML = `
+      <div class="fd-idle">
+        <p class="fd-idle-t">${T.hot} · ${T.count(total)}</p>
+        <div class="fd-chips">${fdHotCodes().map(c => `<button class="fd-chip-btn" onclick="fdType('${c}')">${c}</button>`).join('')}</div>
+      </div>`;
+    finderHits = [];
+    return;
+  }
+
+  finderHits = fdMatch(q);
+  if (!finderHits.length) {
+    list.innerHTML = `<div class="fd-idle"><p class="fd-idle-t">${T.empty}</p><p class="fd-idle-s">${T.emptySub}</p></div>`;
+    return;
+  }
+  const shown = finderHits.slice(0, 24);
+  list.innerHTML = `<p class="fd-count">${T.hits(finderHits.length)}</p>` + shown.map((r, i) => `
+    <button class="fd-row" onclick="fdOpen(${i})">
+      <span class="fd-thumb"><img src="${r.img}" alt="" loading="lazy"></span>
+      <span class="fd-row-main">
+        <span class="fd-row-code">${r.code || r.id}</span>
+        <span class="fd-row-name">${LANG === 'zh' ? r.nameZh : r.nameEn}</span>
+      </span>
+      <span class="fd-row-type">${typeLabel(r.type)}</span>
+    </button>`).join('');
+}
+
+function openFinder() {
+  if (typeof DATA === 'undefined' || !DATA) return;
+  const box = document.getElementById('finder');
+  box.classList.add('show');
+  box.setAttribute('aria-hidden', 'false');
+  finderRow = null;
+  document.getElementById('fdInput').value = '';
+  renderFinder();
+  document.body.classList.add('finder-open');
+  setTimeout(() => { const el = document.getElementById('fdInput'); if (el) el.focus(); }, 40);
+}
+
+function closeFinder() {
+  const box = document.getElementById('finder');
+  box.classList.remove('show');
+  box.setAttribute('aria-hidden', 'true');
+  finderRow = null;
+  const fig = document.getElementById('fdFigure');
+  if (fig) fig.classList.remove('zoom');
+  document.body.classList.remove('finder-open');
+}
+
+// typing again should drop the open part and go back to the result list
+function fdInputChanged() {
+  finderRow = null;
+  renderFinder();
+}
+
+function fdType(code) {
+  const el = document.getElementById('fdInput');
+  el.value = code;
+  finderRow = null;
+  renderFinder();
+  el.focus();
+}
+
+function fdOpen(i) {
+  const r = finderHits[i];
+  if (!r) return;
+  finderRow = r;
+  renderFinder();
+  const body = document.querySelector('.fd-body'); if (body) body.scrollTop = 0;
+}
+
+function fdBack() {
+  finderRow = null;
+  renderFinder();
+}
+
+function fdZoom() {
+  const fig = document.getElementById('fdFigure');
+  if (fig) fig.classList.toggle('zoom');
+}
+
+function onFinderKey(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    if (finderHits.length) fdOpen(0);
+    return;
+  }
+  if (e.key === 'Escape') { e.preventDefault(); closeFinder(); }
+}
+
+(function initFinder() {
+  const box = document.getElementById('finder');
+  if (!box) return;
+  box.addEventListener('click', e => {
+    if (e.target === box) { closeFinder(); return; }
+    if (e.target.closest('.fd-figure.zoom')) fdZoom();
+  });
+  document.addEventListener('keydown', e => {
+    if (!box.classList.contains('show')) return;
+    if (e.key !== 'Escape') return;
+    const fig = document.getElementById('fdFigure');
+    if (fig && fig.classList.contains('zoom')) { fig.classList.remove('zoom'); return; }
+    closeFinder();
+  });
+})();
 
 // Init wizard
 goToStep(0);
