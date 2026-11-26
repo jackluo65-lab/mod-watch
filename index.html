@@ -617,6 +617,16 @@
     justify-content: space-between;
     gap: 12px;
     margin-top: 8px;
+    /* Now that picking a case no longer auto-advances, 下一步 has to be reachable
+       without scrolling past a 15-series grid — pin it to the bottom of the viewport. */
+    position: sticky;
+    bottom: 0;
+    z-index: 40;
+    padding: 12px 0;
+    background: rgba(255,255,255,.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border);
   }
 
   /* Case series list — vertical, one representative per series, expand on click */
@@ -2365,18 +2375,21 @@ function selectCase(id) {
   skippedSteps.clear();
   rebuildCustomDial();
 
-  // Update UI: highlight variant card + representative, collapse all series
+  // Update UI: highlight variant card + representative, fold every series back up
+  // (staying on this step means the whole grid is in view — a collapsed grid is easier to scan)
   document.querySelectorAll('.case-card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
   document.querySelectorAll('.case-series.expanded').forEach(s => s.classList.remove('expanded'));
   highlightSelectedCase();
+  syncAllRepHints();
 
   // Update preview info
   refreshPreviewInfo();
 
-  // Render parts and go to step 2
+  // Render parts, then stay on step 1: the header turns into the pick, 下一步 is the gate
   renderParts();
   updatePreview();
-  goToStep(1);
+  refreshStepChrome();
+  if (currentStep !== 0) goToStep(1);
 }
 
 // Preview panel title + specs line (re-rendered on language switch too)
@@ -3542,7 +3555,8 @@ function refreshStepChrome() {
   if (!step || !guideEl || !btnNext) return;
 
   if (i === 0) {
-    // 表壳那一步的文案由 goToStep 写，这里只管按钮
+    // 选了表壳就地改写抬头（不再自动跳到第 2 步），所以文案也在这里刷新
+    renderCaseStepHeader();
     const ready = !!selectedCase;
     btnNext.textContent = t('next');
     btnNext.disabled = !ready;
@@ -3606,6 +3620,21 @@ function caseSpecLine(cs) {
   return bits.join(' · ');
 }
 
+// Step 1's two lines: asks for a series until one is picked, then reports the pick.
+function renderCaseStepHeader() {
+  const titleEl = document.getElementById('stepTitle');
+  const guideEl = document.getElementById('stepGuide');
+  if (!titleEl || !guideEl) return;
+  if (selectedCase) {
+    titleEl.innerHTML = stepTitleHtml(0, caseSeriesLabel(selectedCase.category));
+    guideEl.textContent = caseSpecLine(selectedCase);
+  } else {
+    titleEl.innerHTML = stepTitleHtml(0, t('stepCaseName'));
+    guideEl.textContent = t('guideCase');
+  }
+  guideEl.classList.remove('guide-ok');
+}
+
 // "第 3 步 · 选择表圈" is split so a phone can drop the number: the counter above
 // already says 第 3 步 / 共 11 步, the title only has to name the step.
 function stepTitleHtml(i, name) {
@@ -3627,14 +3656,7 @@ function goToStep(i) {
     // 完成页把标题藏起来了，回到第 1 步要显回来（"重新配置"之后否则看不到这一步的标题）
     titleEl.style.display = '';
     guideEl.style.display = '';
-    if (selectedCase) {
-      titleEl.innerHTML = stepTitleHtml(0, caseSeriesLabel(selectedCase.category));
-      guideEl.textContent = caseSpecLine(selectedCase);
-    } else {
-      titleEl.innerHTML = stepTitleHtml(0, t('stepCaseName'));
-      guideEl.textContent = t('guideCase');
-    }
-    guideEl.classList.remove('guide-ok');
+    renderCaseStepHeader();
     // Collapse the expanded series when coming back to the case step — except the one
     // holding the current case, so its 「✕ 再点一次取消」 is one tap away instead of two
     document.querySelectorAll('.case-series').forEach(s => {
