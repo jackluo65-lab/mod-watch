@@ -1665,6 +1665,9 @@
   .fd-row-code { font-size: 13px; font-weight: 700; letter-spacing: .8px; color: var(--text); }
   .fd-row-name { font-size: 12px; color: var(--text2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .fd-row-type { flex-shrink: 0; font-size: 11px; color: var(--accent); background: rgba(26,86,219,.08); border-radius: 6px; padding: 3px 8px; }
+  .fd-row-snip { font-size: 11.5px; color: var(--text3); line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fd-hl { background: rgba(255,196,0,.34); color: inherit; padding: 0 1px; border-radius: 2px; }
+  .fd-more { margin: 10px 0 0; font-size: 11.5px; color: var(--text3); }
 
   .fd-back {
     margin: 2px 0 12px; padding: 5px 10px; border: 1px solid var(--border); border-radius: 8px;
@@ -3993,29 +3996,31 @@ function quoteAlert() {
 const FINDER_TEXT = {
   zh: {
     title: '查找零件',
-    sub: '输入零件编号，直接看到它的实拍图',
-    ph: '例如 SKX-B-1、D-GMT-1、S-DDJ-1',
-    hot: '试试这些编号',
+    sub: '按编号、颜色、材质查找零件，直接看到实拍图',
+    ph: '编号、颜色、材质都能搜，例如 黑咖色、陶瓷',
+    hot: '试试这些',
     count: n => `收录 ${n} 个编号，表壳与全部零件都在里面`,
     hits: n => `${n} 个匹配`,
     empty: '没有匹配的编号',
-    emptySub: '编号可以只输前半段，例如 “SKX” 或 “GMT”',
+    emptySub: '可以只输前半段或换个说法，例如 “SKX”“GMT”“黑咖”',
     back: '← 返回结果',
     zoom: '点击放大查看',
-    none: '找不到？把编号公众号发我们，可以帮您查。',
+    none: '搜不到？换个更短的关键词试试，或把编号发我们帮您查。',
+    more: n => `只显示前 ${n} 个，关键词再具体一点能收窄`,
   },
   en: {
     title: 'Find a part',
-    sub: 'Type a part number and the part comes up, photo included',
-    ph: 'e.g. SKX-B-1, D-GMT-1, S-DDJ-1',
-    hot: 'Try these codes',
+    sub: 'Find parts by code, colour or material — photo included',
+    ph: 'Code, colour or material: e.g. ceramic, matte',
+    hot: 'Try these',
     count: n => `${n} codes indexed — cases and every part`,
     hits: n => `${n} matches`,
     empty: 'No code matches that',
-    emptySub: 'Try just the first half, e.g. “SKX” or “GMT”',
+    emptySub: 'Try just the first half, or another word, e.g. “SKX” or “GMT”',
     back: '← Back to results',
     zoom: 'Click to enlarge',
-    none: 'Not finding it? Send us the code and we will look it up.',
+    none: 'Not finding it? Try a shorter keyword, or send us the code.',
+    more: n => `Showing the first ${n} — add a keyword to narrow it down`,
   },
 };
 
@@ -4033,14 +4038,16 @@ function buildFinderIndex() {
   (DATA.caseSeries || []).forEach(c => rows.push({
     type: 'case', code: c.code, id: c.id, img: (c.views && c.views.front) || c.swatch,
     nameZh: c.nameZh, nameEn: c.name,
-    txt: (c.code + ' ' + c.id + ' ' + c.name + ' ' + c.nameZh).toLowerCase(),
+    txt: [c.code, c.id, c.name, c.nameZh, c.description, c.descriptionEn, c.material, c.category].join(' ').toLowerCase(),
+    descZh: c.description || '', descEn: c.descriptionEn || '',
     specZh: `${t('diameter')} ${c.size} · ${t('lugToLug')} ${c.lugToLug} · ${t('thick')} ${c.thickness} · ${t('lug')} ${c.lugWidth} · ${t('wr')} ${c.waterResistance} · ${t('move')} ${c.movement}`,
     specEn: `Diameter ${c.size} · Lug-to-lug ${c.lugToLug} · Thick ${c.thickness} · Lug width ${c.lugWidth} · WR ${c.waterResistance} · ${c.movement}`,
   }));
   partTypes.forEach(tp => (DATA.parts[tp] || []).forEach(p => rows.push({
     type: tp, code: p.code, id: p.id, img: p.image,
     nameZh: p.nameZh, nameEn: p.name,
-    txt: (p.code + ' ' + p.id + ' ' + p.name + ' ' + (p.nameZh || '')).toLowerCase(),
+    txt: [p.code, p.id, p.name, p.nameZh, p.description, p.descriptionEn, p.material, p.series, p.category].join(' ').toLowerCase(),
+    descZh: p.description || '', descEn: p.descriptionEn || '',
     specZh: p.description || '', specEn: p.descriptionEn || '',
   })));
   rows.forEach(r => { r.key = fdNorm(r.code); });
@@ -4058,7 +4065,45 @@ function fdHotCodes() {
     const r = rows.find(x => x.type === tp && x.code);
     if (r) out.push(r.code);
   });
+  // plus words customers actually use: a colour and a material
+  (LANG === 'zh' ? ['黑咖色', '陶瓷'] : ['ceramic', 'matte']).forEach(w => out.push(w));
   return out;
+}
+
+// A hit by number is a hit by name; a hit inside the description is a looser hit,
+// so those sort last instead of flooding the exact matches.
+function fdRank(r, raw, nq) {
+  if (nq && r.key === nq) return 0;
+  if (nq && r.key.indexOf(nq) === 0) return 1;
+  if (nq && r.key.indexOf(nq) >= 0) return 2;
+  if (((r.nameZh || '') + ' ' + (r.nameEn || '')).toLowerCase().indexOf(raw) >= 0) return 3;
+  return 4;
+}
+
+// Wrap the matched word so the customer can see why this row came up.
+function fdHl(text, raw) {
+  const src = String(text == null ? '' : text);
+  if (!raw) return src;
+  const lower = src.toLowerCase();
+  let out = '', i = 0;
+  for (;;) {
+    const at = lower.indexOf(raw, i);
+    if (at < 0) { out += src.slice(i); break; }
+    out += src.slice(i, at) + '<mark class="fd-hl">' + src.slice(at, at + raw.length) + '</mark>';
+    i = at + raw.length;
+  }
+  return out;
+}
+
+// The description text around the match, so "黑咖色" shows the sentence it came from.
+function fdSnippet(r, raw) {
+  const desc = LANG === 'zh' ? r.descZh : r.descEn;
+  if (!desc || !raw) return '';
+  const at = desc.toLowerCase().indexOf(raw);
+  if (at < 0) return '';
+  const from = Math.max(0, at - 14);
+  const to = Math.min(desc.length, at + raw.length + 24);
+  return (from ? '…' : '') + desc.slice(from, to) + (to < desc.length ? '…' : '');
 }
 
 function fdMatch(q) {
@@ -4066,14 +4111,14 @@ function fdMatch(q) {
   const raw = q.trim().toLowerCase();
   if (!raw) return [];
   const nq = fdNorm(q);
-  const hits = rows.filter(r =>
-    (nq && r.key.indexOf(nq) >= 0) || r.txt.indexOf(raw) >= 0
+  const hits = rows.filter(r => (nq && r.key.indexOf(nq) >= 0) || r.txt.indexOf(raw) >= 0);
+  // exact number, then numbers that start with it, then names, then the descriptions
+  hits.forEach(r => { r._rank = fdRank(r, raw, nq); });
+  hits.sort((a, b) =>
+    a._rank - b._rank ||
+    (a.code ? a.code.length : 99) - (b.code ? b.code.length : 99) ||
+    (a.code || a.id).localeCompare(b.code || b.id)
   );
-  // exact code first, then codes that start with it, then everything else
-  hits.sort((a, b) => {
-    const rank = r => (nq && r.key === nq) ? 0 : (nq && r.key.indexOf(nq) === 0) ? 1 : 2;
-    return rank(a) - rank(b) || a.key.length - b.key.length || a.code.localeCompare(b.code);
-  });
   return hits;
 }
 
@@ -4129,16 +4174,23 @@ function renderFinder() {
     list.innerHTML = `<div class="fd-idle"><p class="fd-idle-t">${T.empty}</p><p class="fd-idle-s">${T.emptySub}</p></div>`;
     return;
   }
-  const shown = finderHits.slice(0, 24);
-  list.innerHTML = `<p class="fd-count">${T.hits(finderHits.length)}</p>` + shown.map((r, i) => `
+  const CAP = 40;
+  const shown = finderHits.slice(0, CAP);
+  const raw = q.toLowerCase();
+  list.innerHTML = `<p class="fd-count">${T.hits(finderHits.length)}</p>` + shown.map((r, i) => {
+    // why this row matched: the number/name itself, or the sentence describing it
+    const snip = r._rank === 4 ? fdSnippet(r, raw) : '';
+    return `
     <button class="fd-row" onclick="fdOpen(${i})">
       <span class="fd-thumb"><img src="${r.img}" alt="" loading="lazy"></span>
       <span class="fd-row-main">
-        <span class="fd-row-code">${r.code || r.id}</span>
-        <span class="fd-row-name">${LANG === 'zh' ? r.nameZh : r.nameEn}</span>
+        <span class="fd-row-code">${fdHl(r.code || r.id, raw.toUpperCase())}</span>
+        <span class="fd-row-name">${fdHl(LANG === 'zh' ? r.nameZh : r.nameEn, raw)}</span>
+        ${snip ? `<span class="fd-row-snip">${fdHl(snip, raw)}</span>` : ''}
       </span>
       <span class="fd-row-type">${typeLabel(r.type)}</span>
-    </button>`).join('');
+    </button>`;
+  }).join('') + (finderHits.length > CAP ? `<p class="fd-more">${T.more(CAP)}</p>` : '');
 }
 
 function openFinder() {
